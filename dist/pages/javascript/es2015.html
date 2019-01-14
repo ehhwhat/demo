@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta content="initial-scale=1, shrink-to-fit=no, width=device-width" name="viewport">
+
+    <title>ES2015 | JavaScript</title>
+
+    <!-- CSS -->
+    <!-- Add Material font (Roboto) and Material icon as needed -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Add Material CSS, replace Bootstrap CSS -->
+    <link href="../../../dist/css/material.min.css" rel="stylesheet">
+    <link href="../../../dist/css/demo.css" rel="stylesheet">
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <!-- Then Material JavaScript on top of Bootstrap JavaScript -->
+    <script src="../../../dist/js/material.min.js"></script>
+
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark-1">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarText">
+                        <ul class="navbar-nav">
+                            <li class="nav-item ">
+                                <a class="nav-link nav-link-home" href="../index.html"><i class="material-icons">home</i></a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav">
+                            <li class="nav-item ">
+                                <span class="nav-link disabled">JavaScript:</span>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="basic.html">Basics</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="maths.html">Maths</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="gym.html">Gym (Arrays)</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="books.html">Books (Arrays)</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="objects.html">Objects</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="es2015.html">ES2015</a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <span class="nav-link disabled">jQuery:</span>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="ajax.html">Ajax</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="ajaxJSON.html">AjaxJSON</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="ajaxJSON_promise.html">Ajax Promise</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="jumbotron my-4">
+                <h1 class="display-4">ES2015</h1>
+                <p class="">Few examples of new techniques / tools from es2015. Use of let and const instead of var, demo of the .map function and new arrow (aka fat arrow) functions.</p>
+                <hr class="my-4">
+                <p><strong>Things to note:</strong></p>
+                <ul class="">
+                    <li class="">???</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+
+    <hr class="my-4 invisible"/>
+
+    <div class="row">
+        <div class="col-md-9">
+            <div class="card mb-4 bg-dark text-white">
+                <div class="card-header">
+                    <h2 class="display-4">var</h2>
+                    <p class="">
+                        Use of a <code>var</code> in this demo which the user can then change the value of using the form.
+                        If you check the console you will see an error for the log i have put in as i am looking for the value of the <code>var</code> before it is defined.
+                        Notice the error is <code>undefined</code> this is because <code>var</code> is affected by <strong>hoisting</strong>.
+                    </p>
+                </div>
+                <div class="card-body">
+<pre class="text-white">// Set a default name and add to DOM element
+var demoOneVar = &#x22;Ben Kenny&#x22;;
+document.getElementById(&#x22;demoOneVarResult&#x22;).innerHTML = &#x22;&#x3C;strong&#x3E;&#x22; +demoOneVar+&#x22;.&#x3C;/strong&#x3E;&#x22;;
+
+// On button click take value entered by user and update the original var.
+// Update DOM element with new name
+document.getElementById(&#x27;fullNameSubmit&#x27;).onclick = function(event) {
+    event.preventDefault();
+    const value = document.getElementById(&#x27;fullName&#x27;).value;
+    demoOneVar = value;
+    document.getElementById(&#x22;demoOneVarResult&#x22;).innerHTML = &#x22;&#x3C;strong&#x3E;&#x22; +demoOneVar+&#x22;.&#x3C;/strong&#x3E;&#x22;;
+};</pre>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card mb-4">
+                <div class="card-header bg-light">
+                    <h2 class="display-4">Update var</h2>
+                    <p class="">Change the value associated with the var here.</p>
+                </div>
+                <div class="card-body">
+                    <hr class="invisible"/>
+                    <form id="" action="">
+                        <div class="form-group">
+                            <label for="fullName">Your full name?</label>
+                            <input type="text" class="form-control" id="fullName" placeholder="Your full name?">
+                        </div>
+                        <button id="fullNameSubmit" type="submit" class="btn btn-info float-right">Go</button>
+                    </form>
+                </div>
+                <div class="card-footer bg-light-2 ">
+                    <p>demoOneVar currently = <br/><span class="text-success" id="demoOneVarResult"></span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr class="my-4 invisible"/>
+
+    <script>
+// Set a default name and add to DOM element
+console.log(demoOneVar);
+var demoOneVar = "Ben Kenny";
+document.getElementById("demoOneVarResult").innerHTML = "<strong>" +demoOneVar+".</strong>";
+
+// On button click take value entered by user and update the original var.
+// Update DOM element with new name
+document.getElementById('fullNameSubmit').onclick = function(event) {
+    event.preventDefault();
+    const value = document.getElementById('fullName').value;
+    demoOneVar = value;
+    document.getElementById("demoOneVarResult").innerHTML = "<strong>" +demoOneVar+".</strong>";
+};
+    </script>
+
+</div>
+
+
+
+
+<div class="container">
+
+    <hr class="my-4 invisible"/>
+
+    <div class="row">
+        <div class="col-md-9">
+            <div class="card mb-4 bg-dark text-white">
+                <div class="card-header">
+                    <h2 class="display-4">let</h2>
+                    <p class="">
+                        Use of a <code>let</code> in this demo which the user can then change the value of using the form.
+                        If you check the console you will see an error for the log i have put in as i am looking for the value of the <code>let</code> before it is defined.
+                        Notice the error is a <code>ReferenceError</code> this is because <code>let</code> is <em>unaffected</em> by <strong>hoisting</strong>.
+                    </p>
+                    <p class="text-danger">The console error actually stops the rest of the script working so i have commented out in code, but above statement still stands.</p>
+                </div>
+                <div class="card-body">
+<pre class="text-white">// Set a default name and add to DOM element
+let demoTwoVar = &#x22;Georgi Mann&#x22;;
+document.getElementById(&#x22;demoTwoVarResult&#x22;).innerHTML = &#x22;&#x3C;strong&#x3E;&#x22; +demoTwoVar+&#x22;.&#x3C;/strong&#x3E;&#x22;;
+
+// On button click take value entered by user and update the original var.
+// Update DOM element with new name
+document.getElementById(&#x27;demoTwofullNameSubmit&#x27;).onclick = function(event) {
+    event.preventDefault();
+    const value = document.getElementById(&#x27;demoTwofullName&#x27;).value;
+    demoTwoVar = value;
+    document.getElementById(&#x22;demoTwoVarResult&#x22;).innerHTML = &#x22;&#x3C;strong&#x3E;&#x22; +demoTwoVar+&#x22;.&#x3C;/strong&#x3E;&#x22;;
+};</pre>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card mb-4">
+                <div class="card-header bg-light">
+                    <h2 class="display-4">Update let</h2>
+                    <p class="">Change the value associated with the let here.</p>
+                </div>
+                <div class="card-body">
+                    <hr class="invisible"/>
+                    <form id="demoTwoVarForm" action="">
+                        <div class="form-group">
+                            <label for="demoTwofullName">Your full name?</label>
+                            <input type="text" class="form-control" id="demoTwofullName" placeholder="Your full name?">
+                        </div>
+                        <button id="demoTwofullNameSubmit" type="submit" class="btn btn-info float-right">Go</button>
+                    </form>
+                </div>
+                <div class="card-footer bg-light-2 ">
+                    <p>demoTwoVar currently = <br/><span class="text-success" id="demoTwoVarResult"></span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr class="my-4 invisible"/>
+
+    <script>
+// Set a default name and add to DOM element
+// console.log(demoTwoVar);
+let demoTwoVar = "Georgi Mann";
+document.getElementById("demoTwoVarResult").innerHTML = "<strong>" +demoTwoVar+".</strong>";
+
+// On button click take value entered by user and update the original var.
+// Update DOM element with new name
+document.getElementById('demoTwofullNameSubmit').onclick = function(event) {
+    event.preventDefault();
+    const value = document.getElementById('demoTwofullName').value;
+    demoTwoVar = value;
+    document.getElementById("demoTwoVarResult").innerHTML = "<strong>" +demoTwoVar+".</strong>";
+};
+    </script>
+
+</div>
+
+
+
+
+<div class="container">
+
+    <hr class="my-4 invisible"/>
+
+    <div class="row">
+        <div class="col-md-9">
+            <div class="card mb-4 bg-dark text-white">
+                <div class="card-header">
+                    <h2 class="display-4">const</h2>
+                    <p class="">
+                        Use of a <code>const</code> in this demo which the user cannot change as a <code>const</code> can only assign once a value in a variable.
+                        If you check the console you will see an error for the log i have put in as i am looking for the value of the <code>const</code> before it is defined.
+                        Notice the error is a <code>ReferenceError</code> this is because <code>const</code> is <em>unaffected</em> by <strong>hoisting</strong>.
+                    </p>
+                    <p class="text-danger">The console error actually stops the rest of the script working so i have commented out in code, but above statement still stands.</p>
+                </div>
+                <div class="card-body">
+<pre class="text-white">// Set a default name and add to DOM element
+const demoThreeVar = &#x22;Dave Jones&#x22;;
+document.getElementById(&#x22;demoThreeVarResult&#x22;).innerHTML = &#x22;&#x3C;strong&#x3E;&#x22; +demoThreeVar+&#x22;.&#x3C;/strong&#x3E;&#x22;;
+
+// On button click take value entered by user and update the original var.
+// Update DOM element with new name
+document.getElementById(&#x27;demoThreefullNameSubmit&#x27;).onclick = function(event) {
+    event.preventDefault();
+    const value = document.getElementById(&#x27;demoThreefullName&#x27;).value;
+    demoThreeVar = value;
+    document.getElementById(&#x22;demoThreeVarResult&#x22;).innerHTML = &#x22;&#x3C;strong&#x3E;&#x22; +demoThreeVar+&#x22;.&#x3C;/strong&#x3E;&#x22;;
+};</pre>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card mb-4">
+                <div class="card-header bg-light">
+                    <h2 class="display-4">Update const</h2>
+                    <p class="">Change the value associated with the const here.</p>
+                    <p class="text-danger">This will not work</p>
+                </div>
+                <div class="card-body">
+                    <hr class="invisible"/>
+                    <form id="demoThreeVarForm" action="">
+                        <div class="form-group">
+                            <label for="demoThreefullName">Your full name?</label>
+                            <input type="text" class="form-control" id="demoThreefullName" placeholder="Your full name?">
+                        </div>
+                        <button id="demoThreefullNameSubmit" type="submit" class="btn btn-info float-right">Go</button>
+                    </form>
+                </div>
+                <div class="card-footer bg-light-2 ">
+                    <p>demoThreeVar currently = <br/><span class="text-success" id="demoThreeVarResult"></span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr class="my-4 invisible"/>
+
+    <script>
+// Set a default name and add to DOM element
+// console.log(demoThreeVar);
+const demoThreeVar = "Dave Jones";
+document.getElementById("demoThreeVarResult").innerHTML = "<strong>" +demoThreeVar+".</strong>";
+
+// On button click take value entered by user and update the original var.
+// Update DOM element with new name
+document.getElementById('demoThreefullNameSubmit').onclick = function(event) {
+    event.preventDefault();
+    const value = document.getElementById('demoThreefullName').value;
+    demoThreeVar = value;
+    document.getElementById("demoThreeVarResult").innerHTML = "<strong>" +demoThreeVar+".</strong>";
+};
+    </script>
+
+</div>
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<!-- Then Material JavaScript on top of Bootstrap JavaScript -->
+<script src="../../../dist/js/material.min.js"></script>
+
+</body>
+</html>

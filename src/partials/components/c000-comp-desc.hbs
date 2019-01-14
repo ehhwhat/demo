@@ -1,0 +1,15 @@
+{{!-- components/c000-comp-desc.hbs --}}
+
+<!-- COMPONENT START -->
+<section class="container" id="{{comp-id}}">
+    <div class="row">
+        <div class="col-12">
+            <p class="text-muted text-secondary"><strong>{{comp-name}}</strong><span class="float-right">{{comp-id}}</span></p>
+            {{#if comp-desc}}
+                <p>{{comp-desc}}</p>
+            {{/if}}
+            <hr/>
+        </div>
+    </div>
+</section>
+<!-- COMPONENT END -->

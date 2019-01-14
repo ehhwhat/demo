@@ -1,0 +1,491 @@
+{{!-- pages/app/triathlon.hbs --}}
+
+{{#> layouts/base title="Triathlon" }}
+
+    {{#*inline "header-block"}}
+        {{#> components/header
+                brand='BPK'
+                show-tech=true
+                show-tech-target='#tech-modal'
+        }}
+            {{> components/header__point
+                    point-title='Introduction'
+                    point-href='introduction'
+            }}
+            {{> components/header__point
+                    point-title='How'
+                    point-href='how'
+            }}
+            {{> components/header__point
+                    point-title='KPI'
+                    point-href='kpi'
+            }}
+            {{> components/header__point
+                    point-title='Events'
+                    point-href='events'
+            }}
+            {{> components/header__point
+                    point-title='Training'
+                    point-href='training'
+            }}
+            {{> components/header__point
+                    point-title='Journey'
+                    point-href='journey'
+            }}
+        {{/components/header}}
+    {{/inline}}
+
+    {{#*inline "main-block"}}
+
+        {{#> sublayouts/grid1
+                id='introduction'
+        }}
+            {{> components/c001-basic-content
+                    heading-primary='7 to 70, well 70.3'
+                    heading-secondary='What am i doing?'
+                    body-content='
+                    <p>I will train for the next 7 months to enter a 70.3 half Ironman event in lovely Staffordshire and I plan to document everything as I go along, I also fully expect to get a flat tyre or forget a wetsuit and all this training will be for nothing.</p>
+                    <h3 class="mt-5">What is a half Ironman?</h3>
+                    <p>Well it consists of a <strong>1.2mile swim</strong>, a <strong>56mile bike ride</strong> and finishes with a <strong>13.1mile run</strong>, for a total of 70.3miles in distance.</p>
+                    <h3 class="mt-5">Why am i doing this?</h3>
+                    <p>You may be wondering why i am documenting this process and the simple reason is i am a bit of a neat freak (my life is a trello board) and i love data and training / competing in an event such as this can create lots of juicy data. My plan is to add a post every month detailing what training has been done, what improvements may have been made, what events have been entered etc. </p>
+                    '
+            }}
+        {{/sublayouts/grid1}}
+
+        {{#> sublayouts/grid-wide }}
+            {{#> sublayouts/grid-wide__col12 }}
+                {{#> components/c006-image-block }}
+                    {{> components/c006-image-block__point
+                            img-src='../../img/app/triathlon/training-turbo (7).jpg'
+                            img-alt='Turbo trainer'
+                    }}
+                    {{> components/c006-image-block__point
+                            img-src='../../img/app/triathlon/training-turbo (8).jpg'
+                            img-alt='Turbo trainer'
+                    }}
+                    {{> components/c006-image-block__point
+                            img-src='../../img/app/triathlon/training-turbo (9).jpg'
+                            img-alt='Turbo trainer'
+                    }}
+                    {{> components/c006-image-block__point
+                            img-src='../../img/app/triathlon/training-turbo (11).jpg'
+                            img-alt='Turbo trainer'
+                    }}
+                {{/components/c006-image-block}}
+            {{/sublayouts/grid-wide__col12 }}
+        {{/sublayouts/grid-wide}}
+
+{{!-- ------- --}}
+{{!-- DIVIDER --}}
+{{!-- ------- --}}
+{{> components/c004-divider }}
+
+        {{#> sublayouts/grid1
+                id='how'
+        }}
+            {{> components/c001-basic-content
+                    heading-primary='How to do it'
+                    heading-secondary='What do I want to achieve, what will the strategy be along the way and how will I measure improvements?'
+                    body-content='
+                    <h3 class="mt-5">The objective</h3>
+                    <p>To achieve a <strong>top 30%</strong> finish at Ironman 70.3 Staffordshire which means based on 2,222 people entering last time (2018) and therefore me wanting to achieve a position of 733rd or better I will need to better a time of <strong>05:46:27</strong> (2017 results would be 06:09:10).</p>
+                    <h3 class="mt-5">The strategy</h3>
+                    <p>My plan to get there follows 5 pretty simple ideas, lose weight, become better at cycling, get used to swimming and cycling longer and train over and over and over again.</p>
+                    <ol>
+                        <li><strong>Get lighter</strong> - Eat better and train harder</li>
+                        <li><strong>Gain power</strong> - With weight sessions at the gym</li>
+                        <li><strong>Swim further</strong> - With more pool and outdoor swim time</li>
+                        <li><strong>Cycle further</strong> - Do longer distances on the bike, both in the gym and outside</li>
+                        <li><strong>Train consistently</strong> - By joining running club, getting into the pool, biking more often</li>
+                    </ol>
+                    <p>By the way next to each of the 5 strategy items you will see a number, I will use this number in further updates on the site to highlight an event or training session or piece of data that will link back to this strategic element.</p>
+                    <h3 class="mt-5">KPI`s</h3>
+                    <p>My Key Performance Indicators will be values which will hopefully show improvement as I continue training, each should have some reason/logic behind why I think this specific piece of data will be worth knowing or monitoring.</p>
+
+                    <h6><strong>Weight</strong></h6>
+                    <p>The lighter I am the easier any running should be. <sup><span class="badge badge-info">1</span> <span class="badge badge-info">5</span></sup></p>
+
+                    <h6><strong>5km, 10km and half marathon personal bests</strong></h6>
+                    <p>Improving PB`s in these events will highlight improvements in fitness, technique etc but also show consistency in training as I don`t think improvements could be made without all three. <sup><span class="badge badge-info">1</span> <span class="badge badge-info">5</span></sup></p>
+
+                    <h6><strong>Average bike watts over specific routes</strong></h6>
+                    <p>This will show an increase in power and also potentially a reduction in weight, improving power to weight ratio, it will also highlight an improvement in training time and amount. <sup><span class="badge badge-info">2</span> <span class="badge badge-info">5</span></sup></p>
+
+                    <h6><strong>Longest swim distance</strong></h6>
+                    <p><sup><span class="badge badge-info">3</span> <span class="badge badge-info">5</span></sup></p>
+
+                    <h6><strong>Number of times I cycle 50miles</strong></h6>
+                    <p><sup><span class="badge badge-info">4</span> <span class="badge badge-info">5</span></sup></p>
+
+                    <h6><strong>Hours spent training</strong></h6>
+                    <p>Will track all 3 events, will highlight which event needs more training and where I may have failed to do enough training. <sup><span class="badge badge-info">5</span></sup></p>
+                    '
+                    }}
+                {{/sublayouts/grid1}}
+
+{{!-- ------- --}}
+{{!-- DIVIDER --}}
+{{!-- ------- --}}
+{{> components/c004-divider }}
+
+        {{#> sublayouts/grid1
+                id='kpi'
+        }}
+            {{> components/c001-basic-content
+                    heading-primary='Key performance indicators'
+                    heading-secondary='Main items to track and improve on during the training'
+                    body-content='
+                    <p>These details are what I believe are going to be the biggest indicators of performance for the 70.3 events, the longer the distance I can swim the better I should perform in the event, the higher my bike watts over specific distances should give me an idea of how I will do during the 56mile bike ride and the faster I get at running the easier and better I should be at the final half marathon.</p>
+                    '
+            }}
+        {{/sublayouts/grid1}}
+        {{#> sublayouts/grid-full class='container-training bg-alt1' }}
+            {{> components/c008-kpi }}
+        {{/sublayouts/grid-full}}
+
+{{!-- ------- --}}
+{{!-- DIVIDER --}}
+{{!-- ------- --}}
+{{> components/c004-divider }}
+
+        {{#> sublayouts/grid1
+                id='events'
+        }}
+            {{> components/c001-basic-content
+                    heading-primary='Events'
+                    heading-secondary='Timeline of events to enter and targets to hit'
+                    body-content='
+                    <p>A display of all the events I have entered or plan to enter and potential targets to hit for them, I will also note as part of this whether I achieved the target as well.</p>
+                    '
+            }}
+        {{/sublayouts/grid1}}
+        {{#> sublayouts/grid-full class='lines' }}
+            {{> components/c010-events }}
+        {{/sublayouts/grid-full}}
+
+{{!-- ------- --}}
+{{!-- DIVIDER --}}
+{{!-- ------- --}}
+{{> components/c004-divider }}
+
+        {{#> sublayouts/grid1
+                id='training'
+        }}
+            {{> components/c001-basic-content
+                    heading-primary='Training'
+                    heading-secondary='Up to the millisecond live data'
+                    body-content='
+                    <p>Totals across each discipline and training session across the whole training period (From the start of October). This section should clearly highlight my lowest trained area and I would expect the weakest event.</p>
+                    <p>I plan to replicate this section within each monthly update but with data specific to that time period, might highlight periods when I did less cycling if it snows a lot or maybe more swimming as it got warmer etc.</p>
+                    '
+            }}
+        {{/sublayouts/grid1}}
+        {{#> sublayouts/grid-full class='container-training bg-alt1' }}
+            {{> components/c009-training }}
+        {{/sublayouts/grid-full}}
+
+{{!-- ------- --}}
+{{!-- DIVIDER --}}
+{{!-- ------- --}}
+{{> components/c004-divider }}
+
+        {{#> sublayouts/grid1
+                id='journey'
+        }}
+            {{> components/c001-basic-content
+                    heading-primary='October'
+                    heading-secondary='The first month of training'
+                    body-content='
+                    <h3 class="mt-5">Summary</h3>
+                    <ul class="list-inline">
+                        <li class="list-inline-item">Herts 10km PB</li>
+                        <li class="list-inline-item">Watlington Sportive `Gold` star</li>
+                        <li class="list-inline-item">Lots of running club</li>
+                        <li class="list-inline-item">No swimming at all</li>
+                    </ul>
+                    <h3 class="mt-5">Details</h3>
+                    <p>This month was a mix of running and cycling training, for running we did the Herts 10km and got a new PB (<a href="https://resultsbase.net/results/2509878" title="Click here to leave this site and view Herts 10km result.">43mins 40seconds</a>) despite some rather annoying weather conditions. It rained pretty much non stop the day before and I`d read a review of the course beforehand which mentioned how difficult the route is when wet and muddy, we were very close to not running at all. Glad we did though as it was a massive event compared to some of the other 10kms I`ve run, also pleased that I managed to do a proper sprint finish.</p>
+                    <p>There was also the biweekly running club events, typically one is a technique session (hill sprints, cresting, intervals etc) and the other a longer run (have now joined group 2a as its better paced than much slower 2b).</p>
+                    <p>The cycling event was an Evans Cycles Sportive around Watlington, I chose to do the short route of 30miles as its the start of my cycling training and didn`t want to push it too far just yet, the course was also rated 4/5 for difficulty. Managed to get round in <a href="https://static.evanscycles.com/production/pdf-media/misc/2018-rideit-events/RIDE_IT_Watlington_18_Sportive_rider_times.pdf" title="Click here to leave this site and view Watlington Sportive result.">about 2hrs earning a `gold` star</a> for my average speed and also posted 2nd fastest overall time for this distance, so not a bad start.</p>
+                    <p>Unfortunately no swimming this month which isn`t good as it will be my weakest part of the event, I did do some research and found a 50m pool not too far away so I will hopefully start some training there soon.</p>
+                    '
+            }}
+        {{/sublayouts/grid1}}
+        {{#> sublayouts/grid-wide }}
+            {{#> sublayouts/grid-wide__col12 }}
+                {{#> components/c006-image-block }}
+                    {{> components/c006-image-block__point
+                            img-src='../../img/app/triathlon/herts-10km-me.jpg'
+                            img-alt='Herts 10km'
+                    }}
+                    {{> components/c006-image-block__point
+                            img-src='../../img/app/triathlon/herts-10km-me2.jpg'
+                            img-alt='Herts 10km'
+                    }}
+                    {{> components/c006-image-block__point
+                            img-src='../../img/app/triathlon/gym1.gif'
+                            img-alt='Me at the gym'
+                    }}
+                    {{> components/c006-image-block__point
+                            img-src='../../img/app/triathlon/herts-10km-route.jpg'
+                            img-alt='Herts 10km route'
+                    }}
+                    {{> components/c006-image-block__point
+                            img-src='../../img/app/triathlon/herts-10km-me1.jpg'
+                            img-alt='Herts 10km'
+                    }}
+                    {{> components/c006-image-block__point
+                            img-src='../../img/app/triathlon/watlington-sportive1.jpg'
+                            img-alt='Watlington Sportive'
+                    }}
+                    {{> components/c006-image-block__point
+                            img-src='../../img/app/triathlon/watlington-sportive3.jpg'
+                            img-alt='Watlington Sportive'
+                    }}
+                {{/components/c006-image-block}}
+            {{/sublayouts/grid-wide__col12 }}
+        {{/sublayouts/grid-wide}}
+
+{{!-- ------- --}}
+{{!-- DIVIDER --}}
+{{!-- ------- --}}
+{{> components/c004-divider }}
+
+        {{#> sublayouts/grid-wide }}
+            {{#> sublayouts/grid-wide__col12 }}
+                {{> components/c005-blockquote
+                        body='Never do legs the day before a cycling session'
+                        source-name='Me'
+                        source-location='During November training'
+                }}
+            {{/sublayouts/grid-wide__col12 }}
+        {{/sublayouts/grid-wide}}
+
+{{!-- ------- --}}
+{{!-- DIVIDER --}}
+{{!-- ------- --}}
+{{> components/c004-divider }}
+
+        {{#> sublayouts/grid1
+                id=''
+        }}
+            {{> components/c001-basic-content
+                    heading-primary='November'
+                    heading-secondary='Ramblings for the month'
+                    body-content='
+                    <h3 class="mt-5">Summary</h3>
+                    <ul class="list-inline">
+                        <li class="list-inline-item">MoRun with new pb</li>
+                        <li class="list-inline-item">Cycling watt improvement</li>
+                        <li class="list-inline-item">Cycling distance improvement</li>
+                        <li class="list-inline-item">Hatfield 5 pb</li>
+                        <li class="list-inline-item">Managed some swimming</li>
+                        <li class="list-inline-item">Need for more structured training</li>
+                    </ul>
+                    <h3 class="mt-5">Details</h3>
+                    <p>This month consisted of a couple of running events, some cycling training and finally some swimming. The two running events went very well with a PB in both, the Morun 10km which actually turned out to be closer to 11km was good fun, as always an undulating route with a lot of sharp corners so potentially could have been even better. Following this was the Hatfield 5 which is a club championship event and seems to be for a lot of other clubs as well (so there are lots of very fast runners), this felt a lot harder even though it was shorter but looking back its essentially a very long `short race`, you need to maintain a 5k`ish pace for 8km whereas when you go for a 10km event you tend to slow down overall. </p>
+                    <p>Also this month i managed to do a much longer bike ride of 35mile, it started off with a similar route to my 20miler and joined back up to it later but overall I found it very hard, the start is actually really fun after the first hill as its all slightly downhill on country lanes but as soon as the climb to Whipsnade starts it feels like it never ends and then it just gets worse as you hit Ashridge.</p>
+                    <p>Finally this month i managed to get some swimming in, I still struggle with this in even basic way, ask me to swim 25m as fast as possible and I can do it very quickly, ask me to do 4 lengths in a row and I nearly drown, its because of this I have decided to try and stagger my training with this which will be detailed in another section.</p>
+                    '
+            }}
+        {{/sublayouts/grid1}}
+        {{#> sublayouts/grid-wide }}
+            {{#> sublayouts/grid-wide__col12 }}
+                {{#> components/c006-image-block }}
+                    {{> components/c006-image-block__point
+                            img-src='../../img/app/triathlon/gadgets.jpg'
+                            img-alt='Trackers'
+                    }}
+                    {{> components/c006-image-block__point
+                            img-src='../../img/app/triathlon/training.jpg'
+                            img-alt='Training'
+                    }}
+                    {{> components/c006-image-block__point
+                            img-src='../../img/app/triathlon/morun-10km-start.jpg'
+                            img-alt='MoRun'
+                    }}
+                    {{> components/c006-image-block__point
+                            img-src='../../img/app/triathlon/morun-10km-end.jpg'
+                            img-alt='MoRun'
+                    }}
+                    {{> components/c006-image-block__point
+                            img-src='../../img/app/triathlon/morun-10km-middle.jpg'
+                            img-alt='MoRun'
+                    }}
+                    {{> components/c006-image-block__point
+                            img-src='../../img/app/triathlon/hatfield5-end.jpg'
+                            img-alt='Hatfield 5'
+                    }}
+                {{/components/c006-image-block}}
+            {{/sublayouts/grid-wide__col12 }}
+        {{/sublayouts/grid-wide}}
+
+{{!-- ------- --}}
+{{!-- DIVIDER --}}
+{{!-- ------- --}}
+{{> components/c004-divider }}
+
+        {{#> sublayouts/grid1
+                id=''
+        }}
+            {{> components/c001-basic-content
+                    heading-primary='December'
+                    heading-secondary='Making progress'
+                    body-content='
+                    <h3 class="mt-5">Summary</h3>
+                    <ul class="list-inline">
+                        <li class="list-inline-item">Cross country</li>
+                        <li class="list-inline-item">Ashridge duathlon training</li>
+                        <li class="list-inline-item">Milton Keynes half</li>
+                        <li class="list-inline-item">Lots of swimming</li>
+                    </ul>
+                    <h3 class="mt-5">Details</h3>
+                    <p>Bit of a mixed bag this month, tried the club Cross Country event and found it particularly hard, it was just over 9km in very wet and muddy conditions and a b***ch of a hill at the end, probably didn`t help that I`d done a long swim training session that morning though.</p>
+                    <p>A real positive for the month though was that I finally seemed to make some progress with my swimming, especially with the breathing technique, I also completely changed my overall technique after speaking to people at the club, I`m glad I did this quite early before bad habits really started to stick. I now breathe on every rotation, use big swings with my arms and can finally do some really long distance 1000m + in one go, albeit rather slow.</p>
+                    <p>I also set a massive PB for the half marathon, knocking around 10mins off my time, although my first half was St Albans (which is hilly) and this one was a much flatter run, I also paced myself very well, beating my target by only 9 seconds so I should be able to pace myself slightly faster for next event (my last KM at Milton Keynes was actually my fastest so I know I took it `easy`).</p>
+                    '
+            }}
+        {{/sublayouts/grid1}}
+        {{#> sublayouts/grid-wide }}
+            {{#> sublayouts/grid-wide__col12 }}
+                {{#> components/c006-image-block }}
+                    {{> components/c006-image-block__point
+                            img-src='../../img/app/triathlon/mk-winter-half-5.jpg'
+                            img-alt='Milton Keynes Winter Half'
+                    }}
+                    {{> components/c006-image-block__point
+                            img-src='../../img/app/triathlon/luton-xc1.jpg'
+                            img-alt='Luton cross country'
+                    }}
+                    {{> components/c006-image-block__point
+                            img-src='../../img/app/triathlon/mk-winter-half-1.jpg'
+                            img-alt='Milton Keynes Winter Half'
+                    }}
+                    {{> components/c006-image-block__point
+                            img-src='../../img/app/triathlon/mk-winter-half-2.jpg'
+                            img-alt='Milton Keynes Winter Half'
+                    }}
+                    {{> components/c006-image-block__point
+                            img-src='../../img/app/triathlon/mk-winter-half-3.jpg'
+                            img-alt='Milton Keynes Winter Half'
+                    }}
+                    {{> components/c006-image-block__point
+                            img-src='../../img/app/triathlon/mk-winter-half-4.jpg'
+                            img-alt='Milton Keynes Winter Half'
+                    }}
+                    {{> components/c006-image-block__point
+                            img-src='../../img/app/triathlon/ashridge-training.gif'
+                            img-alt='ashridge'
+                    }}
+                    {{> components/c006-image-block__point
+                            img-src='../../img/app/triathlon/ashridge-training-2.jpg'
+                            img-alt='ashridge'
+                    }}
+                {{/components/c006-image-block}}
+            {{/sublayouts/grid-wide__col12 }}
+        {{/sublayouts/grid-wide}}
+
+
+
+{{!-- ------- --}}
+{{!-- DIVIDER --}}
+{{!-- ------- --}}
+{{> components/c004-divider }}
+
+
+        {{#> sublayouts/grid1
+                id=''
+        }}
+            {{> components/c001-basic-content
+                    heading-primary='January'
+                    heading-secondary='???'
+                    body-content='
+                    <h3 class="mt-5">Summary</h3>
+                    <ul class="list-inline">
+                        <li class="list-inline-item">Lots of swimming</li>
+                        <li class="list-inline-item">Ashridge Duathlon</li>
+                        <li class="list-inline-item">Cross country again</li>
+                        <li class="list-inline-item">Dorney lake half</li>
+                    </ul>
+                    <h3 class="mt-5">Details</h3>
+                    <p>Coming soon...</p>
+
+                    '
+            }}
+        {{/sublayouts/grid1}}
+        {{#> sublayouts/grid-wide }}
+            {{#> sublayouts/grid-wide__col12 }}
+                {{#> components/c006-image-block }}
+                    {{> components/c006-image-block__point
+                            img-src='../../img/app/triathlon/ashridge (1).jpg'
+                            img-alt='Ashridge duathlon'
+                    }}
+                    {{> components/c006-image-block__point
+                            img-src='../../img/app/triathlon/ashridge (2).jpg'
+                            img-alt='Ashridge duathlon'
+                    }}
+                    {{> components/c006-image-block__point
+                            img-src='../../img/app/triathlon/ashridge (3).jpg'
+                            img-alt='Ashridge duathlon'
+                    }}
+                    {{> components/c006-image-block__point
+                            img-src='../../img/app/triathlon/ashridge (4).jpg'
+                            img-alt='Ashridge duathlon'
+                    }}
+                    {{> components/c006-image-block__point
+                            img-src='../../img/app/triathlon/ashridge (5).jpg'
+                            img-alt='Ashridge duathlon'
+                    }}
+                    {{> components/c006-image-block__point
+                            img-src='../../img/app/triathlon/keysoe-xc-(1).jpg'
+                            img-alt='Keysoe Cross Country'
+                    }}
+                    {{> components/c006-image-block__point
+                            img-src='../../img/app/triathlon/keysoe-xc-(2).jpg'
+                            img-alt='Keysoe Cross Country'
+                    }}
+                {{/components/c006-image-block}}
+            {{/sublayouts/grid-wide__col12 }}
+        {{/sublayouts/grid-wide}}
+
+
+{{!-- ------- --}}
+{{!-- DIVIDER --}}
+{{!-- ------- --}}
+{{> components/c004-divider }}
+
+        {{> components/c011-modal
+                modal-id='tech-modal'
+                modal-heading='Under the hood'
+                modal-body='
+                <h6><strong>Markup</strong></h6>
+                <p>A mix of flat HTML and <a href="https://handlebarsjs.com/">Handlebars</a> partials, Handlebars allow for better reuse of code through templating.</p>
+                <h6><strong>Styles</strong></h6>
+                <p><a href="https://getbootstrap.com/">Bootstrap</a> with <a href="https://mdbootstrap.com">mdbootstrap</a> theme on top and then further expanded with my own bespoke styling.</p>
+                <h6><strong>JS</strong></h6>
+                <p>Use of <a href="https://jquery.com/">jQuery</a> and vanilla JS, also use of some libraries such as <a href="https://github.com/verlok/lazyload">lazyload.js</a> and <a href="https://wowjs.uk/">wow.js</a>.</p>
+                <h6><strong>Data</strong></h6>
+                <p>Most content is inline but specific data points are being pulled from my Strava account, I recieve the data in json format and then perfom a number of JS functions before appending to the page.</p>
+                <h6><strong>Imagery</strong></h6>
+                <p>Images have been cropped or resized to specific dimensions, they have been saved as .jpg, optimised using <a href="https://tinypng.com/">tinypng</a> and then I am lazyloading them in to reduce page weight.</p>
+                <h6><strong>Other</strong></h6>
+                <p>Main framework is <a href="https://mdbootstrap.com">mdbootstrap</a> to speed up build. <a href="https://gulpjs.com/">Gulp</a> has been used for task automation and <a href="https://git-scm.com/">Git</a> with <a href="https://github.com/">Github</a> is being used for version control and backup.</p>
+                '
+        }}
+
+            {{/inline}}
+
+            {{#*inline "footer-block"}}
+                {{> components/footer
+                        body-content='
+                        <ul class="list-inline my-0">
+                            <li class="list-inline-item"><a href="../index.html">Home</a></li>
+                            <li class="list-inline-item"><a href="triathlon.html"><strong>Triathlon</strong></a></li>
+                            <li class="list-inline-item"><a href="triathlon-data.html">Data</a></li>
+                        </ul>
+                        '
+        }}
+    {{/inline}}
+
+{{/layouts/base}}

@@ -1,0 +1,36 @@
+{{!-- components/c002-image-content-cta.hbs --}}
+
+<!-- COMPONENT START -->
+<section class="container-fluid c002-image-content-cta" id="{{id}}">
+    <div class="row">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+                    <div class="c002-image-content-cta__image {{img1-class}}"><img class="lazy" data-src="{{img1-url}}" alt="{{img1-alt}}"></div>
+                    <h3 class="h3-responsive">{{heading-primary}}</h3>
+                    <h4 class="h4-responsive">{{heading-secondary}}</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{#if img2-url}}
+    <div class="row c002-image-content-cta__background py-5 mb-5">
+        <div class="col-12 col-md-8 offset-md-2 text-center">
+            <img class="img-fluid rounded z-depth-2 lazy" data-src="{{img2-url}}" alt="{{img2-alt}}">
+        </div>
+    </div>
+    {{/if}}
+    <div class="row">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+                    {{{body-content}}}
+                    {{#if cta-link}}
+                    <div class="c002-image-content-cta__button"><a href="{{cta-link}}" class="btn btn-outline-dark waves-effect" title="{{cta-title}}">{{cta-text}} <i class="fa fa-arrow-right"></i></a></div>
+                    {{/if}}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- COMPONENT END -->

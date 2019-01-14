@@ -1,0 +1,496 @@
+{{!-- pages/general/cv-flat.hbs --}}
+
+{{#> layouts/base title="Benjamin Kenny - Front End Web Developer CV" }}
+
+    {{#*inline "header-block"}}
+        {{#> components/header
+                brand='BPK'
+                show-tech=true
+                show-tech-target='#tech-modal'
+        }}
+            {{> components/header__point
+                    point-title='Introduction'
+                    point-href='introduction'
+            }}
+            {{> components/header__point
+                    point-title='Skills'
+                    point-href='skills'
+            }}
+            {{> components/header__point
+                    point-title='Clients'
+                    point-href='clients'
+            }}
+            {{> components/header__point
+                    point-title='Projects'
+                    point-href='projects'
+            }}
+            {{> components/header__point
+                    point-title='Education'
+                    point-href='education'
+            }}
+            {{> components/header__point
+                    point-title='Other'
+                    point-href='other'
+            }}
+        {{/components/header}}
+    {{/inline}}
+
+    {{#*inline "main-block"}}
+
+        {{#> sublayouts/grid1
+                id='introduction'
+        }}
+            {{> components/c001-basic-content
+                    heading-primary='Benjamin Kenny'
+                    heading-secondary='Front End Web Developer'
+                    body-content='
+                    <p><span class="badge badge-pill badge-success">Available Jan 2019</span></p>
+                    <h3 class="mt-5 h3-responsive">Recently</h3>
+                    <p>My most recent role involved building <strong>responsive</strong> components and templates for Sitecore CMS using markup templating for <strong>HTML</strong> markup, SASS for <strong>CSS</strong> styling with <strong>Grunt</strong> for task automation, built upon <strong>Foundation framework</strong> and a mix of vanilla <strong>Javascript</strong> and <strong>Jquery</strong>, all within an <strong>Agile</strong> working environment.</p>
+                    <h3 class="mt-5 h3-responsive">About me</h3>
+                    <p>I am a Front End Web Developer with a BSc in Information Systems with Multimedia from the University of Central England. I have over <strong>12 years of development experience</strong>, with a mix of permanent roles and contract work.</p>
+                    <p>Easy to work with, laid back and can get along with anyone, hardworking, motivated and capable of working alone (projects whilst at <a href="#proj-cashplus">Cashplus</a>) or as part of a wider team (worked on numerous projects with BA’s, PM’s, DOT NETTER’s and Designers across <a href="#proj-icaew">ICAEW</a> and <a href="#proj-homeserveusa">HomeServe</a> such as Sitecore migration projects for USA and Spain).</p>
+                    <h3 class="mt-5 h3-responsive">Get in touch</h3>
+                    <ul class="">
+                        <li class=""><a href="mailto:ehhwhat@gmail.com" title="Email me at ehhwhat@gmail.com">ehhwhat@gmail.com</a></li>
+                        <li class=""><a href="http://www.ehhwhat.co.uk" title="View my portfolio website at http://www.ehhwhat.co.uk">http://www.ehhwhat.co.uk</a></li>
+                        <li class=""><a href="https://www.linkedin.com/in/ben-kenny-dev/" title="View my LinkedIn profile">LinkedIn profile</a></li>
+                    </ul>
+                '
+            }}
+        {{/sublayouts/grid1}}
+
+{{!-- ------- --}}
+{{!-- DIVIDER --}}
+{{!-- ------- --}}
+{{> components/c004-divider }}
+
+        {{#> sublayouts/grid1
+                id='skills'
+        }}
+            {{> components/c001-basic-content
+                heading-primary='Skills'
+                heading-secondary='Technologies, techniques and languages I have experience of or have built my career around'
+                body-content='
+                <h3 class="mt-5 h3-responsive">Primary</h3>
+                <p>Core skills used on a daily basis over a good 12 year career.</p>
+                <ul class="">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JS</li>
+                    <li>jQuery</li>
+                    <li>Photoshop</li>
+                    <li>Git</li>
+                    <li>GitHub</li>
+                    <li>Content Management Systems</li>
+                    <li>Testing, browser and device</li>
+                    <li>Responsive approaches</li>
+                    <li>Frameworks</li>
+                </ul>
+                <h3 class="mt-5 h3-responsive">Secondary</h3>
+                <p>Skills used but not very regularly, maybe in a personal project or through my own learning.</p>
+                <ul class="">
+                    <li>HandlebarsJS</li>
+                    <li>React</li>
+                    <li>Angular</li>
+                    <li>Grunt</li>
+                    <li>Gulp</li>
+                    <li>NodeJS</li>
+                    <li>SVN</li>
+                    <li>DotNet integration</li>
+                    <li>Wordpress</li>
+                </ul>
+                <h3 class="mt-5 h3-responsive">Worked with</h3>
+                <p>Skills / software used / techniques used / familiar with.</p>
+                <ul class="">
+                    <li>Agile</li>
+                    <li>Scrum</li>
+                    <li>Kanban</li>
+                    <li>Jira</li>
+                    <li>Confluence</li>
+                    <li>Sitecore</li>
+                    <li>Oracle UCM</li>
+                    <li>TFS</li>
+                </ul>
+                '
+            }}
+        {{/sublayouts/grid1}}
+
+{{!-- ------- --}}
+{{!-- DIVIDER --}}
+{{!-- ------- --}}
+{{> components/c004-divider }}
+
+        {{#> sublayouts/grid1
+                id='clients'
+        }}
+            {{#> components/c003-stepper
+                    heading-primary='Clients'
+                    heading-secondary='Companies I`ve worked with previously'
+            }}
+                {{> components/c003-stepper__point
+                        point-title='ICAEW'
+                        point-date='Aug 2018 - Dec 2018'
+                        point-icon='fa-map-marker'
+                        point-status='bg-info'
+                        point-href='#proj-icaew'
+                }}
+                {{> components/c003-stepper__point
+                        point-title='Cashplus'
+                        point-date='Mar 2018 - Aug 2018'
+                        point-icon='fa-check'
+                        point-status='bg-success'
+                        point-href='#proj-cashplus'
+                }}
+                {{> components/c003-stepper__point
+                        point-title='Homeserve PLC'
+                        point-date='Apr 2016 - Dec 2017'
+                        point-icon='fa-check'
+                        point-status='bg-success'
+                        point-href='#proj-homeserveusa'
+                }}
+                {{> components/c003-stepper__point
+                        point-title='Homeserve HML'
+                        point-date='Apr 2014 - Apr 2016'
+                        point-icon='fa-check'
+                        point-status='bg-success'
+                        point-href='#proj-homeserve'
+                }}
+                {{> components/c003-stepper__point
+                        point-title='Npower'
+                        point-date='2007 - Apr 2014'
+                        point-icon='fa-check'
+                        point-status='bg-success'
+                        point-href='#proj-npower'
+                }}
+            {{/components/c003-stepper}}
+        {{/sublayouts/grid1}}
+
+{{!-- ------- --}}
+{{!-- DIVIDER --}}
+{{!-- ------- --}}
+{{> components/c004-divider }}
+
+        {{#> sublayouts/grid1
+                id='projects'
+        }}
+            {{> components/c001-basic-content
+                    heading-primary='Projects'
+                    heading-secondary='Examples of work I`ve been involved in'
+            }}
+        {{/sublayouts/grid1}}
+
+        {{> components/c002-image-content-cta
+            id='proj-icaew'
+            img1-url='https://drive.google.com/uc?export=view&id=1NGo5RiR2pa2VOnQhLVUQhzUpYgO8pWip'
+            img1-alt='ICAEW'
+            img1-class='c002-image-content-cta__image--vertical'
+            heading-primary='ICAEW'
+            heading-secondary='Universal Header'
+            img2-url='https://drive.google.com/uc?export=view&id=1mfLY3FdCZVvybNTuLqfUpruBeyyF6mi8'
+            img2-alt='Universal Header'
+            body-content='
+                <p>The purpose of this project was to realign the header across all ICAEW website so that to a user browsing between them they never felt like they had left ICAEW (currently not the case), this was a huge task as there are multiple websites run by ICAEW with their own branding, there are website outside of the CMS and there are externally hosted and controlled websites as well. This meant we would have the CMS build, a flat /static build for none CMS sites and another potentially stripped down version depending on what the externally controlled sites could support.</p>
+                <h6><strong>My role:</strong></h6>
+                <p>My role was to build the ‘dropdown’ sections of the Universal Header and all the possible content modules that could be added inside, images, text, links, buttons, search bars etc all had to be accommodated and work across Large and Medium viewports. Work was done with HTML, SCSS and JS for various user interactions and effects.</p>
+                <h6><strong>Tech used:</strong></h6>
+                <ul class="list-inline">
+                    <li class="list-inline-item">HTML</li>
+                    <li class="list-inline-item">SCSS</li>
+                    <li class="list-inline-item">JS and Jquery</li>
+                    <li class="list-inline-item">TFS</li>
+                    <li class="list-inline-item">BEM methodology</li>
+                    <li class="list-inline-item">Grunt</li>
+                    <li class="list-inline-item">Foundation</li>
+                    <li class="list-inline-item">Agile</li>
+                </ul>
+                <h6><strong>Location:</strong></h6>
+                <p>2018 | Milton Keynes</p>
+            '
+            cta-link='http://www.icaew.com'
+            cta-text='View ICAEW site'
+            cta-title='View ICAEW site'
+        }}
+
+        {{> components/c002-image-content-cta
+                id=''
+                img1-url='https://drive.google.com/uc?export=view&id=1NGo5RiR2pa2VOnQhLVUQhzUpYgO8pWip'
+                img1-alt='ICAEW'
+                img1-class='c002-image-content-cta__image--vertical'
+                heading-primary='ICAEW'
+                heading-secondary='Universal Search'
+                img2-url='https://drive.google.com/uc?export=view&id=1u9o4yqrAk_IdecFvqMFztyWOnTkrATSS'
+                img2-alt='Universal Search'
+                body-content='
+                <p>The ICAEW team was moving to a new search platform called Coveo which was built to be powered by AI. The project was to implement this across the whole of the ICAEW estate which involved a new search results page and a new journey for users to get there. As there was an issue with timings before the previous search expired and for the dev to be finished on new Coveo search we also designed and built an MVP version and a Google Custom Site Search implementation.</p>
+                <h6><strong>My role:</strong></h6>
+                <p>My role throughout all of this was to first create the HTML and SCSS for the MVP solution, moving then onto a reskin of the GCSE and then finally onto the Coveo build.</p>
+                <h6><strong>Tech used:</strong></h6>
+                <ul class="list-inline">
+                    <li class="list-inline-item">HTML</li>
+                    <li class="list-inline-item">SCSS</li>
+                    <li class="list-inline-item">JS and Jquery</li>
+                    <li class="list-inline-item">TFS</li>
+                    <li class="list-inline-item">BEM methodology</li>
+                    <li class="list-inline-item">Grunt</li>
+                    <li class="list-inline-item">Foundation</li>
+                    <li class="list-inline-item">Agile</li>
+                </ul>
+                <h6><strong>Location:</strong></h6>
+                <p>2018 | Milton Keynes</p>
+            '
+                cta-link='http://www.icaew.com/search'
+                cta-text='View ICAEW search'
+                cta-title='View ICAEW search'
+        }}
+
+        {{> components/c002-image-content-cta
+                id='proj-cashplus'
+                img1-url='https://drive.google.com/uc?export=view&id=19c4YhVwWcl364bPujF-fRqdPdz8fKt7M'
+                img1-alt='Cashplus'
+                img1-class=''
+                heading-primary='Cashplus'
+                heading-secondary='Partner Portal'
+                body-content='
+                <p>Built basic HTML and CSS Front End UI for Partner Portal, a sort of microsite within the main website. User journey included logging in, viewing statements, uploading data etc.</p>
+                <h6><strong>Tech used:</strong></h6>
+                <ul class="list-inline">
+                    <li class="list-inline-item">HTML</li>
+                    <li class="list-inline-item">LESS</li>
+                    <li class="list-inline-item">SVN</li>
+                    <li class="list-inline-item">Bootstrap</li>
+                    <li class="list-inline-item">Agile</li>
+                </ul>
+                <h6><strong>Location:</strong></h6>
+                <p>2018 | London - London Bridge</p>
+            '
+        }}
+
+        {{> components/c002-image-content-cta
+                id=''
+                img1-url='https://drive.google.com/uc?export=view&id=19c4YhVwWcl364bPujF-fRqdPdz8fKt7M'
+                img1-alt='Cashplus'
+                img1-class=''
+                heading-primary='Cashplus'
+                heading-secondary='Transaction Enrichment'
+                body-content='
+                <p>Built Front End UI for Transaction Enrichment. The project aim was to create an improved view of transactions which included more merchant data, categorisation, tagging, spending insights etc.</p>
+                <h6><strong>My role:</strong></h6>
+                <p>My role was to take the existing Front End for the less rich versions of these pages (statements and details) and add new markup and styles to accommodate the new and improved data we would be showing. A whole new UI for details was needed as well as new pages for Categorisation Management and Spending Insights.</p>
+                <h6><strong>Tech used:</strong></h6>
+                <ul class="list-inline">
+                    <li class="list-inline-item">HTML</li>
+                    <li class="list-inline-item">LESS</li>
+                    <li class="list-inline-item">SVN</li>
+                    <li class="list-inline-item">Bootstrap</li>
+                    <li class="list-inline-item">Agile</li>
+                </ul>
+                <h6><strong>Location:</strong></h6>
+                <p>2018 | London - London Bridge</p>
+            '
+        }}
+
+        {{> components/c002-image-content-cta
+                id='proj-homeserveusa'
+                img1-url='https://drive.google.com/uc?export=view&id=1KgAjwwfOqA2keLSLn264qdeswBHYj8Wf'
+                img1-alt='Homeserve PLC'
+                img1-class=''
+                heading-primary='Homeserve PLC'
+                heading-secondary='USA Sitecore Migration'
+                body-content='
+                <p>Worked on the USA CMS migration as a member of the Global Digital and Technology team, responsibilities ranged from Front End Web Development (using Handlebars.JS and SASS, JS) to identifying new components to be built in Sitecore CMS, management of own workload using Jira and creating documentation for other developers in Confluence.</p>
+                <h6><strong>Tech used:</strong></h6>
+                <ul class="list-inline">
+                    <li class="list-inline-item">HTML</li>
+                    <li class="list-inline-item">SCSS</li>
+                    <li class="list-inline-item">JS and Jquery</li>
+                    <li class="list-inline-item">GIT and Github</li>
+                    <li class="list-inline-item">Bootstrap</li>
+                    <li class="list-inline-item">Grunt</li>
+                    <li class="list-inline-item">Agile</li>
+                </ul>
+                <h6><strong>Location:</strong></h6>
+                <p>2017 | London - Kings Cross</p>
+            '
+                cta-link='http://www.homeserveusa.com'
+                cta-text='View Homeserve USA'
+                cta-title='View Homeserve USA'
+        }}
+
+        {{> components/c002-image-content-cta
+                id=''
+                img1-url='https://drive.google.com/uc?export=view&id=1KgAjwwfOqA2keLSLn264qdeswBHYj8Wf'
+                img1-alt='Homeserve PLC'
+                img1-class=''
+                heading-primary='Homeserve PLC'
+                heading-secondary='Spain Sitecore Migration'
+                body-content='
+                <p>Worked on the Spain CMS migration project as Front End Lead, liaising with an offshore Spanish development team, ensuring they stuck to style guide and development practices. Also created a number of reusable components, templates, modules etc.</p>
+                <h6><strong>Tech used:</strong></h6>
+                <ul class="list-inline">
+                    <li class="list-inline-item">HTML</li>
+                    <li class="list-inline-item">SCSS</li>
+                    <li class="list-inline-item">JS and Jquery</li>
+                    <li class="list-inline-item">GIT and Github</li>
+                    <li class="list-inline-item">Bootstrap</li>
+                    <li class="list-inline-item">Grunt</li>
+                    <li class="list-inline-item">Agile</li>
+                </ul>
+                <h6><strong>Location:</strong></h6>
+                <p>2017 | London - Kings Cross</p>
+            '
+                cta-link='http://www.homeserve.es'
+                cta-text='View Homeserve Spain'
+                cta-title='View Homeserve Spain'
+        }}
+
+        {{> components/c002-image-content-cta
+                id='proj-homeserve'
+                img1-url='https://drive.google.com/uc?export=view&id=1Q6HFGqRXsF-O0Hw3_i1NC8Fw3svhqJeb'
+                img1-alt='Homeserve HML'
+                img1-class=''
+                heading-primary='Homeserve HML'
+                heading-secondary='Make a claim, intranet, homepage'
+                body-content='
+                <p>Designed and built a number of responsive applications whilst at Homeserve, Make a claim online, a new intranet as well as a new homepage for the customer-facing website. All fully responsive and mobile first. I also created a style guide for the website going forward which can be used by other developers or external agencies. The team worked as Agile in two-week iterations.</p>
+                <h6><strong>Tech used:</strong></h6>
+                <ul class="list-inline">
+                    <li class="list-inline-item">HTML</li>
+                    <li class="list-inline-item">SCSS</li>
+                    <li class="list-inline-item">JS and Jquery</li>
+                    <li class="list-inline-item">Bootstrap</li>
+                    <li class="list-inline-item">Grunt</li>
+                    <li class="list-inline-item">Agile</li>
+                    <li class="list-inline-item">Sitecore integration</li>
+                </ul>
+                <h6><strong>Key projects:</strong></h6>
+                <ul class="">
+                    <li class="">Make a claim online</li>
+                    <li class="">App views of existing journeys</li>
+                    <li class="">Style guide with accessibility guidelines</li>
+                    <li class="">Online renewals</li>
+                    <li class="">Responsive homepage</li>
+                    <li class="">New intranet</li>
+                    <li class="">Customer hub</li>
+                </ul>
+                <h6><strong>Location:</strong></h6>
+                <p>2014 - 2016 | Birmingham</p>
+            '
+                cta-link='http://www.homeserve.com'
+                cta-text='View Homeserve UK'
+                cta-title='View Homeserve UK'
+        }}
+
+        {{> components/c002-image-content-cta
+                id='proj-npower'
+                img1-url='https://drive.google.com/uc?export=view&id=1gc44aH1H7tE5BYHcE8hX4zvBpEVq2olT'
+                img1-alt='Npower'
+                img1-class=''
+                heading-primary='Npower'
+                heading-secondary='Complete rebuilds, microsites, internal work allocation system, emails, knowledge base and more'
+                body-content='
+                <p>Recoded most of the npower.com website, built templates not only for developer use but also for business owners to contribute content. Created microsites, worked on responsive templates, mobile-only layouts, implemented a knowledge base system which was then also used for live chat functionality across npower.com. </p>
+                <p>I was also solely responsible for the setting up of the Operations workflow system for any business as usual requests, this was done through an existing tool called RightNow. Required the development of workspaces, workflows, admin and end-user accounts, custom rules, custom email, custom look and feel. It was very well received by the senior management team and is now being used by multiple teams across the Digital department.</p>
+                <p>Other responsibilities as Senior were to report on KPI data and other useful team information as well as distribute work throughout the team, both to Front End Developer and Back End Developers (All done using the workflow system I created).</p>
+                <h6><strong>Tech used:</strong></h6>
+                <ul class="list-inline">
+                    <li class="list-inline-item">HTML</li>
+                    <li class="list-inline-item">SCSS</li>
+                    <li class="list-inline-item">JS and Jquery</li>
+                    <li class="list-inline-item">Oracle UCM integration</li>
+                </ul>
+                <h6><strong>Key projects:</strong></h6>
+                <ul class="">
+                    <li class="">Data dashboard</li>
+                    <li class="">Industrial and commercial microsite</li>
+                    <li class="">Energy debate</li>
+                    <li class="">npower.com rebuild</li>
+                    <li class="">RightNow integration and admin</li>
+                </ul>
+                <h6><strong>Location:</strong></h6>
+                <p>2007 - 2014 | Worcester</p>
+            '
+                cta-link='http://www.npower.com'
+                cta-text='View npower'
+                cta-title='View npower'
+        }}
+
+{{!-- ------- --}}
+{{!-- DIVIDER --}}
+{{!-- ------- --}}
+{{> components/c004-divider }}
+
+        {{#> sublayouts/grid1
+                id='education'
+        }}
+            {{> components/c001-basic-content
+                heading-primary='Education'
+                heading-secondary='GCSE to Degree level'
+                body-content='
+                <h3 class="mt-5 h3-responsive">Birmingham City University</h3>
+                <p>BSc Information systems with Multimedia. Grade 1st. 2004 - 2007.</p>
+                <h3 class="mt-5 h3-responsive">South Bromsgrove 6th Form</h3>
+                <p>4 A-Levels. Grades B (I.T) C (Business studies) C (Product design) D (General studies).</p>
+                <h3 class="mt-5 h3-responsive">South Bromsgrove High School</h3>
+                <p>11 GCSE`s. Grades B - D.</p>
+                '
+            }}
+        {{/sublayouts/grid1}}
+
+{{!-- ------- --}}
+{{!-- DIVIDER --}}
+{{!-- ------- --}}
+{{> components/c004-divider }}
+
+        {{#> sublayouts/grid1
+                id='other'
+        }}
+            {{> components/c001-basic-content
+                heading-primary='Other'
+                heading-secondary='What I get up to outside of web development'
+                body-content='
+                <h3 class="mt-5 h3-responsive">Interests</h3>
+                <p>I am rather obsessed with exercising and doing any kind of activity whether that`s the gym, football, cycling or golf. I am also a member of a running club and have started doing triathlons and am working towards my first Ironman 70.3 event. During the working commute, I tend to read quite a lot and focus on either science fiction books (lots of Philip K Dick, big fan of 1984, Fahrenheit 451 etc) or ancient history ones (Rome, the Greek gods etc).</p>
+                <h3 class="mt-5 h3-responsive">Blog</h3>
+                <p>I also maintain my own personal website showcasing my work and occasionally writing the odd development based blog post which you can find here <a href="http://www.ehhwhat.co.uk">http://www.ehhwhat.co.uk</a>, where I tend to write about recent project work or smaller personal projects.</p>
+                '
+            }}
+        {{/sublayouts/grid1}}
+
+{{!-- ------- --}}
+{{!-- DIVIDER --}}
+{{!-- ------- --}}
+{{> components/c004-divider }}
+
+        {{> components/c011-modal
+                modal-id='tech-modal'
+                modal-heading='Under the hood'
+                modal-body='
+                <h6><strong>Markup</strong></h6>
+                <p>A mix of flat HTML and <a href="https://handlebarsjs.com/">Handlebars</a> partials, Handlebars allow for better reuse of code through templating.</p>
+                <h6><strong>Styles</strong></h6>
+                <p><a href="https://getbootstrap.com/">Bootstrap</a> with <a href="https://mdbootstrap.com">mdbootstrap</a> theme on top and then further expanded with my own bespoke styling.</p>
+                <h6><strong>JS</strong></h6>
+                <p>Use of <a href="https://jquery.com/">jQuery</a> and vanilla JS, also use of some libraries such as <a href="https://github.com/verlok/lazyload">lazyload.js</a> and <a href="https://wowjs.uk/">wow.js</a>.</p>
+                <h6><strong>Data</strong></h6>
+                <p>Inline.</p>
+                <h6><strong>Imagery</strong></h6>
+                <p>Images have been cropped or resized to specific dimensions, they have been saved as .jpg, optimised using <a href="https://tinypng.com/">tinypng</a> and then I am lazyloading them in to reduce page weight.</p>
+                <h6><strong>Other</strong></h6>
+                <p>Main framework is <a href="https://mdbootstrap.com">mdbootstrap</a> to speed up build. <a href="https://gulpjs.com/">Gulp</a> has been used for task automation and <a href="https://git-scm.com/">Git</a> with <a href="https://github.com/">Github</a> is being used for version control and backup.</p>
+                '
+        }}
+
+    {{/inline}}
+
+    {{#*inline "footer-block"}}
+        {{> components/footer
+            body-content='
+            <ul class="list-inline my-0">
+                <li class="list-inline-item"><a href="../index.html">Home</a></li>
+            </ul>
+            '
+        }}
+    {{/inline}}
+
+{{/layouts/base}}

@@ -1,0 +1,14 @@
+.c005-blockquote {
+  background:$secondary-color;
+  padding-top:2rem;
+  padding-bottom:2rem;
+  blockquote {
+    margin: 0 2rem;
+    p {
+      color:white;
+    }
+    footer {
+      color:white;
+    }
+  }
+}

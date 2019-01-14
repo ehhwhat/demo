@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta content="initial-scale=1, shrink-to-fit=no, width=device-width" name="viewport">
+
+    <title>Basics | JavaScript</title>
+
+    <!-- CSS -->
+    <!-- Add Material font (Roboto) and Material icon as needed -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Add Material CSS, replace Bootstrap CSS -->
+    <link href="../../../dist/css/material.min.css" rel="stylesheet">
+    <link href="../../../dist/css/demo.css" rel="stylesheet">
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <!-- Then Material JavaScript on top of Bootstrap JavaScript -->
+    <script src="../../../dist/js/material.min.js"></script>
+
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark-1">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarText">
+                        <ul class="navbar-nav">
+                            <li class="nav-item ">
+                                <a class="nav-link nav-link-home" href="../index.html"><i class="material-icons">home</i></a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav">
+                            <li class="nav-item ">
+                                <span class="nav-link disabled">JavaScript:</span>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="basic.html">Basics</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="maths.html">Maths</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="gym.html">Gym (Arrays)</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="books.html">Books (Arrays)</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="objects.html">Objects</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="es2015.html">ES2015</a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <span class="nav-link disabled">jQuery:</span>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="ajax.html">Ajax</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="ajaxJSON.html">AjaxJSON</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="ajaxJSON_promise.html">Ajax Promise</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="jumbotron my-4">
+                <h1 class="display-4">Basics</h1>
+                <p class="">Just some simple JS demo's. One demo to compare to values and display messaging, the other to iterate through and count characters.</p>
+                <hr class="my-4">
+                <p><strong>Things to note:</strong></p>
+                <ul class="">
+                    <li class="">Have used <code>const / let</code> instead of <code>var</code> in places</li>
+                    <li class="">Use of <code>if</code> statements to compare properties and display messaging</li>
+                    <li>Use of a <code>for</code> loop to iterate through a sentence, if the letter at index matches the user input then increment letter count</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <hr class="my-4 invisible"/>
+    <div class="row">
+
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-header bg-light">
+                    <h2 class="display-4">Capacity status</h2>
+                    <p class="">Enter the number of passengers and the capacity to see one message, if the capacity is less than the number of passengers a different message will appear.</p>
+                </div>
+                <div class="card-body">
+                    <form action="#">
+                        <hr class="invisible"/>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="capacityStatusInput1">Passengers</label>
+                                    <input type="number" id="capacityStatusInput1" class="form-control" placeholder="Passengers">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="capacityStatusInput2">Capacity</label>
+                                    <input type="number" id="capacityStatusInput2" class="form-control"  placeholder="Capacity">
+                                </div>
+                            </div>
+                        </div>
+                        <button id="capacityStatusSubmit" type="submit" class="btn btn-info float-right">Go</button>
+                    </form>
+                </div>
+                <div class="card-footer bg-light-2 ">
+                    <p id="capacityStatusResult"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // HOISTING
+        // TEST START
+        // FUNCTION WILL TAKE TWO PARAMETERS.
+        // IF THE NUMBER OF PASSENGERS AND CAPACITY ARE EQUAL
+        // WE SHOW ONE MESSAGE, IF THEY ARE NOT WE SHOW A
+        // DIFFERENT ONE.
+        function capacityStatus(numPassengers, capacity) {
+            document.getElementById("capacityStatusResult").innerHTML = "";
+            const noSeats = function(){
+                document.getElementById("capacityStatusResult").innerHTML += "<span class='text-danger'><i class='material-icons'>error_outline</i> Full up!</span>";
+                return false;
+            };
+            const someSeats = function(){
+                document.getElementById("capacityStatusResult").innerHTML += "<span class='text-success'><i class='material-icons'>info_outline</i> There are <strong>" + (capacity - numPassengers) + "</strong> seats left.</span>";
+                return true;
+            };
+            if(parseInt(numPassengers) >= parseInt(capacity)){
+                // Call this
+                noSeats();
+            } else {
+                // Call this
+                someSeats();
+            }
+        }
+
+        document.getElementById('capacityStatusSubmit').onclick = function(event) {
+            event.preventDefault();
+            let input1 = document.getElementById('capacityStatusInput1').value;
+            let input2 = document.getElementById('capacityStatusInput2').value;
+            capacityStatus(input1,input2);
+        };
+    </script>
+
+</div>
+
+
+
+
+<div class="container">
+    <hr class="my-4 invisible"/>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-header bg-light">
+                    <h2 class="display-4">Count character</h2>
+                    <p class="">Enter the number of passengers and the capacity to see one message, if the capacity is less than the number of passengers a different message will appear.</p>
+                </div>
+                <div class="card-body">
+                    <hr class="invisible"/>
+                    <form action="#">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="countCharInput1">Sentence</label>
+                                    <input type="text" id="countCharInput1" class="form-control" placeholder="Sentence">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="countCharInput2">Letter to count</label>
+                                    <input type="text" id="countCharInput2" class="form-control"  placeholder="Letter to count">
+                                </div>
+                            </div>
+                        </div>
+                        <button id="countCharSubmit" type="submit" class="btn btn-info float-right">Go</button>
+                    </form>
+                </div>
+                <div class="card-footer bg-light-2 ">
+                    <p id="countCharResult"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // TEST START
+        var countChar = function(string,letter) {
+            document.getElementById("countCharResult").innerHTML = "";
+            let letterCount = 0;
+            for(var i = 0; i < string.length; i++){
+                if(string.charAt(i).toUpperCase() == letter.toUpperCase()){
+                    letterCount++;
+                }
+            }
+            document.getElementById("countCharResult").innerHTML += "There are <strong>" + letterCount + " " + letter + "'s</strong> in the sentence: <br/><small>" + string + "</small>";
+            return letterCount;
+        };
+
+        document.getElementById('countCharSubmit').onclick = function(event) {
+            event.preventDefault();
+            let input1 = document.getElementById('countCharInput1').value;
+            let input2 = document.getElementById('countCharInput2').value;
+            countChar(input1,input2);
+        };
+    </script>
+
+</div>
+
+
+
+
+
+<div class="container">
+    <hr class="my-4 invisible"/>
+    <div class="row">
+        <div class="col-sm-6">
+
+        </div>
+    </div>
+
+    <hr class="my-4 invisible"/>
+
+    <script>
+
+    </script>
+
+</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<!-- Then Material JavaScript on top of Bootstrap JavaScript -->
+<script src="../../../dist/js/material.min.js"></script>
+
+</body>
+</html>

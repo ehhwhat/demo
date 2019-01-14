@@ -1,0 +1,213 @@
+{{!-- pages/general/sublayouts.hbs --}}
+
+{{#> layouts/base title="Sublayouts" }}
+
+    {{#*inline "header-block"}}
+        {{#> components/header
+             brand='Sublayouts'
+        }}
+        {{/components/header}}
+    {{/inline}}
+
+    {{#*inline "main-block"}}
+
+        {{!-- ----- --}}
+        {{!-- grid1 --}}
+        {{!-- ----- --}}
+        {{> components/c000-comp-desc
+            comp-id='grid1'
+            comp-name='Grid thin'
+        }}
+        {{#> sublayouts/grid1 }}
+            {{> components/c001-basic-content
+                    heading-primary='Primary'
+                    heading-secondary='Secondary'
+                    body-content='
+                    <p>At the edge of forever radio telescope Flatland paroxysm of global death across the centuries a mote of dust suspended in a sunbeam. Gathered by gravity inconspicuous motes of rock and gas a mote of dust suspended in a sunbeam the carbon in our apple pies muse about Sea of Tranquility.</p>
+                '
+            }}
+        {{/sublayouts/grid1}}
+
+{{!-- ------- --}}
+{{!-- DIVIDER --}}
+{{!-- ------- --}}
+{{> components/c004-divider }}
+
+        {{!-- ----- --}}
+        {{!-- grid1 --}}
+        {{!-- ----- --}}
+        {{> components/c000-comp-desc
+                comp-id='grid1'
+                comp-name='Grid thin - bg-alt1'
+        }}
+        {{#> sublayouts/grid1 class='bg-alt1' }}
+            {{> components/c001-basic-content
+                    heading-primary='Primary'
+                    heading-secondary='Secondary'
+                    body-content='
+                    <p>At the edge of forever radio telescope Flatland paroxysm of global death across the centuries a mote of dust suspended in a sunbeam. Gathered by gravity inconspicuous motes of rock and gas a mote of dust suspended in a sunbeam the carbon in our apple pies muse about Sea of Tranquility.</p>
+                '
+            }}
+        {{/sublayouts/grid1}}
+
+{{!-- ------- --}}
+{{!-- DIVIDER --}}
+{{!-- ------- --}}
+{{> components/c004-divider }}
+
+        {{!-- ----- --}}
+        {{!-- grid1 --}}
+        {{!-- ----- --}}
+        {{> components/c000-comp-desc
+                comp-id='grid1'
+                comp-name='Grid thin - bg-alt2'
+        }}
+        {{#> sublayouts/grid1 class='bg-alt2' }}
+            {{> components/c001-basic-content
+                    heading-primary='Primary'
+                    heading-secondary='Secondary'
+                    body-content='
+                    <p>At the edge of forever radio telescope Flatland paroxysm of global death across the centuries a mote of dust suspended in a sunbeam. Gathered by gravity inconspicuous motes of rock and gas a mote of dust suspended in a sunbeam the carbon in our apple pies muse about Sea of Tranquility.</p>
+                '
+            }}
+        {{/sublayouts/grid1}}
+
+{{!-- ------- --}}
+{{!-- DIVIDER --}}
+{{!-- ------- --}}
+{{> components/c004-divider }}
+
+        {{!-- ----- --}}
+        {{!-- grid-wide__col12 --}}
+        {{!-- ----- --}}
+        {{> components/c000-comp-desc
+                comp-id='grid-wide__col12'
+                comp-name='Grid wide - 12 columns'
+        }}
+        {{#> sublayouts/grid-wide }}
+            {{#> sublayouts/grid-wide__col12 }}
+                {{> components/c001-basic-content
+                        heading-primary='Primary'
+                        heading-secondary='Secondary'
+                        body-content='
+                    <p>At the edge of forever radio telescope Flatland paroxysm of global death across the centuries a mote of dust suspended in a sunbeam. Gathered by gravity inconspicuous motes of rock and gas a mote of dust suspended in a sunbeam the carbon in our apple pies muse about Sea of Tranquility.</p>
+                '
+                }}
+            {{/sublayouts/grid-wide__col12}}
+        {{/sublayouts/grid-wide}}
+
+{{!-- ------- --}}
+{{!-- DIVIDER --}}
+{{!-- ------- --}}
+{{> components/c004-divider }}
+
+        {{!-- ----- --}}
+        {{!-- grid-wide__col4 --}}
+        {{!-- ----- --}}
+        {{> components/c000-comp-desc
+                comp-id='grid-wide__col4'
+                comp-name='Grid wide - 4 columns'
+        }}
+        {{#> sublayouts/grid-wide }}
+            {{#> sublayouts/grid-wide__col4 }}
+                {{> components/c001-basic-content
+                        heading-primary='Primary'
+                        heading-secondary='Secondary'
+                        body-content='
+                    <p>At the edge of forever radio telescope Flatland paroxysm of global death across the centuries a mote of dust suspended in a sunbeam. Gathered by gravity inconspicuous motes of rock and gas a mote of dust suspended in a sunbeam the carbon in our apple pies muse about Sea of Tranquility.</p>
+                '
+                }}
+            {{/sublayouts/grid-wide__col4}}
+            {{#> sublayouts/grid-wide__col4 }}
+                {{> components/c001-basic-content
+                        heading-primary='Primary'
+                        heading-secondary='Secondary'
+                        body-content='
+                    <p>At the edge of forever radio telescope Flatland paroxysm of global death across the centuries a mote of dust suspended in a sunbeam. Gathered by gravity inconspicuous motes of rock and gas a mote of dust suspended in a sunbeam the carbon in our apple pies muse about Sea of Tranquility.</p>
+                '
+                }}
+            {{/sublayouts/grid-wide__col4}}
+            {{#> sublayouts/grid-wide__col4 }}
+                {{> components/c001-basic-content
+                        heading-primary='Primary'
+                        heading-secondary='Secondary'
+                        body-content='
+                    <p>At the edge of forever radio telescope Flatland paroxysm of global death across the centuries a mote of dust suspended in a sunbeam. Gathered by gravity inconspicuous motes of rock and gas a mote of dust suspended in a sunbeam the carbon in our apple pies muse about Sea of Tranquility.</p>
+                '
+                }}
+            {{/sublayouts/grid-wide__col4}}
+        {{/sublayouts/grid-wide}}
+
+{{!-- ------- --}}
+{{!-- DIVIDER --}}
+{{!-- ------- --}}
+{{> components/c004-divider }}
+
+        {{!-- ----- --}}
+        {{!-- grid-wide__col3 --}}
+        {{!-- ----- --}}
+        {{> components/c000-comp-desc
+                comp-id='grid-wide__col3'
+                comp-name='Grid wide - 3 columns'
+        }}
+        {{#> sublayouts/grid-wide }}
+            {{#> sublayouts/grid-wide__col3 }}
+                {{> components/c001-basic-content
+                        heading-primary='Primary'
+                        heading-secondary='Secondary'
+                        body-content='
+                    <p>At the edge of forever radio telescope Flatland paroxysm of global death across the centuries a mote of dust suspended in a sunbeam. Gathered by gravity inconspicuous motes of rock and gas a mote of dust suspended in a sunbeam the carbon in our apple pies muse about Sea of Tranquility.</p>
+                '
+                }}
+            {{/sublayouts/grid-wide__col3}}
+            {{#> sublayouts/grid-wide__col3 }}
+                {{> components/c001-basic-content
+                        heading-primary='Primary'
+                        heading-secondary='Secondary'
+                        body-content='
+                    <p>At the edge of forever radio telescope Flatland paroxysm of global death across the centuries a mote of dust suspended in a sunbeam. Gathered by gravity inconspicuous motes of rock and gas a mote of dust suspended in a sunbeam the carbon in our apple pies muse about Sea of Tranquility.</p>
+                '
+                }}
+            {{/sublayouts/grid-wide__col3}}
+            {{#> sublayouts/grid-wide__col3 }}
+                {{> components/c001-basic-content
+                        heading-primary='Primary'
+                        heading-secondary='Secondary'
+                        body-content='
+                    <p>At the edge of forever radio telescope Flatland paroxysm of global death across the centuries a mote of dust suspended in a sunbeam. Gathered by gravity inconspicuous motes of rock and gas a mote of dust suspended in a sunbeam the carbon in our apple pies muse about Sea of Tranquility.</p>
+                '
+                }}
+            {{/sublayouts/grid-wide__col3}}
+            {{#> sublayouts/grid-wide__col3 }}
+                {{> components/c001-basic-content
+                        heading-primary='Primary'
+                        heading-secondary='Secondary'
+                        body-content='
+                    <p>At the edge of forever radio telescope Flatland paroxysm of global death across the centuries a mote of dust suspended in a sunbeam. Gathered by gravity inconspicuous motes of rock and gas a mote of dust suspended in a sunbeam the carbon in our apple pies muse about Sea of Tranquility.</p>
+                '
+                }}
+            {{/sublayouts/grid-wide__col3}}
+        {{/sublayouts/grid-wide}}
+
+{{!-- ------- --}}
+{{!-- DIVIDER --}}
+{{!-- ------- --}}
+{{> components/c004-divider }}
+
+
+    {{/inline}}
+
+    {{#*inline "footer-block"}}
+        {{> components/footer
+                body-content='
+                <ul class="list-inline my-0">
+                    <li class="list-inline-item"><a href="../index.html">Home</a></li>
+                    <li class="list-inline-item"><a href="styletile.html">Style tile</a></li>
+                    <li class="list-inline-item"><a href="components.html">Components</a></li>
+                    <li class="list-inline-item"><a href="sublayouts.html"><strong>Sublayouts</strong></a></li>
+                </ul>
+            '
+        }}
+    {{/inline}}
+
+{{/layouts/base}}

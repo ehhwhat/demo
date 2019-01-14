@@ -1,0 +1,31 @@
+.c006-image-block {
+  &.grid {
+    column-width: auto;
+    column-count: 2;
+    column-gap: 0;
+    &.cols-1 {
+      column-count: 1!important;
+    }
+    .grid-item {
+      .video-fluid {
+        margin-bottom:-0.5rem;
+      }
+
+      $list: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15;
+      @each $i in $list {
+        &:nth-child(#{$i}) {
+          animation-delay: 0.1s  * $i;
+        }
+      }
+
+    }
+    section:nth-of-type(1) {
+      margin-top:0!important;
+    }
+  }
+  @include media-breakpoint-up(sm) {
+    &.grid {
+      column-count: 4;
+    }
+  }
+}

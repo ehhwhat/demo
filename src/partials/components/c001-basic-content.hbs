@@ -1,0 +1,13 @@
+{{!-- components/c001-basic-content.hbs --}}
+
+<!-- COMPONENT START -->
+<div class="c001-basic-content">
+    {{#if heading-primary}}
+        <h1 class="display-4">{{heading-primary}}</h1>
+    {{/if}}
+    {{#if heading-secondary}}
+        <h2 class="display-5 text-muted">{{heading-secondary}}</h2>
+    {{/if}}
+    {{{body-content}}}
+</div>
+<!-- COMPONENT END -->

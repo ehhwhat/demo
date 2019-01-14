@@ -1,0 +1,153 @@
+{{!-- pages/app/triathlon-data.hbs --}}
+
+{{#> layouts/base title="Triathlon | Data" }}
+
+    {{#*inline "header-block"}}
+        {{#> components/header
+                brand='BPK'
+                show-tech=true
+                show-tech-target='#tech-modal'
+        }}
+            {{> components/header__point
+                    point-title='Introduction'
+                    point-href='introduction'
+            }}
+            {{> components/header__point
+                    point-title='How'
+                    point-href='how'
+            }}
+            {{> components/header__point
+                    point-title='KPI'
+                    point-href='kpi'
+            }}
+            {{> components/header__point
+                    point-title='Events'
+                    point-href='events'
+            }}
+            {{> components/header__point
+                    point-title='Training'
+                    point-href='training'
+            }}
+            {{> components/header__point
+                    point-title='Journey'
+                    point-href='journey'
+            }}
+        {{/components/header}}
+    {{/inline}}
+
+    {{#*inline "main-block"}}
+
+        <section class="container">
+            <div class="row">
+                <div class="col-12">
+                    <p class="text-muted text-secondary"><strong>All data being collected</strong><span class="float-right">01</span></p>
+                    <hr/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead class="bg-dark text-white">
+                            <tr>
+                                <th>Type</th>
+                                <th>Total sessions</th>
+                                <th>Total km</th>
+                                <th>Total time</th>
+                                <th>Average watts</th>
+                                <th>Average pace</th>
+                                <th>Longest distance</th>
+                                <th>Weight</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th>General</th>
+                                <td class="totalTrainingSessions strava-data"></td>
+                                <td class="totalTrainingKM strava-data"></td>
+                                <td class="totalTrainingTime strava-data"></td>
+                                <td class="na">n/a</td>
+                                <td class="na">n/a</td>
+                                <td class="na">n/a</td>
+                                <td class="">78kg</td>
+                            </tr>
+                            <tr>
+                                <th>Swimming</th>
+                                <td class="totalSwimSessions strava-data"></td>
+                                <td class="totalSwimKM strava-data"></td>
+                                <td class="totalSwimTime strava-data"></td>
+                                <td class="na">n/a</td>
+                                <td class=" text-danger">Need</td>
+                                <td class="swimsDistanceFurthest strava-data"></td>
+                                <td class="na">n/a</td>
+                            </tr>
+                            <tr>
+                                <th>Cycling</th>
+                                <td class="totalCycleSessions strava-data"></td>
+                                <td class="totalCycleKM strava-data"></td>
+                                <td class="totalCycleTime strava-data"></td>
+                                <td class="cyclesWattAvg strava-data"></td>
+                                <td class="na">n/a</td>
+                                <td class="cyclesDistanceFurthest strava-data"></td>
+                                <td class="na">n/a</td>
+                            </tr>
+                            <tr>
+                                <th>Running</th>
+                                <td class="totalRunSessions strava-data"></td>
+                                <td class="totalRunKM strava-data"></td>
+                                <td class="totalRunTime strava-data"></td>
+                                <td class="na">n/a</td>
+                                <td class="runsPaceAvg strava-data"></td>
+                                <td class="runsDistanceFurthest strava-data"></td>
+                                <td class="na">n/a</td>
+                            </tr>
+                            <tr>
+                                <th>Gym Cardio</th>
+                                <td class="totalGymCardioSessions strava-data"></td>
+                                <td class="na">n/a</td>
+                                <td class="totalGymCardioTime strava-data"></td>
+                                <td class="na">n/a</td>
+                                <td class="na">n/a</td>
+                                <td class="na">n/a</td>
+                                <td class="na">n/a</td>
+                            </tr>
+                            <tr>
+                                <th>Gym weights</th>
+                                <td class="totalWeightSessions strava-data"></td>
+                                <td class="na">n/a</td>
+                                <td class="totalWeightTime strava-data"></td>
+                                <td class="na">n/a</td>
+                                <td class="na">n/a</td>
+                                <td class="na">n/a</td>
+                                <td class="na">n/a</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p><strong>Latest activity:</strong> <span class="latestEntry"></span></p>
+                    <p><strong>Training days:</strong> <span class="totalTrainingDays"></span></p>
+                </div>
+
+            </div>
+        </section>
+
+{{!-- ------- --}}
+{{!-- DIVIDER --}}
+{{!-- ------- --}}
+{{> components/c004-divider }}
+
+    {{/inline}}
+
+    {{#*inline "footer-block"}}
+        {{> components/footer
+                body-content='
+            <ul class="list-inline my-0">
+                <li class="list-inline-item"><a href="../index.html">Home</a></li>
+                <li class="list-inline-item"><a href="triathlon.html">Triathlon</a></li>
+                <li class="list-inline-item"><a href="triathlon-data.html"><strong>Data</strong></a></li>
+            </ul>
+            '
+        }}
+    {{/inline}}
+
+{{/layouts/base}}

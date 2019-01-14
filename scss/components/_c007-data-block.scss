@@ -1,0 +1,24 @@
+.container-training {
+  .c007-data-block {
+    .dataPoint {
+      min-height:48px;
+    }
+    .dataPointBlank {
+      opacity:0.25;
+    }
+  }
+  .c007-data-block__triggers {
+    [type=radio]:checked, [type=radio]:not(:checked) {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }
+    .btn.active {
+      font-weight:bold;
+      opacity:1;
+    }
+    .btn {
+      opacity:0.5;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.grid1 {
+  &.bg-alt1 {
+    background-color:$theme-light;
+    padding-top:4rem;
+    padding-bottom: 3rem;
+  }
+  &.bg-alt2 {
+    background-color:$theme-pink;
+    padding-top:4rem;
+    padding-bottom: 3rem;
+    color:white;
+    .text-muted {
+      color:white!important;
+    }
+  }
+  &.bg-alt3 {
+    background-color:$theme-dark;
+    padding-top:4rem;
+    padding-bottom: 3rem;
+    color:white;
+    .text-muted {
+      color:white!important;
+    }
+  }
+}

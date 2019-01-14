@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en" class="with-jumbotron">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>7 to 70.3 | Tri</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="../../../css/bootstrap.min.css?v3" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="../../../css/mdb.min.css?v3" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="../../../css/style.css?v3" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" />
+</head>
+<body data-spy="scroll" data-target="#navbar-example1" data-offset="150">
+
+<!-- Main navigation -->
+<header>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top scrolling-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                EHHWHAT
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7"
+                    aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
+                <ul class="navbar-nav mr-auto smooth-scroll">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#intro">Introduction <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#how">How</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#kpi">KPI's</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#timeline">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#journey">Journey</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Full Page Intro -->
+    <div class="view" style="background-image: url('../../../img/app/triathlon/jumbo2.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+        <!-- Mask & flexbox options-->
+        <div class="mask rgba-gradient d-flex justify-content-center align-items-center">
+            <!-- Content -->
+            <div class="container">
+                <!--Grid row-->
+                <div class="row">
+                    <div class="col-md-6 white-text mt-xl-5 mb-5 wow fadeIn smooth-scroll" data-wow-delay="0.5s">
+                        <p><small><strong>Latest activity:</strong> <span class="latestEntry"></span></small></p>
+                        <h1 class="display-4">Triathlon training blog</h1>
+                        <hr class="hr-light">
+                        <h6 class="mb-4">Welcome to my constantly evolving website based around all my triathlon training. Although it may seem incredibly vain to build something like this i am doing it for a number of reasons.</h6>
+                        <h6 class="mb-4">1, it will focus my mind as i know all my training will be logged and could be seen. 2, i am sad enough to think data is cool and interesting and my training will lead to lots and lots of data. And 3, as a developer it can help me learn new techniques and skills.</h6>
+                        <a href="#journey" class="btn btn-white">Latest update</a>
+                        <a href="#intro" class="btn btn-outline-white">Learn more</a>
+                    </div>
+                </div>
+                <!--Grid row-->
+            </div>
+            <!-- Content -->
+        </div>
+        <!-- Mask & flexbox options-->
+    </div>
+    <!-- Full Page Intro -->
+</header>
+<!-- Main navigation -->
+
+<!-- Template for content updates -->
+<!--
+<section class="container">
+    <div class="row">
+        <div class="col-12 col-md-9">
+            <h1 class="display-4 done">Heading1</h1>
+            <h2 class="display-5">Heading2</h2>
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+            <h3 class="mt-5">Training</h3>
+            <table class="table table-sm">
+                <thead>
+                <tr>
+                    <th scope="col"></th>
+                    <th scope="col">Swim</th>
+                    <th scope="col">Cycle</th>
+                    <th scope="col">Run</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Event/s</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>Training hours</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                </tbody>
+            </table>
+            <h3 class="mt-5">Heading3</h3>
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="grid">
+                <section class="grid-item wow fadeIn" data-wow-delay="0.5s">
+                    <img src="../../../img/app/triathlon/hemel-sprint-me.jpg" class="img-fluid grayscale" alt="placeholder">
+                </section>
+                <section class="grid-item wow fadeIn" data-wow-delay="1s">
+                    <img src="../../../img/app/triathlon/hemel-sprint-bikes.jpg" class="img-fluid grayscale" alt="placeholder">
+                </section>
+                <section class="grid-item wow fadeIn" data-wow-delay="1.5s">
+                    <img src="../../../img/app/triathlon/hemel-sprint-us.jpg" class="img-fluid grayscale" alt="placeholder">
+                </section>
+            </div>
+        </div>
+    </div>
+</section>
+-->
+
+<hr class="my-5 invisible" />
+
+<div class="container" id="intro">
+    <div class="row">
+        <div class="col-12 col-md-8">
+            <h1 class="display-4">7 to 70, well 70.3</h1>
+            <h2 class="display-5">What am i doing?</h2>
+            <p>I will training for the next 7 months to enter a 70.3 half Ironman event in lovely Staffordshire and i plan to document everything as i go along, i also fully expect to get a flat tyre or forget a wetsuit and all this training will be for nothing.</p>
+            <h3 class="mt-5">What is a half Ironman?</h3>
+            <p>Well is consists of a <strong>1.2mile swim</strong>, a <strong>56mile bike ride</strong> and finishes with a <strong>13.1mile run</strong>, for a total of 70.3miles in distance.</p>
+            <h3 class="mt-5">Why am i doing this?</h3>
+            <p>You may be wondering why i am documenting this process and the simple reason is i am a bit of a neat freak (my life is a trello board) and i love data and training / competing in an event such as this can create lots of juicy data. My plan is to add a post every month detailing what training has been done, what improvements may have been made, what events have been entered etc. </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="grid">
+                <section class="grid-item wow fadeIn" data-wow-delay="0.1s">
+                    <img src="../../../img/app/triathlon/hemel-sprint-me.jpg" class="img-fluid grayscale" alt="placeholder">
+                </section>
+                <section class="grid-item wow fadeIn" data-wow-delay="0.2s">
+                    <img src="../../../img/app/triathlon/hemel-sprint-bikes.jpg" class="img-fluid grayscale" alt="placeholder">
+                </section>
+                <section class="grid-item wow fadeIn" data-wow-delay="0.3s">
+                    <img src="../../../img/app/triathlon/hemel-sprint-us.jpg" class="img-fluid grayscale" alt="placeholder">
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr class="my-huge invisible" />
+
+<section class="container" id="how">
+    <div class="row">
+        <div class="col-12 col-md-9">
+            <h1 class="display-4">How to do it</h1>
+            <h2 class="display-5">What do i want to achieve, what will the strategy be along the way and how will i measure improvements?</h2>
+            <h3 class="mt-5">The objective</h3>
+            <p>To achieve a <strong>top 30%</strong> finish at Ironman 70.3 Staffordshire which means based on 2,222 people entering last time (2018) and therefore me wanting to achieve a position of 733rd or better i will need to better a time of <strong>05:46:27</strong> (2017 results would be 06:09:10).</p>
+            <h3 class="mt-5">The strategy</h3>
+            <p>My plan to get there follows 5 pretty simple ideas, lose weight, become better at cycling, get used to swimming and cycling longer and train over and over and over again.</p>
+            <ol>
+                <li><strong>Get lighter</strong> - Eat better and train harder</li>
+                <li><strong>Gain power</strong> - With weight sessions at gym</li>
+                <li><strong>Swim further</strong> - With more pool and outdoor swim time</li>
+                <li><strong>Cycle further</strong> - Do longer distances on the bike, both in the gym and outside</li>
+                <li><strong>Train consistently</strong> - By joining running club, getting into the pool, biking more often</li>
+            </ol>
+            <p>By the way next to each of the 5 strategy items you will see a number, i will use this number in further updates on the site to highlight an event or training session or piece of data that will link back to this strategic element.</p>
+            <h3 class="mt-5">KPI's</h3>
+            <p>My Key Performance Indicators will be values which will hopefully show improvement as i continue training, each should have some reason/logic behind why i think this specific piece of data will be worth knowing or monitoring.</p>
+
+            <h5>Weight</h5>
+            <p>The lighter i am the easier any running should be. <sup><span class="badge badge-info">1</span> <span class="badge badge-info">5</span></sup></p>
+
+            <h5>5km, 10km and half marathon personal bests</h5>
+            <p>Improving PB's in these events will highlight improvements in fitness, technique etc but also show a consistency in training as i don't think improvements could be made without all three. <sup><span class="badge badge-info">1</span> <span class="badge badge-info">5</span></sup></p>
+
+            <h5>Average bike watts over specific routes</h5>
+            <p>This will show an increase in power and also potentially a reduction in weight, improving power to weight ratio, it will also highlight an improvement in training time and amount. <sup><span class="badge badge-info">2</span> <span class="badge badge-info">5</span></sup></p>
+
+            <h5>Longest swim distance</h5>
+            <p><sup><span class="badge badge-info">3</span> <span class="badge badge-info">5</span></sup></p>
+
+            <h5>Number of times i cycle 50miles</h5>
+            <p><sup><span class="badge badge-info">4</span> <span class="badge badge-info">5</span></sup></p>
+
+            <h5>Hours spent training</h5>
+            <p>Will track all 3 events, will highlight which event needs more training and where i may have failed to do enough training. <sup><span class="badge badge-info">5</span></sup></p>
+        </div>
+    </div>
+</section>
+
+<hr class="my-huge invisible" />
+
+<div class="container" id="kpi">
+    <div class="row">
+        <div class="col-12 col-md-9">
+            <h1 class="display-4">Key performance indicators</h1>
+            <h2 class="display-5">Main items to track and improve on during the training</h2>
+            <p>These details are what i believe are going to be the biggest indicators of performance for the 70.3 event, the longer the distance i can swim the better i should perform in the event, the higher my bike watts over specific distances should give me an idea of how i will do during the 56mile bike ride and the faster i get at running the easier and better i should be at the final half marathon.</p>
+        </div>
+    </div>
+</div>
+<div class="container-fluid container-kpi bg-dark text-white py-2 d-none d-sm-block">
+    <div class="row">
+        <div class="container-fluid">
+            <div class="row py-4">
+                <div class="col-12 text-center col-md-2 text-sm-right">
+                    <img class="icon-kpi" src="https://cdn0.iconfinder.com/data/icons/sport-2-android-l-lollipop-icon-pack/24/skydiving-48.png">
+                </div>
+                <div class="col-4 col-md-2">
+                    <p class="mt-3 mb-0"><strong>Weight <sup><span class="badge badge-info">1</span></sup></strong></p>
+                    <p class="display-5">78kg</p>
+                </div>
+                <div class="col-4 col-md-2">
+                    <p class="mt-3 mb-0">
+                        <strong>Training hrs</strong>
+                        <sup>
+                            <span class="badge badge-info">5</span>
+                            <span class="badge badge-warning">S</span>
+                        </sup>
+                    </p>
+                    <p class="display-5 totalTrainingTime"></p>
+                </div>
+                <div class="col-4 col-md-2">
+                    <p class="mt-3 mb-0"><strong>Training days</strong></p>
+                    <p class="display-5 totalTrainingDays"></p>
+                </div>
+            </div>
+            <div class="row py-4">
+                <div class="col-12 text-center col-md-2 text-sm-right">
+                    <img class="icon-kpi" src="https://cdn0.iconfinder.com/data/icons/sport-2-android-l-lollipop-icon-pack/24/swimming-48.png">
+                </div>
+                <div class="col-4 col-md-2">
+                    <p class="mt-3 mb-0">
+                        <strong>Longest distance</strong>
+                        <sup>
+                            <span class="badge badge-info">?</span>
+                            <span class="badge badge-warning">S</span>
+                        </sup>
+                    </p>
+                    <p class="display-5 swimsDistanceFurthest"></p>
+                </div>
+            </div>
+            <div class="row py-4">
+                <div class="col-12 text-center col-md-2 text-sm-right">
+                    <img class="icon-kpi" src="https://cdn0.iconfinder.com/data/icons/sport-2-android-l-lollipop-icon-pack/24/time_trial_biking-48.png">
+                </div>
+                <div class="col-4 col-md-2">
+                    <p class="mt-3 mb-0"><strong>20miler</strong></p>
+                    <p class="display-5">145watts <sup class="font-small text-success">+18</sup></p>
+                </div>
+                <div class="col-4 col-md-2">
+                    <p class="mt-3 mb-0"><strong>35miler</strong></p>
+                    <p class="display-5">115watts</p>
+                </div>
+                <div class="col-4 col-md-2 unavailable-at-the-moment">
+                    <p class="mt-3 mb-0"><strong>50miler</strong></p>
+                    <p class="display-5">N/A</p>
+                </div>
+                <div class="col-4 col-md-2">
+                    <p class="mt-3 mb-0">
+                        <strong>Longest distance</strong>
+                        <sup>
+                            <span class="badge badge-info">?</span>
+                            <span class="badge badge-warning">S</span>
+                        </sup>
+                    </p>
+                    <p class="display-5 cyclesDistanceFurthest"></p>
+                </div>
+                <div class="col-4 col-md-2">
+                    <p class="mt-3 mb-0">
+                        <strong>Average</strong>
+                        <sup>
+                            <span class="badge badge-info">?</span>
+                            <span class="badge badge-warning">S</span>
+                        </sup>
+                    </p>
+                    <p class="display-5 cyclesWattAvg"></p>
+                </div>
+            </div>
+            <div class="row py-4">
+                <div class="col-12 text-center col-md-2 text-sm-right">
+                    <img class="icon-kpi" src="https://cdn0.iconfinder.com/data/icons/sport-2-android-l-lollipop-icon-pack/24/walking-48.png">
+                </div>
+                <div class="col-4 col-md-2">
+                    <p class="mt-3 mb-0"><strong>5km</strong></p>
+                    <p class="display-5">00:21:30</p>
+                </div>
+                <div class="col-4 col-md-2">
+                    <p class="mt-3 mb-0"><strong>10km</strong></p>
+                    <p class="display-5">00:43:10 <sup class="font-small text-success">-00:00:30</sup></p>
+                </div>
+                <div class="col-4 col-md-2">
+                    <p class="mt-3 mb-0"><strong>Half marathon</strong></p>
+                    <p class="display-5">01:49:51</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- MOBILE VIEW OF THIS ONLY -->
+<div class="container-fluid container-kpi bg-dark d-block d-sm-none">
+    <div class="row">
+        <div class="container">
+            <!-- GENERAL -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="card my-4">
+                        <div class="card-body">
+                            <h4 class="card-title py-0 my-0 ">General</h4>
+                        </div>
+                        <ul class="list-group">
+                            <li class="list-group-item ">
+                                <p class="mt-0 mb-0"><strong>Weight <sup><span class="badge badge-info">1</span></sup></strong></p>
+                                <p class="display-5 mb-0">78kg</p>
+                            </li>
+                            <li class="list-group-item ">
+                                <p class="mt-0 mb-0">
+                                    <strong>Training</strong>
+                                    <sup>
+                                        <span class="badge badge-info">5</span>
+                                        <span class="badge badge-warning">S</span>
+                                    </sup>
+                                </p>
+                                <p class="display-5 mb-0 totalTrainingTime"></p>
+                            </li>
+                            <li class="list-group-item ">
+                                <p class="mt-0 mb-0"><strong>Training days</strong></p>
+                                <p class="display-5 mb-0 totalTrainingDays"></p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- SWIMMING -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="card mb-4 ">
+                        <div class="card-body">
+                            <h4 class="card-title py-0 my-0">Swimming</h4>
+                        </div>
+                        <ul class="list-group">
+                            <li class="list-group-item ">
+                                <p class="mt-0 mb-0">
+                                    <strong>Longest distance</strong>
+                                    <sup>
+                                        <span class="badge badge-info">?</span>
+                                        <span class="badge badge-warning">S</span>
+                                    </sup>
+                                </p>
+                                <p class="display-5 mb-0 swimsDistanceFurthest"></p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- CYCLING -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="card mb-4 ">
+                        <div class="card-body">
+                            <h4 class="card-title py-0 my-0">Cycling</h4>
+                        </div>
+                        <ul class="list-group">
+                            <li class="list-group-item ">
+                                <p class="mt-0 mb-0"><strong>20miler</strong></p>
+                                <p class="display-5 mb-0">145watts <sup class="font-small text-success">+18</sup></p>
+                            </li>
+                            <li class="list-group-item ">
+                                <p class="mt-0 mb-0"><strong>35miler</strong></p>
+                                <p class="display-5 mb-0">115watts</p>
+                            </li>
+                            <li class="list-group-item ">
+                                <p class="mt-0 mb-0"><strong>50miler</strong></p>
+                                <p class="display-5 mb-0">N/A</p>
+                            </li>
+                            <li class="list-group-item ">
+                                <p class="mt-0 mb-0">
+                                    <strong>Longest distance</strong>
+                                    <sup>
+                                        <span class="badge badge-info">?</span>
+                                        <span class="badge badge-warning">S</span>
+                                    </sup>
+                                </p>
+                                <p class="display-5 mb-0 cyclesDistanceFurthest"></p>
+                            </li>
+                            <li class="list-group-item ">
+                                <p class="mt-0 mb-0">
+                                    <strong>Average</strong>
+                                    <sup>
+                                        <span class="badge badge-info">?</span>
+                                        <span class="badge badge-warning">S</span>
+                                    </sup>
+                                </p>
+                                <p class="display-5 mb-0 cyclesWattAvg"></p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- RUNNING -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="card mb-4 ">
+                        <div class="card-body">
+                            <h4 class="card-title py-0 my-0">Running</h4>
+                        </div>
+                        <ul class="list-group">
+                            <li class="list-group-item ">
+                                <p class="mt-0 mb-0"><strong>5km</strong></p>
+                                <p class="display-5 mb-0">00:21:30</p>
+                            </li>
+                            <li class="list-group-item ">
+                                <p class="mt-0 mb-0"><strong>10km</strong></p>
+                                <p class="display-5 mb-0">00:43:10 <sup class="font-small text-success">-00:00:30</sup></p>
+                            </li>
+                            <li class="list-group-item ">
+                                <p class="mt-0 mb-0"><strong>Half marathon</strong></p>
+                                <p class="display-5 mb-0">01:49:51</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr class="my-huge invisible" />
+
+<div class="container" id="timeline">
+    <div class="row">
+        <div class="col-12 col-md-9">
+            <h1 class="display-4">Events</h1>
+            <h2 class="display-5">Timeline of events to enter, targets to hit.</h2>
+            <p>A display of all the events i have entered or plan to enter and potential targets to hit for them, i will also note as part of this whether i achieved the target as well.</p>
+        </div>
+    </div>
+</div>
+<div class="container-fluid my-5 lines wow fadeIn" data-wow-delay="0.5s">
+    <!--
+    Timeline is 100%
+    210 days ish to train
+    every day = 0.5%
+    so if event is 45 days into timeline then left = 22.5%
+    / each month is 30 days and then divide by 2.5
+
+    -->
+    <div class="row">
+        <div class="col-12">
+
+            <div class="line time-line">
+                <span class="dot dot-start"></span>
+                <span class="dot dot-nov"></span>
+                <span class="dot dot-dec"></span>
+                <span class="dot dot-jan"></span>
+                <span class="dot dot-feb"></span>
+                <span class="dot dot-mar"></span>
+                <span class="dot dot-apr"></span>
+                <span class="dot dot-may"></span>
+                <span class="dot dot-end"></span>
+            </div>
+
+            <div class="line events-line">
+                <span class="line-label">Events</span>
+                <span class="dot dot-run dot-herts" data-toggle="tooltip" data-placement="top" title="Herts - 10km"></span>
+                <span class="dot dot-cycle dot-cycle1" data-toggle="tooltip" data-placement="top" title="Sportive - 48km "></span>
+                <span class="dot dot-run dot-morun" data-toggle="tooltip" data-placement="top" title="Morun - 10km"></span>
+                <span class="dot dot-run dot-hatfield5" data-toggle="tooltip" data-placement="top" title="Hatfield 5 - 8km"></span>
+
+                <span class="dot dot-run dot-mkhalf" data-toggle="tooltip" data-placement="top" title="Milton Keynes Half"></span>
+                <span class="dot dot-dual dot-ashridgedual" data-toggle="tooltip" data-placement="top" title="Ashridge Dualathlon"></span>
+
+                <span class="dot dot-run dot-windsorhalf" data-toggle="tooltip" data-placement="top" title="Windsor Half - 21km"></span>
+                <span class="dot dot-tri dot-marlowe dot-to-book" data-toggle="tooltip" data-placement="top" title="Marlowe - Olympic"></span>
+
+                <span class="dot dot-cycle dot-cycle2 dot-to-book" data-toggle="tooltip" data-placement="top" title="Sportive 2 ???"></span>
+                <span class="dot dot-run dot-harpenden dot-to-book" data-toggle="tooltip" data-placement="top" title="Harpenden Half - 21km"></span>
+                <span class="dot dot-cycle dot-cycle3 dot-to-book" data-toggle="tooltip" data-placement="top" title="Sportive 3 ???"></span>
+                <span class="dot dot-cycle dot-cycle4 dot-to-book" data-toggle="tooltip" data-placement="top" title="Sportive 4 ???"></span>
+            </div>
+
+            <div class="line target-line">
+                <span class="line-label">Targets</span>
+                <span class="dot dot-target dot-target-herts" data-toggle="tooltip" data-placement="top" title="00:44:59"></span>
+                <span class="dot dot-target dot-target-cycle1" data-toggle="tooltip" data-placement="top" title="02:09:59"></span>
+                <span class="dot dot-target dot-target-morun" data-toggle="tooltip" data-placement="top" title="00:43:59"></span>
+                <span class="dot dot-target dot-target-hatfield5" data-toggle="tooltip" data-placement="top" title="00:34:59"></span>
+
+                <span class="dot dot-target dot-target-mkhalf" data-toggle="tooltip" data-placement="top" title="01:49:59"></span>
+                <span class="dot dot-target dot-target-windsorhalf" data-toggle="tooltip" data-placement="top" title="01:44:59"></span>
+            </div>
+
+            <div class="line current-line">
+                <span class="line-label">Status</span>
+                <span class="dot dot-target-herts dot-success" data-toggle="tooltip" data-placement="top" title="00:43:40"></span>
+                <span class="dot dot-target-cycle1 dot-success" data-toggle="tooltip" data-placement="top" title="02:04:00"></span>
+                <span class="dot dot-target-morun dot-success" data-toggle="tooltip" data-placement="top" title="00:43:10"></span>
+                <span class="dot dot-target-hatfield5 dot-success" data-toggle="tooltip" data-placement="top" title="00:34:26"></span>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<hr class="my-huge invisible" />
+
+<div class="container" id="training">
+    <div class="row">
+        <div class="col-12 col-md-9">
+            <h1 class="display-4">Training</h1>
+            <h2 class="display-5">Up to the millisecond live data</h2>
+            <p>Totals across each discipline and training session across the whole training period (From start of October). This section should clearly highlight my lowest trained area and i would expect the weakest event.</p>
+            <p>I plan to replicate this section within each monthly update but with data specific to that time period, might highlight periods when i did less cycling if it snows a lot or maybe more swimming as it got warmer etc.</p>
+        </div>
+    </div>
+</div>
+<div class="container-fluid container-training bg-dark text-white py-2">
+    <div class="row">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 sessionsVsDistances pb-3">
+                    <p class="mt-3 mb-0"><strong>Switch</strong></p>
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" class="custom-control-input" id="Sessions" name="sessionsVsDistances" value="sessions" checked>
+                        <label class="custom-control-label" for="Sessions">Sessions</label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" class="custom-control-input" id="Distances" name="sessionsVsDistances" value="distances" >
+                        <label class="custom-control-label" for="Distances">Distances</label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" class="custom-control-input" id="Times" name="sessionsVsDistances" value="times" >
+                        <label class="custom-control-label" for="Times">Times</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4 col-md-2">
+                    <p class="mt-3 mb-0"><strong>Total</strong></p>
+                    <p class="display-5 dataPoint totalTrainingSessions showOnSessions"></p>
+                    <p class="display-5 dataPoint totalTrainingKM showOnDistances"></p>
+                    <p class="display-5 dataPoint totalTrainingTime showOnTimes"></p>
+                </div>
+                <div class="col-4 col-md-2">
+                    <p class="mt-3 mb-0"><strong>GYM Cardio</strong></p>
+                    <p class="display-5 dataPoint totalGymCardioSessions showOnSessions"></p>
+                    <p class="display-5 dataPoint dataPointBlank showOnDistances">N/A</p>
+                    <p class="display-5 dataPoint totalGymCardioTime showOnTimes"></p>
+                </div>
+                <div class="col-4 col-md-2">
+                    <p class="mt-3 mb-0"><strong>Weights</strong></p>
+                    <p class="display-5 dataPoint totalWeightSessions showOnSessions"></p>
+                    <p class="display-5 dataPoint dataPointBlank showOnDistances">N/A</p>
+                    <p class="display-5 dataPoint totalWeightTime showOnTimes"></p>
+                </div>
+                <div class="col-4 col-md-2">
+                    <p class="mt-3 mb-0"><strong>Swims</strong></p>
+                    <p class="display-5 dataPoint totalSwimSessions showOnSessions"></p>
+                    <p class="display-5 dataPoint totalSwimKM showOnDistances"></p>
+                    <p class="display-5 dataPoint totalSwimTime showOnTimes"></p>
+                </div>
+                <div class="col-4 col-md-2">
+                    <p class="mt-3 mb-0"><strong>Cycles</strong></p>
+                    <p class="display-5 dataPoint totalCycleSessions showOnSessions"></p>
+                    <p class="display-5 dataPoint totalCycleKM showOnDistances"></p>
+                    <p class="display-5 dataPoint totalCycleTime showOnTimes"></p>
+                </div>
+                <div class="col-4 col-md-2">
+                    <p class="mt-3 mb-0"><strong>Runs</strong></p>
+                    <p class="display-5 dataPoint totalRunSessions showOnSessions"></p>
+                    <p class="display-5 dataPoint totalRunKM showOnDistances"></p>
+                    <p class="display-5 dataPoint totalRunTime showOnTimes"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<hr class="my-huge invisible" />
+
+<div class="container" id="journey">
+    <div class="row">
+        <div class="col-12 col-md-8 text-justify">
+            <h1 class="display-4">October</h1>
+            <h2 class="display-5">First month of training</h2>
+
+            <h3 class="mt-5">Summary</h3>
+            <ul class="list-inline">
+                <li class="list-inline-item">Herts 10km PB</li>
+                <li class="list-inline-item">Watlington Sportive 'Gold' star</li>
+                <li class="list-inline-item">Lots of running club</li>
+                <li class="list-inline-item">No swimming at all</li>
+            </ul>
+
+            <h3 class="mt-5">Details</h3>
+            <p>This month was a mix of running and cycling training, for running we did the Herts 10km and got a new PB (<a href="https://resultsbase.net/results/2509878" title="Click here to leave this site and view Herts 10km result.">43mins 40seconds</a>) despite some rather annoying weather conditions. It rained pretty much non stop the day before and i'd read a review of the course beforehand which mentioned how difficult the route is when wet and muddy, we were very close to not running at all. Glad we did though as it was a massive event compared to some of the other 10kms i've run, also pleased that i managed to do a proper sprint finish.</p>
+            <p>There was also the biweekly running club events, typically one is a technique session (hill sprints, cresting, intervals etc) and the other a longer run (have now joined group 2a as its better paced than much slower 2b).</p>
+            <p>The cycling event was an Evans Cycles Sportive around Watlington, i chose to do the short route of 30miles as its the start of my cycling training and didnt want to push it too far just yet, the course was also rated 4/5 for difficulty. Managed to get round in <a href="https://static.evanscycles.com/production/pdf-media/misc/2018-rideit-events/RIDE_IT_Watlington_18_Sportive_rider_times.pdf" title="Click here to leave this site and view Watlington Sportive result.">about 2hrs earning a 'gold' star</a> for my average speed and also posted 2nd fastest overall time for this distance, so not a bad start.</p>
+            <p>Unfortunately no swimming this month which isn't good as it will be my weakest part of the event, i did do some research and found a 50m pool not too far away so i will hopefully start some training there soon.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="grid">
+                <section class="grid-item wow fadeIn" data-wow-delay="0.1">
+                    <img src="../../../img/app/triathlon/herts-10km-me.jpg" class="img-fluid grayscale" alt="placeholder">
+                </section>
+                <section class="grid-item wow fadeIn" data-wow-delay="0.2">
+                    <img src="../../../img/app/triathlon/herts-10km-me2.jpg" class="img-fluid grayscale" alt="placeholder">
+                </section>
+                <section class="grid-item wow fadeIn" data-wow-delay="0.3">
+                    <img src="../../../img/app/triathlon/gym1.gif" class="img-fluid grayscale" alt="placeholder">
+                </section>
+                <section class="grid-item wow fadeIn" data-wow-delay="0.3">
+                    <img src="../../../img/app/triathlon/herts-10km-route.png" class="img-fluid grayscale" alt="placeholder">
+                </section>
+                <section class="grid-item wow fadeIn" data-wow-delay="0.4s">
+                    <img src="../../../img/app/triathlon/herts-10km-me1.jpg" class="img-fluid grayscale" alt="placeholder">
+                </section>
+                <section class="grid-item wow fadeIn" data-wow-delay="0.5s">
+                    <img src="../../../img/app/triathlon/watlington-sportive1.jpg" class="img-fluid grayscale" alt="placeholder">
+                </section>
+                <section class="grid-item wow fadeIn" data-wow-delay="0.6s">
+                    <img src="../../../img/app/triathlon/watlington-sportive3.jpg" class="img-fluid grayscale" alt="placeholder">
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr class="my-huge invisible" />
+
+<section class="container">
+    <div class="row">
+        <div class="col">
+            <div class="bg-light z-depth-5 rounded py-5">
+            <blockquote class="blockquote my-0 mx-5">
+                <p class="mb-0">Never do legs the day before a cycling session</p>
+                <footer class="blockquote-footer mb-3">Me in <cite title="Source Title">November training update</cite></footer>
+            </blockquote>
+            </div>
+        </div>
+    </div>
+</section>
+
+<hr class="my-huge invisible" />
+
+<!-- Template for content updates -->
+<section class="container">
+    <div class="row">
+        <div class="col-12 col-md-8 text-justify">
+            <h1 class="display-4 done">November</h1>
+            <h2 class="display-5">Ramblings for the month</h2>
+            <h3 class="mt-5">Summary</h3>
+            <ul class="list-inline">
+                <li class="list-inline-item">MoRun with new pb</li>
+                <li class="list-inline-item">Cycling watt improvement</li>
+                <li class="list-inline-item">Cycling distance improvement</li>
+                <li class="list-inline-item">Hatfield 5 pb</li>
+                <li class="list-inline-item">Managed some swimming</li>
+                <li class="list-inline-item">Need for more structured training</li>
+            </ul>
+            <h3 class="mt-5">Details</h3>
+            <p>This month consisted of a couple of running events, some cycling training and finally some swimming. The two running events went very well with a PB in both, the Morun 10km which actually turned out to be closer to 11km was good fun, as always an undulating route with a lot of sharp corners so potentially could have been even better. Following this was the Hatfield 5 which is a club championship event and seems to be for a lot of other clubs as well (so there are lots of very fast runners), this felt a lot harder even though it was shorter but looking back its essentially a very long 'short race', you need to maintain a 5k'ish pace for 8km whereas when you go for a 10km event you tend to slow down overall. </p>
+            <p>Also this month i managed to do a much longer bike ride of 35mile, it started off with a similar route to my 20miler and joined back up to it later but overall i found it very hard, the start is actually really fun after the first hill as its all slightly down hill on country lanes but as soon as the climb to Whipsnade starts it feels like it never ends and then it just gets worse as you hit Ashridge.</p>
+            <p>Finally this month i managed to get some swimming in, i still struggle with this in even basic way, ask me to swim 25m as fast as possible and i can do it very quickly, ask me to do 4 lengths in a row and i nearly drown, its because of this i have decided to try and stagger my training with this which will be detailed in another section.</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <div class="grid">
+                <section class="grid-item wow fadeIn" data-wow-delay="0.5s">
+                    <img src="../../../img/app/triathlon/gadgets.jpg" class="img-fluid grayscale" alt="placeholder">
+                </section>
+                <section class="grid-item wow fadeIn" data-wow-delay="1s">
+                    <video class="video-fluid" autoplay loop controls muted>
+                        <source src="../../../img/app/triathlon/cycle1.webm" type="video/mp4" />
+                    </video>
+                </section>
+                <section class="grid-item wow fadeIn" data-wow-delay="0.6s">
+                    <img src="../../../img/app/triathlon/training.jpg" class="img-fluid grayscale" alt="placeholder">
+                </section>
+                <section class="grid-item wow fadeIn" data-wow-delay="0.7s">
+                    <img src="../../../img/app/triathlon/morun-10km-start.jpg" class="img-fluid grayscale" alt="placeholder">
+                </section>
+                <section class="grid-item wow fadeIn" data-wow-delay="0.8s">
+                    <img src="../../../img/app/triathlon/morun-10km-end.jpg" class="img-fluid grayscale" alt="placeholder">
+                </section>
+                <section class="grid-item wow fadeIn" data-wow-delay="0.9s">
+                    <img src="../../../img/app/triathlon/morun-10km-middle.jpg" class="img-fluid grayscale" alt="placeholder">
+                </section>
+                <section class="grid-item wow fadeIn" data-wow-delay="1s">
+                    <img src="../../../img/app/triathlon/hatfield5-end.jpg" class="img-fluid grayscale" alt="placeholder">
+                </section>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<hr class="my-huge invisible" />
+
+<!-- Template for content updates -->
+<section class="container">
+    <div class="row">
+        <div class="col-12 col-md-9">
+            <h1 class="display-4 done">A training plan</h1>
+            <h2 class="display-5">To stop turning up at the gym and going through the motions</h2>
+            <p>...</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <ul class="stepper stepper-horizontal">
+                <li class="completed">
+                    <a href="#!">
+                        <span class="circle">1</span>
+                        <span class="label">Legs single</span>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="#!">
+                        <span class="circle">2</span>
+                        <span class="label">Legs double</span>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="#!">
+                        <span class="circle">3</span>
+                        <span class="label">Legs single</span>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="#!">
+                        <span class="circle">4</span>
+                        <span class="label">Legs double</span>
+                    </a>
+                </li>
+                <li class="success">
+                    <a href="#!">
+                        <span class="circle"><i class="fa fa-check"></i></span>
+                        <span class="label">Watt training / 20miler</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <ul class="stepper stepper-horizontal">
+                <li class="completed">
+                    <a href="#!">
+                        <span class="circle">1</span>
+                        <span class="label">Speed session</span>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="#!">
+                        <span class="circle">2</span>
+                        <span class="label">Speed session + 20%</span>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="#!">
+                        <span class="circle">3</span>
+                        <span class="label">Speed session + 40%</span>
+                    </a>
+                </li>
+                <li class="success">
+                    <a href="#!">
+                        <span class="circle"><i class="fa fa-check"></i></span>
+                        <span class="label">Running event</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <ul class="stepper stepper-horizontal">
+                <li class="completed">
+                    <a href="#!">
+                        <span class="circle">1a</span>
+                        <span class="label">Phase</span>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="#!">
+                        <span class="circle">1b</span>
+                        <span class="label">Phase</span>
+                    </a>
+                </li>
+                <li class="success">
+                    <a href="#!">
+                        <span class="circle"><i class="fa fa-check"></i></span>
+                        <span class="label">-5 seconds rest</span>
+                    </a>
+                </li>
+                <li class="completed">
+                    <a href="#!">
+                        <span class="circle">1</span>
+                        <span class="label">Swim session</span>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="#!">
+                        <span class="circle">2</span>
+                        <span class="label">Swim session</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<hr class="my-huge invisible" />
+
+<!-- Template for content updates -->
+<section class="container">
+    <div class="row">
+        <div class="col-12 col-md-8 text-justify">
+            <h1 class="display-4 done">December</h1>
+            <h2 class="display-5">???</h2>
+            <h3 class="mt-5">Summary</h3>
+            <ul class="list-inline">
+                <li class="list-inline-item">Cross country</li>
+                <li class="list-inline-item">Ashridge duathlon training</li>
+                <li class="list-inline-item">Milton keynes half</li>
+            </ul>
+
+            <p>...</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <div class="grid cols-1">
+                <section class="grid-item wow fadeIn" data-wow-delay="0.1s">
+                    <img src="../../../img/app/triathlon/mk-winter-half-5.jpg" class="img-fluid grayscale" alt="placeholder">
+                </section>
+            </div>
+            <div class="grid">
+                <section class="grid-item wow fadeIn" data-wow-delay="0.2s">
+                    <img src="../../../img/app/triathlon/luton-xc1.jpg" class="img-fluid grayscale" alt="placeholder">
+                </section>
+                <section class="grid-item wow fadeIn" data-wow-delay="0.3s">
+                    <img src="../../../img/app/triathlon/mk-winter-half-1.jpg" class="img-fluid grayscale" alt="placeholder">
+                </section>
+                <section class="grid-item wow fadeIn" data-wow-delay="0.4s">
+                    <img src="../../../img/app/triathlon/mk-winter-half-2.jpg" class="img-fluid grayscale" alt="placeholder">
+                </section>
+                <section class="grid-item wow fadeIn" data-wow-delay="0.3s">
+                    <img src="../../../img/app/triathlon/mk-winter-half-3.jpg" class="img-fluid grayscale" alt="placeholder">
+                </section>
+                <section class="grid-item wow fadeIn" data-wow-delay="0.4s">
+                    <img src="../../../img/app/triathlon/mk-winter-half-4.jpg" class="img-fluid grayscale" alt="placeholder">
+                </section>
+            </div>
+        </div>
+    </div>
+</section>
+
+<hr class="my-huge invisible" />
+
+<!-- Footer -->
+<footer class="page-footer font-small mdb-color lighten-1">
+    <div class="footer-copyright text-center py-3">
+        <!--<p>© 2018 Copyright: <a href="http://www.ehhwhat.co.uk">Me</a></p>-->
+        <ul class="list-inline my-0">
+            <li class="list-inline-item"><a href="index.html"><strong>Home</strong></a></li>
+            <li class="list-inline-item"><a href="styletile.html">Style tile</a></li>
+            <li class="list-inline-item"><a href="components.html">Component sheet</a></li>
+            <li class="list-inline-item"><a href="data.html">Data</a></li>
+        </ul>
+    </div>
+</footer>
+<!-- Footer -->
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<!-- Then Material JavaScript on top of Bootstrap JavaScript -->
+<script src="../../../js/mdb.js"></script>
+
+</body>
+</html>

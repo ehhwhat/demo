@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta content="initial-scale=1, shrink-to-fit=no, width=device-width" name="viewport">
+
+    <title>Ajax | Jquery</title>
+
+    <!-- CSS -->
+    <!-- Add Material font (Roboto) and Material icon as needed -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Add Material CSS, replace Bootstrap CSS -->
+    <link href="../../../dist/css/material.min.css" rel="stylesheet">
+    <link href="../../../dist/css/demo.css" rel="stylesheet">
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <!-- Then Material JavaScript on top of Bootstrap JavaScript -->
+    <script src="../../../dist/js/material.min.js"></script>
+
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark-1">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarText">
+                        <ul class="navbar-nav">
+                            <li class="nav-item ">
+                                <a class="nav-link nav-link-home" href="../index.html"><i class="material-icons">home</i></a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav">
+                            <li class="nav-item ">
+                                <span class="nav-link disabled">JavaScript:</span>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="basic.html">Basics</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="maths.html">Maths</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="gym.html">Gym (Arrays)</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="books.html">Books (Arrays)</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="objects.html">Objects</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="es2015.html">ES2015</a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <span class="nav-link disabled">jQuery:</span>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="ajax.html">Ajax</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="ajaxJSON.html">AjaxJSON</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="ajaxJSON_promise.html">Ajax Promise</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="jumbotron my-4">
+                <h1 class="display-4">Ajax | <small class="text-muted">Getting data.</small></h1>
+                <p class="">
+                    Pull data (a static HTMl file) using <code>$.ajax</code>.
+                    All 4 examples below will point to the same file but #4 will fail on purpose to demonstrate the error handling (part of handling is to log error to console).
+                </p>
+                <hr class="my-4">
+                <p><strong>Things to note:</strong></p>
+                <ul class="">
+                    <li>Grabbing of external data, the data source is the same</li>
+                    <li>Have used <code>const</code> / <code>let</code> and <code>var</code> in multiple places</li>
+                    <li>Use of <code>$.ajax</code></li>
+                    <li>Success and error handling</li>
+                    <li><code>if</code> statement used to force the error handling in demo 4</li>
+                    <li>Each button clicked will append a unique id to the query string of file, this query string is pulled from HTML data <code>attr</code></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+
+    <hr class="my-4 invisible"/>
+
+    <div class="row">
+        <div class="col-12 col-md-3">
+            <div class="card mb-4 bg-light">
+                <div class="card-body text-center">
+                    <div class="inject-here text-left">
+
+                    </div>
+                </div>
+                <div class="card-footer text-center">
+                    <button id="ajaxStaticData1" data-box="box1" type="button" class="btn btn-info ajaxStaticData">Pull</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-4">
+            <div class="card mb-4 bg-light">
+                <div class="card-body text-center">
+                    <div class="inject-here text-left">
+
+                    </div>
+                </div>
+                <div class="card-footer text-center">
+                    <button id="ajaxStaticData2" data-box="box2" type="button" class="btn btn-info ajaxStaticData">Pull</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-3">
+            <div class="card mb-4 bg-light">
+                <div class="card-body text-center">
+                    <div class="inject-here text-left">
+
+                    </div>
+                </div>
+                <div class="card-footer text-center">
+                    <button id="ajaxStaticData3" data-box="box3" type="button" class="btn btn-info ajaxStaticData">Pull</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-2">
+            <div class="card mb-4 bg-light">
+                <div class="card-body text-center">
+                    <div class="inject-here text-left">
+
+                    </div>
+                </div>
+                <div class="card-footer text-center">
+                    <button id="ajaxStaticData4" data-box="box4" type="button" class="btn btn-info ajaxStaticData">Pull</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<script>
+
+    // standard click event
+    $(".ajaxStaticData").click(function () {
+
+        const buttonClicked = this;
+        const buttonData = $(this).data('box');
+        const parent = $(this).parent().parent();
+
+        // start by removing any existing .chips as they will continue forever if not
+        parent.find('.card-body .chip').remove();
+
+        // then add .chip to show dynamic data attr from specific button
+        parent.find('.card-footer').append('<span class="chip"><i class="chip-icon">#</i>'+buttonData+'</span>');
+
+        // use ajax to grab this specific html file
+        // if successful find this specific class and inject the html inside
+        // also append the url for the .html file with 'queryString:' and then the data attr from the button clicked
+        // wrapped in IF statement to demo what happens if file not found.
+
+        if($(this).attr('id') === 'ajaxStaticData4') {
+            var htmlFile = 'WILLNOTBEFOUND.html';
+        } else {
+            var htmlFile = 'ajax_data.html';
+        }
+
+        $.ajax(htmlFile, {
+            context:buttonClicked,
+            data: {"queryString": $(this).data('box')},
+            timeout: 3000,
+            success: function (response) {
+                $(this).parent().parent().find('.inject-here').html(response).slideDown();
+                $(this).remove();
+            },
+            // Error callback which takes a number of parameters
+            error: function(request, errorType, errorMessage){
+                console.log('Error: ' +errorType+ '. Reason: ' +errorMessage);
+                $(this).parent().parent().removeClass('bg-light').addClass('bg-danger');
+                $(this).remove();
+            },
+            beforeSend: function(){
+
+            },
+            complete: function(){
+
+            }
+        });
+
+
+    });
+
+</script>
+
+</body>
+</html>

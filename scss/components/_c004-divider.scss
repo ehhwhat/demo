@@ -1,0 +1,30 @@
+.c004-divider {
+  hr.section-divider {
+    display: block;
+    border: 0;
+    text-align: center;
+    overflow: visible;
+    margin:4rem 0;
+    &.section-divider__small {
+      margin:4rem 0;
+    }
+    &:before {
+      font-family: Georgia,Cambria,"Times New Roman",Times,serif;
+      font-weight: 400;
+      font-style: italic;
+      font-size: 2rem;
+      letter-spacing: .6em;
+      content: '...';
+      display: inline-block;
+      margin-left: .6em;
+      color: rgba($secondary-color,.25);
+      position: relative;
+      top: -2rem;
+    }
+  }
+  @include media-breakpoint-up(sm) {
+    hr.section-divider {
+      margin:8rem 0;
+    }
+  }
+}

@@ -1,0 +1,130 @@
+{{!-- components/c008-kpi.hbs --}}
+
+<!-- COMPONENT START -->
+
+<!-- GENERAL -->
+{{#> sublayouts/grid-row }}
+    {{#> sublayouts/grid-wide__col12 }}
+        <h3 class="mb-0">General</h3>
+    {{/sublayouts/grid-wide__col12 }}
+    {{#> sublayouts/grid-wide__col2 }}
+        {{> components/c007-data-block
+                data-title='Weight'
+                data-value='174lbs'
+        }}
+    {{/sublayouts/grid-wide__col2 }}
+    {{#> sublayouts/grid-wide__col2 }}
+        {{> components/c007-data-block
+                data-title='Bodyfat'
+                data-value='12.5%'
+                data-status='Down'
+                data-status-class='text-success'
+        }}
+    {{/sublayouts/grid-wide__col2 }}
+    {{#> sublayouts/grid-wide__col2 }}
+        {{> components/c007-data-block
+                data-title='Training hours'
+                data-value=''
+                data-class='totalTrainingTime'
+        }}
+    {{/sublayouts/grid-wide__col2 }}
+    {{#> sublayouts/grid-wide__col2 }}
+        {{> components/c007-data-block
+                data-title='Training days'
+                data-value=''
+                data-class='totalTrainingDays'
+        }}
+    {{/sublayouts/grid-wide__col2 }}
+{{/sublayouts/grid-row }}
+
+<!-- SWIMMING -->
+{{#> sublayouts/grid-row }}
+    {{#> sublayouts/grid-wide__col12 }}
+        <h3 class="mb-0 mt-5">Swimming</h3>
+    {{/sublayouts/grid-wide__col12 }}
+    {{#> sublayouts/grid-wide__col2 }}
+        {{> components/c007-data-block
+                data-title='Longest distance'
+                data-value=''
+                data-class='swimsDistanceFurthest'
+        }}
+    {{/sublayouts/grid-wide__col2 }}
+{{/sublayouts/grid-row }}
+
+<!-- CYCLING -->
+{{#> sublayouts/grid-row }}
+    {{#> sublayouts/grid-wide__col12 }}
+        <h3 class="mb-0 mt-5">Cycling</h3>
+    {{/sublayouts/grid-wide__col12 }}
+    {{#> sublayouts/grid-wide__col2 }}
+        {{> components/c007-data-block
+                data-title='Longest distance'
+                data-value=''
+                data-class='cyclesDistanceFurthest'
+        }}
+    {{/sublayouts/grid-wide__col2 }}
+    {{#> sublayouts/grid-wide__col2 }}
+        {{> components/c007-data-block
+                data-title='32km route'
+                data-value='145watts'
+                data-status='+18'
+                data-status-class='text-success'
+        }}
+    {{/sublayouts/grid-wide__col2 }}
+    {{#> sublayouts/grid-wide__col2 }}
+        {{> components/c007-data-block
+                data-title='56km route'
+                data-value='115watts'
+        }}
+    {{/sublayouts/grid-wide__col2 }}
+    {{#> sublayouts/grid-wide__col2 }}
+        {{> components/c007-data-block
+                data-title='80km route'
+                data-value=''
+        }}
+    {{/sublayouts/grid-wide__col2 }}
+    {{#> sublayouts/grid-wide__col2 }}
+        {{> components/c007-data-block
+                data-title='Average'
+                data-value=''
+                data-class='cyclesWattAvg'
+        }}
+    {{/sublayouts/grid-wide__col2 }}
+{{/sublayouts/grid-row }}
+
+<!-- RUNNING -->
+{{#> sublayouts/grid-row }}
+    {{#> sublayouts/grid-wide__col12 }}
+        <h3 class="mb-0 mt-5">Running</h3>
+    {{/sublayouts/grid-wide__col12 }}
+    {{#> sublayouts/grid-wide__col2 }}
+        {{> components/c007-data-block
+                data-title='Longest distance'
+                data-value='21km'
+        }}
+    {{/sublayouts/grid-wide__col2 }}
+    {{#> sublayouts/grid-wide__col2 }}
+        {{> components/c007-data-block
+                data-title='5km pb'
+                data-value='00:21:30'
+        }}
+    {{/sublayouts/grid-wide__col2 }}
+    {{#> sublayouts/grid-wide__col2 }}
+        {{> components/c007-data-block
+                data-title='10km pb'
+                data-value='00:43:10'
+                data-status='-00:00:30'
+                data-status-class='text-success'
+        }}
+    {{/sublayouts/grid-wide__col2 }}
+    {{#> sublayouts/grid-wide__col2 }}
+        {{> components/c007-data-block
+                data-title='Half marathon pb'
+                data-value='01:39:23'
+                data-status='-00:10:30'
+                data-status-class='text-success'
+        }}
+    {{/sublayouts/grid-wide__col2 }}
+{{/sublayouts/grid-row }}
+
+<!-- COMPONENT END -->

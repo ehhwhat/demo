@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta content="initial-scale=1, shrink-to-fit=no, width=device-width" name="viewport">
+
+    <title>Gym | JavaScript </title>
+
+    <!-- CSS -->
+    <!-- Add Material font (Roboto) and Material icon as needed -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Add Material CSS, replace Bootstrap CSS -->
+    <link href="../../../dist/css/material.min.css" rel="stylesheet">
+    <link href="../../../dist/css/demo.css" rel="stylesheet">
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <!-- Then Material JavaScript on top of Bootstrap JavaScript -->
+    <script src="../../../dist/js/material.min.js"></script>
+
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark-1">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarText">
+                        <ul class="navbar-nav">
+                            <li class="nav-item ">
+                                <a class="nav-link nav-link-home" href="../index.html"><i class="material-icons">home</i></a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav">
+                            <li class="nav-item ">
+                                <span class="nav-link disabled">JavaScript:</span>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="basic.html">Basics</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="maths.html">Maths</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="gym.html">Gym (Arrays)</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="books.html">Books (Arrays)</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="objects.html">Objects</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="es2015.html">ES2015</a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <span class="nav-link disabled">jQuery:</span>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="ajax.html">Ajax</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="ajaxJSON.html">AjaxJSON</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="ajaxJSON_promise.html">Ajax Promise</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="jumbotron my-4">
+                <h1 class="display-4">Arrays | <small class="text-muted">Based around a gym tool.</small></h1>
+                <p class="">Pull previous data from array (faked) and allow user to add new data from a form to the array and do some basic math on it.</p>
+                <hr class="my-4">
+                <p><strong>Things to note:</strong></p>
+                <ul class="">
+                    <li class="">Have used <code>const</code> / <code>let</code> instead of <code>var</code> for variables as this seems best practise for my needs (ES2015).</li>
+                    <li class="">This component makes use of a <code>function</code>, a nested <code>array</code>, a <code>for</code> loop and the <code>.push</code> method.</li>
+                    <li>The <code>function</code> is used to get the data items and is fired on page load and on a click event</li>
+                    <li>The <code>array</code> is some basic data values which we then <code>.push</code> new values to later.</li>
+                    <li>The <code>for</code> loop will find all the item in the <code>array</code> and spit out some HTML, it will then increment for the length of the <code>array</code>.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <hr class="my-4 invisible"/>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-header bg-light">
+                    <h2 class="display-4">Your weight</h2>
+                    <p class="">Pulls in previous weight entries and converts to lbs (pounds), also allows entry of new data to the array.</p>
+                </div>
+                <div class="card-body">
+                    <form id="weightForm" action="" class="mt-4">
+                        <div class="form-group">
+                            <label for="weightDate">Weigh in date</label>
+                            <input class="form-control" id="weightDate" placeholder="Pick a date" type="text">
+                        </div>
+                        <div class="form-group">
+                            <label for="weightInput">Weight in kilos</label>
+                            <input type="number" class="form-control" id="weightInput" placeholder="Weight in kilos">
+                        </div>
+                        <button type="submit" class="btn btn-primary" id="weightSubmit">Submit</button>
+                    </form>
+                </div>
+                <div class="card-footer bg-light-2 ">
+                    <table class="table" id="weightTable">
+                        <thead>
+                        <tr>
+                            <th scope="col">Date</th>
+                            <th scope="col">Weight(kg)</th>
+                            <th scope="col">Weight(lbs)</th>
+                        </tr>
+                        </thead>
+                        <tbody id="weightTableBody">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr class="my-4 invisible"/>
+
+</div>
+
+<script>
+
+    // Needed for the date picker
+    $('#weightDate').pickdate({max: true,min: -10});
+
+    // Create a fake array of data
+    let weightArray = [['01/02/2018',75],['02/02/2018',77],['03/02/2018',79]];
+
+    // Create a function so we can fire the data grab on page load and on a button click
+    function getData() {
+        // Use a for loop to iterate through each of the array items for as long as the length of the array
+        // Find specific element in DOM and add the required HTML.
+        // Conversion of data to change weight. Use math.round to remove decimals.
+        for(let i = 0; i < weightArray.length; i++) {
+            const weightInKG = weightArray[i][1];
+            const weightInPounds = Math.round(weightInKG * 2.2);
+            document.getElementById("weightTableBody").innerHTML += "<tr><td>" +weightArray[i][0]+ "</td><td>" +weightArray[i][1]+ "</td><td>" +weightInPounds+ "</td></tr>";
+        }
+    }
+
+    // Create click event.
+    // Start by removing the HTML inside our table body, basically resetting the table.
+    // Get the 2 new values and push to our already existing nested array
+    // Fire our getData() function again which will now use the updated array items
+    document.getElementById('weightSubmit').onclick = function(event) {
+        event.preventDefault();
+        document.getElementById("weightTableBody").innerHTML = "";
+        let newWeightDate = document.getElementById("weightDate").value;
+        let newWeight = Math.round(parseInt(document.getElementById("weightInput").value));
+        weightArray.push([newWeightDate,newWeight]);
+        getData();
+    };
+
+    // On window load fire our getData() function
+    window.onload = function() {
+        getData();
+    }
+
+</script>
+
+</body>
+</html>

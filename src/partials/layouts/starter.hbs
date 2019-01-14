@@ -1,0 +1,52 @@
+{{!-- layouts/starter.hbs --}}
+
+<!doctype html>
+<html>
+    <head>
+        {{> includes/meta }}
+        <title>
+            {{#if title}}
+                {{title}}
+            {{else}}
+                Base Page Title
+            {{/if}}
+        </title>
+        <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@8.17.0/dist/lazyload.min.js"></script>
+        {{> includes/styles
+                domainprefix='../'
+                version='8'
+        }}
+        {{#> head-block}}
+            {{!-- Custom <head> content per page could be added. --}}
+        {{/head-block}}
+    </head>
+
+    <body data-spy="scroll" data-target="#navbar" data-offset="150" class="smooth-scroll">
+
+        <header>
+            {{#> header-block}}
+                {{!-- header content goes here. --}}
+            {{/header-block}}
+        </header>
+
+        <main>
+            {{#> main-block}}
+                {{!-- main content goes here. --}}
+            {{/main-block}}
+        </main>
+
+        <footer class="page-footer font-small mdb-color lighten-1">
+            {{#> footer-block}}
+                {{!-- footer content goes here. --}}
+            {{/footer-block}}
+        </footer>
+
+        {{#> scripts-block}}
+            {{> includes/scripts
+                    domainprefix='../'
+                    version='8'
+            }}
+        {{/scripts-block}}
+
+    </body>
+</html>

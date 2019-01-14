@@ -1,0 +1,173 @@
+{{!-- pages/general/styletile.hbs --}}
+
+{{#> layouts/base title="Style tile" }}
+
+    {{#*inline "header-block"}}
+        {{#> components/header
+             brand='Style tile'
+        }}
+        {{/components/header}}
+    {{/inline}}
+
+    {{#*inline "main-block"}}
+
+        {{!-- ------------------ --}}
+        {{!-- c001-basic-content --}}
+        {{!-- ------------------ --}}
+        {{> components/c000-comp-desc
+            comp-id='headings'
+            comp-name='Headings'
+        }}
+        {{#> sublayouts/grid1 }}
+            {{> components/c001-basic-content
+                    heading-primary='It was a bright cold day in April, and the clocks were striking thirteen'
+                    heading-secondary='It was a bright cold day in April, and the clocks were striking thirteen'
+                    body-content='
+                    <h3 class="mt-5 h3-responsive">It was a bright cold day in April, and the clocks were striking thirteen</h3>
+                    <h4 class="mt-5 h4-responsive">It was a bright cold day in April, and the clocks were striking thirteen</h4>
+                    <h5><strong>It was a bright cold day in April, and the clocks were striking thirteen</strong></h5>
+                    <h6><strong>It was a bright cold day in April, and the clocks were striking thirteen</strong></h6>
+                '
+            }}
+        {{/sublayouts/grid1}}
+
+{{!-- ------- --}}
+{{!-- DIVIDER --}}
+{{!-- ------- --}}
+{{> components/c004-divider }}
+
+        {{!-- ------------------ --}}
+        {{!-- c001-basic-content --}}
+        {{!-- ------------------ --}}
+        {{> components/c000-comp-desc
+                comp-id='typography'
+                comp-name='Typography'
+        }}
+        {{#> sublayouts/grid1 }}
+            {{> components/c001-basic-content
+                    body-content='
+                    <h6><strong>Lead</strong></h6>
+                    <p class="lead">A B C D E F G H I K L M N O P Q R S T V X Y Z</p>
+                    <p class="lead">It was a bright cold day in April, and the clocks were striking thirteen.</p>
+
+                    <h6><strong>Strong, emphasis, underlined and linked</strong></h6>
+                    <p>a <strong>b</strong> c d <strong>e</strong> f g h i j k l m <strong>n</strong> o p q r s t u v w x y z</p>
+                    <p>a <em>b</em> c d <em>e</em> f g h i j k l m <em>n</em> o p q r s t u v w x y z</p>
+                    <p>a <u>b</u> c d <u>e</u> f g h i j k l m <u>n</u> o p q r s t u v w x y z</p>
+                    <p>a <a href="">b</a> c d <a href="">e</a> f g h i j k l m <a href="">n</a> o p q r s t u v w x y z</p>
+                    <p>It was a <strong>bright</strong> <a href="">cold day in April</a>, and the <em>clocks</em> were <u>striking</u> thirteen.</p>
+
+                    <h6><strong>Muted</strong></h6>
+                    <p class="text-muted">a b c d e f g h i j k l m n o p q r s t u v w x y z</p>
+                    <p class="text-muted">It was a bright cold day in April, and the clocks were striking thirteen.</p>
+
+                    <h6><strong>Small</strong></h6>
+                    <p class="small">a b c d e f g h i j k l m n o p q r s t u v w x y z</p>
+                    <p class="small">It was a bright cold day in April, and the clocks were striking thirteen.</p>
+                '
+            }}
+        {{/sublayouts/grid1}}
+
+{{!-- ------- --}}
+{{!-- DIVIDER --}}
+{{!-- ------- --}}
+{{> components/c004-divider }}
+
+        {{!-- ------------------ --}}
+        {{!-- c001-basic-content --}}
+        {{!-- ------------------ --}}
+        {{> components/c000-comp-desc
+                comp-id='colors'
+                comp-name='Colors'
+        }}
+        {{#> sublayouts/grid1 }}
+            <h3 class="h3-responsive">Brand</h3>
+            <div class="py-2 border-bottom border-default" style="border-width:4px!important;">Default</div>
+            <div class="py-2 border-bottom border-primary" style="border-width:4px!important;">Primary</div>
+            <div class="py-2 border-bottom border-secondary" style="border-width:4px!important;">Secondary</div>
+            <div class="py-2 border-bottom border-light" style="border-width:4px!important;">Light</div>
+            <div class="py-2 border-bottom border-dark" style="border-width:4px!important;">Dark</div>
+
+            <h3 class="mt-5 h3-responsive">Other</h3>
+            <div class="py-2 border-bottom border-info" style="border-width:2px!important;">Links / Info</div>
+            <div class="py-2 border-bottom border-success" style="border-width:2px!important;">Success</div>
+            <div class="py-2 border-bottom border-warning" style="border-width:2px!important;">Warning</div>
+            <div class="py-2 border-bottom border-danger" style="border-width:2px!important;">Danger</div>
+        {{/sublayouts/grid1}}
+
+{{!-- ------- --}}
+{{!-- DIVIDER --}}
+{{!-- ------- --}}
+{{> components/c004-divider }}
+
+        {{!-- ------------------ --}}
+        {{!-- c001-basic-content --}}
+        {{!-- ------------------ --}}
+        {{> components/c000-comp-desc
+                comp-id='button'
+                comp-name='Buttons'
+        }}
+        {{#> sublayouts/grid-wide }}
+            {{#> sublayouts/grid-wide__col4 }}
+                <a href="#" class="btn btn-outline-default waves-effect" title="{{cta-title}}">Default <i class="fa fa-arrow-right"></i></a>
+            {{/sublayouts/grid-wide__col4}}
+            {{#> sublayouts/grid-wide__col4 }}
+                <a href="#" class="btn btn-outline-secondary waves-effect" title="{{cta-title}}">Secondary <i class="fa fa-arrow-right"></i></a>
+            {{/sublayouts/grid-wide__col4}}
+            {{#> sublayouts/grid-wide__col4 }}
+
+            {{/sublayouts/grid-wide__col4}}
+        {{/sublayouts/grid-wide}}
+
+{{!-- ------- --}}
+{{!-- DIVIDER --}}
+{{!-- ------- --}}
+{{> components/c004-divider }}
+
+        {{!-- ------------------ --}}
+        {{!-- c001-basic-content --}}
+        {{!-- ------------------ --}}
+        {{> components/c000-comp-desc
+                comp-id='images'
+                comp-name='Images'
+        }}
+        {{#> sublayouts/grid-wide }}
+            {{#> sublayouts/grid-wide__col4 }}
+                <h3 class="h3-responsive">Square</h3>
+                <p>1000px (W) by 1000px (H)</p>
+                <img class="img-fluid" src="../../../img/app/triathlon/watlington-sportive2.jpg">
+            {{/sublayouts/grid-wide__col4}}
+            {{#> sublayouts/grid-wide__col4 }}
+                <h3 class="h3-responsive">Horizontal</h3>
+                <p>2000px (W) by 1000px (H)</p>
+                <img class="img-fluid" src="../../../img/app/triathlon/ashridge-training-2.jpg">
+            {{/sublayouts/grid-wide__col4}}
+            {{#> sublayouts/grid-wide__col4 }}
+                <h3 class="h3-responsive">Vertical</h3>
+                <p>1000px (W) by 2000px (H)</p>
+                <img class="img-fluid" src="../../../img/app/triathlon/training-turbo (7).jpg">
+            {{/sublayouts/grid-wide__col4}}
+        {{/sublayouts/grid-wide}}
+
+{{!-- ------- --}}
+{{!-- DIVIDER --}}
+{{!-- ------- --}}
+{{> components/c004-divider }}
+
+
+    {{/inline}}
+
+    {{#*inline "footer-block"}}
+        {{> components/footer
+                body-content='
+                <ul class="list-inline my-0">
+                    <li class="list-inline-item"><a href="../index.html">Home</a></li>
+                    <li class="list-inline-item"><a href="styletile.html"><strong>Style tile</strong></a></li>
+                    <li class="list-inline-item"><a href="components.html">Components</a></li>
+                    <li class="list-inline-item"><a href="sublayouts.html">Sublayouts</a></li>
+                </ul>
+            '
+        }}
+    {{/inline}}
+
+{{/layouts/base}}

@@ -1,0 +1,8 @@
+{{!-- components/c007-data-block.hbs --}}
+
+<!-- COMPONENT START -->
+<div class="c007-data-block">
+    <p class="mt-3 mb-0"><strong>{{data-title}}</strong></p>
+    <p class="display-5 dataPoint {{data-class}}">{{data-value}}{{#if data-status}}<sup class="font-small {{data-status-class}}">{{data-status}}</sup>{{/if}}</p>
+</div>
+<!-- COMPONENT END -->

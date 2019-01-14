@@ -1,0 +1,269 @@
+{{!-- pages/general/components.hbs --}}
+
+{{#> layouts/base title="Components" }}
+
+    {{#*inline "header-block"}}
+        {{#> components/header
+             brand='Components'
+        }}
+        {{/components/header}}
+    {{/inline}}
+
+    {{#*inline "main-block"}}
+
+
+        {{!-- ------------------ --}}
+        {{!-- c001-basic-content --}}
+        {{!-- ------------------ --}}
+        {{> components/c000-comp-desc
+            comp-id='c001-basic-content'
+            comp-name='Content block'
+        }}
+        {{#> sublayouts/grid1 }}
+            {{> components/c001-basic-content
+                    heading-primary='Primary heading'
+                    heading-secondary='Secondary heading'
+                    body-content='
+                    <p>At the edge of forever radio telescope Flatland paroxysm of global death across the centuries a mote of dust suspended in a sunbeam. Gathered by gravity inconspicuous motes of rock and gas a mote of dust suspended in a sunbeam the carbon in our apple pies muse about Sea of Tranquility. The ash of stellar alchemy bits of moving fluff extraordinary claims require extraordinary evidence vastness is bearable only through love birth muse about and billions upon billions upon billions upon billions upon billions upon billions upon billions.</p>
+                    <h3 class="mt-5 h3-responsive">Tertiary heading</h3>
+                    <p>At the edge of forever radio telescope Flatland paroxysm of global death across the centuries a mote of dust suspended in a sunbeam. Gathered by gravity inconspicuous motes of rock and gas a mote of dust suspended in a sunbeam the carbon in our apple pies muse about Sea of Tranquility.</p>
+                    <h4 class="mt-5 h4-responsive">Forthinary heading</h4>
+                    <p>At the edge of forever radio telescope Flatland paroxysm of global death across the centuries a mote of dust suspended in a sunbeam.</p>
+                    <h3 class="mt-5 h3-responsive">Tertiary heading</h3>
+                    <p>At the edge of forever radio telescope Flatland paroxysm of global death across the centuries a mote of dust suspended in a sunbeam.</p>
+                    <ul class="">
+                        <li>Lorem</li>
+                        <li>ipsum</li>
+                        <li>dolor</li>
+                        <li>sit</li>
+                        <li>amet</li>
+                    </ul>
+                '
+            }}
+        {{/sublayouts/grid1}}
+
+
+        {{!-- ------- --}}
+        {{!-- DIVIDER --}}
+        {{!-- ------- --}}
+        {{> components/c004-divider }}
+
+
+        {{!-- ---------------------- --}}
+        {{!-- c002-image-content-cta --}}
+        {{!-- ---------------------- --}}
+        {{> components/c000-comp-desc
+                comp-id='c002-image-content-cta'
+                comp-name='Project block with image'
+        }}
+        {{> components/c002-image-content-cta
+            id='test'
+            img1-url='https://drive.google.com/uc?export=view&id=1431tyUj1VzkAZTMlYQybaKYBYhnREl4c'
+            img1-alt=''
+            img1-class=''
+            heading-primary='Primary heading'
+            heading-secondary='Secondary heading'
+            img2-url='https://placeimg.com/800/450/tech/grayscale'
+            img2-alt=''
+            body-content='
+                <p>At the edge of forever radio telescope Flatland paroxysm of global death across the centuries a mote of dust suspended in a sunbeam. Gathered by gravity inconspicuous motes of rock and gas a mote of dust suspended in a sunbeam the carbon in our apple pies muse about Sea of Tranquility. The ash of stellar alchemy bits of moving fluff extraordinary claims require extraordinary evidence vastness is bearable only through love birth muse about and billions upon billions upon billions upon billions upon billions upon billions upon billions.</p>
+                <h6><strong>Tech used:</strong></h6>
+                <ul class="list-inline">
+                    <li class="list-inline-item">Tech</li>
+                    <li class="list-inline-item">Tech</li>
+                    <li class="list-inline-item">Tech</li>
+                    <li class="list-inline-item">Tech</li>
+                </ul>
+                <h6><strong>Location:</strong></h6>
+                <p>Date - Date | Somewhere</p>
+            '
+            cta-link='#'
+            cta-text='View site'
+            cta-title='View this'
+        }}
+
+
+        {{!-- ------- --}}
+        {{!-- DIVIDER --}}
+        {{!-- ------- --}}
+        {{> components/c004-divider }}
+
+
+        {{!-- ------------ --}}
+        {{!-- c003-stepper --}}
+        {{!-- ------------ --}}
+        {{> components/c000-comp-desc
+                comp-id='c003-stepper'
+                comp-name='Stepper'
+        }}
+        {{#> sublayouts/grid1 }}
+            {{#> components/c003-stepper
+                 heading-primary='Primary heading'
+                 heading-secondary='Secondary heading'
+            }}
+                {{> components/c003-stepper__point
+                        point-title='Title'
+                        point-date='Date - Date'
+                        point-icon='fa-map-marker'
+                        point-status='bg-info'
+                        point-href='#icaew'
+                }}
+                {{> components/c003-stepper__point
+                        point-title='Title'
+                        point-date='Date - Date'
+                        point-icon='fa-check'
+                        point-status='bg-success'
+                        point-href='#icaew'
+                }}
+                {{> components/c003-stepper__point
+                        point-title='Title'
+                        point-date='Date - Date'
+                        point-icon='fa-check'
+                        point-status='bg-dark'
+                        point-href='#icaew'
+                }}
+                {{> components/c003-stepper__point
+                        point-title='Title'
+                        point-date='Date - Date'
+                        point-icon='fa-times'
+                        point-status='bg-danger'
+                        point-href='#icaew'
+                }}
+                {{> components/c003-stepper__point
+                        point-title='Title'
+                        point-date='Date - Date'
+                        point-icon='fa-check'
+                        point-status='bg-info'
+                        point-href='#icaew'
+                }}
+            {{/components/c003-stepper}}
+        {{/sublayouts/grid1}}
+
+
+        {{!-- ------- --}}
+        {{!-- DIVIDER --}}
+        {{!-- ------- --}}
+        {{> components/c004-divider }}
+
+
+        {{!-- ------------ --}}
+        {{!-- c004-divider --}}
+        {{!-- ------------ --}}
+        {{> components/c000-comp-desc
+                comp-id='c004-divider'
+                comp-name='Divider'
+        }}
+        {{> components/c004-divider }}
+
+{{!-- ------- --}}
+{{!-- DIVIDER --}}
+{{!-- ------- --}}
+{{> components/c004-divider }}
+
+        {{!-- --------------- --}}
+        {{!-- c005-blockquote --}}
+        {{!-- --------------- --}}
+        {{> components/c000-comp-desc
+                comp-id='c005-blockquote'
+                comp-name='Blockquote'
+        }}
+        {{#> sublayouts/grid-wide }}
+            {{#> sublayouts/grid-wide__col12 }}
+                {{> components/c005-blockquote
+                    body='At the edge of forever radio telescope Flatland paroxysm of global death across the centuries a mote of dust suspended in a sunbeam.'
+                    source-name='me'
+                    source-location='over there'
+                }}
+            {{/sublayouts/grid-wide__col12 }}
+        {{/sublayouts/grid-wide}}
+
+{{!-- ------- --}}
+{{!-- DIVIDER --}}
+{{!-- ------- --}}
+{{> components/c004-divider }}
+
+        {{!-- ---------------- --}}
+        {{!-- c006-image-block --}}
+        {{!-- ---------------- --}}
+        {{> components/c000-comp-desc
+                comp-id='c006-image-block'
+                comp-name='Image block'
+        }}
+        {{#> sublayouts/grid-wide }}
+            {{#> sublayouts/grid-wide__col12 }}
+                {{#> components/c006-image-block }}
+                    {{> components/c006-image-block__point
+                            img-src='../../../img/app/triathlon/training-turbo (7).jpg'
+                            img-alt='1'
+                    }}
+                    {{> components/c006-image-block__point
+                            img-src='../../../img/app/triathlon/training-turbo (8).jpg'
+                            img-alt='2'
+                    }}
+                    {{> components/c006-image-block__point
+                            img-src='../../../img/app/triathlon/training-turbo (9).jpg'
+                            img-alt='3'
+                    }}
+                {{/components/c006-image-block}}
+            {{/sublayouts/grid-wide__col12 }}
+        {{/sublayouts/grid-wide}}
+
+{{!-- ------- --}}
+{{!-- DIVIDER --}}
+{{!-- ------- --}}
+{{> components/c004-divider }}
+
+        {{!-- --------------- --}}
+        {{!-- c005-blockquote --}}
+        {{!-- --------------- --}}
+        {{> components/c000-comp-desc
+                comp-id='c007-data-block'
+                comp-name='Data block'
+        }}
+        {{#> sublayouts/grid-wide }}
+            {{#> sublayouts/grid-wide__col4 }}
+                {{> components/c007-data-block
+                        data-title='Title'
+                        data-value='Value'
+                        data-status='Up'
+                        data-status-class='text-success'
+                }}
+            {{/sublayouts/grid-wide__col4}}
+            {{#> sublayouts/grid-wide__col4 }}
+                {{> components/c007-data-block
+                        data-title='Title'
+                        data-value='Value'
+                        data-status='Down'
+                        data-status-class='text-danger'
+                }}
+            {{/sublayouts/grid-wide__col4}}
+            {{#> sublayouts/grid-wide__col4 }}
+                {{> components/c007-data-block
+                        data-title='Title'
+                        data-value='Value'
+                }}
+            {{/sublayouts/grid-wide__col4}}
+        {{/sublayouts/grid-wide}}
+
+{{!-- ------- --}}
+{{!-- DIVIDER --}}
+{{!-- ------- --}}
+{{> components/c004-divider }}
+
+
+    {{/inline}}
+
+    {{#*inline "footer-block"}}
+        {{> components/footer
+                body-content='
+                <ul class="list-inline my-0">
+                    <li class="list-inline-item"><a href="../index.html">Home</a></li>
+                    <li class="list-inline-item"><a href="styletile.html">Style tile</a></li>
+                    <li class="list-inline-item"><a href="components.html"><strong>Components</strong></a></li>
+                    <li class="list-inline-item"><a href="sublayouts.html">Sublayouts</a></li>
+                </ul>
+            '
+        }}
+    {{/inline}}
+
+{{/layouts/base}}

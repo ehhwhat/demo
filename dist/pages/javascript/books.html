@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta content="initial-scale=1, shrink-to-fit=no, width=device-width" name="viewport">
+
+    <title>Books | JavaScript </title>
+
+    <!-- CSS -->
+    <!-- Add Material font (Roboto) and Material icon as needed -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Add Material CSS, replace Bootstrap CSS -->
+    <link href="../../../dist/css/material.min.css" rel="stylesheet">
+    <link href="../../../dist/css/demo.css" rel="stylesheet">
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <!-- Then Material JavaScript on top of Bootstrap JavaScript -->
+    <script src="../../../dist/js/material.min.js"></script>
+
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark-1">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarText">
+                        <ul class="navbar-nav">
+                            <li class="nav-item ">
+                                <a class="nav-link nav-link-home" href="../index.html"><i class="material-icons">home</i></a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav">
+                            <li class="nav-item ">
+                                <span class="nav-link disabled">JavaScript:</span>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="basic.html">Basics</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="maths.html">Maths</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="gym.html">Gym (Arrays)</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="books.html">Books (Arrays)</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="objects.html">Objects</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="es2015.html">ES2015</a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <span class="nav-link disabled">jQuery:</span>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="ajax.html">Ajax</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="ajaxJSON.html">AjaxJSON</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="ajaxJSON_promise.html">Ajax Promise</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="jumbotron my-4">
+                <h1 class="display-4">Arrays | <small class="text-muted">Based around lists of books.</small></h1>
+                <p class="">
+                    2 Demo's of adding and removing items from an array.
+                    First demo is pretty basic, we start with an empty array and poplate it with our favourite books.</p>
+                <hr class="my-4">
+                <p><strong>Things to note:</strong></p>
+                <ul class="">
+                    <li class="text-danger">Need to update</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <hr class="my-4 invisible"/>
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="card my-2">
+                <div class="card-header">
+                    <h2 class="display-4">Favourite Books</h2>
+                    <p class="">Add your favourite books with a Title and a Review to a table (array).</p>
+                </div>
+                <div class="card-body">
+                    <form id="weightForm" action="" class="">
+                        <div class="form-group">
+                            <label for="bookInput">Title</label>
+                            <input type="text" id="bookInput" class="form-control" placeholder="Title">
+                        </div>
+                        <div class="form-group">
+                            <label for="bookReviewInput">Review</label>
+                            <input type="text" id="bookReviewInput" class="form-control"  placeholder="Review">
+                        </div>
+                        <button type="submit" class="btn btn-info" id="bookSubmit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card my-2 bg-light">
+                <div class="card-body text-center">
+                    <h4>Table of books</h4>
+                    <table class="table" id="reviewTable">
+                        <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Review</th>
+                        </tr>
+                        </thead>
+                        <tbody id="tableBody">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card my-2 bg-dark">
+                <div class="card-body text-white text-center">
+                    <h5>Print out of array data</h5>
+                    <pre class="text-white" id="code">
+
+                    </pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr class="my-4 invisible"/>
+
+</div>
+
+<script>
+    var favBooksArray = [];
+
+    // WHEN USER CLICKS BUTTON
+    // START BY EMPTYING TABLE AND CODE BLOCK SO WE DONT REPEAT ENTRIES
+    // GRAB VALUES FOR BOOK TITLE AND BOOK SCORE
+    // PUSH TO ARRAY
+    // ITERATE THROUGH ARRAY 1 BY 1
+    // UPDATE HTML FOR TABLE AND CODE BLOCK TO SHOW UPDATED ARRAY ITEMS
+    // PASS NESTED ARRAY ITEM AT INDEX 0 TO ONE PLACE
+    // PASS NESTED ARRAY ITEM AT INDEX 1 TO ANOTHER
+    // FINISH BY CLEARING THE TWO BOOK INPUTS
+
+    document.getElementById('bookSubmit').onclick = function(event) {
+        event.preventDefault();
+        document.getElementById("tableBody").innerHTML = "";
+        document.getElementById("code").innerHTML = "";
+        var newBook = document.getElementById('bookInput').value;
+        var newBookScore = document.getElementById('bookReviewInput').value;
+        favBooksArray.push([newBook,newBookScore]);
+        for (var i = 0; i < favBooksArray.length; i++) {
+            document.getElementById("tableBody").innerHTML += "<tr><td>"+favBooksArray[i][0]+"</td><td>"+favBooksArray[i][1]+"</td></tr>";
+            document.getElementById("code").innerHTML +="The value in cell " + i + " is " + favBooksArray[i]+"<br/>";
+        }
+
+        // Empty values to allow another book to be added
+        document.getElementById("bookInput").value = "";
+        document.getElementById("bookInput").focus();
+        document.getElementById("bookReviewInput").value = "";
+
+    };
+
+</script>
+
+</body>
+</html>

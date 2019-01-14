@@ -1,0 +1,170 @@
+{{!-- components/c009-training.hbs --}}
+
+<!-- COMPONENT START -->
+{{#> sublayouts/grid-row }}
+    {{#> sublayouts/grid-wide__col12 }}
+        <div class="text-center c007-data-block__triggers">
+            <div class="btn-group mb-5" data-toggle="buttons">
+                <label class="btn btn-outline-default btn-sm form-check-label active">
+                    <input class="form-check-input" type="radio" name="sessionsVsDistances" id="Sessions" value="sessions" autocomplete="off" checked>
+                    Sessions
+                </label>
+                <label class="btn btn-outline-default btn-sm form-check-label">
+                    <input class="form-check-input" type="radio" name="sessionsVsDistances" id="Distances" value="distances" autocomplete="off">
+                    Distances
+                </label>
+                <label class="btn btn-outline-default btn-sm form-check-label">
+                    <input class="form-check-input" type="radio" name="sessionsVsDistances" id="Times" value="times" autocomplete="off">
+                    Times
+                </label>
+            </div>
+        </div>
+    {{/sublayouts/grid-wide__col12 }}
+{{/sublayouts/grid-row }}
+
+{{#> sublayouts/grid-row }}
+<div class="showOnSessions" style="width:100%;display: flex;flex-wrap: wrap;">
+    {{#> sublayouts/grid-wide__col12 }}
+        <h3 class="">Sessions</h3>
+    {{/sublayouts/grid-wide__col12 }}
+    {{#> sublayouts/grid-wide__col2 }}
+        {{> components/c007-data-block
+                data-title='Total'
+                data-value=''
+                data-class='dataPoint totalTrainingSessions showOnSessions'
+        }}
+    {{/sublayouts/grid-wide__col2 }}
+    {{#> sublayouts/grid-wide__col2 }}
+        {{> components/c007-data-block
+                data-title='GYM Cardio'
+                data-value=''
+                data-class='dataPoint totalGymCardioSessions showOnSessions'
+        }}
+    {{/sublayouts/grid-wide__col2 }}
+    {{#> sublayouts/grid-wide__col2 }}
+        {{> components/c007-data-block
+                data-title='Weights'
+                data-value=''
+                data-class='dataPoint totalWeightSessions showOnSessions'
+        }}
+    {{/sublayouts/grid-wide__col2 }}
+    {{#> sublayouts/grid-wide__col2 }}
+        {{> components/c007-data-block
+                data-title='Swims'
+                data-value=''
+                data-class='dataPoint totalSwimSessions showOnSessions'
+        }}
+    {{/sublayouts/grid-wide__col2 }}
+    {{#> sublayouts/grid-wide__col2 }}
+        {{> components/c007-data-block
+                data-title='Cycles'
+                data-value=''
+                data-class='dataPoint totalCycleSessions showOnSessions'
+        }}
+    {{/sublayouts/grid-wide__col2 }}
+    {{#> sublayouts/grid-wide__col2 }}
+        {{> components/c007-data-block
+                data-title='Runs'
+                data-value=''
+                data-class='dataPoint totalRunSessions showOnSessions'
+        }}
+    {{/sublayouts/grid-wide__col2 }}
+</div>
+
+<div class="showOnDistances" style="width:100%;display: flex;flex-wrap: wrap;">
+    {{#> sublayouts/grid-wide__col12 }}
+        <h3 class="">Distances</h3>
+    {{/sublayouts/grid-wide__col12 }}
+    {{#> sublayouts/grid-wide__col2 }}
+        {{> components/c007-data-block
+                data-title='Total'
+                data-value=''
+                data-class='dataPoint totalTrainingKM showOnDistancesOFF'
+        }}
+    {{/sublayouts/grid-wide__col2 }}
+    {{#> sublayouts/grid-wide__col2 }}
+        {{> components/c007-data-block
+                data-title='GYM Cardio'
+                data-value='N/A'
+                data-class='dataPoint dataPointBlank showOnDistancesOFF'
+        }}
+    {{/sublayouts/grid-wide__col2 }}
+    {{#> sublayouts/grid-wide__col2 }}
+        {{> components/c007-data-block
+                data-title='Weights'
+                data-value='N/A'
+                data-class='dataPoint dataPointBlank showOnDistancesOFF'
+        }}
+    {{/sublayouts/grid-wide__col2 }}
+    {{#> sublayouts/grid-wide__col2 }}
+        {{> components/c007-data-block
+                data-title='Swims'
+                data-value=''
+                data-class='dataPoint totalSwimKM showOnDistancesOFF'
+        }}
+    {{/sublayouts/grid-wide__col2 }}
+    {{#> sublayouts/grid-wide__col2 }}
+        {{> components/c007-data-block
+                data-title='Cycles'
+                data-value=''
+                data-class='dataPoint totalCycleKM showOnDistancesOFF'
+        }}
+    {{/sublayouts/grid-wide__col2 }}
+    {{#> sublayouts/grid-wide__col2 }}
+        {{> components/c007-data-block
+                data-title='Runs'
+                data-value=''
+                data-class='dataPoint totalRunKM showOnDistancesOFF'
+        }}
+    {{/sublayouts/grid-wide__col2 }}
+</div>
+
+<div class="showOnTimes" style="width:100%;display: flex;flex-wrap: wrap;">
+    {{#> sublayouts/grid-wide__col12 }}
+        <h3 class="">Times</h3>
+    {{/sublayouts/grid-wide__col12 }}
+    {{#> sublayouts/grid-wide__col2 }}
+        {{> components/c007-data-block
+                data-title='Total'
+                data-value=''
+                data-class='dataPoint totalTrainingTime showOnTimesOFF'
+        }}
+    {{/sublayouts/grid-wide__col2 }}
+    {{#> sublayouts/grid-wide__col2 }}
+        {{> components/c007-data-block
+                data-title='GYM Cardio'
+                data-value=''
+                data-class='dataPoint totalGymCardioTime showOnTimesOFF'
+        }}
+    {{/sublayouts/grid-wide__col2 }}
+    {{#> sublayouts/grid-wide__col2 }}
+        {{> components/c007-data-block
+                data-title='Weights'
+                data-value=''
+                data-class='dataPoint totalWeightTime showOnTimesOFF'
+        }}
+    {{/sublayouts/grid-wide__col2 }}
+    {{#> sublayouts/grid-wide__col2 }}
+        {{> components/c007-data-block
+                data-title='Swims'
+                data-value=''
+                data-class='dataPoint totalSwimTime showOnTimesOFF'
+        }}
+    {{/sublayouts/grid-wide__col2 }}
+    {{#> sublayouts/grid-wide__col2 }}
+        {{> components/c007-data-block
+                data-title='Cycles'
+                data-value=''
+                data-class='dataPoint totalCycleTime showOnTimesOFF'
+        }}
+    {{/sublayouts/grid-wide__col2 }}
+    {{#> sublayouts/grid-wide__col2 }}
+        {{> components/c007-data-block
+                data-title='Runs'
+                data-value=''
+                data-class='dataPoint totalRunTime showOnTimesOFF'
+        }}
+    {{/sublayouts/grid-wide__col2 }}
+</div>
+{{/sublayouts/grid-row }}
+<!-- COMPONENT END -->

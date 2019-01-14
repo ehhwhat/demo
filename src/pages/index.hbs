@@ -1,0 +1,160 @@
+{{!-- pages/index.hbs --}}
+
+{{#> layouts/starter title="Home" }}
+
+    {{#*inline "header-block"}}
+        {{#> components/header
+                brand='Ehhwhat'
+        }}
+            {{> components/header__point
+                    point-title='Introduction'
+                    point-href='introduction'
+            }}
+            {{> components/header__point
+                    point-title='Generic'
+                    point-href='generic'
+            }}
+            {{> components/header__point
+                    point-title='Apps'
+                    point-href='apps'
+            }}
+            {{> components/header__point
+                    point-title='React'
+                    point-href='react'
+            }}
+            {{> components/header__point
+                    point-title='JS'
+                    point-href='js'
+            }}
+        {{/components/header}}
+    {{/inline}}
+
+    {{#*inline "main-block"}}
+
+        {{#> sublayouts/grid1
+                id='introduction'
+        }}
+            {{> components/c001-basic-content
+                    heading-primary='Hello, world!'
+                    heading-secondary='How are you?'
+                    body-content='
+                    <p><span class="badge badge-pill badge-primary">Updated 14/01/2019</span> <span class="badge badge-pill badge-secondary">v8</span></p>
+                    <h3 class="mt-5 h3-responsive">Purpose</h3>
+                    <p>This repo will be used for code examples, they will range from Vanilla JavaScript to Jquery to React and maybe some other stuff as well.</p>
+                    <h3 class="mt-5 h3-responsive">Recent work</h3>
+                    <ul class="">
+                    <li class=""><a href="app/triathlon.html" title="View Triathlon">Triathlon</a></li>
+                        <li class=""><a href="general/cv-flat.html" title="View CV">CV flat</a></li>
+                        <li class=""><a href="general/styletile.html" title="View Style tile">Style tile</a></li>
+
+                    </ul>
+                '
+            }}
+        {{/sublayouts/grid1}}
+
+{{!-- ------- --}}
+{{!-- DIVIDER --}}
+{{!-- ------- --}}
+{{> components/c004-divider }}
+
+        {{#> sublayouts/grid1
+                id='generic'
+        }}
+            {{> components/c001-basic-content
+                    heading-primary='Generic'
+                    heading-secondary='Framework building stuff'
+                    body-content='
+                    <p>This section will cover things like branding, and markup templating. Most of this has been built using Handlebars.</p>
+                    <h3 class="mt-5 h3-responsive">Links</h3>
+                    <ul class="">
+                        <li class=""><a href="general/styletile.html" title="">Style tile</a></li>
+                        <li class=""><a href="general/components.html" title="">Components</a></li>
+                        <li class=""><a href="general/sublayouts.html" title="">Sublayouts</a></li>
+                    </ul>
+                '
+            }}
+        {{/sublayouts/grid1}}
+
+{{!-- ------- --}}
+{{!-- DIVIDER --}}
+{{!-- ------- --}}
+{{> components/c004-divider }}
+
+        {{#> sublayouts/grid1
+                id='apps'
+        }}
+            {{> components/c001-basic-content
+                    heading-primary='Apps'
+                    heading-secondary='Standalone demo`s'
+                    body-content='
+                    <p>Code I consider to be a standalone application or site.</p>
+<div class="media mb-5">
+    <img width="100" class="d-flex mr-3 z-depth-2" src="https://chart.googleapis.com/chart?cht=qr&chl=http%3A%2F%2Fehhwhat.co.uk%2Fplayground%2Falpha%2Fdist%2Fpages-handled%2Fapp%2Ftriathlon.html&chs=180x180&choe=UTF-8&chld=L|2" alt="Triathlon training QR">
+    <div class="media-body">
+        <a href="app/triathlon.html"><h5 class="">Triathlon training</h5></a>
+            Blog type site I have been building to track all my training towards an Ironman 70.3 event.
+    </div>
+</div>
+<div class="media">
+    <img width="100" class="d-flex mr-3 z-depth-2" src="https://chart.googleapis.com/chart?cht=qr&chl=http%3A%2F%2Fehhwhat.co.uk%2Fplayground%2Falpha%2Fdist%2Fpages-handled%2Fgeneral%2Fcv-flat.html&chs=180x180&choe=UTF-8&chld=L|2" alt="Triathlon training QR">
+    <div class="media-body">
+        <a href="general/cv-flat.html"><h5 class="">CV</h5></a>
+            Flat HTML version of my CV, allows for improved experience over a simple word document.
+    </div>
+</div>
+                '
+            }}
+        {{/sublayouts/grid1}}
+
+{{!-- ------- --}}
+{{!-- DIVIDER --}}
+{{!-- ------- --}}
+{{> components/c004-divider }}
+
+        {{#> sublayouts/grid1
+                id='react'
+        }}
+            {{> components/c001-basic-content
+                    heading-primary='React'
+                    heading-secondary='???'
+                    body-content='
+                    ???
+                '
+            }}
+        {{/sublayouts/grid1}}
+
+{{!-- ------- --}}
+{{!-- DIVIDER --}}
+{{!-- ------- --}}
+{{> components/c004-divider }}
+
+        {{#> sublayouts/grid1
+                id='js'
+        }}
+            {{> components/c001-basic-content
+                    heading-primary='JS / Jquery'
+                    heading-secondary='???'
+                    body-content='
+                    ???
+                '
+            }}
+        {{/sublayouts/grid1}}
+
+{{!-- ------- --}}
+{{!-- DIVIDER --}}
+{{!-- ------- --}}
+{{> components/c004-divider }}
+
+    {{/inline}}
+
+    {{#*inline "footer-block"}}
+        {{> components/footer
+            body-content='
+            <ul class="list-inline my-0">
+                <li class="list-inline-item">BPK | EHWHAT</li>
+            </ul>
+            '
+        }}
+    {{/inline}}
+
+{{/layouts/starter}}

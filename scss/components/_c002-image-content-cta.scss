@@ -1,0 +1,30 @@
+.c002-image-content-cta {
+  p {
+    text-align: justify;
+  }
+  &__image {
+    text-align: center;
+    img {
+      width:150px;
+      max-width:150px;
+      margin: 6rem 0 3rem;
+    }
+    &--vertical {
+      img {
+        width:auto;
+        height:100px;
+      }
+    }
+  }
+  &__background {
+    background-color:$theme-light;
+  }
+  &__button {
+    text-align: center;
+    margin-top: 2rem;
+    .btn {
+      margin-left:0;
+      margin-right:0;
+    }
+  }
+}

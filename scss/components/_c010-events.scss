@@ -1,0 +1,228 @@
+.lines {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  > div {
+    > div {
+      min-width:100rem;
+    }
+  }
+  @include media-breakpoint-up(sm) {
+    overflow-x: hidden;
+    > div {
+      > div {
+        min-width:1rem;
+      }
+    }
+  }
+}
+
+.line {
+  width:100%;
+  min-width:100%;
+  height:1px;
+  margin: 40px 0;
+  background:silver;
+  position:relative;
+  .line-label {
+    font-size:10px;
+    color:silver;
+    position:absolute;
+    left:5px;
+    top:-15px;
+  }
+  .dot {
+    width:24px;
+    height:24px;
+    background:white;
+    background-position:center;
+    background-repeat:no-repeat;
+    position:absolute;
+    top:-12px;
+    left:0;
+    border-radius:100%;
+    border:0px solid silver;
+    transition:all 0.1s;
+    //box-shadow: 0 2px 5px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)!important;
+
+    &.dot-swim {
+      background-image:url(https://cdn0.iconfinder.com/data/icons/sport-2-android-l-lollipop-icon-pack/24/swimming-16.png);
+    }
+    &.dot-cycle {
+      background-image:url(https://cdn0.iconfinder.com/data/icons/sport-2-android-l-lollipop-icon-pack/24/time_trial_biking-16.png);
+    }
+    &.dot-run {
+      background-image:url(https://cdn0.iconfinder.com/data/icons/sport-2-android-l-lollipop-icon-pack/24/walking-16.png);
+    }
+    &.dot-dual {
+      background-image:url(https://cdn0.iconfinder.com/data/icons/entypo/90/two17-512.png);
+      background-size: 12px;
+    }
+    &.dot-tri {
+      background-image:url(https://cdn0.iconfinder.com/data/icons/entypo/90/share4-16.png);
+      background-size: 12px;
+    }
+    &.dot-target {
+      background-image:url(https://cdn1.iconfinder.com/data/icons/feather-2/24/flag-16.png);
+    }
+    &.dot-success {
+      background-image:url(https://cdn2.iconfinder.com/data/icons/donkey/800/18-16.png);
+    }
+
+
+  }
+}
+
+.time-line {
+  background:#fff;
+  .dot {
+    width:12px;
+    height:12px;
+    top:-6px;
+    border-color:#6D7578;
+    &:before {
+      content:"";
+      position:relative;
+      top:-25px;
+      left:-4px;
+      font-size:10px;
+      color:#6D7578;
+    }
+  }
+  .dot-start {
+    left:0%;
+  }
+  .dot-end {
+    left:auto;
+    right:0%;
+  }
+  .dot-nov {
+    left:12.5%;
+    &:before {content:"nov";}
+  }
+  .dot-dec {
+    left:25%;
+    &:before {content:"dec";}
+  }
+  .dot-jan {
+    left:37.5%;
+    &:before {content:"jan";}
+  }
+  .dot-feb {
+    left:50%;
+    &:before {content:"feb";}
+  }
+  .dot-mar {
+    left:62.5%;
+    &:before {content:"mar";}
+  }
+  .dot-apr {
+    left:75%;
+    &:before {content:"apr";}
+  }
+  .dot-may {
+    left:87.5%;
+    &:before {content:"may";}
+  }
+}
+
+.events-line {
+  background:$secondary-color;
+  .dot {
+    margin-left:-12px;
+  }
+  //
+  .dot-herts {
+    left:5%;
+  }
+  // 28 days = 11.2
+  .dot-cycle1 {
+    left:11.2%;
+  }
+  //
+  .dot-morun {
+    left:19%;
+  }
+  //
+  .dot-hatfield5 {
+    left:22%;
+  }
+
+  //
+  .dot-marlowe {
+    left:94%;
+  }
+
+
+
+  // 69days in
+  .dot-mkhalf {left:27.5%;}
+
+  // 99days in
+  .dot-ashridgedual {left:39.6%;}
+
+  // 119days in = 119/2.5 =
+  .dot-ashridgedual2 {left:47.6%;}
+
+  // 120days in = 120/2.5 =
+  .dot-windsorhalf {left:48%;}
+
+  // 137 days in
+  .dot-cycle2 {left:54.8%;}
+
+  // 207 days in
+  .dot-cycle3 {left:82.8%;}
+
+  // 229 days in
+  .dot-cycle4 {left:91.6%;}
+
+  // 160 days in
+  .dot-harpenden {left:64%;}
+
+  .dot-to-book {
+    border: 1px solid $theme-red;
+  }
+}
+
+.target-line {
+  background:$secondary-color;
+  .dot {
+    margin-left:-12px;
+  }
+  .dot-target-herts {left:5%;}
+  .dot-target-cycle1 {left:11.2%;}
+  .dot-target-morun {left:19%;}
+  .dot-target-hatfield5 {left:22%;}
+  .dot-target-mkhalf {left:27.5%;}
+  .dot-target-ashridge {left:39.6%;}
+  .dot-target-ashridge2 {left:47.6%;}
+
+  .dot-target-windsorhalf {left:48%;}
+}
+
+.current-line {
+  background:$theme-blue!important;
+  height:2px;
+  position:relative;
+  .dot {
+    margin-left:-12px;
+  }
+  .dot-target-herts {left:5%;}
+  .dot-target-cycle1 {left:11.2%;}
+  .dot-target-morun {left:19%;}
+  .dot-target-hatfield5 {left:22%;}
+  .dot-target-mkhalf {left:27.5%;}
+  .dot-target-ashridge {left:39.6%;}
+
+  &:after {
+    content:"";
+    position:absolute;
+    left:0%;
+    bottom:0;
+    width:1px;
+    background:white;
+    height:125px;
+    border:1px dashed white;
+    transition:all 2s;
+  }
+}

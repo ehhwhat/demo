@@ -1,0 +1,230 @@
+
+
+<!doctype html>
+<html>
+    <head>
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>
+                Triathlon | Data
+        </title>
+        <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@8.17.0/dist/lazyload.min.js"></script>
+        
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- Bootstrap core CSS -->
+        <link href="../../css/bootstrap.min.css?v8" rel="stylesheet">
+        <!-- Material Design Bootstrap -->
+        <link href="../../css/mdb.min.css?v8" rel="stylesheet">
+        <!-- Your custom styles (optional) -->
+        <link href="../../css/style.css?v8" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" />
+    </head>
+
+    <body data-spy="scroll" data-target="#navbar" data-offset="150" class="smooth-scroll">
+
+        <header>
+
+<!-- Main navigation -->
+<header>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top scrolling-navbar" id="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <strong>BPK</strong>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar-content">
+                <ul class="navbar-nav mr-auto">
+                                
+                                <!-- COMPONENT START -->
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#introduction">Introduction</a>
+                                </li>
+                                <!-- COMPONENT END -->
+                                
+                                <!-- COMPONENT START -->
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#how">How</a>
+                                </li>
+                                <!-- COMPONENT END -->
+                                
+                                <!-- COMPONENT START -->
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#kpi">KPI</a>
+                                </li>
+                                <!-- COMPONENT END -->
+                                
+                                <!-- COMPONENT START -->
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#events">Events</a>
+                                </li>
+                                <!-- COMPONENT END -->
+                                
+                                <!-- COMPONENT START -->
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#training">Training</a>
+                                </li>
+                                <!-- COMPONENT END -->
+                                
+                                <!-- COMPONENT START -->
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#journey">Journey</a>
+                                </li>
+                                <!-- COMPONENT END -->
+                </ul>
+
+                <ul class="navbar-nav ml-auto nav-flex-icons">
+                    <li class="nav-item">
+                        <a class="nav-link waves-effect waves-light" data-toggle="modal" data-target="#tech-modal">
+                            Under the hood
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<!-- Main navigation -->
+        </header>
+
+        <main>
+
+        <section class="container">
+            <div class="row">
+                <div class="col-12">
+                    <p class="text-muted text-secondary"><strong>All data being collected</strong><span class="float-right">01</span></p>
+                    <hr/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead class="bg-dark text-white">
+                            <tr>
+                                <th>Type</th>
+                                <th>Total sessions</th>
+                                <th>Total km</th>
+                                <th>Total time</th>
+                                <th>Average watts</th>
+                                <th>Average pace</th>
+                                <th>Longest distance</th>
+                                <th>Weight</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th>General</th>
+                                <td class="totalTrainingSessions strava-data"></td>
+                                <td class="totalTrainingKM strava-data"></td>
+                                <td class="totalTrainingTime strava-data"></td>
+                                <td class="na">n/a</td>
+                                <td class="na">n/a</td>
+                                <td class="na">n/a</td>
+                                <td class="">78kg</td>
+                            </tr>
+                            <tr>
+                                <th>Swimming</th>
+                                <td class="totalSwimSessions strava-data"></td>
+                                <td class="totalSwimKM strava-data"></td>
+                                <td class="totalSwimTime strava-data"></td>
+                                <td class="na">n/a</td>
+                                <td class=" text-danger">Need</td>
+                                <td class="swimsDistanceFurthest strava-data"></td>
+                                <td class="na">n/a</td>
+                            </tr>
+                            <tr>
+                                <th>Cycling</th>
+                                <td class="totalCycleSessions strava-data"></td>
+                                <td class="totalCycleKM strava-data"></td>
+                                <td class="totalCycleTime strava-data"></td>
+                                <td class="cyclesWattAvg strava-data"></td>
+                                <td class="na">n/a</td>
+                                <td class="cyclesDistanceFurthest strava-data"></td>
+                                <td class="na">n/a</td>
+                            </tr>
+                            <tr>
+                                <th>Running</th>
+                                <td class="totalRunSessions strava-data"></td>
+                                <td class="totalRunKM strava-data"></td>
+                                <td class="totalRunTime strava-data"></td>
+                                <td class="na">n/a</td>
+                                <td class="runsPaceAvg strava-data"></td>
+                                <td class="runsDistanceFurthest strava-data"></td>
+                                <td class="na">n/a</td>
+                            </tr>
+                            <tr>
+                                <th>Gym Cardio</th>
+                                <td class="totalGymCardioSessions strava-data"></td>
+                                <td class="na">n/a</td>
+                                <td class="totalGymCardioTime strava-data"></td>
+                                <td class="na">n/a</td>
+                                <td class="na">n/a</td>
+                                <td class="na">n/a</td>
+                                <td class="na">n/a</td>
+                            </tr>
+                            <tr>
+                                <th>Gym weights</th>
+                                <td class="totalWeightSessions strava-data"></td>
+                                <td class="na">n/a</td>
+                                <td class="totalWeightTime strava-data"></td>
+                                <td class="na">n/a</td>
+                                <td class="na">n/a</td>
+                                <td class="na">n/a</td>
+                                <td class="na">n/a</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p><strong>Latest activity:</strong> <span class="latestEntry"></span></p>
+                    <p><strong>Training days:</strong> <span class="totalTrainingDays"></span></p>
+                </div>
+
+            </div>
+        </section>
+
+
+<!-- COMPONENT START -->
+<div class="container c004-divider">
+    <div class="row">
+        <div class="col-md-12">
+            <hr class="section-divider" />
+        </div>
+    </div>
+</div>
+<!-- COMPONENT END -->
+
+        </main>
+
+        <footer class="page-footer font-small mdb-color lighten-1">
+        
+        <!-- Footer -->
+        <div class="footer-copyright text-center py-3">
+            
+                    <ul class="list-inline my-0">
+                        <li class="list-inline-item"><a href="../index.html">Home</a></li>
+                        <li class="list-inline-item"><a href="triathlon.html">Triathlon</a></li>
+                        <li class="list-inline-item"><a href="triathlon-data.html"><strong>Data</strong></a></li>
+                    </ul>
+                    
+        </div>
+        <!-- Footer -->
+        </footer>
+
+            
+            <!-- Optional JavaScript -->
+            <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+            
+            <!-- Then Material JavaScript on top of Bootstrap JavaScript -->
+            <script src="../../js/mdb.min.js?v8"></script>
+
+    </body>
+</html>

@@ -1,0 +1,46 @@
+// Your custom variables
+
+$btn-margin-basic:0 !default;
+$display5-size:               2.5rem !default;
+
+// COLORS
+
+$theme-blue:    #42a5f5 !default; // $blue-lighten-1
+$theme-pink:    #ff8a80 !default; // $red-accent-1
+$theme-red:     #ef5350 !default; // $red-lighten-1
+$theme-orange:  #ffa726 !default; // $orange-lighten-1
+$theme-yellow:  #ffee58 !default; // $yellow-lighten-1
+$theme-green:   #66bb6a !default; // $green-lighten-1
+$theme-dark:    #45526e !default; // $mdb-color-base
+$theme-light:   #d0d6e2 !default; // $mdb-color-lighten-5
+
+$default-color:         $theme-dark !default;
+$primary-color:         $theme-red !default;
+$secondary-color:       $theme-pink !default;
+$grey-lighten-2:        $theme-light !default;
+$grey-darken-4:         $default-color !default;
+$info-color:            $theme-blue !default;
+$success-color:         $theme-green !default;
+$warning-color:         $theme-orange !default;
+$danger-color:          $theme-red !default;
+
+$mdb-color-lighten-2:  #7283a7 !default;
+$red-lighten-3:  #ef9a9a !default;
+
+// GRADIENTS
+$gradient-transparency: 0.9;
+.rgba-gradient {
+  background: -moz-linear-gradient(45deg, rgba($grey-darken-4, $gradient-transparency), rgba($mdb-color-lighten-2, $gradient-transparency) 100%);
+  background: -webkit-linear-gradient(45deg, rgba($grey-darken-4, $gradient-transparency), rgba($mdb-color-lighten-2, $gradient-transparency) 100%);
+  background: -webkit-gradient(linear, 45deg, from(rgba($grey-darken-4, $gradient-transparency)), to(rgba($mdb-color-lighten-2, $gradient-transparency)));
+  background: linear-gradient(to 45deg, rgba($grey-darken-4, $gradient-transparency), rgba($mdb-color-lighten-2, $gradient-transparency) 100%);
+}
+
+.rgba-gradient-secondary {
+  background: -moz-linear-gradient(45deg, rgba($primary-color, 0.95), rgba($red-lighten-3, 0.95) 100%);
+  background: -webkit-linear-gradient(45deg, rgba($primary-color, 0.95), rgba($red-lighten-3, 0.95) 100%);
+  background: -webkit-gradient(linear, 45deg, from(rgba($primary-color, 0.95)), to(rgba($red-lighten-3, 0.95)));
+  background: linear-gradient(to 45deg, rgba($primary-color, 0.95), rgba($red-lighten-3, 0.95) 100%);
+}
+
+

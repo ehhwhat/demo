@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta content="initial-scale=1, shrink-to-fit=no, width=device-width" name="viewport">
+
+    <title>Objects | JS</title>
+
+    <!-- CSS -->
+    <!-- Add Material font (Roboto) and Material icon as needed -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Add Material CSS, replace Bootstrap CSS -->
+    <link href="../../../dist/css/material.min.css" rel="stylesheet">
+    <link href="../../../dist/css/demo.css" rel="stylesheet">
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <!-- Then Material JavaScript on top of Bootstrap JavaScript -->
+    <script src="../../../dist/js/material.min.js"></script>
+
+    <style>
+        #wrap {
+            perspective: 800px;
+            perspective-origin: 50% -150px;
+            padding:10% 20%;
+        }
+        #cube {
+            position: relative;
+            transform-style: preserve-3d;
+            margin: 0 auto;
+        }
+        #cube div {
+            position: absolute;
+            color:white;
+            opacity:0.75;
+            padding:20px;
+        }
+        #back {
+        }
+        #right {
+            transform-origin: top right;
+        }
+        #left {
+            transform-origin: center left;
+        }
+        #top {
+            transform-origin: top center;
+        }
+        #bottom {
+            transform-origin: bottom center;
+        }
+        #front {
+        }
+        @keyframes spin {
+            from { transform: rotateY(0); }
+            to { transform: rotateY(360deg); }
+        }
+
+        #cube {
+            animation: spin 5s infinite linear;
+        }
+    </style>
+
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark-1">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarText">
+                        <ul class="navbar-nav">
+                            <li class="nav-item ">
+                                <a class="nav-link nav-link-home" href="../index.html"><i class="material-icons">home</i></a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav">
+                            <li class="nav-item ">
+                                <span class="nav-link disabled">JavaScript:</span>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="basic.html">Basics</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="maths.html">Maths</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="gym.html">Gym (Arrays)</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="books.html">Books (Arrays)</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="objects.html">Objects</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="es2015.html">ES2015</a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <span class="nav-link disabled">jQuery:</span>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="ajax.html">Ajax</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="ajaxJSON.html">AjaxJSON</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="ajaxJSON_promise.html">Ajax Promise</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="jumbotron my-4">
+                <h1 class="display-4">Objects</h1>
+                <p class="">
+                    A few examples of using <code>object</code> to create things.
+                </p>
+                <hr class="my-4">
+                <p>
+                    <i class="material-icons text-info">info_outline</i> An <code>object</code> has <code>properties</code> (written as <strong>name:value</strong> pairs) and can make use of <code>methods</code>.
+                    Multiple <code>objects</code> can have same properties with different values and can use the same methods in different orders.
+                </p>
+                <hr class="my-4">
+                <p><strong>Things to note:</strong></p>
+                <ul class="">
+                    <li><code>object</code> has been created with existing <code>properties</code> and <code>values</code></li>
+                    <li>Multiple <code>methods</code> are included for altering the values within the object</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+
+    <hr class="my-4 invisible"/>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card mb-4 bg-dark text-white">
+                <div class="card-header">
+                    <h2 class="display-4">The object</h2>
+                    <p class="">A very basic object for some box information.</p>
+                </div>
+                <div class="card-body">
+<pre class="text-white">const cubeObject = {
+    width:50,
+    length:50,
+    height:50,
+    name:&#x22;Box&#x22;,
+    color:&#x22;black&#x22;,
+    changeColor: function(color){
+        this[&#x27;color&#x27;] = color;
+    },
+    changeSize: function(size){
+        this[&#x27;width&#x27;] = size;
+        this[&#x27;length&#x27;] = size;
+        this[&#x27;height&#x27;] = size;
+    }
+};</pre>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <div class="card-header bg-light">
+                    <h2 class="display-4">Grabbing the data</h2>
+                    <p class="">Pull in the data from the object and then use it to build a box (should be seen on the right).</p>
+                </div>
+                <div class="card-body">
+                    <hr class="invisible"/>
+                    <p id="basicResult" class="">
+
+                    </p>
+                    <form id="" action="">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="sizePicker">Size picker</label>
+                                    <input type="range" class="form-control" id="sizePicker" min="30" max="100" step="10" placeholder="Size picker" onchange="buildCube()">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="colorPicker">Color picker</label>
+                                    <input type="color" class="form-control" id="colorPicker" placeholder="Color picker" onchange="buildCube()">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div id="wrap">
+                <div id="cube">
+                    <div id="front">front</div>
+                    <div id="back">back</div>
+                    <div id="top">top</div>
+                    <div id="bottom">bottom</div>
+                    <div id="left">left</div>
+                    <div id="right">right</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <hr class="my-4 invisible"/>
+
+</div>
+
+
+<script>
+
+    // AN OBJECT
+    // With some key:value properties and a method to change color
+    const cubeObject = {
+        width:50,
+        length:50,
+        height:50,
+        name:"Box",
+        color:"black",
+        changeColor: function(color){
+            this['color'] = color;
+        },
+        changeSize: function(size){
+            this['width'] = size;
+            this['length'] = size;
+            this['height'] = size;
+        }
+    };
+
+    // Lets print these to the page
+    document.getElementById("basicResult").innerHTML += "<span id='basicResultSize'>Show me this objects size: " +cubeObject.width+ " x " +cubeObject.length+ " x " +cubeObject.height+ "</span><br/>";
+    document.getElementById("basicResult").innerHTML += "<span id='basicResultColor'>Show me this objects color: " +cubeObject.color+ "</span>";
+
+    // Function to fire when input changes
+    // Grab values chosen by user and update object
+    // Build styles using values from the object
+    function buildCube() {
+        console.log('changed');
+        // Color
+        let newColor = document.getElementById("colorPicker").value;
+        cubeObject.changeColor(newColor);
+        document.getElementById("basicResultColor").innerHTML = "Show me this objects color: " +cubeObject.color+"";
+
+        // Size
+        let newSize = document.getElementById("sizePicker").value;
+        cubeObject.changeSize(newSize);
+        document.getElementById("basicResultSize").innerHTML = "Show me this objects color: " +cubeObject.width+ " x " +cubeObject.length+ " x " +cubeObject.height+ "";
+
+        // Build cube
+        document.getElementById("cube").setAttribute("style","width:"+(cubeObject.width * 2)+"px;");
+        document.getElementById("back").setAttribute("style","transform: translateZ(-"+cubeObject.width+"px) rotateY(180deg); background-color: "+cubeObject.color+"!important; width:"+(cubeObject.width * 2)+"px;height:"+(cubeObject.width * 2)+"px;");
+        document.getElementById("right").setAttribute("style","transform: rotateY(-270deg) translateX("+cubeObject.width+"px); background-color: "+cubeObject.color+"!important; width:"+(cubeObject.width * 2)+"px;height:"+(cubeObject.width * 2)+"px;");
+        document.getElementById("left").setAttribute("style","transform: rotateY(270deg) translateX(-"+cubeObject.width+"px); background-color: "+cubeObject.color+"!important; width:"+(cubeObject.width * 2)+"px;height:"+(cubeObject.width * 2)+"px;");
+        document.getElementById("top").setAttribute("style","transform: rotateX(-90deg) translateY(-"+cubeObject.width+"px); background-color: "+cubeObject.color+"!important; width:"+(cubeObject.width * 2)+"px;height:"+(cubeObject.width * 2)+"px;");
+        document.getElementById("bottom").setAttribute("style","transform: rotateX(90deg) translateY("+cubeObject.width+"px); background-color: "+cubeObject.color+"!important; width:"+(cubeObject.width * 2)+"px;height:"+(cubeObject.width * 2)+"px;");
+        document.getElementById("front").setAttribute("style","transform: translateZ("+cubeObject.width+"px); background-color: "+cubeObject.color+"!important; width:"+(cubeObject.width * 2)+"px;height:"+(cubeObject.width * 2)+"px;");
+
+        document.getElementById("wrap").setAttribute("style","height:"+(cubeObject.width * 3)+"px;");
+    }
+
+</script>
+
+</body>
+</html>
