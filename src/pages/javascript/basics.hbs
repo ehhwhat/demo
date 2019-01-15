@@ -1,0 +1,113 @@
+{{!-- pages/javascript/basics.hbs --}}
+
+{{#> layouts/base title="Basics | Javascript" }}
+
+    {{#*inline "header-block"}}
+        {{#> components/header
+             brand='Javascript'
+        }}
+            {{> components/header__point--external
+                    point-title='Maths'
+                    point-href='maths.html'
+            }}
+            {{> components/header__point
+                    point-title='Basics'
+                    point-href='basics'
+            }}
+        {{/components/header}}
+    {{/inline}}
+
+    {{#*inline "main-block"}}
+
+        {{#> sublayouts/grid1
+                id='basics'
+        }}
+            {{> components/c001-basic-content
+                    heading-primary='Basics'
+                    heading-secondary='Just some simple JS demo`s'
+                    body-content='
+                    <p> One demo to compare two values and display messaging, the other to iterate through and count characters.</p>
+                    <h3 class="mt-5">Things to note</h3>
+                    <ul class="">
+                        <li class="">Have used <code>const / let</code> instead of <code>var</code> in places</li>
+                        <li class="">Use of <code>if</code> statements to compare properties and display messaging</li>
+                        <li>Use of a <code>for</code> loop to iterate through a sentence, if the letter at index matches the user input then increment letter count</li>
+                    </ul>
+                    '
+            }}
+        {{/sublayouts/grid1}}
+
+        {{#> sublayouts/grid1 }}
+            {{> components/c012-card
+                    heading='Capacity status'
+                    subheading='Enter the number of passengers and the capacity to see one message, if the capacity is less than the number of passengers a different message will appear'
+                    body='
+                        <form action="#">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="capacityStatusInput1">Passengers</label>
+                                        <input type="number" id="capacityStatusInput1" class="form-control" placeholder="Passengers">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="capacityStatusInput2">Capacity</label>
+                                        <input type="number" id="capacityStatusInput2" class="form-control"  placeholder="Capacity">
+                                    </div>
+                                </div>
+                            </div>
+                            <button id="capacityStatusSubmit" type="submit" class="btn btn-outline-default waves-effect">Go</button>
+                        </form>
+                        '
+                    footer='<p id="capacityStatusResult" class="mb-0"></p>'
+            }}
+            {{> components/c012-card
+                    heading='Count character'
+                    subheading='Enter the number of passengers and the capacity to see one message, if the capacity is less than the number of passengers a different message will appear'
+                    body='
+                        <form action="#">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="countCharInput1">Sentence</label>
+                                        <input type="text" id="countCharInput1" class="form-control" placeholder="Sentence">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="countCharInput2">Letter to count</label>
+                                        <input type="text" id="countCharInput2" class="form-control"  placeholder="Letter to count">
+                                    </div>
+                                </div>
+                            </div>
+                            <button id="countCharSubmit" type="submit" class="btn btn-outline-default waves-effect">Go</button>
+                        </form>
+                        '
+                    footer='<p id="countCharResult" class="mb-0"></p>'
+            }}
+        {{/sublayouts/grid1}}
+
+        {{!-- ------- --}}
+        {{!-- DIVIDER --}}
+        {{!-- ------- --}}
+        {{> components/c004-divider }}
+
+    {{/inline}}
+
+    {{#*inline "footer-block"}}
+        {{> components/footer
+                body-content='
+                <ul class="list-inline my-0">
+                    <li class="list-inline-item"><a href="../index.html">Home</a></li>
+                </ul>
+            '
+        }}
+    {{/inline}}
+
+    {{#*inline "scripts-block"}}
+        <!-- Bespoke to page JavaScript -->
+        <script src="{{domainprefix}}js/bespoke/basic.js?v{{version}}"></script>
+    {{/inline}}
+
+{{/layouts/base}}

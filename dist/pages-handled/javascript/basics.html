@@ -1,0 +1,215 @@
+
+
+<!doctype html>
+<html>
+    <head>
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>
+                Basics | Javascript
+        </title>
+        <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@8.17.0/dist/lazyload.min.js"></script>
+        
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- Bootstrap core CSS -->
+        <link href="../../css/bootstrap.min.css?v8" rel="stylesheet">
+        <!-- Material Design Bootstrap -->
+        <link href="../../css/mdb.min.css?v8" rel="stylesheet">
+        <!-- Your custom styles (optional) -->
+        <link href="../../css/style.css?v8" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" />
+    </head>
+
+    <body data-spy="scroll" data-target="#navbar" data-offset="150" class="smooth-scroll">
+
+        <header>
+
+<!-- Main navigation -->
+<header>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top scrolling-navbar" id="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <strong>Javascript</strong>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar-content">
+                <ul class="navbar-nav mr-auto">
+                                
+                                <!-- COMPONENT START -->
+                                <li class="nav-item">
+                                    <a class="nav-link" href="maths.html">Maths</a>
+                                </li>
+                                <!-- COMPONENT END -->
+                                
+                                <!-- COMPONENT START -->
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#basics">Basics</a>
+                                </li>
+                                <!-- COMPONENT END -->
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</header>
+<!-- Main navigation -->
+        </header>
+
+        <main>
+
+
+<section class="container-fluid grid1 " id="basics">
+    <div class="row">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+                                
+                                <!-- COMPONENT START -->
+                                <div class="c001-basic-content">
+                                        <h1 class="display-4">Basics</h1>
+                                        <h2 class="display-5 text-muted">Just some simple JS demo&#x60;s</h2>
+                                    
+                                                    <p> One demo to compare two values and display messaging, the other to iterate through and count characters.</p>
+                                                    <h3 class="mt-5">Things to note</h3>
+                                                    <ul class="">
+                                                        <li class="">Have used <code>const / let</code> instead of <code>var</code> in places</li>
+                                                        <li class="">Use of <code>if</code> statements to compare properties and display messaging</li>
+                                                        <li>Use of a <code>for</code> loop to iterate through a sentence, if the letter at index matches the user input then increment letter count</li>
+                                                    </ul>
+                                                    
+                                </div>
+                                <!-- COMPONENT END -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="container-fluid grid1 " id="">
+    <div class="row">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+                                
+                                <!-- COMPONENT START -->
+                                <div class="card c012-card mb-5">
+                                    <div class="card-header">
+                                        <h3 class="h3-responsive">Capacity status</h3>
+                                            <h5 class="h5-responsive">Enter the number of passengers and the capacity to see one message, if the capacity is less than the number of passengers a different message will appear</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        
+                                                        <form action="#">
+                                                            <div class="row">
+                                                                <div class="col-sm-6">
+                                                                    <div class="form-group">
+                                                                        <label for="capacityStatusInput1">Passengers</label>
+                                                                        <input type="number" id="capacityStatusInput1" class="form-control" placeholder="Passengers">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-6">
+                                                                    <div class="form-group">
+                                                                        <label for="capacityStatusInput2">Capacity</label>
+                                                                        <input type="number" id="capacityStatusInput2" class="form-control"  placeholder="Capacity">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <button id="capacityStatusSubmit" type="submit" class="btn btn-outline-default waves-effect">Go</button>
+                                                        </form>
+                                                        
+                                    </div>
+                                    <div class="card-footer">
+                                        <p id="capacityStatusResult" class="mb-0"></p>
+                                    </div>
+                                </div>
+                                <!-- COMPONENT END -->
+                                
+                                <!-- COMPONENT START -->
+                                <div class="card c012-card mb-5">
+                                    <div class="card-header">
+                                        <h3 class="h3-responsive">Count character</h3>
+                                            <h5 class="h5-responsive">Enter the number of passengers and the capacity to see one message, if the capacity is less than the number of passengers a different message will appear</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        
+                                                        <form action="#">
+                                                            <div class="row">
+                                                                <div class="col-sm-6">
+                                                                    <div class="form-group">
+                                                                        <label for="countCharInput1">Sentence</label>
+                                                                        <input type="text" id="countCharInput1" class="form-control" placeholder="Sentence">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-6">
+                                                                    <div class="form-group">
+                                                                        <label for="countCharInput2">Letter to count</label>
+                                                                        <input type="text" id="countCharInput2" class="form-control"  placeholder="Letter to count">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <button id="countCharSubmit" type="submit" class="btn btn-outline-default waves-effect">Go</button>
+                                                        </form>
+                                                        
+                                    </div>
+                                    <div class="card-footer">
+                                        <p id="countCharResult" class="mb-0"></p>
+                                    </div>
+                                </div>
+                                <!-- COMPONENT END -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+        
+        <!-- COMPONENT START -->
+        <div class="container c004-divider">
+            <div class="row">
+                <div class="col-md-12">
+                    <hr class="section-divider" />
+                </div>
+            </div>
+        </div>
+        <!-- COMPONENT END -->
+
+        </main>
+
+        <footer class="page-footer font-small mdb-color lighten-1">
+        
+        <!-- Footer -->
+        <div class="footer-copyright text-center py-3">
+            
+                        <ul class="list-inline my-0">
+                            <li class="list-inline-item"><a href="../index.html">Home</a></li>
+                        </ul>
+                    
+        </div>
+        <!-- Footer -->
+        </footer>
+
+        
+        
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        
+        <!-- Then Material JavaScript on top of Bootstrap JavaScript -->
+        <script src="../../js/mdb.min.js?v8"></script>
+        
+        <!-- Optional JavaScript -->
+        <script src="../../js/bespoke/general.js?v8"></script>
+
+        <!-- Bespoke to page JavaScript -->
+        <script src="../../js/bespoke/basic.js?v8"></script>
+
+    </body>
+</html>

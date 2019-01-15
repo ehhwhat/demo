@@ -6059,6 +6059,12 @@ ul.stepper {
     -o-transition: all 2s;
     transition: all 2s; }
 
+.c012-card .card-header {
+  border: none; }
+
+.c012-card .card-footer {
+  background-color: white; }
+
 .dataPoint:empty {
   font-size: 2rem;
   font-weight: bold; }

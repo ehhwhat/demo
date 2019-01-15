@@ -214,7 +214,7 @@
 {{> components/c004-divider }}
 
         {{!-- --------------- --}}
-        {{!-- c005-blockquote --}}
+        {{!-- c007-data-block --}}
         {{!-- --------------- --}}
         {{> components/c000-comp-desc
                 comp-id='c007-data-block'
@@ -241,6 +241,45 @@
                 {{> components/c007-data-block
                         data-title='Title'
                         data-value='Value'
+                }}
+            {{/sublayouts/grid-wide__col4}}
+        {{/sublayouts/grid-wide}}
+
+{{!-- ------- --}}
+{{!-- DIVIDER --}}
+{{!-- ------- --}}
+{{> components/c004-divider }}
+
+        {{!-- --------------- --}}
+        {{!-- c012-card --}}
+        {{!-- --------------- --}}
+        {{> components/c000-comp-desc
+                comp-id='c012-card'
+                comp-name='Card'
+        }}
+        {{#> sublayouts/grid-wide }}
+            {{#> sublayouts/grid-wide__col4 }}
+                {{> components/c012-card
+                        img-src='https://images.pexels.com/photos/262333/pexels-photo-262333.jpeg?auto=compress&cs=tinysrgb&w=640'
+                        heading='Heading'
+                        subheading='Subheading'
+                        body='<p>At the edge of forever radio telescope Flatland paroxysm of global death across the centuries a mote of dust suspended in a sunbeam.</p>'
+                        footer='<p class="mb-0">Footer</p>'
+                }}
+            {{/sublayouts/grid-wide__col4}}
+            {{#> sublayouts/grid-wide__col4 }}
+                {{> components/c012-card
+                        heading='Heading'
+                        body='<p>At the edge of forever radio telescope Flatland paroxysm of global death across the centuries a mote of dust suspended in a sunbeam.</p>'
+                        footer='<p class="mb-0">Footer</p>'
+                }}
+            {{/sublayouts/grid-wide__col4}}
+            {{#> sublayouts/grid-wide__col4 }}
+                {{> components/c012-card
+                        img-src='https://images.pexels.com/photos/262333/pexels-photo-262333.jpeg?auto=compress&cs=tinysrgb&w=640'
+                        heading='Heading'
+                        subheading='Subheading'
+                        body='<p>At the edge of forever radio telescope Flatland paroxysm of global death across the centuries a mote of dust suspended in a sunbeam.</p>'
                 }}
             {{/sublayouts/grid-wide__col4}}
         {{/sublayouts/grid-wide}}

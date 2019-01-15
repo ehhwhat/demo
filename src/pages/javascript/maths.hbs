@@ -1,0 +1,126 @@
+{{!-- pages/javascript/maths.hbs --}}
+
+{{#> layouts/base title="Maths | Javascript" }}
+
+    {{#*inline "header-block"}}
+        {{#> components/header
+             brand='Javascript'
+        }}
+            {{> components/header__point
+                    point-title='Maths'
+                    point-href='maths'
+            }}
+            {{> components/header__point--external
+                    point-title='Basics'
+                    point-href='basics.html'
+            }}
+        {{/components/header}}
+    {{/inline}}
+
+    {{#*inline "main-block"}}
+
+        {{#> sublayouts/grid1
+                id='maths'
+        }}
+            {{> components/c001-basic-content
+                    heading-primary='Maths'
+                    heading-secondary='Some really basic Vanilla Javascript maths functions'
+                    body-content='
+                    <h3 class="mt-5">Things to note</h3>
+                    <ul class="">
+                        <li class="">Have used <code>const</code> instead of <code>var</code> for variables as this seems best practise for my needs (ES2015).</li>
+                        <li class="">Each component is within its own container and has its own <code>script</code> for control, just to keep things separate.</li>
+                    </ul>
+                    '
+            }}
+        {{/sublayouts/grid1}}
+
+        {{#> sublayouts/grid1 }}
+            {{> components/c012-card
+                    heading='Number to square'
+                    subheading='Takes a number as an input and multiples it by itself'
+                    body='
+                        <form id="numberToSquareForm" action="">
+                            <div class="form-group">
+                                <label for="numberToSquare">Number to square</label>
+                                <input type="number" class="form-control" id="numberToSquare" aria-describedby="numberToSquareHelp" placeholder="Number to square">
+                            </div>
+                            <button id="numberToSquareSubmit" type="submit" class="btn btn-outline-default waves-effect">Go</button>
+                        </form>
+                        '
+                    footer='<p id="numberToSquareResult" class="mb-0">Result: </p>'
+            }}
+            {{> components/c012-card
+                    heading='Number to cube'
+                    subheading='Takes a number as an input and multiples it by itself and again'
+                    body='
+                        <form id="numberToCubeForm" action="">
+                            <div class="form-group">
+                                <label for="numberToCube">Number to cube</label>
+                                <input type="number" class="form-control" id="numberToCube" aria-describedby="numberToCubeHelp" placeholder="Number to cube">
+                            </div>
+                            <button id="numberToCubeSubmit" type="submit" class="btn btn-outline-default waves-effect">Go</button>
+                        </form>
+                        '
+                    footer='<p id="numberToCubeResult" class="mb-0">Result: </p>'
+            }}
+            {{> components/c012-card
+                    heading='Basic calculator'
+                    subheading='Play around with some basic maths stuff'
+                    body='
+                        <form id="numberCalcForm" action="">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-group">
+                                        <label for="numberOne">Number One</label>
+                                        <input type="number" class="form-control" id="numberOne" aria-describedby="" placeholder="Number One">
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-group">
+                                        <label for="numberDevice">Math device</label>
+                                        <select class="form-control" id="numberDevice">
+                                            <option value="+">+</option>
+                                            <option value="-">-</option>
+                                            <option value="*">*</option>
+                                            <option value="/">/</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-group">
+                                        <label for="numberTwo">Number Two</label>
+                                        <input type="number" class="form-control" id="numberTwo" aria-describedby="" placeholder="Number Two">
+                                    </div>
+                                </div>
+                            </div>
+                            <button id="numberCalcSubmit" type="submit" class="btn btn-outline-default waves-effect">Go</button>
+                        </form>
+                        '
+                    footer='<p id="numberCalcResult" class="mb-0">Result: </p>'
+            }}
+        {{/sublayouts/grid1}}
+
+        {{!-- ------- --}}
+        {{!-- DIVIDER --}}
+        {{!-- ------- --}}
+        {{> components/c004-divider }}
+
+    {{/inline}}
+
+    {{#*inline "footer-block"}}
+        {{> components/footer
+                body-content='
+                <ul class="list-inline my-0">
+                    <li class="list-inline-item"><a href="../index.html">Home</a></li>
+                </ul>
+            '
+        }}
+    {{/inline}}
+
+    {{#*inline "scripts-block"}}
+        <!-- Bespoke to page JavaScript -->
+        <script src="{{domainprefix}}js/bespoke/maths.js?v{{version}}"></script>
+    {{/inline}}
+
+{{/layouts/base}}

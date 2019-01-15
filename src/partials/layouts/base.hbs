@@ -41,11 +41,15 @@
             {{/footer-block}}
         </footer>
 
-        {{#> scripts-block}}
-            {{> includes/scripts
-                    domainprefix='../../'
-                    version='8'
-            }}
+        {{> includes/scripts
+            domainprefix='../../'
+            version='8'
+        }}
+
+        {{#> scripts-block
+                domainprefix='../../'
+                version='8'}}
+                {{!-- Custom scripts. --}}
         {{/scripts-block}}
 
     </body>

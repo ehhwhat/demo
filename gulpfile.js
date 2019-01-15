@@ -55,6 +55,12 @@ gulp.task('js-minify', function() {
     .pipe(gulp.dest('./dist/js'));
 });
 
+// JavaScript Tasks
+gulp.task('js-build-bespoke', function() {
+    gulp.src('js/src/bespoke/*.js')
+        .pipe(gulp.dest('./dist/js/bespoke/'))
+});
+
 // Image Compression
 gulp.task('img-compression', function() {
   gulp.src('./img/*')
@@ -106,6 +112,7 @@ gulp.task('mdb-go', function() {
     gulp.watch(["dist/css/*.css", "!dist/css/*.min.css"], ['css-minify']);
     gulp.watch("js/**/*.js", ['js-build']);
     gulp.watch("dist/js/mdb.js", ['js-minify']);
+    gulp.watch("js/**/**/*.js", ['js-build-bespoke']);
     gulp.watch("**/*", {cwd: './img/'}, ['img-compression']);
     gulp.watch("src/pages/**/*.hbs", ['handled']);
     gulp.watch("src/partials/**/*.hbs", ['handled']);
