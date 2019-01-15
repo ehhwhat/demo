@@ -1,0 +1,164 @@
+{{!-- pages/javascript/arrays.hbs --}}
+
+{{#> layouts/base title="Arrays | Javascript" }}
+
+    {{#*inline "header-block"}}
+        {{#> components/header
+             brand='Javascript'
+        }}
+            {{> components/header__point--external
+                    point-title='Maths'
+                    point-href='maths.html'
+            }}
+            {{> components/header__point--external
+                    point-title='Basics'
+                    point-href='basics.html'
+            }}
+            {{> components/header__point
+                    point-title='Arrays'
+                    point-href='arrays'
+            }}
+        {{/components/header}}
+    {{/inline}}
+
+    {{#*inline "main-block"}}
+
+        {{#> sublayouts/grid1
+                id='arrays'
+        }}
+            {{> components/c001-basic-content
+                    heading-primary='Arrays'
+                    heading-secondary='Based around a gym tool'
+                    body-content='
+                    <p>Pull previous data from array (faked) and allow user to add new data from a form to the array and do some basic math on it.</p>
+                    <h3 class="mt-5">Things to note</h3>
+                    <ul class="">
+                        <li class="">Have used <code>const</code> / <code>let</code> instead of <code>var</code> for variables as this seems best practise for my needs (ES2015).</li>
+                        <li class="">This component makes use of a <code>function</code>, a nested <code>array</code>, a <code>for</code> loop and the <code>.push</code> method.</li>
+                        <li>The <code>function</code> is used to get the data items and is fired on page load and on a click event</li>
+                        <li>The <code>array</code> is some basic data values which we then <code>.push</code> new values to later.</li>
+                        <li>The <code>for</code> loop will find all the item in the <code>array</code> and spit out some HTML, it will then increment for the length of the <code>array</code>.</li>
+                    </ul>
+                    '
+            }}
+        {{/sublayouts/grid1}}
+
+        {{#> sublayouts/grid1 }}
+            {{> components/c012-card
+                    heading='Your weight'
+                    subheading='Pulls in previous weight entries and converts to lbs (pounds), also allows entry of new data to the array'
+                    body='
+                        <form id="weightForm" action="">
+                            <div class="form-group">
+                                <label for="weightDate">Weigh in date</label>
+                                <input class="form-control" id="weightDate" placeholder="Pick a date" type="date">
+                            </div>
+                            <div class="form-group">
+                                <label for="weightInput">Weight in kilos</label>
+                                <input type="number" class="form-control" id="weightInput" placeholder="Weight in kilos">
+                            </div>
+                            <button type="submit" class="btn btn-outline-default waves-effect" id="weightSubmit">Submit</button>
+                        </form>
+                        '
+                    footer='
+                        <table class="table" id="weightTable">
+                            <thead>
+                            <tr>
+                                <th scope="col">Date</th>
+                                <th scope="col">Weight(kg)</th>
+                                <th scope="col">Weight(lbs)</th>
+                            </tr>
+                            </thead>
+                            <tbody id="weightTableBody">
+
+                            </tbody>
+                        </table>
+                    '
+            }}
+        {{/sublayouts/grid1}}
+
+{{!-- ------- --}}
+{{!-- DIVIDER --}}
+{{!-- ------- --}}
+{{> components/c004-divider }}
+
+        {{#> sublayouts/grid1 }}
+            {{> components/c001-basic-content
+                    heading-primary='Arrays'
+                    heading-secondary='Based around lists of books'
+                    body-content='
+                    <p>2 Demo`s of adding and removing items from an array. First demo is pretty basic, we start with an empty array and poplate it with our favourite books.</p>
+                    '
+            }}
+        {{/sublayouts/grid1}}
+        {{#> sublayouts/grid-wide }}
+            {{#> sublayouts/grid-wide__col4 }}
+                {{> components/c012-card
+                        heading='Favourite Books'
+                        subheading='Add your favourite books with a Title and a Review to a table (array)'
+                        body='
+                        <form id="weightForm" action="" class="">
+                            <div class="form-group">
+                                <label for="bookInput">Title</label>
+                                <input type="text" id="bookInput" class="form-control" placeholder="Title">
+                            </div>
+                            <div class="form-group">
+                                <label for="bookReviewInput">Review</label>
+                                <input type="text" id="bookReviewInput" class="form-control"  placeholder="Review">
+                            </div>
+                            <button type="submit" class="btn btn-outline-default waves-effect" id="bookSubmit">Submit</button>
+                        </form>
+                        '
+                }}
+            {{/sublayouts/grid-wide__col4}}
+            {{#> sublayouts/grid-wide__col4 }}
+                {{> components/c012-card
+                        heading='Table of books'
+                        body='
+                        <table class="table" id="reviewTable">
+                            <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>Review</th>
+                            </tr>
+                            </thead>
+                            <tbody id="tableBody">
+
+                            </tbody>
+                        </table>
+                        '
+                }}
+            {{/sublayouts/grid-wide__col4}}
+            {{#> sublayouts/grid-wide__col4 }}
+                {{> components/c012-card
+                        heading='Print out of array data'
+                        body='
+                        <pre class="" id="code"></pre>
+                        '
+                }}
+            {{/sublayouts/grid-wide__col4}}
+        {{/sublayouts/grid-wide}}
+
+{{!-- ------- --}}
+{{!-- DIVIDER --}}
+{{!-- ------- --}}
+{{> components/c004-divider }}
+
+    {{/inline}}
+
+    {{#*inline "footer-block"}}
+        {{> components/footer
+                body-content='
+                <ul class="list-inline my-0">
+                    <li class="list-inline-item"><a href="../index.html">Home</a></li>
+                </ul>
+            '
+        }}
+    {{/inline}}
+
+    {{#*inline "scripts-block"}}
+        <!-- Bespoke to page JavaScript -->
+        <script src="{{domainprefix}}js/bespoke/arrays.js?v{{version}}"></script>
+    {{/inline}}
+
+{{/layouts/base}}

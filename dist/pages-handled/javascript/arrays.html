@@ -1,0 +1,308 @@
+
+
+<!doctype html>
+<html>
+    <head>
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>
+                Arrays | Javascript
+        </title>
+        <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@8.17.0/dist/lazyload.min.js"></script>
+        
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- Bootstrap core CSS -->
+        <link href="../../css/bootstrap.min.css?v8" rel="stylesheet">
+        <!-- Material Design Bootstrap -->
+        <link href="../../css/mdb.min.css?v8" rel="stylesheet">
+        <!-- Your custom styles (optional) -->
+        <link href="../../css/style.css?v8" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" />
+    </head>
+
+    <body data-spy="scroll" data-target="#navbar" data-offset="150" class="smooth-scroll">
+
+        <header>
+
+<!-- Main navigation -->
+<header>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top scrolling-navbar" id="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <strong>Javascript</strong>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar-content">
+                <ul class="navbar-nav mr-auto">
+                                
+                                <!-- COMPONENT START -->
+                                <li class="nav-item">
+                                    <a class="nav-link" href="maths.html">Maths</a>
+                                </li>
+                                <!-- COMPONENT END -->
+                                
+                                <!-- COMPONENT START -->
+                                <li class="nav-item">
+                                    <a class="nav-link" href="basics.html">Basics</a>
+                                </li>
+                                <!-- COMPONENT END -->
+                                
+                                <!-- COMPONENT START -->
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#arrays">Arrays</a>
+                                </li>
+                                <!-- COMPONENT END -->
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</header>
+<!-- Main navigation -->
+        </header>
+
+        <main>
+
+
+<section class="container-fluid grid1 " id="arrays">
+    <div class="row">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+                                
+                                <!-- COMPONENT START -->
+                                <div class="c001-basic-content">
+                                        <h1 class="display-4">Arrays</h1>
+                                        <h2 class="display-5 text-muted">Based around a gym tool</h2>
+                                    
+                                                    <p>Pull previous data from array (faked) and allow user to add new data from a form to the array and do some basic math on it.</p>
+                                                    <h3 class="mt-5">Things to note</h3>
+                                                    <ul class="">
+                                                        <li class="">Have used <code>const</code> / <code>let</code> instead of <code>var</code> for variables as this seems best practise for my needs (ES2015).</li>
+                                                        <li class="">This component makes use of a <code>function</code>, a nested <code>array</code>, a <code>for</code> loop and the <code>.push</code> method.</li>
+                                                        <li>The <code>function</code> is used to get the data items and is fired on page load and on a click event</li>
+                                                        <li>The <code>array</code> is some basic data values which we then <code>.push</code> new values to later.</li>
+                                                        <li>The <code>for</code> loop will find all the item in the <code>array</code> and spit out some HTML, it will then increment for the length of the <code>array</code>.</li>
+                                                    </ul>
+                                                    
+                                </div>
+                                <!-- COMPONENT END -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="container-fluid grid1 " id="">
+    <div class="row">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+                                
+                                <!-- COMPONENT START -->
+                                <div class="card c012-card mt-2 mb-5">
+                                    <div class="card-header">
+                                        <h3 class="h3-responsive">Your weight</h3>
+                                            <h5 class="h5-responsive">Pulls in previous weight entries and converts to lbs (pounds), also allows entry of new data to the array</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        
+                                                        <form id="weightForm" action="">
+                                                            <div class="form-group">
+                                                                <label for="weightDate">Weigh in date</label>
+                                                                <input class="form-control" id="weightDate" placeholder="Pick a date" type="date">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="weightInput">Weight in kilos</label>
+                                                                <input type="number" class="form-control" id="weightInput" placeholder="Weight in kilos">
+                                                            </div>
+                                                            <button type="submit" class="btn btn-outline-default waves-effect" id="weightSubmit">Submit</button>
+                                                        </form>
+                                                        
+                                    </div>
+                                    <div class="card-footer">
+                                        
+                                                        <table class="table" id="weightTable">
+                                                            <thead>
+                                                            <tr>
+                                                                <th scope="col">Date</th>
+                                                                <th scope="col">Weight(kg)</th>
+                                                                <th scope="col">Weight(lbs)</th>
+                                                            </tr>
+                                                            </thead>
+                                                            <tbody id="weightTableBody">
+                                
+                                                            </tbody>
+                                                        </table>
+                                                    
+                                    </div>
+                                </div>
+                                <!-- COMPONENT END -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- COMPONENT START -->
+<div class="container c004-divider">
+    <div class="row">
+        <div class="col-md-12">
+            <hr class="section-divider" />
+        </div>
+    </div>
+</div>
+<!-- COMPONENT END -->
+
+
+<section class="container-fluid grid1 " id="">
+    <div class="row">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+                                
+                                <!-- COMPONENT START -->
+                                <div class="c001-basic-content">
+                                        <h1 class="display-4">Arrays</h1>
+                                        <h2 class="display-5 text-muted">Based around lists of books</h2>
+                                    
+                                                    <p>2 Demo`s of adding and removing items from an array. First demo is pretty basic, we start with an empty array and poplate it with our favourite books.</p>
+                                                    
+                                </div>
+                                <!-- COMPONENT END -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container-fluid grid-wide " id="">
+    <div class="row">
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-12 col-md-4">
+                                    
+                                    <!-- COMPONENT START -->
+                                    <div class="card c012-card mt-2 mb-5">
+                                        <div class="card-header">
+                                            <h3 class="h3-responsive">Favourite Books</h3>
+                                                <h5 class="h5-responsive">Add your favourite books with a Title and a Review to a table (array)</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            
+                                                            <form id="weightForm" action="" class="">
+                                                                <div class="form-group">
+                                                                    <label for="bookInput">Title</label>
+                                                                    <input type="text" id="bookInput" class="form-control" placeholder="Title">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="bookReviewInput">Review</label>
+                                                                    <input type="text" id="bookReviewInput" class="form-control"  placeholder="Review">
+                                                                </div>
+                                                                <button type="submit" class="btn btn-outline-default waves-effect" id="bookSubmit">Submit</button>
+                                                            </form>
+                                                            
+                                        </div>
+                                    </div>
+                                    <!-- COMPONENT END -->
+                </div>
+                
+                <div class="col-12 col-md-4">
+                                    
+                                    <!-- COMPONENT START -->
+                                    <div class="card c012-card mt-2 mb-5">
+                                        <div class="card-header">
+                                            <h3 class="h3-responsive">Table of books</h3>
+                                        </div>
+                                        <div class="card-body">
+                                            
+                                                            <table class="table" id="reviewTable">
+                                                                <thead>
+                                                                <tr>
+                                                                    <th>Title</th>
+                                                                    <th>Review</th>
+                                                                </tr>
+                                                                </thead>
+                                                                <tbody id="tableBody">
+                                    
+                                                                </tbody>
+                                                            </table>
+                                                            
+                                        </div>
+                                    </div>
+                                    <!-- COMPONENT END -->
+                </div>
+                
+                <div class="col-12 col-md-4">
+                                    
+                                    <!-- COMPONENT START -->
+                                    <div class="card c012-card mt-2 mb-5">
+                                        <div class="card-header">
+                                            <h3 class="h3-responsive">Print out of array data</h3>
+                                        </div>
+                                        <div class="card-body">
+                                            
+                                                            <pre class="" id="code"></pre>
+                                                            
+                                        </div>
+                                    </div>
+                                    <!-- COMPONENT END -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- COMPONENT START -->
+<div class="container c004-divider">
+    <div class="row">
+        <div class="col-md-12">
+            <hr class="section-divider" />
+        </div>
+    </div>
+</div>
+<!-- COMPONENT END -->
+
+        </main>
+
+        <footer class="page-footer font-small mdb-color lighten-1">
+        
+        <!-- Footer -->
+        <div class="footer-copyright text-center py-3">
+            
+                        <ul class="list-inline my-0">
+                            <li class="list-inline-item"><a href="../index.html">Home</a></li>
+                        </ul>
+                    
+        </div>
+        <!-- Footer -->
+        </footer>
+
+        
+        
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        
+        <!-- Then Material JavaScript on top of Bootstrap JavaScript -->
+        <script src="../../js/mdb.min.js?v8"></script>
+        
+        <!-- Optional JavaScript -->
+        <script src="../../js/bespoke/general.js?v8"></script>
+
+        <!-- Bespoke to page JavaScript -->
+        <script src="../../js/bespoke/arrays.js?v8"></script>
+
+    </body>
+</html>
