@@ -1,0 +1,178 @@
+{{!-- pages/javascript/objects.hbs --}}
+
+{{#> layouts/base title="Objects | Javascript" }}
+
+    {{#*inline "header-block"}}
+        {{#> components/header
+             brand='Javascript'
+        }}
+            {{> components/header__point--external
+                    point-title='Maths'
+                    point-href='maths.html'
+            }}
+            {{> components/header__point--external
+                    point-title='Basics'
+                    point-href='basics.html'
+            }}
+            {{> components/header__point--external
+                    point-title='Arrays'
+                    point-href='arrays.html'
+            }}
+            {{> components/header__point
+                    point-title='Objects'
+                    point-href='objects'
+            }}
+        {{/components/header}}
+    {{/inline}}
+
+    {{#*inline "main-block"}}
+
+        <style>
+            #wrap {
+                perspective: 800px;
+                perspective-origin: 50% -150px;
+                padding:10% 20%;
+            }
+            #cube {
+                position: relative;
+                transform-style: preserve-3d;
+                margin: 0 auto;
+            }
+            #cube div {
+                position: absolute;
+                color:white;
+                opacity:0.75;
+                padding:20px;
+            }
+            #back {
+            }
+            #right {
+                transform-origin: top right;
+            }
+            #left {
+                transform-origin: center left;
+            }
+            #top {
+                transform-origin: top center;
+            }
+            #bottom {
+                transform-origin: bottom center;
+            }
+            #front {
+            }
+            @keyframes spin {
+                from { transform: rotateY(0); }
+                to { transform: rotateY(360deg); }
+            }
+
+            #cube {
+                animation: spin 5s infinite linear;
+            }
+        </style>
+
+        {{#> sublayouts/grid1
+                id='objects'
+        }}
+            {{> components/c001-basic-content
+                    heading-primary='Objects'
+                    heading-secondary='A few examples of using object to create things'
+                    body-content='
+                    <p>
+                        <i class="fa fa-info-circle" aria-hidden="true"></i> An <code>object</code> has <code>properties</code> (written as <strong>name:value</strong> pairs) and can make use of <code>methods</code>.
+                        Multiple <code>objects</code> can have same properties with different values and can use the same methods in different orders.
+                    </p>
+                    <h3 class="mt-5">Things to note</h3>
+                    <ul class="">
+                        <li><code>object</code> has been created with existing <code>properties</code> and <code>values</code></li>
+                        <li>Multiple <code>methods</code> are included for altering the values within the object</li>
+                    </ul>
+                    '
+            }}
+        {{/sublayouts/grid1}}
+
+        {{#> sublayouts/grid-wide }}
+            {{#> sublayouts/grid-wide__col4 }}
+                {{> components/c012-card
+                        heading='The object'
+                        subheading='A very basic object for some box information'
+                        body='
+                        <code class="">const cubeObject = {<br/>
+                            &nbsp;&nbsp;width:50,<br/>
+                            &nbsp;&nbsp;length:50,<br/>
+                            &nbsp;&nbsp;height:50,<br/>
+                            &nbsp;&nbsp;name:&#x22;Box&#x22;,<br/>
+                            &nbsp;&nbsp;color:&#x22;black&#x22;,<br/>
+                            &nbsp;&nbsp;changeColor: function(color){<br/>
+                                &nbsp;&nbsp;&nbsp;&nbsp;this[&#x27;color&#x27;] = color;<br/>
+                            &nbsp;&nbsp;},<br/>
+                            &nbsp;&nbsp;changeSize: function(size){<br/>
+                                &nbsp;&nbsp;&nbsp;&nbsp;this[&#x27;width&#x27;] = size;<br/>
+                                &nbsp;&nbsp;&nbsp;&nbsp;this[&#x27;length&#x27;] = size;<br/>
+                                &nbsp;&nbsp;&nbsp;&nbsp;this[&#x27;height&#x27;] = size;<br/>
+                            &nbsp;&nbsp;}<br/>
+                        };</code>
+                        '
+                }}
+            {{/sublayouts/grid-wide__col4}}
+            {{#> sublayouts/grid-wide__col4 }}
+                {{> components/c012-card
+                        heading='Grabbing the data'
+                        subheading='Pull in the data from the object and then use it to build a box (should be seen on the right)'
+                        body='
+                        <p id="basicResult" class=""></p>
+                        <form id="" action="">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="sizePicker">Size picker</label>
+                                        <input type="range" class="form-control" id="sizePicker" min="30" max="100" step="10" placeholder="Size picker" onchange="buildCube()">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="colorPicker">Color picker</label>
+                                        <input type="color" class="form-control" id="colorPicker" placeholder="Color picker" onchange="buildCube()">
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        '
+                }}
+            {{/sublayouts/grid-wide__col4}}
+            {{#> sublayouts/grid-wide__col4 }}
+                <div id="wrap">
+                    <div id="cube">
+                        <div id="front">front</div>
+                        <div id="back">back</div>
+                        <div id="top">top</div>
+                        <div id="bottom">bottom</div>
+                        <div id="left">left</div>
+                        <div id="right">right</div>
+                    </div>
+                </div>
+            {{/sublayouts/grid-wide__col4}}
+        {{/sublayouts/grid-wide}}
+
+{{!-- ------- --}}
+{{!-- DIVIDER --}}
+{{!-- ------- --}}
+{{> components/c004-divider }}
+
+    {{/inline}}
+
+    {{#*inline "footer-block"}}
+        {{> components/footer
+                body-content='
+                <ul class="list-inline my-0">
+                    <li class="list-inline-item"><a href="../index.html">Home</a></li>
+                </ul>
+            '
+        }}
+    {{/inline}}
+
+    {{#*inline "scripts-block"}}
+        <!-- Bespoke to page JavaScript -->
+        <script src="{{domainprefix}}js/bespoke/objects.js?v{{version}}"></script>
+    {{/inline}}
+
+{{/layouts/base}}
