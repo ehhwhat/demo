@@ -14,91 +14,105 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="c012-card.hbs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/partials/components/c012-card.hbs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="27" lean-forward="false" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ajax-json.hbs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pages/jquery/ajax-json.hbs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="66" column="59" lean-forward="false" selection-start-line="66" selection-start-column="59" selection-end-line="66" selection-end-column="59" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_c012-card.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scss/components/_c012-card.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="27" lean-forward="false" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ajax-json.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/src/bespoke/jquery/ajax-json.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="101" lean-forward="false" selection-start-line="0" selection-start-column="101" selection-end-line="0" selection-end-column="101" />
+              <folding>
+                <marker date="1547640315356" expanded="true" signature="4219:4225" ph="•" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ajax-promise.hbs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pages/jquery/ajax-promise.hbs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="70">
+              <caret line="49" column="28" lean-forward="false" selection-start-line="49" selection-start-column="28" selection-end-line="51" selection-end-column="114" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ajax-promise.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/src/bespoke/jquery/ajax-promise.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="120" column="46" lean-forward="false" selection-start-line="120" selection-start-column="46" selection-end-line="120" selection-end-column="46" />
+              <folding>
+                <marker date="1547640557783" expanded="true" signature="5127:5133" ph="•" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="index.hbs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pages/index.hbs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="29" column="39" lean-forward="false" selection-start-line="29" selection-start-column="39" selection-end-line="29" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="maths.hbs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pages/javascript/maths.hbs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="12" lean-forward="false" selection-start-line="20" selection-start-column="12" selection-end-line="23" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="basics.hbs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pages/javascript/basics.hbs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="14" lean-forward="false" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="arrays.hbs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pages/javascript/arrays.hbs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="14" lean-forward="false" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="objects.hbs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pages/javascript/objects.hbs">
-          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="238">
-              <caret line="14" column="44" lean-forward="false" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
+              <caret line="44" column="78" lean-forward="false" selection-start-line="44" selection-start-column="78" selection-end-line="44" selection-end-column="78" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="objects.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dist/pages/javascript/objects.html">
+      <file leaf-file-name="base.hbs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/partials/layouts/base.hbs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="202" column="167" lean-forward="false" selection-start-line="202" selection-start-column="158" selection-end-line="202" selection-end-column="167" />
+            <state relative-caret-position="153">
+              <caret line="9" column="20" lean-forward="true" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="objects.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/src/bespoke/objects.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="50" lean-forward="false" selection-start-line="23" selection-start-column="50" selection-end-line="23" selection-end-column="50" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="basic.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/src/bespoke/basic.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="24" lean-forward="false" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="c012-card.hbs" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/partials/components/c012-card.hbs">
+      <file leaf-file-name="starter.hbs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/partials/layouts/starter.hbs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="272">
-              <caret line="16" column="18" lean-forward="true" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+              <caret line="16" column="26" lean-forward="false" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ajax-static.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/src/bespoke/jquery/ajax-static.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="103" lean-forward="false" selection-start-line="0" selection-start-column="103" selection-end-line="0" selection-end-column="103" />
               <folding />
             </state>
           </provider>
@@ -153,12 +167,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/scss/components/_c004-divider.scss" />
-        <option value="$PROJECT_DIR$/scss/sublayouts/_grid1.scss" />
-        <option value="$PROJECT_DIR$/scss/sublayouts/_grid-wide.scss" />
-        <option value="$PROJECT_DIR$/src/partials/sublayouts/grid-wide__col2.hbs" />
-        <option value="$PROJECT_DIR$/src/partials/components/c006-image-block__point.hbs" />
-        <option value="$PROJECT_DIR$/scss/components/_c006-image-block.scss" />
         <option value="$PROJECT_DIR$/scss/components/bespoke/_ c007-data-block.scss" />
         <option value="$PROJECT_DIR$/scss/sublayouts/_grid-full.scss" />
         <option value="$PROJECT_DIR$/src/partials/sublayouts/grid-row.hbs" />
@@ -183,16 +191,11 @@
         <option value="$PROJECT_DIR$/js/modules.js" />
         <option value="$PROJECT_DIR$/js/src/bespoke/general.js" />
         <option value="$PROJECT_DIR$/js/src/bespoke/data.js" />
-        <option value="$PROJECT_DIR$/src/partials/layouts/base.hbs" />
-        <option value="$PROJECT_DIR$/src/partials/layouts/starter.hbs" />
         <option value="$PROJECT_DIR$/src/partials/includes/scripts.hbs" />
         <option value="$PROJECT_DIR$/src/pages/app/triathlon-data.hbs" />
         <option value="$PROJECT_DIR$/src/pages/app/triathlon.hbs" />
-        <option value="$PROJECT_DIR$/gulpfile.js" />
         <option value="$PROJECT_DIR$/src/pages/general/components.hbs" />
         <option value="$PROJECT_DIR$/src/partials/components/header__point--external.hbs" />
-        <option value="$PROJECT_DIR$/scss/_custom-styles.scss" />
-        <option value="$PROJECT_DIR$/scss/components/_c012-card.scss" />
         <option value="$PROJECT_DIR$/js/src/bespoke/basic.js" />
         <option value="$PROJECT_DIR$/js/src/bespoke/maths.js" />
         <option value="$PROJECT_DIR$/dist/pages/javascript/gym.html" />
@@ -202,8 +205,19 @@
         <option value="$PROJECT_DIR$/src/pages/javascript/maths.hbs" />
         <option value="$PROJECT_DIR$/src/pages/javascript/basics.hbs" />
         <option value="$PROJECT_DIR$/src/pages/javascript/arrays.hbs" />
-        <option value="$PROJECT_DIR$/src/pages/index.hbs" />
+        <option value="$PROJECT_DIR$/gulpfile.js" />
         <option value="$PROJECT_DIR$/src/partials/components/c012-card.hbs" />
+        <option value="$PROJECT_DIR$/scss/_custom-styles.scss" />
+        <option value="$PROJECT_DIR$/src/pages/jquery/ajax.hbs" />
+        <option value="$PROJECT_DIR$/src/pages/jquery/ajax-promise.hbs" />
+        <option value="$PROJECT_DIR$/src/pages/jquery/ajax-json.hbs" />
+        <option value="$PROJECT_DIR$/scss/components/_c012-card.scss" />
+        <option value="$PROJECT_DIR$/js/src/bespoke/jquery/ajax-json.js" />
+        <option value="$PROJECT_DIR$/js/src/bespoke/jquery/ajax-static.js" />
+        <option value="$PROJECT_DIR$/js/src/bespoke/jquery/ajax-promise.js" />
+        <option value="$PROJECT_DIR$/src/pages/index.hbs" />
+        <option value="$PROJECT_DIR$/src/partials/layouts/starter.hbs" />
+        <option value="$PROJECT_DIR$/src/partials/layouts/base.hbs" />
       </list>
     </option>
   </component>
@@ -288,6 +302,19 @@
             <path>
               <item name="ver2.0" type="b2602c69:ProjectViewProjectNode" />
               <item name="ver2.0" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
+              <item name="pages-handled" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ver2.0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ver2.0" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
+              <item name="pages-handled" type="462c0819:PsiDirectoryNode" />
+              <item name="jquery" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ver2.0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ver2.0" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -306,6 +333,14 @@
             <path>
               <item name="ver2.0" type="b2602c69:ProjectViewProjectNode" />
               <item name="ver2.0" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="bespoke" type="462c0819:PsiDirectoryNode" />
+              <item name="jquery" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ver2.0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ver2.0" type="462c0819:PsiDirectoryNode" />
               <item name="scss" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -319,6 +354,13 @@
               <item name="ver2.0" type="462c0819:PsiDirectoryNode" />
               <item name="scss" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ver2.0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ver2.0" type="462c0819:PsiDirectoryNode" />
+              <item name="scss" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="bespoke" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ver2.0" type="b2602c69:ProjectViewProjectNode" />
@@ -357,6 +399,13 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
               <item name="javascript" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ver2.0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ver2.0" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="jquery" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ver2.0" type="b2602c69:ProjectViewProjectNode" />
@@ -415,11 +464,11 @@
       <recent name="C:\xampp\htdocs\ver2.0\source\pages" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\ver2.0\js\src\bespoke\jquery" />
+      <recent name="C:\xampp\htdocs\ver2.0\src\pages\jquery" />
+      <recent name="C:\xampp\htdocs\ver2.0\dist\pages-handled\jquery" />
       <recent name="C:\xampp\htdocs\ver2.0\js\src\bespoke" />
       <recent name="C:\xampp\htdocs\ver2.0\src\pages\javascript" />
-      <recent name="C:\xampp\htdocs\ver2.0\scss\components" />
-      <recent name="C:\xampp\htdocs\ver2.0\src\partials\components" />
-      <recent name="C:\xampp\htdocs\ver2.0\src\partials\layouts" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -448,12 +497,12 @@
       <option name="presentableId" value="Default" />
       <updated>1539524445068</updated>
       <workItem from="1539524446362" duration="33506000" />
-      <workItem from="1541362131120" duration="190136000" />
+      <workItem from="1541362131120" duration="199371000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="223642000" />
+    <option name="totallyTimeSpent" value="232877000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -464,7 +513,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29891303" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29891303" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14910433" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -514,120 +563,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/js/src/general.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/partials/components/c002-image-content-cta.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="61" lean-forward="true" selection-start-line="17" selection-start-column="61" selection-end-line="17" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/partials/components/c006-image-block__point.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/partials/components/c006-image-block.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/general/cv-flat.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="30" column="33" lean-forward="false" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dist/pages/app/triathlon/data.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="114" column="10" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="114" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scss/_custom-variables.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scss/components/_c007-data-block.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="18" lean-forward="false" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/partials/components/c007-data-block.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scss/components/_c010-events.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="187" column="29" lean-forward="false" selection-start-line="187" selection-start-column="29" selection-end-line="187" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/partials/components/c010-events.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/partials/includes/styles.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/_intro-mdb-free.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/src/data.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/dist/data.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="748">
@@ -676,22 +611,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/partials/layouts/base.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="52" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/partials/layouts/starter.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="444">
-          <caret line="49" column="30" lean-forward="false" selection-start-line="49" selection-start-column="30" selection-end-line="49" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/partials/includes/scripts.hbs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -700,26 +619,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/app/triathlon-data.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
-          <caret line="153" column="0" lean-forward="false" selection-start-line="153" selection-start-column="0" selection-end-line="153" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/src/bespoke/data.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="464">
           <caret line="480" column="0" lean-forward="false" selection-start-line="480" selection-start-column="0" selection-end-line="480" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gulpfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="108" column="32" lean-forward="false" selection-start-line="108" selection-start-column="32" selection-end-line="108" selection-end-column="32" />
           <folding />
         </state>
       </provider>
@@ -780,22 +683,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scss/_custom-styles.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="29" lean-forward="false" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/partials/sublayouts/grid1.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/src/bespoke/basic.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -824,14 +711,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="218">
           <caret line="110" column="0" lean-forward="false" selection-start-line="110" selection-start-column="0" selection-end-line="138" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scss/components/_c012-card.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="27" lean-forward="false" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
           <folding />
         </state>
       </provider>
@@ -884,42 +763,214 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/javascript/basics.hbs">
+    <entry file="file://$PROJECT_DIR$/gulpfile.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="14" lean-forward="false" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
+        <state relative-caret-position="39">
+          <caret line="76" column="7" lean-forward="false" selection-start-line="76" selection-start-column="7" selection-end-line="76" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/javascript/arrays.hbs">
+    <entry file="file://$PROJECT_DIR$/dist/pages/javascript/ajax_data.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="14" lean-forward="false" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/javascript/objects.hbs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
+        <state relative-caret-position="-1632">
           <caret line="14" column="44" lean-forward="false" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/index.hbs">
+    <entry file="file://$PROJECT_DIR$/src/pages/javascript/arrays.hbs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="39" lean-forward="false" selection-start-line="29" selection-start-column="39" selection-end-line="29" selection-end-column="39" />
+        <state relative-caret-position="221">
+          <caret line="63" column="93" lean-forward="false" selection-start-line="63" selection-start-column="57" selection-end-line="63" selection-end-column="93" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/javascript/basics.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="47" column="8" lean-forward="false" selection-start-line="47" selection-start-column="8" selection-end-line="96" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/pages/javascript/ajax.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="413">
+          <caret line="162" column="20" lean-forward="false" selection-start-line="162" selection-start-column="20" selection-end-line="162" selection-end-column="128" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/partials/sublayouts/grid-wide.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/partials/sublayouts/grid1.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="12" lean-forward="false" selection-start-line="5" selection-start-column="12" selection-end-line="6" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scss/components/_c007-data-block.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="3" lean-forward="false" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scss/_custom-styles.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="44" column="11" lean-forward="false" selection-start-line="44" selection-start-column="11" selection-end-line="44" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/app/triathlon-data.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="48" column="20" lean-forward="false" selection-start-line="48" selection-start-column="20" selection-end-line="48" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/pages/javascript/ajaxJSON.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="179" column="8" lean-forward="false" selection-start-line="179" selection-start-column="8" selection-end-line="199" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/jquery/ajax.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="39" lean-forward="false" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/partials/components/c012-card.hbs">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="27" lean-forward="false" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/pages-handled/jquery/ajax-promise.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/pages/javascript/ajaxJSON_promise.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2907">
+          <caret line="346" column="5" lean-forward="false" selection-start-line="203" selection-start-column="0" selection-end-line="346" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/jquery/ajax-promise.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="70">
+          <caret line="49" column="28" lean-forward="false" selection-start-line="49" selection-start-column="28" selection-end-line="51" selection-end-column="114" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scss/components/bespoke/_events.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/jquery/ajax-json.hbs">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
-          <caret line="16" column="18" lean-forward="true" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+          <caret line="66" column="59" lean-forward="false" selection-start-line="66" selection-start-column="59" selection-end-line="66" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scss/components/_c012-card.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="27" lean-forward="false" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/src/bespoke/jquery/ajax-json.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="101" lean-forward="false" selection-start-line="0" selection-start-column="101" selection-end-line="0" selection-end-column="101" />
+          <folding>
+            <marker date="1547640315356" expanded="true" signature="4219:4225" ph="•" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/src/bespoke/jquery/ajax-static.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="103" lean-forward="false" selection-start-line="0" selection-start-column="103" selection-end-line="0" selection-end-column="103" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/src/bespoke/jquery/ajax-promise.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="120" column="46" lean-forward="false" selection-start-line="120" selection-start-column="46" selection-end-line="120" selection-end-column="46" />
+          <folding>
+            <marker date="1547640557783" expanded="true" signature="5127:5133" ph="•" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/index.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="44" column="78" lean-forward="false" selection-start-line="44" selection-start-column="78" selection-end-line="44" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/partials/layouts/starter.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="26" lean-forward="false" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/partials/layouts/base.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="20" lean-forward="true" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
           <folding />
         </state>
       </provider>

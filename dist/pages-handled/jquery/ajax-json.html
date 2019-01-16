@@ -1,0 +1,226 @@
+
+
+<!doctype html>
+<html>
+    <head>
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>
+                Ajax Json | jQuery
+        </title>
+        <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@8.17.0/dist/lazyload.min.js"></script>
+        
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- Bootstrap core CSS -->
+        <link href="../../css/bootstrap.min.css?v9" rel="stylesheet">
+        <!-- Material Design Bootstrap -->
+        <link href="../../css/mdb.min.css?v9" rel="stylesheet">
+        <!-- Your custom styles (optional) -->
+        <link href="../../css/style.css?v9" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" />
+    </head>
+
+    <body data-spy="scroll" data-target="#navbar" data-offset="150" class="smooth-scroll">
+
+        <header>
+
+<!-- Main navigation -->
+<header>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top scrolling-navbar" id="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <strong>jQuery</strong>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar-content">
+                <ul class="navbar-nav mr-auto">
+                                
+                                <!-- COMPONENT START -->
+                                <li class="nav-item">
+                                    <a class="nav-link" href="ajax.html">Ajax Static</a>
+                                </li>
+                                <!-- COMPONENT END -->
+                                
+                                <!-- COMPONENT START -->
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#ajax-json">Ajax Json</a>
+                                </li>
+                                <!-- COMPONENT END -->
+                                
+                                <!-- COMPONENT START -->
+                                <li class="nav-item">
+                                    <a class="nav-link" href="ajax-promise.html">Ajax Promise</a>
+                                </li>
+                                <!-- COMPONENT END -->
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</header>
+<!-- Main navigation -->
+        </header>
+
+        <main>
+
+
+<section class="container-fluid grid1 " id="ajax-json">
+    <div class="row">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+                                
+                                <!-- COMPONENT START -->
+                                <div class="c001-basic-content">
+                                        <h1 class="display-4">Ajax Json</h1>
+                                        <h2 class="display-5 text-muted">Getting data from JSON</h2>
+                                    
+                                                    <p class="">
+                                                        Pull data from external JSON file using <code>$.getJSON</code>. Multiple demo`s below of different techniques.
+                                                        <strong>Demo 1</strong> and <strong>Demo 2</strong> use <code>$.getJSON</code> to grab data,
+                                                        then an <code>$.each</code> to loop through the items (skip first as this is metadata) and then append HTML (different for each demo) to DOM.
+                                                        <strong>Demo 3</strong> uses <code>$.getJSON</code> to grab data as well but then uses the newer <code>$.map</code> method to create a new <code>array</code> of the JSON data.
+                                                    </p>
+                                                    <h3 class="mt-5">Things to note</h3>
+                                                    <ul class="">
+                                                        <li>Grabbing of external JSON Data, the data source is the same i just pull different items in each demo</li>
+                                                        <li>Have used <code>const</code> / <code>let</code> instead of <code>var</code> for variables as this seems best practise for my needs (ES2015)</li>
+                                                        <li>Multiple uses of $.getJSON</li>
+                                                        <li>Use of the $.each method</li>
+                                                        <li>Use of the $.map method</li>
+                                                        <li>I have created a count of the items using the <code>$.each</code> or <code>$.map</code> index(i) value</li>
+                                                        <li>I have added a fake `loading` effect of the data so items are added 1 by 1 just because i think it looks nicer/cooler</li>
+                                                    </ul>
+                                                    
+                                </div>
+                                <!-- COMPONENT END -->
+                                
+                                <!-- COMPONENT START -->
+                                <div class="c001-basic-content">
+                                    
+                                                    <div class="text-center">
+                                                        <div class="btn-group demo-buttons my-5" role="group" aria-label="Basic example">
+                                                            <button type="button" class="btn btn-outline-default waves-effect demo1">Cards</button>
+                                                            <button type="button" class="btn btn-outline-default waves-effect demo2">Table</button>
+                                                            <button type="button" class="btn btn-outline-default waves-effect demo3">List</button>
+                                                        </div>
+                                                    </div>
+                                                    
+                                </div>
+                                <!-- COMPONENT END -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div id="demoOneContainer" class="demo-container" style="display:none;">
+                        <div class="loading" id="progress1"></div>
+                        <div class="text-center">
+                            <p class="lead"><strong><span class="booksnumber"></span></strong> Books</p>
+                        </div>
+                        <div class="row"  id="injectHere">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div id="demoTwoContainer" class="demo-container" style="display:none;">
+                        <div class="loading" id="progress2"></div>
+                        <div class="text-center">
+                            <p class="lead"><strong><span class="booksnumber"></span></strong> Books</p>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table" id="records_table3">
+                                <thead class="bg-dark text-white">
+
+                                </thead>
+                                <tbody>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div id="demoThreeContainer" class="demo-container" style="display:none;">
+
+                        <div class="loading" id="progress3"></div>
+                        <div class="text-center">
+                            <p class="lead"><strong><span class="booksnumber"></span></strong> Books</p>
+                        </div>
+                        <div class="row">
+                            <div class="col" id="demo3">
+                                <ul class="list-inline">
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+<!-- COMPONENT START -->
+<div class="container c004-divider">
+    <div class="row">
+        <div class="col-md-12">
+            <hr class="section-divider" />
+        </div>
+    </div>
+</div>
+<!-- COMPONENT END -->
+
+        </main>
+
+        <footer class="page-footer font-small mdb-color lighten-1">
+        
+        <!-- Footer -->
+        <div class="footer-copyright text-center py-3">
+            
+                        <ul class="list-inline my-0">
+                            <li class="list-inline-item"><a href="../index.html">Home</a></li>
+                        </ul>
+                    
+        </div>
+        <!-- Footer -->
+        </footer>
+
+        
+        
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        
+        <!-- Then Material JavaScript on top of Bootstrap JavaScript -->
+        <script src="../../js/mdb.min.js?v9"></script>
+        
+        <!-- Optional JavaScript -->
+        <script src="../../js/bespoke/general.js?v9"></script>
+
+        <!-- Bespoke to page JavaScript -->
+        <script src="../../js/bespoke/jquery/ajax-json.js?v9"></script>
+
+    </body>
+</html>

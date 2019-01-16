@@ -1,0 +1,91 @@
+{{!-- pages/jquery/ajax.hbs --}}
+
+{{#> layouts/base title="Ajax Static | jQuery" }}
+
+    {{#*inline "header-block"}}
+        {{#> components/header
+             brand='jQuery'
+        }}
+            {{> components/header__point
+                    point-title='Ajax Static'
+                    point-href='ajax'
+            }}
+            {{> components/header__point--external
+                    point-title='Ajax Json'
+                    point-href='ajax-json.html'
+            }}
+            {{> components/header__point--external
+                    point-title='Ajax Promise'
+                    point-href='ajax-promise.html'
+            }}
+        {{/components/header}}
+    {{/inline}}
+
+    {{#*inline "main-block"}}
+
+        {{#> sublayouts/grid1
+                id='ajax'
+        }}
+            {{> components/c001-basic-content
+                    heading-primary='Ajax static'
+                    heading-secondary='Getting data'
+                    body-content='
+                    <p class="">
+                        Pull data (a static HTMl file) using <code>$.ajax</code>.
+                        All 4 examples below will point to the same file but #4 will fail on purpose to demonstrate the error handling (part of handling is to log error to console).
+                    </p>
+                    <h3 class="mt-5">Things to note</h3>
+                    <ul class="">
+                        <li>Grabbing of external data, the data source is the same</li>
+                        <li>Have used <code>const</code> / <code>let</code> and <code>var</code> in multiple places</li>
+                        <li>Use of <code>$.ajax</code></li>
+                        <li>Success and error handling</li>
+                        <li><code>if</code> statement used to force the error handling in demo 4</li>
+                        <li>Each button clicked will append a unique id to the query string of file, this query string is pulled from HTML data <code>attr</code></li>
+                    </ul>
+                    '
+            }}
+        {{/sublayouts/grid1}}
+
+        {{#> sublayouts/grid1 }}
+            {{> components/c012-card
+                    heading='Successful'
+                    subheading='This request will work and will pull in the specific data'
+                    body='
+                        <div class="inject-here text-left"></div>
+                        '
+                    footer='<button id="ajaxStaticData1" data-box="box1" type="button" class="btn btn-outline-default waves-effect ajaxStaticData">Pull</button>'
+            }}
+            {{> components/c012-card
+                    heading='Failue'
+                    subheading='This request will <strong>not</strong> work and will <strong>not</strong> pull in the specific data'
+                    body='
+                        <div class="inject-here text-left"></div>
+                        '
+                    footer='<button id="ajaxStaticData4" data-box="box4" type="button" class="btn btn-outline-default waves-effect ajaxStaticData">Pull</button>'
+            }}
+        {{/sublayouts/grid1}}
+
+{{!-- ------- --}}
+{{!-- DIVIDER --}}
+{{!-- ------- --}}
+{{> components/c004-divider }}
+
+    {{/inline}}
+
+    {{#*inline "footer-block"}}
+        {{> components/footer
+                body-content='
+                <ul class="list-inline my-0">
+                    <li class="list-inline-item"><a href="../index.html">Home</a></li>
+                </ul>
+            '
+        }}
+    {{/inline}}
+
+    {{#*inline "scripts-block"}}
+        <!-- Bespoke to page JavaScript -->
+        <script src="{{domainprefix}}js/bespoke/jquery/ajax-static.js?v{{version}}"></script>
+    {{/inline}}
+
+{{/layouts/base}}

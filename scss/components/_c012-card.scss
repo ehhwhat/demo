@@ -1,6 +1,10 @@
 .c012-card {
   .card-header {
     border:none;
+    padding-bottom:.25rem;
+  }
+  .card-body {
+    padding-bottom:0;
   }
   .card-footer {
     background-color:white;

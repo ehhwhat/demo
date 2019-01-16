@@ -38,6 +38,17 @@
   }
 }
 
+.loading {
+  font-size:2rem;
+  font-weight: bold;
+  text-align:center;
+  &:after {
+    content: ' .';
+    animation: dots 1s steps(5, end) infinite;
+    color:transparent;
+  }
+}
+
 @keyframes dots {
   0%, 20% {
     color: rgba(0,0,0,0);

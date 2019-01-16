@@ -8383,7 +8383,11 @@ ul.stepper {
     transition: all 2s; }
 
 .c012-card .card-header {
-  border: none; }
+  border: none;
+  padding-bottom: .25rem; }
+
+.c012-card .card-body {
+  padding-bottom: 0; }
 
 .c012-card .card-footer {
   background-color: white; }
@@ -8392,6 +8396,16 @@ ul.stepper {
   font-size: 2rem;
   font-weight: bold; }
   .dataPoint:empty:after {
+    content: ' .';
+    -webkit-animation: dots 1s steps(5, end) infinite;
+    animation: dots 1s steps(5, end) infinite;
+    color: transparent; }
+
+.loading {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center; }
+  .loading:after {
     content: ' .';
     -webkit-animation: dots 1s steps(5, end) infinite;
     animation: dots 1s steps(5, end) infinite;

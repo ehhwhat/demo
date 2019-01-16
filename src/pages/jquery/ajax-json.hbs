@@ -1,0 +1,146 @@
+{{!-- pages/jquery/ajax-json.hbs --}}
+
+{{#> layouts/base title="Ajax Json | jQuery" }}
+
+    {{#*inline "header-block"}}
+        {{#> components/header
+             brand='jQuery'
+        }}
+            {{> components/header__point--external
+                    point-title='Ajax Static'
+                    point-href='ajax.html'
+            }}
+            {{> components/header__point
+                    point-title='Ajax Json'
+                    point-href='ajax-json'
+            }}
+            {{> components/header__point--external
+                    point-title='Ajax Promise'
+                    point-href='ajax-promise.html'
+            }}
+        {{/components/header}}
+    {{/inline}}
+
+    {{#*inline "main-block"}}
+
+        {{#> sublayouts/grid1
+                id='ajax-json'
+        }}
+            {{> components/c001-basic-content
+                    heading-primary='Ajax Json'
+                    heading-secondary='Getting data from JSON'
+                    body-content='
+                    <p class="">
+                        Pull data from external JSON file using <code>$.getJSON</code>. Multiple demo`s below of different techniques.
+                        <strong>Demo 1</strong> and <strong>Demo 2</strong> use <code>$.getJSON</code> to grab data,
+                        then an <code>$.each</code> to loop through the items (skip first as this is metadata) and then append HTML (different for each demo) to DOM.
+                        <strong>Demo 3</strong> uses <code>$.getJSON</code> to grab data as well but then uses the newer <code>$.map</code> method to create a new <code>array</code> of the JSON data.
+                    </p>
+                    <h3 class="mt-5">Things to note</h3>
+                    <ul class="">
+                        <li>Grabbing of external JSON Data, the data source is the same i just pull different items in each demo</li>
+                        <li>Have used <code>const</code> / <code>let</code> instead of <code>var</code> for variables as this seems best practise for my needs (ES2015)</li>
+                        <li>Multiple uses of $.getJSON</li>
+                        <li>Use of the $.each method</li>
+                        <li>Use of the $.map method</li>
+                        <li>I have created a count of the items using the <code>$.each</code> or <code>$.map</code> index(i) value</li>
+                        <li>I have added a fake `loading` effect of the data so items are added 1 by 1 just because i think it looks nicer/cooler</li>
+                    </ul>
+                    '
+            }}
+            {{> components/c001-basic-content
+                    body-content='
+                    <div class="text-center">
+                        <div class="btn-group demo-buttons my-5" role="group" aria-label="Basic example">
+                            <button type="button" class="btn btn-outline-default waves-effect demo1">Cards</button>
+                            <button type="button" class="btn btn-outline-default waves-effect demo2">Table</button>
+                            <button type="button" class="btn btn-outline-default waves-effect demo3">List</button>
+                        </div>
+                    </div>
+                    '
+            }}
+        {{/sublayouts/grid1}}
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div id="demoOneContainer" class="demo-container" style="display:none;">
+                        <div class="loading" id="progress1"></div>
+                        <div class="text-center">
+                            <p class="lead"><strong><span class="booksnumber"></span></strong> Books</p>
+                        </div>
+                        <div class="row"  id="injectHere">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div id="demoTwoContainer" class="demo-container" style="display:none;">
+                        <div class="loading" id="progress2"></div>
+                        <div class="text-center">
+                            <p class="lead"><strong><span class="booksnumber"></span></strong> Books</p>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table" id="records_table3">
+                                <thead class="bg-dark text-white">
+
+                                </thead>
+                                <tbody>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div id="demoThreeContainer" class="demo-container" style="display:none;">
+
+                        <div class="loading" id="progress3"></div>
+                        <div class="text-center">
+                            <p class="lead"><strong><span class="booksnumber"></span></strong> Books</p>
+                        </div>
+                        <div class="row">
+                            <div class="col" id="demo3">
+                                <ul class="list-inline">
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+{{!-- ------- --}}
+{{!-- DIVIDER --}}
+{{!-- ------- --}}
+{{> components/c004-divider }}
+
+    {{/inline}}
+
+    {{#*inline "footer-block"}}
+        {{> components/footer
+                body-content='
+                <ul class="list-inline my-0">
+                    <li class="list-inline-item"><a href="../index.html">Home</a></li>
+                </ul>
+            '
+        }}
+    {{/inline}}
+
+    {{#*inline "scripts-block"}}
+        <!-- Bespoke to page JavaScript -->
+        <script src="{{domainprefix}}js/bespoke/jquery/ajax-json.js?v{{version}}"></script>
+    {{/inline}}
+
+{{/layouts/base}}

@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>
-                Basics | Javascript
+                Ajax Static | jQuery
         </title>
         <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@8.17.0/dist/lazyload.min.js"></script>
         
@@ -33,7 +33,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top scrolling-navbar" id="navbar">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <strong>Javascript</strong>
+                <strong>jQuery</strong>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -43,25 +43,19 @@
                                 
                                 <!-- COMPONENT START -->
                                 <li class="nav-item">
-                                    <a class="nav-link" href="maths.html">Maths</a>
+                                    <a class="nav-link" href="#ajax">Ajax Static</a>
                                 </li>
                                 <!-- COMPONENT END -->
                                 
                                 <!-- COMPONENT START -->
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#basics">Basics</a>
+                                    <a class="nav-link" href="ajax-json.html">Ajax Json</a>
                                 </li>
                                 <!-- COMPONENT END -->
                                 
                                 <!-- COMPONENT START -->
                                 <li class="nav-item">
-                                    <a class="nav-link" href="arrays.html">Arrays</a>
-                                </li>
-                                <!-- COMPONENT END -->
-                                
-                                <!-- COMPONENT START -->
-                                <li class="nav-item">
-                                    <a class="nav-link" href="objects.html">Objects</a>
+                                    <a class="nav-link" href="ajax-promise.html">Ajax Promise</a>
                                 </li>
                                 <!-- COMPONENT END -->
                 </ul>
@@ -76,7 +70,7 @@
         <main>
 
 
-<section class="container-fluid grid1 " id="basics">
+<section class="container-fluid grid1 " id="ajax">
     <div class="row">
         <div class="container">
             <div class="row">
@@ -84,15 +78,21 @@
                                 
                                 <!-- COMPONENT START -->
                                 <div class="c001-basic-content">
-                                        <h1 class="display-4">Basics</h1>
-                                        <h2 class="display-5 text-muted">Just some simple JS demo&#x60;s</h2>
+                                        <h1 class="display-4">Ajax static</h1>
+                                        <h2 class="display-5 text-muted">Getting data</h2>
                                     
-                                                    <p> One demo to compare two values and display messaging, the other to iterate through and count characters.</p>
+                                                    <p class="">
+                                                        Pull data (a static HTMl file) using <code>$.ajax</code>.
+                                                        All 4 examples below will point to the same file but #4 will fail on purpose to demonstrate the error handling (part of handling is to log error to console).
+                                                    </p>
                                                     <h3 class="mt-5">Things to note</h3>
                                                     <ul class="">
-                                                        <li class="">Have used <code>const / let</code> instead of <code>var</code> in places</li>
-                                                        <li class="">Use of <code>if</code> statements to compare properties and display messaging</li>
-                                                        <li>Use of a <code>for</code> loop to iterate through a sentence, if the letter at index matches the user input then increment letter count</li>
+                                                        <li>Grabbing of external data, the data source is the same</li>
+                                                        <li>Have used <code>const</code> / <code>let</code> and <code>var</code> in multiple places</li>
+                                                        <li>Use of <code>$.ajax</code></li>
+                                                        <li>Success and error handling</li>
+                                                        <li><code>if</code> statement used to force the error handling in demo 4</li>
+                                                        <li>Each button clicked will append a unique id to the query string of file, this query string is pulled from HTML data <code>attr</code></li>
                                                     </ul>
                                                     
                                 </div>
@@ -113,32 +113,16 @@
                                 <!-- COMPONENT START -->
                                 <div class="card c012-card my-5">
                                     <div class="card-header">
-                                        <h3 class="h3-responsive">Capacity status</h3>
-                                            <h5 class="h5-responsive">Enter the number of passengers and the capacity to see one message, if the capacity is less than the number of passengers a different message will appear</h5>
+                                        <h3 class="h3-responsive">Successful</h3>
+                                            <h5 class="h5-responsive">This request will work and will pull in the specific data</h5>
                                     </div>
                                     <div class="card-body">
                                         
-                                                        <form action="#">
-                                                            <div class="row">
-                                                                <div class="col-sm-6">
-                                                                    <div class="form-group">
-                                                                        <label for="capacityStatusInput1">Passengers</label>
-                                                                        <input type="number" id="capacityStatusInput1" class="form-control" placeholder="Passengers">
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-sm-6">
-                                                                    <div class="form-group">
-                                                                        <label for="capacityStatusInput2">Capacity</label>
-                                                                        <input type="number" id="capacityStatusInput2" class="form-control"  placeholder="Capacity">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <button id="capacityStatusSubmit" type="submit" class="btn btn-outline-default waves-effect">Go</button>
-                                                        </form>
+                                                        <div class="inject-here text-left"></div>
                                                         
                                     </div>
                                     <div class="card-footer">
-                                        <p id="capacityStatusResult" class="mb-0"></p>
+                                        <button id="ajaxStaticData1" data-box="box1" type="button" class="btn btn-outline-default waves-effect ajaxStaticData">Pull</button>
                                     </div>
                                 </div>
                                 <!-- COMPONENT END -->
@@ -146,32 +130,16 @@
                                 <!-- COMPONENT START -->
                                 <div class="card c012-card my-5">
                                     <div class="card-header">
-                                        <h3 class="h3-responsive">Count character</h3>
-                                            <h5 class="h5-responsive">Enter the number of passengers and the capacity to see one message, if the capacity is less than the number of passengers a different message will appear</h5>
+                                        <h3 class="h3-responsive">Failue</h3>
+                                            <h5 class="h5-responsive">This request will <strong>not</strong> work and will <strong>not</strong> pull in the specific data</h5>
                                     </div>
                                     <div class="card-body">
                                         
-                                                        <form action="#">
-                                                            <div class="row">
-                                                                <div class="col-sm-6">
-                                                                    <div class="form-group">
-                                                                        <label for="countCharInput1">Sentence</label>
-                                                                        <input type="text" id="countCharInput1" class="form-control" placeholder="Sentence">
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-sm-6">
-                                                                    <div class="form-group">
-                                                                        <label for="countCharInput2">Letter to count</label>
-                                                                        <input type="text" id="countCharInput2" class="form-control"  placeholder="Letter to count">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <button id="countCharSubmit" type="submit" class="btn btn-outline-default waves-effect">Go</button>
-                                                        </form>
+                                                        <div class="inject-here text-left"></div>
                                                         
                                     </div>
                                     <div class="card-footer">
-                                        <p id="countCharResult" class="mb-0"></p>
+                                        <button id="ajaxStaticData4" data-box="box4" type="button" class="btn btn-outline-default waves-effect ajaxStaticData">Pull</button>
                                     </div>
                                 </div>
                                 <!-- COMPONENT END -->
@@ -181,16 +149,16 @@
     </div>
 </section>
 
-        
-        <!-- COMPONENT START -->
-        <div class="container c004-divider">
-            <div class="row">
-                <div class="col-md-12">
-                    <hr class="section-divider" />
-                </div>
-            </div>
+
+<!-- COMPONENT START -->
+<div class="container c004-divider">
+    <div class="row">
+        <div class="col-md-12">
+            <hr class="section-divider" />
         </div>
-        <!-- COMPONENT END -->
+    </div>
+</div>
+<!-- COMPONENT END -->
 
         </main>
 
@@ -221,7 +189,7 @@
         <script src="../../js/bespoke/general.js?v9"></script>
 
         <!-- Bespoke to page JavaScript -->
-        <script src="../../js/bespoke/basic.js?v9"></script>
+        <script src="../../js/bespoke/jquery/ajax-static.js?v9"></script>
 
     </body>
 </html>
