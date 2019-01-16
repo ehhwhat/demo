@@ -6230,6 +6230,9 @@ a {
 sup .badge {
   font-size: 0.75rem; }
 
+.btn {
+  margin-bottom: 1rem; }
+
 .grayscale {
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);

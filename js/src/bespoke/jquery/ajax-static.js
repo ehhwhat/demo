@@ -15,10 +15,10 @@ $(".ajaxStaticData").click(function () {
     // also append the url for the .html file with 'queryString:' and then the data attr from the button clicked
     // wrapped in IF statement to demo what happens if file not found.
 
+    let htmlFile = 'ajax_data.html';
+
     if($(this).attr('id') === 'ajaxStaticData4') {
-        let htmlFile = 'WILLNOTBEFOUND.html';
-    } else {
-        let htmlFile = 'ajax_data.html';
+        htmlFile = 'WILLNOTBEFOUND.html';
     }
 
     $.ajax(htmlFile, {
