@@ -49,28 +49,18 @@
       <file leaf-file-name="index.hbs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pages/index.hbs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="44" column="78" lean-forward="false" selection-start-line="44" selection-start-column="78" selection-end-line="44" selection-end-column="78" />
+            <state relative-caret-position="255">
+              <caret line="45" column="139" lean-forward="false" selection-start-line="45" selection-start-column="130" selection-end-line="45" selection-end-column="139" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="header.hbs" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/partials/components/header.hbs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="141">
-              <caret line="10" column="46" lean-forward="false" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base.hbs" pinned="false" current-in-tab="false">
+      <file leaf-file-name="base.hbs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/partials/layouts/base.hbs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="31" column="21" lean-forward="false" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
+            <state relative-caret-position="393">
+              <caret line="50" column="27" lean-forward="false" selection-start-line="50" selection-start-column="27" selection-end-line="50" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -79,8 +69,8 @@
       <file leaf-file-name="starter.hbs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/partials/layouts/starter.hbs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="31" column="21" lean-forward="false" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
+            <state relative-caret-position="393">
+              <caret line="50" column="27" lean-forward="false" selection-start-line="50" selection-start-column="27" selection-end-line="50" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -109,8 +99,8 @@
       <file leaf-file-name="ajax.hbs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pages/jquery/ajax.hbs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="58" column="36" lean-forward="false" selection-start-line="58" selection-start-column="36" selection-end-line="58" selection-end-column="36" />
+            <state relative-caret-position="102">
+              <caret line="6" column="27" lean-forward="false" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -208,14 +198,14 @@
         <option value="$PROJECT_DIR$/scss/components/_c012-card.scss" />
         <option value="$PROJECT_DIR$/js/src/bespoke/jquery/ajax-json.js" />
         <option value="$PROJECT_DIR$/js/src/bespoke/jquery/ajax-promise.js" />
-        <option value="$PROJECT_DIR$/src/pages/index.hbs" />
         <option value="$PROJECT_DIR$/scss/_custom-styles.scss" />
         <option value="$PROJECT_DIR$/dist/pages-handled/jquery/ajax_data.html" />
         <option value="$PROJECT_DIR$/src/pages/jquery/ajax.hbs" />
         <option value="$PROJECT_DIR$/js/src/bespoke/jquery/ajax-static.js" />
-        <option value="$PROJECT_DIR$/src/partials/layouts/base.hbs" />
-        <option value="$PROJECT_DIR$/src/partials/layouts/starter.hbs" />
         <option value="$PROJECT_DIR$/src/partials/components/header.hbs" />
+        <option value="$PROJECT_DIR$/src/pages/index.hbs" />
+        <option value="$PROJECT_DIR$/src/partials/layouts/starter.hbs" />
+        <option value="$PROJECT_DIR$/src/partials/layouts/base.hbs" />
       </list>
     </option>
   </component>
@@ -495,12 +485,12 @@
       <option name="presentableId" value="Default" />
       <updated>1539524445068</updated>
       <workItem from="1539524446362" duration="33506000" />
-      <workItem from="1541362131120" duration="200631000" />
+      <workItem from="1541362131120" duration="201483000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="234137000" />
+    <option name="totallyTimeSpent" value="234989000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -893,14 +883,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/index.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="44" column="78" lean-forward="false" selection-start-line="44" selection-start-column="78" selection-end-line="44" selection-end-column="78" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/jquery/ajax-promise.hbs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1083">
@@ -933,14 +915,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/jquery/ajax.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="58" column="36" lean-forward="false" selection-start-line="58" selection-start-column="36" selection-end-line="58" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/src/bespoke/jquery/ajax-static.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
@@ -949,26 +923,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/partials/layouts/base.hbs">
+    <entry file="file://$PROJECT_DIR$/src/pages/jquery/ajax.hbs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="31" column="21" lean-forward="false" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/partials/layouts/starter.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="21" lean-forward="false" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
+        <state relative-caret-position="102">
+          <caret line="6" column="27" lean-forward="false" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/partials/components/header.hbs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="10" column="46" lean-forward="false" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
+        <state relative-caret-position="357">
+          <caret line="26" column="41" lean-forward="false" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/index.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="45" column="139" lean-forward="false" selection-start-line="45" selection-start-column="130" selection-end-line="45" selection-end-column="139" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/partials/layouts/starter.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="393">
+          <caret line="50" column="27" lean-forward="false" selection-start-line="50" selection-start-column="27" selection-end-line="50" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/partials/layouts/base.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="393">
+          <caret line="50" column="27" lean-forward="false" selection-start-line="50" selection-start-column="27" selection-end-line="50" selection-end-column="27" />
           <folding />
         </state>
       </provider>
