@@ -57,8 +57,8 @@ gulp.task('js-minify', function() {
 
 // JavaScript Tasks
 gulp.task('js-build-bespoke', function() {
-    gulp.src('js/src/bespoke/**/*.js')
-        .pipe(gulp.dest('./dist/js/bespoke/'))
+    gulp.src('js/src/**/**/*.js')
+        .pipe(gulp.dest('./dist/js/'))
 });
 
 // Image Compression

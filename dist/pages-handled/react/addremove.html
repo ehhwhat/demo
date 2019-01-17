@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>
-                Ajax Static | jQuery
+                Add or Remove | React
         </title>
         <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@8.17.0/dist/lazyload.min.js"></script>
         
@@ -36,7 +36,7 @@
                     <i class="fa fa-home" aria-hidden="true"></i>
                 </a>
             <a class="navbar-brand" href="#top">
-                <strong>jQuery</strong>
+                <strong>React</strong>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -46,19 +46,49 @@
                                 
                                 <!-- COMPONENT START -->
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#ajax">Ajax Static</a>
+                                    <a class="nav-link" href="static.html">Static</a>
                                 </li>
                                 <!-- COMPONENT END -->
                                 
                                 <!-- COMPONENT START -->
                                 <li class="nav-item">
-                                    <a class="nav-link" href="ajax-json.html">Ajax Json</a>
+                                    <a class="nav-link" href="inline.html">Inline Props</a>
                                 </li>
                                 <!-- COMPONENT END -->
                                 
                                 <!-- COMPONENT START -->
                                 <li class="nav-item">
-                                    <a class="nav-link" href="ajax-promise.html">Ajax Promise</a>
+                                    <a class="nav-link" href="array.html">Array</a>
+                                </li>
+                                <!-- COMPONENT END -->
+                                
+                                <!-- COMPONENT START -->
+                                <li class="nav-item">
+                                    <a class="nav-link" href="dynamic.html">Dynamic Grid</a>
+                                </li>
+                                <!-- COMPONENT END -->
+                                
+                                <!-- COMPONENT START -->
+                                <li class="nav-item">
+                                    <a class="nav-link" href="state.html">Toggle State</a>
+                                </li>
+                                <!-- COMPONENT END -->
+                                
+                                <!-- COMPONENT START -->
+                                <li class="nav-item">
+                                    <a class="nav-link" href="add.html">Add Items</a>
+                                </li>
+                                <!-- COMPONENT END -->
+                                
+                                <!-- COMPONENT START -->
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#addremove">Add or Remove Items</a>
+                                </li>
+                                <!-- COMPONENT END -->
+                                
+                                <!-- COMPONENT START -->
+                                <li class="nav-item">
+                                    <a class="nav-link" href="cv.html">CV</a>
                                 </li>
                                 <!-- COMPONENT END -->
                 </ul>
@@ -73,7 +103,7 @@
         <main id="top">
 
 
-<section class="container-fluid grid1 " id="ajax">
+<section class="container-fluid grid1 " id="addremove">
     <div class="row">
         <div class="container">
             <div class="row">
@@ -81,22 +111,10 @@
                                 
                                 <!-- COMPONENT START -->
                                 <div class="c001-basic-content">
-                                        <h1 class="display-4">Ajax static</h1>
-                                        <h2 class="display-5 text-muted">Getting data</h2>
+                                        <h1 class="display-4">React</h1>
+                                        <h2 class="display-5 text-muted">Add or remove</h2>
                                     
-                                                    <p class="">
-                                                        Pull data (a static HTMl file) using <code>$.ajax</code>.
-                                                        All 4 examples below will point to the same file but #4 will fail on purpose to demonstrate the error handling (part of handling is to log error to console).
-                                                    </p>
-                                                    <h3 class="mt-5">Things to note</h3>
-                                                    <ul class="">
-                                                        <li>Grabbing of external data, the data source is the same</li>
-                                                        <li>Have used <code>const</code> / <code>let</code> and <code>var</code> in multiple places</li>
-                                                        <li>Use of <code>$.ajax</code></li>
-                                                        <li>Success and error handling</li>
-                                                        <li><code>if</code> statement used to force the error handling in demo 4</li>
-                                                        <li>Each button clicked will append a unique id to the query string of file, this query string is pulled from HTML data <code>attr</code></li>
-                                                    </ul>
+                                                    <p>???</p>
                                                     
                                 </div>
                                 <!-- COMPONENT END -->
@@ -112,36 +130,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
-                                
-                                <!-- COMPONENT START -->
-                                <div class="card c012-card my-5">
-                                    <div class="card-header">
-                                        <h3 class="h3-responsive">Successful</h3>
-                                            <h5 class="h5-responsive">This request will work and will pull in the specific data</h5>
-                                    </div>
-                                    <div class="card-body">
-                                        
-                                                        <button id="ajaxStaticData1" data-box="box1" type="button" class="btn btn-outline-default waves-effect ajaxStaticData">Pull</button>
-                                                        <div class="inject-here text-left"></div>
-                                                        
-                                    </div>
-                                </div>
-                                <!-- COMPONENT END -->
-                                
-                                <!-- COMPONENT START -->
-                                <div class="card c012-card my-5">
-                                    <div class="card-header">
-                                        <h3 class="h3-responsive">Failue</h3>
-                                            <h5 class="h5-responsive">This request will <strong>not</strong> work and will <strong>not</strong> pull in the specific data</h5>
-                                    </div>
-                                    <div class="card-body">
-                                        
-                                                        <button id="ajaxStaticData4" data-box="box4" type="button" class="btn btn-outline-default waves-effect ajaxStaticData">Pull</button>
-                                                        <div class="inject-here text-left"></div>
-                                                        
-                                    </div>
-                                </div>
-                                <!-- COMPONENT END -->
+                                <!-- TARGET TO RENDER THE MARKUP -->
+                                <div id="book-shelf-3" class="fakeshelf"></div>
                 </div>
             </div>
         </div>
@@ -186,8 +176,10 @@
         <!-- Optional JavaScript -->
         <script src="../../js/bespoke/general.js?v10"></script>
 
-        <!-- Bespoke to page JavaScript -->
-        <script src="../../js/bespoke/jquery/ajax-static.js?v10"></script>
+        <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js" integrity="sha256-FiZMk1zgTeujzf/+vomWZGZ9r00+xnGvOgXoj0Jo1jA=" crossorigin="anonymous"></script>
+        <script src="../../js/react/react-addremove.js?v10" type="text/babel"></script>
 
     </body>
 </html>

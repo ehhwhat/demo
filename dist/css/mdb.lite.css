@@ -6067,7 +6067,8 @@ ul.stepper {
   padding-bottom: 0; }
 
 .c012-card .card-footer {
-  background-color: white; }
+  background-color: white;
+  padding-bottom: 0; }
 
 .dataPoint:empty {
   font-size: 2rem;

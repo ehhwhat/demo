@@ -1,0 +1,94 @@
+{{!-- pages/react/static.hbs --}}
+
+{{#> layouts/base title="Static | React" }}
+
+    {{#*inline "header-block"}}
+        {{#> components/header
+             brand='React'
+        }}
+            {{> components/header__point
+                    point-title='Static'
+                    point-href='content'
+            }}
+            {{> components/header__point--external
+                    point-title='Inline Props'
+                    point-href='inline.html'
+            }}
+            {{> components/header__point--external
+                    point-title='Array'
+                    point-href='array.html'
+            }}
+            {{> components/header__point--external
+                    point-title='Dynamic Grid'
+                    point-href='dynamic.html'
+            }}
+            {{> components/header__point--external
+                    point-title='Toggle State'
+                    point-href='state.html'
+            }}
+            {{> components/header__point--external
+                    point-title='Add Items'
+                    point-href='add.html'
+            }}
+            {{> components/header__point--external
+                    point-title='Add or Remove Items'
+                    point-href='addremove.html'
+            }}
+            {{> components/header__point--external
+                    point-title='CV'
+                    point-href='cv.html'
+            }}
+        {{/components/header}}
+    {{/inline}}
+
+    {{#*inline "main-block"}}
+
+        {{#> sublayouts/grid1
+                id='content'
+        }}
+            {{> components/c001-basic-content
+                    heading-primary='React'
+                    heading-secondary='Static'
+                    body-content='
+                    <p>In this example all data is hardcoded.</p>
+                    <p><span class="text-danger"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> To add a different book i would need to create a new React
+                    component for each one.</span></p>
+                    <h3 class="mt-5">Details</h3>
+                    <p>This is a very basic React demo, the page begins with a root component called <code>&lt;BookShelf /&gt;</code> which is essentially a wrapper for
+                    everything else i want to display. This <code>&lt;BookShelf /&gt;</code> then contains some static markup for grid and layout purposes but also another
+                    React component called <code>&lt;Book /&gt;</code>, referencing this component means React will go off and find the code for it (it is a simple card
+                    component which some static information about a book) and then render it inside the <code>&lt;BookShelf /&gt;</code>, the <code>&lt;BookShelf /&gt;
+                    </code> is then called and told to render at a specific location on the page.
+                    </p>
+                    '
+            }}
+        {{/sublayouts/grid1}}
+
+        {{#> sublayouts/grid1 }}
+            <!-- TARGET TO RENDER THE MARKUP -->
+            <div id="book-shelf-1" class="fakeshelf"></div>
+        {{/sublayouts/grid1}}
+
+{{!-- ------- --}}
+{{!-- DIVIDER --}}
+{{!-- ------- --}}
+{{> components/c004-divider }}
+
+    {{/inline}}
+
+    {{#*inline "footer-block"}}
+        {{> components/footer
+                body-content='
+                <ul class="list-inline my-0">
+                    <li class="list-inline-item"><a href="../index.html">Home</a></li>
+                </ul>
+            '
+        }}
+    {{/inline}}
+
+    {{#*inline "scripts-block"}}
+        {{> includes/scripts-react }}
+        <script src="{{domainprefix}}js/react/react-static.js?v{{version}}" type="text/babel"></script>
+    {{/inline}}
+
+{{/layouts/base}}

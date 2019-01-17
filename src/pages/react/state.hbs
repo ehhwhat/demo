@@ -1,0 +1,89 @@
+{{!-- pages/react/static.hbs --}}
+
+{{#> layouts/base title="Toggle State | React" }}
+
+    {{#*inline "header-block"}}
+        {{#> components/header
+             brand='React'
+        }}
+            {{> components/header__point--external
+                    point-title='Static'
+                    point-href='static.html'
+            }}
+            {{> components/header__point--external
+                    point-title='Inline Props'
+                    point-href='inline.html'
+            }}
+            {{> components/header__point--external
+                    point-title='Array'
+                    point-href='array.html'
+            }}
+            {{> components/header__point--external
+                    point-title='Dynamic Grid'
+                    point-href='dynamic.html'
+            }}
+            {{> components/header__point
+                    point-title='Toggle State'
+                    point-href='state'
+            }}
+            {{> components/header__point--external
+                    point-title='Add Items'
+                    point-href='add.html'
+            }}
+            {{> components/header__point--external
+                    point-title='Add or Remove Items'
+                    point-href='addremove.html'
+            }}
+            {{> components/header__point--external
+                    point-title='CV'
+                    point-href='cv.html'
+            }}
+        {{/components/header}}
+    {{/inline}}
+
+    {{#*inline "main-block"}}
+
+        {{#> sublayouts/grid1
+                id='state'
+        }}
+            {{> components/c001-basic-content
+                    heading-primary='React'
+                    heading-secondary='Toggle state'
+                    body-content='
+                    <p>Example 4 + toggle button</p>
+                    <h3 class="mt-5">Details</h3>
+                    <p>Same as <a href="dynamic.html">Example 4</a> but with a dynamic text button which will toggle the lists of books.</p>
+                    '
+            }}
+        {{/sublayouts/grid1}}
+
+        {{#> sublayouts/grid-wide }}
+            {{#> sublayouts/grid-wide__col12 }}
+                <!-- TARGET TO RENDER THE MARKUP -->
+                <div id="book-shelf-5" class="fakeshelf"></div>
+            {{/sublayouts/grid-wide__col12}}
+        {{/sublayouts/grid-wide}}
+
+{{!-- ------- --}}
+{{!-- DIVIDER --}}
+{{!-- ------- --}}
+{{> components/c004-divider }}
+
+    {{/inline}}
+
+    {{#*inline "footer-block"}}
+        {{> components/footer
+                body-content='
+                <ul class="list-inline my-0">
+                    <li class="list-inline-item"><a href="../index.html">Home</a></li>
+                </ul>
+            '
+        }}
+    {{/inline}}
+
+    {{#*inline "scripts-block"}}
+        {{> includes/scripts-react }}
+        <script src="{{domainprefix}}js/react/react-state.js?v{{version}}" type="text/babel"></script>
+    {{/inline}}
+
+{{/layouts/base}}
