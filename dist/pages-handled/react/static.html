@@ -32,7 +32,7 @@
     <!--Navbar-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top scrolling-navbar" id="navbar">
         <div class="container">
-                <a class="navbar-brand" href="../index.html">
+                <a class="navbar-brand d-none d-sm-block" href="../index.html">
                     <i class="fa fa-home" aria-hidden="true"></i>
                 </a>
             <a class="navbar-brand" href="#top">
@@ -43,6 +43,9 @@
             </button>
             <div class="collapse navbar-collapse" id="navbar-content">
                 <ul class="navbar-nav mr-auto">
+                    <li class="nav-item d-block d-sm-none">
+                        <a class="nav-link" href="../index.html"><i class="fa fa-home" aria-hidden="true"></i></a>
+                    </li>
                                 
                                 <!-- COMPONENT START -->
                                 <li class="nav-item">
@@ -115,15 +118,29 @@
                                         <h2 class="display-5 text-muted">Static</h2>
                                     
                                                     <p>In this example all data is hardcoded.</p>
-                                                    <p><span class="text-danger"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> To add a different book i would need to create a new React
-                                                    component for each one.</span></p>
+                                                    <p><i class="fa fa-exclamation-triangle text-danger" aria-hidden="true"></i> To add a different book i would need to create a new React
+                                                    component for each one.</p>
                                                     <h3 class="mt-5">Details</h3>
                                                     <p>This is a very basic React demo, the page begins with a root component called <code>&lt;BookShelf /&gt;</code> which is essentially a wrapper for
                                                     everything else i want to display. This <code>&lt;BookShelf /&gt;</code> then contains some static markup for grid and layout purposes but also another
                                                     React component called <code>&lt;Book /&gt;</code>, referencing this component means React will go off and find the code for it (it is a simple card
                                                     component which some static information about a book) and then render it inside the <code>&lt;BookShelf /&gt;</code>, the <code>&lt;BookShelf /&gt;
-                                                    </code> is then called and told to render at a specific location on the page.
-                                                    </p>
+                                                    </code> is then called and told to render at a specific location on the page.</p>
+                                                    <h3 class="mt-5">React features</h3>
+                                                    <ul class="">
+                                                        <li class=""><strong>Component/s:</strong>
+                                                            <ul>
+                                                                <li><code>&lt;BookShelf /&gt;</code></li>
+                                                                <li><code>&lt;Book /&gt;</code></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li class=""><strong>Data:</strong>
+                                                            <ul>
+                                                                <li><code>Static</code></li>
+                                                                <li><code>Hardcoded</code></li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
                                                     
                                 </div>
                                 <!-- COMPONENT END -->

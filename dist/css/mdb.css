@@ -8557,6 +8557,14 @@ sup .badge {
 .btn {
   margin-bottom: 1rem; }
 
+code {
+  color: inherit; }
+  p code {
+    background: #d0d6e2;
+    -webkit-border-radius: 0.25rem;
+    border-radius: 0.25rem;
+    padding: 2px 4px; }
+
 .grayscale {
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);

@@ -32,7 +32,7 @@
     <!--Navbar-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top scrolling-navbar" id="navbar">
         <div class="container">
-                <a class="navbar-brand" href="../index.html">
+                <a class="navbar-brand d-none d-sm-block" href="../index.html">
                     <i class="fa fa-home" aria-hidden="true"></i>
                 </a>
             <a class="navbar-brand" href="#top">
@@ -43,6 +43,9 @@
             </button>
             <div class="collapse navbar-collapse" id="navbar-content">
                 <ul class="navbar-nav mr-auto">
+                    <li class="nav-item d-block d-sm-none">
+                        <a class="nav-link" href="../index.html"><i class="fa fa-home" aria-hidden="true"></i></a>
+                    </li>
                                 
                                 <!-- COMPONENT START -->
                                 <li class="nav-item">
@@ -114,9 +117,34 @@
                                         <h1 class="display-4">React</h1>
                                         <h2 class="display-5 text-muted">Toggle state</h2>
                                     
-                                                    <p>Example 4 + toggle button</p>
+                                                    <p>Show and hide using a new method.</p>
                                                     <h3 class="mt-5">Details</h3>
-                                                    <p>Same as <a href="dynamic.html">Example 4</a> but with a dynamic text button which will toggle the lists of books.</p>
+                                                    <p>Same set up as <a href="dynamic.html">previous example with a dynamic grid</a> depending upon the number of books in the array. I have now added a new
+                                                    <code>_handleClick()
+                                                    </code> method and assigned to the button to change the <code>state</code> of the React app. If there we less books in the hardcoded static array then
+                                                    the cards would appear larger and the parent grid classes would change.</p>
+                                                    <ul class="">
+                                                        <li class=""><strong>Component/s:</strong>
+                                                            <ul>
+                                                                <li><code>&lt;BookShelf /&gt;</code></li>
+                                                                <li><code>&lt;Book /&gt;</code></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li class=""><strong>Data:</strong>
+                                                            <ul>
+                                                                <li><code>Static</code></li>
+                                                                <li><code>Hardcoded</code></li>
+                                                                <li><code>Array</code></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li class=""><strong>Methods:</strong>
+                                                            <ul>
+                                                                <li><code>_getBooks()</code></li>
+                                                                <li><code>_getNumberOfBooksTitle()</code></li>
+                                                                <li><code>_handleClick()</code></li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
                                                     
                                 </div>
                                 <!-- COMPONENT END -->

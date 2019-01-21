@@ -51,15 +51,29 @@
                     heading-secondary='Static'
                     body-content='
                     <p>In this example all data is hardcoded.</p>
-                    <p><span class="text-danger"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> To add a different book i would need to create a new React
-                    component for each one.</span></p>
+                    <p><i class="fa fa-exclamation-triangle text-danger" aria-hidden="true"></i> To add a different book i would need to create a new React
+                    component for each one.</p>
                     <h3 class="mt-5">Details</h3>
                     <p>This is a very basic React demo, the page begins with a root component called <code>&lt;BookShelf /&gt;</code> which is essentially a wrapper for
                     everything else i want to display. This <code>&lt;BookShelf /&gt;</code> then contains some static markup for grid and layout purposes but also another
                     React component called <code>&lt;Book /&gt;</code>, referencing this component means React will go off and find the code for it (it is a simple card
                     component which some static information about a book) and then render it inside the <code>&lt;BookShelf /&gt;</code>, the <code>&lt;BookShelf /&gt;
-                    </code> is then called and told to render at a specific location on the page.
-                    </p>
+                    </code> is then called and told to render at a specific location on the page.</p>
+                    <h3 class="mt-5">React features</h3>
+                    <ul class="">
+                        <li class=""><strong>Component/s:</strong>
+                            <ul>
+                                <li><code>&lt;BookShelf /&gt;</code></li>
+                                <li><code>&lt;Book /&gt;</code></li>
+                            </ul>
+                        </li>
+                        <li class=""><strong>Data:</strong>
+                            <ul>
+                                <li><code>Static</code></li>
+                                <li><code>Hardcoded</code></li>
+                            </ul>
+                        </li>
+                    </ul>
                     '
             }}
         {{/sublayouts/grid1}}

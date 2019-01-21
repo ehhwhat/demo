@@ -223,6 +223,16 @@ sup .badge {
   margin-bottom:1rem;
 }
 
+code {
+  color:inherit;
+  p & {
+    background:$theme-light;
+    border-radius:$border-radius;
+    padding:2px 4px;
+  }
+}
+
+
 
 /////////////////////////////////
 // Grid

@@ -9,13 +9,6 @@ class BookShelf extends React.Component {
                     <Book id="1" title="1984" author="George Orwell" rating="5" body="Best book ever." cover="https://www4.alibris-static.com/1984/isbn/9781328869333_l.jpg" />
                     <Book id="2" title="Life of PI" author="Yann Martell" rating="4" body="Love the ending." cover="http://cdn.collider.com/wp-content/uploads/life-of-pi-poster2.jpg" />
                     <Book id="3" title="Lost city of Z" author="David Grann" rating="4" body="Crazy stuff." cover="https://images-eu.ssl-images-amazon.com/images/I/51o-3-68PML.jpg" />
-                    <div className="col-sm-12">
-                        <ul className="">
-                            <li className=""><strong>Component/s:</strong> <code>&lt;BookShelf /&gt;</code>, <code>&lt;Book /&gt;</code></li>
-                            <li className=""><strong>Data:</strong> Inline properties</li>
-                            <li className=""><strong>Methods:</strong> </li>
-                        </ul>
-                    </div>
                 </div>
             </div>
         )

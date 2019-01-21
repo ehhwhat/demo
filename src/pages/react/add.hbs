@@ -50,15 +50,55 @@
                     heading-primary='React'
                     heading-secondary='Add'
                     body-content='
-                    <p>???</p>
+                    <p>A starting set of books with the ability to add more.</p>
+                    <p><i class="fa fa-exclamation-triangle text-danger" aria-hidden="true"></i> As the array is static once you refresh everything will return to original
+                    state.</p>
+                    <p><i class="fa fa-exclamation-triangle text-danger" aria-hidden="true"></i> There is no validation on the form as it makes it a lot quicker to add a
+                    new item and see how it affects the React app. A card should appear, the grid might change and the number of books will increase.</p>
+                    <h3 class="mt-5">Details</h3>
+                    <p>Building on previous examples with <a href="state.html">toggling state</a> via a button i have now included the ability to add new books to the
+                    <code>Static</code>
+                    <code>Array</code>. We begin with a
+                    small set and when a user fills in all the details a new <code>&lt;Book /&gt;</code> is added to the <code>&lt;BookShelf /&gt;</code>, this demo
+                    also helps to show the use of the <a href="dynamic.html">dynamic grid</a> from an earlier demo as the more new items added the more the grid will change.
+                    </p>
+                    <h3 class="mt-5">React features</h3>
+                    <ul class="">
+                        <li class=""><strong>Component/s:</strong>
+                            <ul>
+                                <li><code>&lt;BookShelf /&gt;</code></li>
+                                <li><code>&lt;Book /&gt;</code></li>
+                                <li><code>&lt;AddBookForm /&gt;</code></li>
+                            </ul>
+                        </li>
+                        <li class=""><strong>Data:</strong>
+                            <ul>
+                                <li><code>Static</code></li>
+                                <li><code>Hardcoded</code></li>
+                                <li><code>Inline</code></li>
+                                <li><code>Array</code></li>
+                            </ul>
+                        </li>
+                        <li class=""><strong>Methods:</strong>
+                            <ul>
+                                <li><code>_getBooks()</code></li>
+                                <li><code>_getNumberOfBooksTitle()</code></li>
+                                <li><code>_handleClick()</code></li>
+                                <li><code>_addBook()</code></li>
+                                <li><code>_handleSubmit()</code></li>
+                            </ul>
+                        </li>
+                    </ul>
                     '
             }}
         {{/sublayouts/grid1}}
 
-        {{#> sublayouts/grid1 }}
-            <!-- TARGET TO RENDER THE MARKUP -->
-            <div id="book-shelf-3" class="fakeshelf"></div>
-        {{/sublayouts/grid1}}
+        {{#> sublayouts/grid-wide }}
+            {{#> sublayouts/grid-wide__col12 }}
+                <!-- TARGET TO RENDER THE MARKUP -->
+                <div id="book-shelf-6" class="fakeshelf"></div>
+            {{/sublayouts/grid-wide__col12}}
+        {{/sublayouts/grid-wide}}
 
 {{!-- ------- --}}
 {{!-- DIVIDER --}}

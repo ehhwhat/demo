@@ -50,15 +50,49 @@
                     heading-primary='React'
                     heading-secondary='Add or remove'
                     body-content='
-                    <p>???</p>
+                    <p>Ability too remove a <code>&lt;Book /&gt;</code>.</p>
+                    <h3 class="mt-5">Details</h3>
+                    <p>Same as <a href="add.html">previous example</a> except now you can delete an item in the array.</p>
+                    <h3 class="mt-5">React features</h3>
+                    <ul class="">
+                        <li class=""><strong>Component/s:</strong>
+                            <ul>
+                                <li><code>&lt;BookShelf /&gt;</code></li>
+                                <li><code>&lt;Book /&gt;</code></li>
+                                <li><code>&lt;AddBookForm /&gt;</code></li>
+                            </ul>
+                        </li>
+                        <li class=""><strong>Data:</strong>
+                            <ul>
+                                <li><code>Static</code></li>
+                                <li><code>Hardcoded</code></li>
+                                <li><code>Inline</code></li>
+                                <li><code>Array</code></li>
+                            </ul>
+                        </li>
+                        <li class=""><strong>Methods:</strong>
+                            <ul>
+                                <li><code>_getBooks()</code></li>
+                                <li><code>_getNumberOfBooksTitle()</code></li>
+                                <li><code>_handleClick()</code></li>
+                                <li><code>_addBook()</code></li>
+                                <li><code>_deleteBook()</code></li>
+                                <li><code>_fetchBooks()</code></li>
+                                <li><code>_handleDelete()</code></li>
+                                <li><code>_handleSubmit()</code></li>
+                            </ul>
+                        </li>
+                    </ul>
                     '
             }}
         {{/sublayouts/grid1}}
 
-        {{#> sublayouts/grid1 }}
-            <!-- TARGET TO RENDER THE MARKUP -->
-            <div id="book-shelf-3" class="fakeshelf"></div>
-        {{/sublayouts/grid1}}
+        {{#> sublayouts/grid-wide }}
+            {{#> sublayouts/grid-wide__col12 }}
+                <!-- TARGET TO RENDER THE MARKUP -->
+                <div id="book-shelf-7" class="fakeshelf"></div>
+            {{/sublayouts/grid-wide__col12}}
+        {{/sublayouts/grid-wide}}
 
 {{!-- ------- --}}
 {{!-- DIVIDER --}}

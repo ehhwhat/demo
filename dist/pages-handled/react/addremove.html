@@ -32,7 +32,7 @@
     <!--Navbar-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top scrolling-navbar" id="navbar">
         <div class="container">
-                <a class="navbar-brand" href="../index.html">
+                <a class="navbar-brand d-none d-sm-block" href="../index.html">
                     <i class="fa fa-home" aria-hidden="true"></i>
                 </a>
             <a class="navbar-brand" href="#top">
@@ -43,6 +43,9 @@
             </button>
             <div class="collapse navbar-collapse" id="navbar-content">
                 <ul class="navbar-nav mr-auto">
+                    <li class="nav-item d-block d-sm-none">
+                        <a class="nav-link" href="../index.html"><i class="fa fa-home" aria-hidden="true"></i></a>
+                    </li>
                                 
                                 <!-- COMPONENT START -->
                                 <li class="nav-item">
@@ -114,7 +117,39 @@
                                         <h1 class="display-4">React</h1>
                                         <h2 class="display-5 text-muted">Add or remove</h2>
                                     
-                                                    <p>???</p>
+                                                    <p>Ability too remove a <code>&lt;Book /&gt;</code>.</p>
+                                                    <h3 class="mt-5">Details</h3>
+                                                    <p>Same as <a href="add.html">previous example</a> except now you can delete an item in the array.</p>
+                                                    <h3 class="mt-5">React features</h3>
+                                                    <ul class="">
+                                                        <li class=""><strong>Component/s:</strong>
+                                                            <ul>
+                                                                <li><code>&lt;BookShelf /&gt;</code></li>
+                                                                <li><code>&lt;Book /&gt;</code></li>
+                                                                <li><code>&lt;AddBookForm /&gt;</code></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li class=""><strong>Data:</strong>
+                                                            <ul>
+                                                                <li><code>Static</code></li>
+                                                                <li><code>Hardcoded</code></li>
+                                                                <li><code>Inline</code></li>
+                                                                <li><code>Array</code></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li class=""><strong>Methods:</strong>
+                                                            <ul>
+                                                                <li><code>_getBooks()</code></li>
+                                                                <li><code>_getNumberOfBooksTitle()</code></li>
+                                                                <li><code>_handleClick()</code></li>
+                                                                <li><code>_addBook()</code></li>
+                                                                <li><code>_deleteBook()</code></li>
+                                                                <li><code>_fetchBooks()</code></li>
+                                                                <li><code>_handleDelete()</code></li>
+                                                                <li><code>_handleSubmit()</code></li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
                                                     
                                 </div>
                                 <!-- COMPONENT END -->
@@ -125,13 +160,14 @@
 </section>
 
 
-<section class="container-fluid grid1 " id="">
+<section class="container-fluid grid-wide " id="">
     <div class="row">
         <div class="container">
             <div class="row">
-                <div class="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
-                                <!-- TARGET TO RENDER THE MARKUP -->
-                                <div id="book-shelf-3" class="fakeshelf"></div>
+                
+                <div class="col-12">
+                                    <!-- TARGET TO RENDER THE MARKUP -->
+                                    <div id="book-shelf-7" class="fakeshelf"></div>
                 </div>
             </div>
         </div>

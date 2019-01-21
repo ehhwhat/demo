@@ -50,9 +50,34 @@
                     heading-primary='React'
                     heading-secondary='Toggle state'
                     body-content='
-                    <p>Example 4 + toggle button</p>
+                    <p>Show and hide using a new method.</p>
                     <h3 class="mt-5">Details</h3>
-                    <p>Same as <a href="dynamic.html">Example 4</a> but with a dynamic text button which will toggle the lists of books.</p>
+                    <p>Same set up as <a href="dynamic.html">previous example with a dynamic grid</a> depending upon the number of books in the array. I have now added a new
+                    <code>_handleClick()
+                    </code> method and assigned to the button to change the <code>state</code> of the React app. If there we less books in the hardcoded static array then
+                    the cards would appear larger and the parent grid classes would change.</p>
+                    <ul class="">
+                        <li class=""><strong>Component/s:</strong>
+                            <ul>
+                                <li><code>&lt;BookShelf /&gt;</code></li>
+                                <li><code>&lt;Book /&gt;</code></li>
+                            </ul>
+                        </li>
+                        <li class=""><strong>Data:</strong>
+                            <ul>
+                                <li><code>Static</code></li>
+                                <li><code>Hardcoded</code></li>
+                                <li><code>Array</code></li>
+                            </ul>
+                        </li>
+                        <li class=""><strong>Methods:</strong>
+                            <ul>
+                                <li><code>_getBooks()</code></li>
+                                <li><code>_getNumberOfBooksTitle()</code></li>
+                                <li><code>_handleClick()</code></li>
+                            </ul>
+                        </li>
+                    </ul>
                     '
             }}
         {{/sublayouts/grid1}}

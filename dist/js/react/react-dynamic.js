@@ -11,17 +11,6 @@ class BookShelf extends React.Component {
                         <p><span className="badge badge-pill badge-default">{books.length} {this._getNumberOfBooksTitle(books.length)}</span></p>
                     </div>
                     {books}
-                    <div className="col-sm-12">
-                        <div className="row">
-                            <div className="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
-                                <ul className="">
-                                    <li className=""><strong>Component/s:</strong> <code>&lt;BookShelf /&gt;</code>, <code>&lt;Book /&gt;</code></li>
-                                    <li className=""><strong>Data:</strong> Array</li>
-                                    <li className=""><strong>Methods:</strong> <code>_getBooks()</code>, <code>_getNumberOfBooksTitle()</code></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         )

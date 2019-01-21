@@ -31,13 +31,6 @@ class BookShelf extends React.Component {
                 <div className="row">
                     <Book />
                     <Book />
-                    <div className="col-sm-12">
-                        <ul className="">
-                            <li className=""><strong>Component/s:</strong> <code>&lt;BookShelf /&gt;</code>, <code>&lt;Book /&gt;</code></li>
-                            <li className=""><strong>Data:</strong> Hardcoded and static</li>
-                            <li className=""><strong>Methods:</strong> </li>
-                        </ul>
-                    </div>
                 </div>
             </div>
         )

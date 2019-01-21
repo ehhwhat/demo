@@ -32,7 +32,7 @@
     <!--Navbar-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top scrolling-navbar" id="navbar">
         <div class="container">
-                <a class="navbar-brand" href="../index.html">
+                <a class="navbar-brand d-none d-sm-block" href="../index.html">
                     <i class="fa fa-home" aria-hidden="true"></i>
                 </a>
             <a class="navbar-brand" href="#top">
@@ -43,6 +43,9 @@
             </button>
             <div class="collapse navbar-collapse" id="navbar-content">
                 <ul class="navbar-nav mr-auto">
+                    <li class="nav-item d-block d-sm-none">
+                        <a class="nav-link" href="../index.html"><i class="fa fa-home" aria-hidden="true"></i></a>
+                    </li>
                                 
                                 <!-- COMPONENT START -->
                                 <li class="nav-item">
@@ -112,14 +115,36 @@
                                 <!-- COMPONENT START -->
                                 <div class="c001-basic-content">
                                         <h1 class="display-4">React</h1>
-                                        <h2 class="display-5 text-muted">Dynamic</h2>
+                                        <h2 class="display-5 text-muted">Dynamic grid</h2>
                                     
-                                                    <p>Example 3 + dynamic grid</p>
+                                                    <p>Array example with a dynamic grid</p>
                                                     <h3 class="mt-5">Details</h3>
-                                                    <p>Same as <a href="array.html">Example 3</a> but with added dynamic grid classes to adjust size of each book card depending on number of books.</p>
-                                                    <p class="text-danger"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Only issue is that with a hardcoded array i need to
+                                                    <p>Same as <a href="array.html">Array example</a> but with added dynamic grid classes to adjust size of each book card depending on number of books.</p>
+                                                    <p><i class="fa fa-exclamation-triangle text-danger" aria-hidden="true"></i> Only issue is that with a hardcoded array i need to
                                                     change the code everytime to show this. For example if there were 3 books the grid would be <code>col-6 col-sm-4 col-md-4 col-lg-4</code>, but
                                                     with 8 items like we have it will be <code>col-6 col-sm-6 col-md-3 col-lg-2</code>.</p>
+                                                    <h3 class="mt-5">React features</h3>
+                                                    <ul class="">
+                                                        <li class=""><strong>Component/s:</strong>
+                                                            <ul>
+                                                                <li><code>&lt;BookShelf /&gt;</code></li>
+                                                                <li><code>&lt;Book /&gt;</code></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li class=""><strong>Data:</strong>
+                                                            <ul>
+                                                                <li><code>Static</code></li>
+                                                                <li><code>Hardcoded</code></li>
+                                                                <li><code>Array</code></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li class=""><strong>Methods:</strong>
+                                                            <ul>
+                                                                <li><code>_getBooks()</code></li>
+                                                                <li><code>_getNumberOfBooksTitle()</code></li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
                                                     
                                 </div>
                                 <!-- COMPONENT END -->
