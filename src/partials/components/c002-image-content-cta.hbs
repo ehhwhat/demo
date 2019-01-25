@@ -1,7 +1,7 @@
 {{!-- components/c002-image-content-cta.hbs --}}
 
 <!-- COMPONENT START -->
-<section class="container-fluid c002-image-content-cta" id="{{id}}">
+<section class="container-fluid c002-image-content-cta {{class}}" id="{{id}}">
     <div class="row">
         <div class="container">
             <div class="row">
@@ -19,6 +19,9 @@
             <img class="img-fluid rounded z-depth-2 lazy" data-src="{{img2-url}}" alt="{{img2-alt}}">
         </div>
     </div>
+    {{/if}}
+    {{#if img3-url}}
+    <div class="row c002-image-content-cta__background py-5 mb-2" style="background: url({{img3-url}}) bottom no-repeat; background-size: cover;min-height:50rem;"></div>
     {{/if}}
     <div class="row">
         <div class="container">

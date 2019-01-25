@@ -55,10 +55,27 @@ $(document).ready(function() {
     $('.showOnDistances').hide();
     $('.showOnTimes').hide();
 
+
+    // ---------------
+    // For when we run out of strava access
+    // ---------------
+    // let url1 = 'https://www.strava.com/api/v3/athlete/activities?after=1538355661&page=1&per_page=150&access_token=6c4884a4196ff4b71d3a58439c23a5adfadad027&callback=?';
+    // let url2 = 'https://www.strava.com/api/v3/athlete/activities?after=1538355661&page=2&per_page=150&access_token=6c4884a4196ff4b71d3a58439c23a5adfadad027&callback=?';
+    // $.when(
+    //     $.getJSON(url1),
+    //     $.getJSON(url2)
+    // ).done(function(result1, result2) {
+    //     var fullData = [];
+    //     newArray.push.apply(fullData, result1[0]);
+    //     newArray.push.apply(fullData, result2[0]);
+    //     console.log(fullData);
+    // });
+
+
     // ---------------
     // Getting the data
     // ---------------
-    $.getJSON("https://www.strava.com/api/v3/athlete/activities?after=1538355661&page=1&per_page=150&access_token=6c4884a4196ff4b71d3a58439c23a5adfadad027&callback=?", function(data) {
+    $.getJSON("https://www.strava.com/api/v3/athlete/activities?after=1538355661&page=1&per_page=200&access_token=6c4884a4196ff4b71d3a58439c23a5adfadad027&callback=?", function(data) {
         console.log("%c .", "color:white;padding:20px;margin-bottom:5px;background:url('https://cdn4.iconfinder.com/data/icons/essential-app-2/16/cloud-storage-online-data-32.png') no-repeat;background-position-y:bottom;");
         console.log("%c getJSON CALLED", "padding:10px 15px;margin:5px;color: #333;border-left:5px solid gold;");
         //console.log(data);

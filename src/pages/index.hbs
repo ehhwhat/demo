@@ -29,7 +29,7 @@
             }}
             {{> components/header__point
                     point-title='jQuery'
-                    point-href='js'
+                    point-href='jquery'
             }}
         {{/components/header}}
     {{/inline}}
@@ -43,32 +43,28 @@
                     heading-primary='Hello, world!'
                     heading-secondary='How are you?'
                     body-content='
-                    <p><span class="badge badge-pill badge-primary">Updated 17/01/2019</span> <span class="badge badge-pill badge-secondary">v11</span></p>
+                    <p><span class="badge badge-pill badge-default">Updated 25/01/2019</span> <span class="badge badge-pill badge-default">v13</span> <span class="badge
+                    badge-pill badge-danger">Work in progress</span></p>
                     <h3 class="mt-5 h3-responsive">Purpose</h3>
-                    <p>This repo will be used for code examples, they will range from Vanilla JavaScript to Jquery to React and maybe some other stuff as well.</p>
+                    <p>This repo will be used for code examples, they will range from Vanilla JavaScript to jQuery to React and maybe some other stuff as well.</p>
                     <h3 class="mt-5 h3-responsive">Recent work</h3>
                     <ul class="">
-                    <li class=""><a href="app/triathlon.html" title="View Triathlon">Triathlon</a></li>
+                        <li class=""><a href="app/triathlon.html" title="View Triathlon">Triathlon</a></li>
                         <li class=""><a href="general/cv-flat.html" title="View CV">CV flat</a></li>
                         <li class=""><a href="general/styletile.html" title="View Style tile">Style tile</a></li>
-
                     </ul>
                 '
             }}
         {{/sublayouts/grid1}}
 
-{{!-- ------- --}}
-{{!-- DIVIDER --}}
-{{!-- ------- --}}
-{{> components/c004-divider }}
-
-        {{#> sublayouts/grid1
+        {{> components/c002-image-content-cta
                 id='generic'
-        }}
-            {{> components/c001-basic-content
-                    heading-primary='Generic'
-                    heading-secondary='Framework building stuff'
-                    body-content='
+                img1-url='https://cdn4.iconfinder.com/data/icons/logos-3/504/Bootstrap-128.png'
+                img1-alt=''
+                img1-class=''
+                heading-primary='Generic'
+                heading-secondary='Framework building stuff'
+                body-content='
                     <p>This section will cover things like branding, and markup templating. Most of this has been built using Handlebars.</p>
                     <h3 class="mt-5 h3-responsive">Links</h3>
                     <ul class="">
@@ -77,52 +73,88 @@
                         <li class=""><a href="general/sublayouts.html" title="">Sublayouts</a></li>
                     </ul>
                 '
-            }}
-        {{/sublayouts/grid1}}
+        }}
 
-{{!-- ------- --}}
-{{!-- DIVIDER --}}
-{{!-- ------- --}}
-{{> components/c004-divider }}
-
-        {{#> sublayouts/grid1
+        {{> components/c002-image-content-cta
                 id='apps'
-        }}
-            {{> components/c001-basic-content
-                    heading-primary='Apps'
-                    heading-secondary='Standalone demo`s'
-                    body-content='
+                img1-url='https://cdn4.iconfinder.com/data/icons/logos-3/504/PhoneGap-128.png'
+                img1-alt=''
+                img1-class=''
+                heading-primary='Apps'
+                heading-secondary='Standalone demo`s'
+                body-content='
                     <p>Code I consider to be a standalone application or site.</p>
-<div class="media mb-5">
-    <img width="100" class="d-flex mr-3 z-depth-2" src="https://chart.googleapis.com/chart?cht=qr&chl=http%3A%2F%2Fehhwhat.co.uk%2Fplayground%2Falpha%2Fdist%2Fpages-handled%2Fapp%2Ftriathlon.html&chs=180x180&choe=UTF-8&chld=L|2" alt="Triathlon training QR">
-    <div class="media-body">
-        <a href="app/triathlon.html"><h5 class="">Triathlon training</h5></a>
-            Blog type site I have been building to track all my training towards an Ironman 70.3 event.
-    </div>
-</div>
-<div class="media">
-    <img width="100" class="d-flex mr-3 z-depth-2" src="https://chart.googleapis.com/chart?cht=qr&chl=http%3A%2F%2Fehhwhat.co.uk%2Fplayground%2Falpha%2Fdist%2Fpages-handled%2Fgeneral%2Fcv-flat.html&chs=180x180&choe=UTF-8&chld=L|2" alt="Triathlon training QR">
-    <div class="media-body">
-        <a href="general/cv-flat.html"><h5 class="">CV</h5></a>
-            Flat HTML version of my CV, allows for improved experience over a simple word document.
-    </div>
-</div>
                 '
-            }}
-        {{/sublayouts/grid1}}
-
-{{!-- ------- --}}
-{{!-- DIVIDER --}}
-{{!-- ------- --}}
-{{> components/c004-divider }}
-
-        {{#> sublayouts/grid1
-                id='react'
         }}
-            {{> components/c001-basic-content
-                    heading-primary='React'
-                    heading-secondary='???'
-                    body-content='
+        {{#> sublayouts/grid-wide }}
+            {{#> sublayouts/grid-wide__colfluid }}
+                {{> components/c012-card
+                        img-src='https://images.pexels.com/photos/260409/pexels-photo-260409.jpeg?auto=compress&w=1260'
+                        heading='Triathlon training'
+                        body='
+                        <p class="mb-0"><strong>Tech:</strong></p>
+                        <ul class="list-inline">
+                            <li class="list-inline-item">Handlebars</li>
+                            <li class="list-inline-item">SASS</li>
+                            <li class="list-inline-item">JS</li>
+                            <li class="list-inline-item">jQuery</li>
+                            <li class="list-inline-item">JSON</li>
+                        </ul>
+                        <p class="mb-0"><strong>Details:</strong></p>
+                        <p>Blog type site I have been building to track all my training towards an Ironman 70.3 event.</p>
+                        <a href="app/triathlon.html" class="btn btn-outline-dark waves-effect" title="View this">View training <i class="fa fa-arrow-right"></i></a>
+                        '
+                }}
+            {{/sublayouts/grid-wide__colfluid}}
+            {{#> sublayouts/grid-wide__colfluid }}
+                {{> components/c012-card
+                        img-src='https://images.pexels.com/photos/355988/pexels-photo-355988.jpeg?auto=compress&w=1260'
+                        heading='Curriculum Vitae'
+                        body='
+                        <p class="mb-0"><strong>Tech:</strong></p>
+                        <ul class="list-inline">
+                            <li class="list-inline-item">Handlebars</li>
+                            <li class="list-inline-item">SASS</li>
+                            <li class="list-inline-item">JS</li>
+                            <li class="list-inline-item">jQuery</li>
+                        </ul>
+                        <p class="mb-0"><strong>Details:</strong></p>
+                        <p>Flat HTML version of my CV, allows for improved experience over a simple word document.</p>
+                        <a href="general/cv-flat.html" class="btn btn-outline-dark waves-effect" title="View this">View CV <i class="fa fa-arrow-right"></i></a>
+                        '
+                }}
+            {{/sublayouts/grid-wide__colfluid}}
+            {{#> sublayouts/grid-wide__colfluid }}
+                {{> components/c012-card
+                        img-src='https://images.pexels.com/photos/1166657/pexels-photo-1166657.jpeg?auto=compress&w=1260'
+                        heading='React bookshelf'
+                        body='
+                        <p class="mb-0"><strong>Tech:</strong></p>
+                        <ul class="list-inline">
+                            <li class="list-inline-item">Handlebars</li>
+                            <li class="list-inline-item">React</li>
+                            <li class="list-inline-item">SASS</li>
+                            <li class="list-inline-item">JS</li>
+                            <li class="list-inline-item">jQuery</li>
+                            <li class="list-inline-item">JSON</li>
+                        </ul>
+                        <p class="mb-0"><strong>Details:</strong></p>
+                        <p>Basic React app which allows a user to add books to a shelf and then remove them.</p>
+                        <a href="react/addremove.html" class="btn btn-outline-dark waves-effect" title="View this">View Bookshelf <i class="fa fa-arrow-right"></i></a>
+                        '
+                }}
+            {{/sublayouts/grid-wide__colfluid}}
+        {{/sublayouts/grid-wide}}
+
+        {{> components/c002-image-content-cta
+                id='react'
+                img1-url='https://cdn4.iconfinder.com/data/icons/logos-3/426/react_js-128.png'
+                img1-alt=''
+                img1-class=''
+                heading-primary='React'
+                heading-secondary='Code demonstrations built using React'
+                body-content='
+                    <p>All based around the idea of a bookshelf and adding books to it, similar to Good Reads website.</p>
                     <h3 class="mt-5 h3-responsive">Links</h3>
                     <ul class="">
                         <li class=""><a href="react/static.html" title="">Static</a></li>
@@ -135,43 +167,45 @@
                         <li class=""><a href="react/cv.html" title="">CV</a></li>
                     </ul>
                 '
-            }}
-        {{/sublayouts/grid1}}
-
-{{!-- ------- --}}
-{{!-- DIVIDER --}}
-{{!-- ------- --}}
-{{> components/c004-divider }}
-
-        {{#> sublayouts/grid1
-                id='js'
         }}
-            {{> components/c001-basic-content
-                    heading-primary='JavaScript / jQuery'
-                    heading-secondary='Code demonstations in vanilla JavaScript or jQuery'
-                    body-content='
+
+        {{> components/c002-image-content-cta
+                id='js'
+                img1-url='https://cdn4.iconfinder.com/data/icons/logos-3/504/javascript-128.png'
+                img1-alt=''
+                img1-class=''
+                heading-primary='JavaScript'
+                heading-secondary='Code demonstations in vanilla JavaScript'
+                body-content='
                     <p>Very simple maths functions up to AJAX data requests and the manipulation of the returned JSON data.</p>
                     <h3 class="mt-5 h3-responsive">Links</h3>
-                    <ul class="">
-                        <li>JavaScript
-                            <ul>
-                                <li class=""><a href="javascript/maths.html" title="">Maths</a></li>
-                                <li class=""><a href="javascript/basics.html" title="">Basics</a></li>
-                                <li class=""><a href="javascript/arrays.html" title="">Arrays</a></li>
-                                <li class=""><a href="javascript/objects.html" title="">Objects</a></li>
-                            </ul>
-                        </li>
-                        <li>jQuery
-                            <ul>
-                                <li class=""><a href="jquery/ajax.html" title="">Ajax Static</a></li>
-                            <li class=""><a href="jquery/ajax-json.html" title="">Ajax Json</a></li>
-                            <li class=""><a href="jquery/ajax-promise.html" title="">Ajax Promise</a></li>
-                            </ul>
-                        </li>
+                    <ul>
+                        <li class=""><a href="javascript/maths.html" title="">Maths</a></li>
+                        <li class=""><a href="javascript/basics.html" title="">Basics</a></li>
+                        <li class=""><a href="javascript/arrays.html" title="">Arrays</a></li>
+                        <li class=""><a href="javascript/objects.html" title="">Objects</a></li>
                     </ul>
                 '
-            }}
-        {{/sublayouts/grid1}}
+        }}
+
+        {{> components/c002-image-content-cta
+                id='jquery'
+                img1-url='https://cdn4.iconfinder.com/data/icons/logos-3/504/javascript-128.png'
+                img1-alt=''
+                img1-class=''
+                heading-primary='jQuery'
+                heading-secondary='Code demonstations using jQuery'
+                body-content='
+                    <p>Very simple maths functions up to AJAX data requests and the manipulation of the returned JSON data.</p>
+                    <h3 class="mt-5 h3-responsive">Links</h3>
+                    <ul>
+                        <li class=""><a href="jquery/ajax.html" title="">Ajax Static</a></li>
+                        <li class=""><a href="jquery/ajax-json.html" title="">Ajax Json</a></li>
+                        <li class=""><a href="jquery/ajax-promise.html" title="">Ajax Promise</a></li>
+                    </ul>
+                '
+        }}
+
 
 {{!-- ------- --}}
 {{!-- DIVIDER --}}

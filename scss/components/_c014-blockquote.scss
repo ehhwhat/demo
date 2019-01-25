@@ -1,0 +1,51 @@
+.c014-blockquote {
+  padding:0;
+  text-align: center;
+  img {
+    max-width:50%;
+  }
+  blockquote {
+    position: relative;
+    border:none;
+    padding:3.5rem 0;
+    margin:0;
+    text-align: left;
+    &:before {
+      content:"";
+      background:transparent url(../../img/svg/quote.svg) center no-repeat;
+      transform: scaleX(-1);
+      display:block;
+      position: absolute;
+      top:0;
+      height:2rem;
+      width:2rem;
+      left:0;
+      @include media-breakpoint-up(sm) {
+        height:4rem;
+        width:4rem;
+        left:-5rem;
+      }
+    }
+    &:after {
+      content:"";
+      background:transparent url(../../img/svg/quote.svg) center no-repeat;
+      display:block;
+      position: absolute;
+      bottom:0;
+      height:2rem;
+      width:2rem;
+      right:0;
+      @include media-breakpoint-up(sm) {
+        height:4rem;
+        width:4rem;
+        right:-5rem;
+      }
+    }
+    p {
+      //color:white;
+    }
+    footer {
+      //color:white;
+    }
+  }
+}

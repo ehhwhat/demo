@@ -4,7 +4,7 @@
 
     {{#*inline "header-block"}}
         {{#> components/header
-                brand='BPK'
+                brand='Triathlon'
                 show-tech=true
                 show-tech-target='#tech-modal'
         }}
@@ -31,6 +31,10 @@
             {{> components/header__point
                     point-title='Journey'
                     point-href='journey'
+            }}
+            {{> components/header__point
+                    point-title='Injuries'
+                    point-href='injuries'
             }}
         {{/components/header}}
     {{/inline}}
@@ -252,15 +256,13 @@
 {{!-- ------- --}}
 {{> components/c004-divider }}
 
-        {{#> sublayouts/grid-wide }}
-            {{#> sublayouts/grid-wide__col12 }}
-                {{> components/c005-blockquote
-                        body='Never do legs the day before a cycling session'
-                        source-name='Me'
-                        source-location='During November training'
-                }}
-            {{/sublayouts/grid-wide__col12 }}
-        {{/sublayouts/grid-wide}}
+        {{#> sublayouts/grid1 }}
+            {{> components/c014-blockquote
+                    body='Never do legs the day before a cycling session.'
+                    source-name='Me'
+                    source-location='During November training'
+            }}
+        {{/sublayouts/grid1}}
 
 {{!-- ------- --}}
 {{!-- DIVIDER --}}
@@ -375,11 +377,11 @@
                             img-alt='Milton Keynes Winter Half'
                     }}
                     {{> components/c006-image-block__point
-                            img-src='../../img/app/triathlon/ashridge-training.gif'
+                            img-src='../../img/app/triathlon/ashridge/ashridge-training.gif'
                             img-alt='ashridge'
                     }}
                     {{> components/c006-image-block__point
-                            img-src='../../img/app/triathlon/ashridge-training-2.jpg'
+                            img-src='../../img/app/triathlon/ashridge/ashridge-training2.jpg'
                             img-alt='ashridge'
                     }}
                 {{/components/c006-image-block}}
@@ -399,14 +401,17 @@
         }}
             {{> components/c001-basic-content
                     heading-primary='January'
-                    heading-secondary='???'
+                    heading-secondary='A painful month'
                     body-content='
                     <h3 class="mt-5">Summary</h3>
                     <ul class="list-inline">
                         <li class="list-inline-item">Lots of swimming</li>
                         <li class="list-inline-item">Ashridge Duathlon</li>
+                        <li class="list-inline-item">Injured back</li>
                         <li class="list-inline-item">Cross country again</li>
                         <li class="list-inline-item">Dorney lake half</li>
+                        <li class="list-inline-item">Fall off bike</li>
+                        <li class="list-inline-item">Ashridge Duathlon 2</li>
                     </ul>
                     <h3 class="mt-5">Details</h3>
                     <p>Coming soon...</p>
@@ -418,23 +423,23 @@
             {{#> sublayouts/grid-wide__col12 }}
                 {{#> components/c006-image-block }}
                     {{> components/c006-image-block__point
-                            img-src='../../img/app/triathlon/ashridge (1).jpg'
+                            img-src='../../img/app/triathlon/ashridge/ashridge-house.jpg'
                             img-alt='Ashridge duathlon'
                     }}
                     {{> components/c006-image-block__point
-                            img-src='../../img/app/triathlon/ashridge (2).jpg'
+                            img-src='../../img/app/triathlon/ashridge/ashridge-run.jpg'
                             img-alt='Ashridge duathlon'
                     }}
                     {{> components/c006-image-block__point
-                            img-src='../../img/app/triathlon/ashridge (3).jpg'
+                            img-src='../../img/app/triathlon/ashridge/ashridge-bike.jpg'
                             img-alt='Ashridge duathlon'
                     }}
                     {{> components/c006-image-block__point
-                            img-src='../../img/app/triathlon/ashridge (4).jpg'
+                            img-src='../../img/app/triathlon/ashridge/ashridge-bike2.jpg'
                             img-alt='Ashridge duathlon'
                     }}
                     {{> components/c006-image-block__point
-                            img-src='../../img/app/triathlon/ashridge (5).jpg'
+                            img-src='../../img/app/triathlon/ashridge/ashridge-result.jpg'
                             img-alt='Ashridge duathlon'
                     }}
                     {{> components/c006-image-block__point
@@ -445,10 +450,152 @@
                             img-src='../../img/app/triathlon/keysoe-xc-(2).jpg'
                             img-alt='Keysoe Cross Country'
                     }}
+                    {{> components/c006-image-block__point
+                            img-src='../../img/app/triathlon/gear/gear1.jpg'
+                            img-alt='Keysoe Cross Country'
+                    }}
                 {{/components/c006-image-block}}
             {{/sublayouts/grid-wide__col12 }}
         {{/sublayouts/grid-wide}}
 
+{{!-- ------- --}}
+{{!-- DIVIDER --}}
+{{!-- ------- --}}
+{{> components/c004-divider }}
+
+        {{#> sublayouts/grid1 }}
+            {{> components/c014-blockquote
+                    img-src="../../img/app/triathlon/injury/shoe.jpg"
+                    img-alt="Damaged shoe"
+                    body='Who would have thought that crashing off your bike and smashing your head on the floor, stopping your fall with your shoulder, walloping your hip on
+                    the ground and scraping a load of skin off your uncovered leg would hurt so much.'
+                    source-name='Me'
+                    source-location='Playing around Ashridge'
+            }}
+        {{/sublayouts/grid1}}
+
+{{!-- ------- --}}
+{{!-- DIVIDER --}}
+{{!-- ------- --}}
+{{> components/c004-divider class="d-none" }}
+
+        {{> components/c002-image-content-cta
+                id='ashridge'
+                class="d-none"
+                img1-url='http://ashridgeduathlon.co.uk/wp-content/uploads/2018/03/Ashridge-logo-marroon.png'
+                img1-alt='Ashridge badge'
+                img1-class=''
+                heading-primary='Ashridge again'
+                heading-secondary='ETU Standard Distance Duathlon 2020 European Championship Qualifier'
+                img3-url='../../img/app/triathlon/ashridge/ashridge-house.jpg'
+                body-content='
+                <p>After completing an earlier (less congested) version of the Ashridge Duathlon in January and then finding out that i could potentially qualify
+                for the 2020 European Championships as an age grouper i decided to do it all over again, this time it would be much more competitve but im going to give it
+                my best shot.</p>
+
+                <h5><strong>Training and taper plan:</strong></h5>
+                <p>As this became a short term target of mine i stopped with all the swim training as i only need run and bike. In terms of training i managed to get in a
+                good number of speed sessions for running and for the bike i got in a lot of virtual training sessions at the gym, over the course of a couple of weeks i
+                have gone from speed training at 15kmph to 16kmph and taken my average watts over and hour on the bike from 160ish to 180ish.</p>
+                <h6>Penultimate week - intense (around 14hrs of training)</h6>
+                <ul class="">
+                    <li class="">2hrs on watt bike + Speed training</li>
+                    <li class="">1.5hrs on watt bike + LISS cardio * 2</li>
+                    <li class="">1hrs on watt bike + Speed training * 3 </li>
+                </ul>
+                <h6>Final week - taper (around 7hrs of training)</h6>
+                <ul class="">
+                    <li class="">Ashridge bike route x 4 loops + 10km run on treadmill</li>
+                    <li class="">Ashridge bike route x 3 loops + 7.5km run on treadmill</li>
+                    <li class="">Ashridge bike route x 2 loops + 5km run on treadmill</li>
+                    <li class="">Do nothing up to the event</li>
+                </ul>
+                <p><i class="fa fa-exclamation-triangle text-danger" aria-hidden="true"></i> During the final week into the event on what was supposed to be a medium pace 4
+                 loops of the Ashridge route i fell off my bike quite badly and injured
+                nearly every part of the right hand side of my body (see <a href="#injuries">injury list</a>), this meant i couldn`t finish my training plan completely but
+                worst of all i now have the `fear`, i worry
+                i may end up holding back on the day at certain points on the bike due the accident.</p>
+
+                <h5><strong>Nutrition on the day and beforehand:</strong></h5>
+                <p>Having done the event before i found that after the 10km run and start of the bike my legs felt heavy, i think the issue was i didn`t take any calories
+                with my on the run so my legs were slightly depleted once i jumped on, this time i will be taking a sports drink to sip on every 2.5km lap, on the bike i will
+                have another sports drink and will use every 5km and also an energy gel to take right at the very start. For the final 5km i will take the same bottle from
+                the 10km to hydrate around the last 2 laps. I will start the day with a big bowl of porridge.</p>
+                <ul class="list-inline">
+                    <li class="list-inline-item">Porridge</li>
+                    <li class="list-inline-item">2 x lucozade drinks</li>
+                    <li class="list-inline-item">1 x energy gel</li>
+                </ul>
+
+                <h5><strong>Equipment for the event:</strong></h5>
+                <ul class="list-inline">
+                    <li class="list-inline-item">Tri suit</li>
+                    <li class="list-inline-item">Nike running trainers</li>
+                    <li class="list-inline-item">Giant TCR road bike</li>
+                    <li class="list-inline-item">Garmin 730xt</li>
+                </ul>
+
+                <h5><strong>How it went:</strong></h5>
+                <p>Coming soon</p>
+
+                <h5><strong>The result:</strong></h5>
+                <p>Coming soon</p>
+            '
+        }}
+
+{{!-- ------- --}}
+{{!-- DIVIDER --}}
+{{!-- ------- --}}
+{{> components/c004-divider }}
+
+        {{#> sublayouts/grid1
+                id='injuries'
+        }}
+            {{> components/c001-basic-content
+                    heading-primary='Injuries'
+                    heading-secondary='Starting to wrack em up now'
+                    body-content='
+                    <p>Figured i may as well document parts of the body im doing my best to break, at the moment i haven`t had any injuries due to overtraining which is good.
+                    Both have been due to stupid mistakes.</p>
+                    '
+            }}
+            {{#> components/c013-injuries
+                    img-src="https://upload.wikimedia.org/wikipedia/commons/8/88/Vitruvianischer_Mann.png"
+                    img-alt="Vitruvian man"
+            }}
+                {{> components/c013-injuries__point
+                        point-class='c013-injuries__point--two'
+                        point-title='Fell off bike and now neck hurts.'
+                        position-x='44%'
+                        position-y='27%'
+                }}
+                {{> components/c013-injuries__point
+                        point-class='c013-injuries__point--two'
+                        point-title='Fell off bike and smashed shoulder.'
+                        position-x='38%'
+                        position-y='30%'
+                }}
+                {{> components/c013-injuries__point
+                        point-class='c013-injuries__point--one'
+                        point-title='Messed back up doing a squat.'
+                        position-x='44%'
+                        position-y='50%'
+                }}
+                {{> components/c013-injuries__point
+                        point-class='c013-injuries__point--two'
+                        point-title='Fell off bike and smashed hip.'
+                        position-x='40%'
+                        position-y='55%'
+                }}
+                {{> components/c013-injuries__point
+                        point-class='c013-injuries__point--two'
+                        point-title='Fell off bike and grazed leg sliding on the floor.'
+                        position-x='42%'
+                        position-y='80%'
+                }}
+            {{/components/c013-injuries}}
+
+        {{/sublayouts/grid1}}
 
 {{!-- ------- --}}
 {{!-- DIVIDER --}}

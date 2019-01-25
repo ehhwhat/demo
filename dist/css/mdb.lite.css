@@ -5728,12 +5728,11 @@ ul.stepper {
 .c002-image-content-cta__image {
   text-align: center; }
   .c002-image-content-cta__image img {
-    width: 150px;
     max-width: 150px;
     margin: 6rem 0 3rem; }
   .c002-image-content-cta__image--vertical img {
     width: auto;
-    height: 100px; }
+    max-height: 100px; }
 
 .c002-image-content-cta__background {
   background-color: #d0d6e2; }
@@ -6059,6 +6058,20 @@ ul.stepper {
     -o-transition: all 2s;
     transition: all 2s; }
 
+.c012-card .card-img-wrapper {
+  overflow: hidden; }
+  .c012-card .card-img-wrapper img {
+    -webkit-transition: all 0.125s;
+    -o-transition: all 0.125s;
+    transition: all 0.125s; }
+  .c012-card .card-img-wrapper:hover img {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    -webkit-transition: all 0.25s;
+    -o-transition: all 0.25s;
+    transition: all 0.25s; }
+
 .c012-card .card-header {
   border: none;
   padding-bottom: .25rem; }
@@ -6069,6 +6082,71 @@ ul.stepper {
 .c012-card .card-footer {
   background-color: white;
   padding-bottom: 0; }
+
+.c013-injuries__wrapper {
+  position: relative;
+  background: #fff; }
+
+.c013-injuries__img {
+  opacity: 0.75; }
+
+.c013-injuries__point {
+  height: 24px;
+  width: 24px;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+  background-color: rgba(0, 0, 0, 0.75); }
+  .c013-injuries__point--one {
+    background-color: rgba(66, 165, 245, 0.75); }
+  .c013-injuries__point--two {
+    background-color: rgba(255, 138, 128, 0.75); }
+
+.c014-blockquote {
+  padding: 0;
+  text-align: center; }
+  .c014-blockquote img {
+    max-width: 50%; }
+  .c014-blockquote blockquote {
+    position: relative;
+    border: none;
+    padding: 3.5rem 0;
+    margin: 0;
+    text-align: left; }
+    .c014-blockquote blockquote:before {
+      content: "";
+      background: transparent url(../../img/svg/quote.svg) center no-repeat;
+      -webkit-transform: scaleX(-1);
+      -ms-transform: scaleX(-1);
+      transform: scaleX(-1);
+      display: block;
+      position: absolute;
+      top: 0;
+      height: 2rem;
+      width: 2rem;
+      left: 0; }
+      @media (min-width: 576px) {
+        .c014-blockquote blockquote:before {
+          height: 4rem;
+          width: 4rem;
+          left: -5rem; } }
+    .c014-blockquote blockquote:after {
+      content: "";
+      background: transparent url(../../img/svg/quote.svg) center no-repeat;
+      display: block;
+      position: absolute;
+      bottom: 0;
+      height: 2rem;
+      width: 2rem;
+      right: 0; }
+      @media (min-width: 576px) {
+        .c014-blockquote blockquote:after {
+          height: 4rem;
+          width: 4rem;
+          right: -5rem; } }
 
 .dataPoint:empty {
   font-size: 2rem;
@@ -6255,6 +6333,9 @@ code {
   -webkit-transition: all .25s;
   -o-transition: all .25s;
   transition: all .25s; }
+
+img {
+  max-width: 100%; }
 
 @media (min-width: 576px) {
   body .container {

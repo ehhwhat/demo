@@ -20,6 +20,8 @@
 @import "components/c007-data-block";
 @import "components/c010-events";
 @import "components/c012-card";
+@import "components/c013-injuries";
+@import "components/c014-blockquote";
 
 /////////////////////////////////
 // Bespoke
@@ -254,7 +256,9 @@ code {
   transition: all .25s;
 }
 
-
+img {
+  max-width:100%;
+}
 
 
 

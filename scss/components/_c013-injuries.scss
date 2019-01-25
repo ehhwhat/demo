@@ -1,0 +1,29 @@
+.c013-injuries {
+  &__wrapper {
+    position: relative;
+    background:#fff;
+  }
+  &__img {
+    opacity: 0.75;
+  }
+  &__point {
+    height:24px;
+    width:24px;
+    //background:transparent url(../../img/svg/plaster.svg) center no-repeat;
+    //background-size:20px;
+    display:block;
+    position: absolute;
+    top:50%;
+    left:50%;
+    border-radius:100%;
+    background-color:rgba(black,0.75);
+    //border:4px double #ef5350;
+
+    &--one {background-color:rgba($theme-blue,0.75);}
+    &--two {background-color:rgba($theme-pink,0.75);}
+  }
+}
+
+
+
+

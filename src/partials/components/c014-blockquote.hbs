@@ -1,0 +1,13 @@
+{{!-- components/c014-blockquote.hbs --}}
+
+<!-- COMPONENT START -->
+<div class="c014-blockquote">
+    {{#if img-src}}
+        <img src="{{img-src}}" alt="{{img-alt}}" class="z-depth-2 rounded-circle">
+    {{/if}}
+    <blockquote class="">
+        <p class="lead">{{{body}}}</p>
+        <footer class="text-muted">{{source-name}} <cite title="Source Title">{{source-location}}</cite></footer>
+    </blockquote>
+</div>
+<!-- COMPONENT END -->

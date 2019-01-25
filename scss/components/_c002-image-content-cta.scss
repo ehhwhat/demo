@@ -5,14 +5,14 @@
   &__image {
     text-align: center;
     img {
-      width:150px;
+      //width:150px;
       max-width:150px;
       margin: 6rem 0 3rem;
     }
     &--vertical {
       img {
         width:auto;
-        height:100px;
+        max-height:100px;
       }
     }
   }

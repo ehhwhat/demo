@@ -193,15 +193,19 @@
             {{#> sublayouts/grid-wide__col12 }}
                 {{#> components/c006-image-block }}
                     {{> components/c006-image-block__point
-                            img-src='../../../img/app/triathlon/training-turbo (7).jpg'
+                            img-src='../../../img/app/triathlon/self/norm.jpg'
                             img-alt='1'
                     }}
                     {{> components/c006-image-block__point
-                            img-src='../../../img/app/triathlon/training-turbo (8).jpg'
+                            img-src='../../../img/app/triathlon/self/swim.jpg'
                             img-alt='2'
                     }}
                     {{> components/c006-image-block__point
-                            img-src='../../../img/app/triathlon/training-turbo (9).jpg'
+                            img-src='../../../img/app/triathlon/self/bike.jpg'
+                            img-alt='3'
+                    }}
+                    {{> components/c006-image-block__point
+                            img-src='../../../img/app/triathlon/self/run.jpg'
                             img-alt='3'
                     }}
                 {{/components/c006-image-block}}
@@ -263,15 +267,18 @@
                         img-src='https://images.pexels.com/photos/262333/pexels-photo-262333.jpeg?auto=compress&cs=tinysrgb&w=640'
                         heading='Heading'
                         subheading='Subheading'
-                        body='<p>At the edge of forever radio telescope Flatland paroxysm of global death across the centuries a mote of dust suspended in a sunbeam.</p>'
-                        footer='<p class="mb-0">Footer</p>'
+                        body='
+                        <p>At the edge of forever radio telescope Flatland paroxysm of global death across the centuries a mote of dust suspended in a sunbeam.</p>
+                        <a href="" class="btn btn-outline-dark waves-effect" title="View this">View ... <i class="fa fa-arrow-right"></i></a>
+                        '
+                        footer='<p>Footer</p>'
                 }}
             {{/sublayouts/grid-wide__col4}}
             {{#> sublayouts/grid-wide__col4 }}
                 {{> components/c012-card
                         heading='Heading'
                         body='<p>At the edge of forever radio telescope Flatland paroxysm of global death across the centuries a mote of dust suspended in a sunbeam.</p>'
-                        footer='<p class="mb-0">Footer</p>'
+                        footer='<p>Footer</p>'
                 }}
             {{/sublayouts/grid-wide__col4}}
             {{#> sublayouts/grid-wide__col4 }}
@@ -283,6 +290,69 @@
                 }}
             {{/sublayouts/grid-wide__col4}}
         {{/sublayouts/grid-wide}}
+
+{{!-- ------- --}}
+{{!-- DIVIDER --}}
+{{!-- ------- --}}
+{{> components/c004-divider }}
+
+        {{!-- --------------- --}}
+        {{!-- c013-injuries --}}
+        {{!-- --------------- --}}
+        {{> components/c000-comp-desc
+                comp-id='c013-injuries'
+                comp-name='Image overlay'
+        }}
+        {{#> sublayouts/grid1 }}
+            {{#> components/c013-injuries
+                    img-src="https://upload.wikimedia.org/wikipedia/commons/8/88/Vitruvianischer_Mann.png"
+                    img-alt="Vitruvian man"
+            }}
+                {{> components/c013-injuries__point
+                        point-class='c013-injuries__point--shoulderright'
+                        point-title='Fell off bike and smashed shoulder.'
+                }}
+                {{> components/c013-injuries__point
+                        point-class='c013-injuries__point--backright'
+                        point-title='Messed back up doing a squat.'
+                }}
+                {{> components/c013-injuries__point
+                        point-class='c013-injuries__point--hipright'
+                        point-title='Fell off bike and smashed hip.'
+                }}
+                {{> components/c013-injuries__point
+                        point-class='c013-injuries__point--calveright'
+                        point-title='Fell off bike and grazed leg sliding on the floor.'
+                }}
+            {{/components/c013-injuries}}
+        {{/sublayouts/grid1}}
+
+{{!-- ------- --}}
+{{!-- DIVIDER --}}
+{{!-- ------- --}}
+{{> components/c004-divider }}
+
+        {{!-- --------------- --}}
+        {{!-- c014-blockquote --}}
+        {{!-- --------------- --}}
+        {{> components/c000-comp-desc
+                comp-id='c014-blockquote'
+                comp-name='Blockquote '
+        }}
+        {{#> sublayouts/grid1 }}
+            {{> components/c014-blockquote
+                    img-src="../../img/app/triathlon/injury/shoe.jpg"
+                    img-alt="Damaged shoe"
+                    body='At the edge of forever radio telescope Flatland paroxysm of global death across the centuries a mote of dust suspended in a sunbeam.'
+                    source-name='me'
+                    source-location='over there'
+            }}
+            {{> components/c014-blockquote
+                    body='At the edge of forever radio telescope Flatland paroxysm of global death across the centuries a mote of dust suspended in a sunbeam.'
+                    source-name='me'
+                    source-location='over there'
+            }}
+        {{/sublayouts/grid1}}
 
 {{!-- ------- --}}
 {{!-- DIVIDER --}}
