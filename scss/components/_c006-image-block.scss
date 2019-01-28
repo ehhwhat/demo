@@ -28,4 +28,7 @@
       column-count: 4;
     }
   }
+  @include media-breakpoint-down(sm) {
+    margin: 0 -2rem;
+  }
 }

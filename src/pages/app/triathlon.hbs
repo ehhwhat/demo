@@ -28,9 +28,37 @@
                     point-title='Training'
                     point-href='training'
             }}
+            {{!--
             {{> components/header__point
                     point-title='Journey'
                     point-href='journey'
+            }}
+            --}}
+            {{! DROPDOWN }}
+            {{#> components/header__point--dropdown
+                    point-title='Journey'
+            }}
+                {{> components/header__point--dropdown__point
+                        point-title='October'
+                        point-href='#journey'
+                }}
+                {{> components/header__point--dropdown__point
+                        point-title='November'
+                        point-href='#november'
+                }}
+                {{> components/header__point--dropdown__point
+                        point-title='December'
+                        point-href='#december'
+                }}
+                {{> components/header__point--dropdown__point
+                        point-title='January'
+                        point-href='#january'
+                }}
+            {{/components/header__point--dropdown}}
+            {{! DROPDOWN END }}
+            {{> components/header__point
+                    point-title='Specials'
+                    point-href='specials'
             }}
             {{> components/header__point
                     point-title='Injuries'
@@ -270,7 +298,7 @@
 {{> components/c004-divider }}
 
         {{#> sublayouts/grid1
-                id=''
+                id='november'
         }}
             {{> components/c001-basic-content
                     heading-primary='November'
@@ -329,7 +357,7 @@
 {{> components/c004-divider }}
 
         {{#> sublayouts/grid1
-                id=''
+                id='december'
         }}
             {{> components/c001-basic-content
                     heading-primary='December'
@@ -388,16 +416,13 @@
             {{/sublayouts/grid-wide__col12 }}
         {{/sublayouts/grid-wide}}
 
-
-
 {{!-- ------- --}}
 {{!-- DIVIDER --}}
 {{!-- ------- --}}
 {{> components/c004-divider }}
 
-
         {{#> sublayouts/grid1
-                id=''
+                id='january'
         }}
             {{> components/c001-basic-content
                     heading-primary='January'
@@ -477,71 +502,32 @@
 {{!-- ------- --}}
 {{!-- DIVIDER --}}
 {{!-- ------- --}}
-{{> components/c004-divider class="d-none" }}
+{{> components/c004-divider }}
 
-        {{> components/c002-image-content-cta
-                id='ashridge'
-                class="d-none"
-                img1-url='http://ashridgeduathlon.co.uk/wp-content/uploads/2018/03/Ashridge-logo-marroon.png'
-                img1-alt='Ashridge badge'
-                img1-class=''
-                heading-primary='Ashridge again'
-                heading-secondary='ETU Standard Distance Duathlon 2020 European Championship Qualifier'
-                img3-url='../../img/app/triathlon/ashridge/ashridge-house.jpg'
-                body-content='
-                <p>After completing an earlier (less congested) version of the Ashridge Duathlon in January and then finding out that i could potentially qualify
-                for the 2020 European Championships as an age grouper i decided to do it all over again, this time it would be much more competitve but im going to give it
-                my best shot.</p>
-
-                <h5><strong>Training and taper plan:</strong></h5>
-                <p>As this became a short term target of mine i stopped with all the swim training as i only need run and bike. In terms of training i managed to get in a
-                good number of speed sessions for running and for the bike i got in a lot of virtual training sessions at the gym, over the course of a couple of weeks i
-                have gone from speed training at 15kmph to 16kmph and taken my average watts over and hour on the bike from 160ish to 180ish.</p>
-                <h6>Penultimate week - intense (around 14hrs of training)</h6>
-                <ul class="">
-                    <li class="">2hrs on watt bike + Speed training</li>
-                    <li class="">1.5hrs on watt bike + LISS cardio * 2</li>
-                    <li class="">1hrs on watt bike + Speed training * 3 </li>
-                </ul>
-                <h6>Final week - taper (around 7hrs of training)</h6>
-                <ul class="">
-                    <li class="">Ashridge bike route x 4 loops + 10km run on treadmill</li>
-                    <li class="">Ashridge bike route x 3 loops + 7.5km run on treadmill</li>
-                    <li class="">Ashridge bike route x 2 loops + 5km run on treadmill</li>
-                    <li class="">Do nothing up to the event</li>
-                </ul>
-                <p><i class="fa fa-exclamation-triangle text-danger" aria-hidden="true"></i> During the final week into the event on what was supposed to be a medium pace 4
-                 loops of the Ashridge route i fell off my bike quite badly and injured
-                nearly every part of the right hand side of my body (see <a href="#injuries">injury list</a>), this meant i couldn`t finish my training plan completely but
-                worst of all i now have the `fear`, i worry
-                i may end up holding back on the day at certain points on the bike due the accident.</p>
-
-                <h5><strong>Nutrition on the day and beforehand:</strong></h5>
-                <p>Having done the event before i found that after the 10km run and start of the bike my legs felt heavy, i think the issue was i didn`t take any calories
-                with my on the run so my legs were slightly depleted once i jumped on, this time i will be taking a sports drink to sip on every 2.5km lap, on the bike i will
-                have another sports drink and will use every 5km and also an energy gel to take right at the very start. For the final 5km i will take the same bottle from
-                the 10km to hydrate around the last 2 laps. I will start the day with a big bowl of porridge.</p>
-                <ul class="list-inline">
-                    <li class="list-inline-item">Porridge</li>
-                    <li class="list-inline-item">2 x lucozade drinks</li>
-                    <li class="list-inline-item">1 x energy gel</li>
-                </ul>
-
-                <h5><strong>Equipment for the event:</strong></h5>
-                <ul class="list-inline">
-                    <li class="list-inline-item">Tri suit</li>
-                    <li class="list-inline-item">Nike running trainers</li>
-                    <li class="list-inline-item">Giant TCR road bike</li>
-                    <li class="list-inline-item">Garmin 730xt</li>
-                </ul>
-
-                <h5><strong>How it went:</strong></h5>
-                <p>Coming soon</p>
-
-                <h5><strong>The result:</strong></h5>
-                <p>Coming soon</p>
-            '
+        {{#> sublayouts/grid1
+                id='specials'
         }}
+            {{> components/c001-basic-content
+                    heading-primary='Specials'
+                    heading-secondary='test'
+                    body-content='
+                    <p>test</p>
+                    '
+            }}
+        {{/sublayouts/grid1}}
+        {{#> sublayouts/grid-wide class-row='justify-content-center' }}
+            {{#> sublayouts/grid-wide__col4 }}
+                {{> components/c012-card
+                        img-src='../../img/app/triathlon/ashridge/ashridge-duathlon2-4.jpg'
+                        heading='Ashridge Duathlon Standard'
+                        subheading='Triathlon England National Championship'
+                        body='
+                        <p>"Nestled in the heart of the Chiltern’s rolling hills, Ashridge Estate House is one of the most historically significant landmarks in Hertfordshire."</p>
+                        <a href="triathlon-ashridge.html" class="btn btn-outline-dark waves-effect" title="View this">View report <i class="fa fa-arrow-right"></i></a>
+                        '
+                }}
+            {{/sublayouts/grid-wide__col4}}
+        {{/sublayouts/grid-wide}}
 
 {{!-- ------- --}}
 {{!-- DIVIDER --}}

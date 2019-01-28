@@ -224,7 +224,7 @@
 <section class="container-fluid grid-wide " id="">
     <div class="row">
         <div class="container">
-            <div class="row">
+            <div class="row ">
                 
                 <div class="col-12 col-md-4">
                                     <a href="#" class="btn btn-outline-default waves-effect" title="">Default <i class="fa fa-arrow-right"></i></a>
@@ -268,25 +268,31 @@
 <section class="container-fluid grid-wide " id="">
     <div class="row">
         <div class="container">
-            <div class="row">
+            <div class="row ">
                 
-                <div class="col-12 col-md-4">
-                                    <h3 class="h3-responsive">Square</h3>
-                                    <p>1000px (W) by 1000px (H)</p>
-                                    <img class="img-fluid" src="../../../img/app/triathlon/watlington-sportive2.jpg">
-                </div>
-                
-                <div class="col-12 col-md-4">
-                                    <h3 class="h3-responsive">Horizontal</h3>
-                                    <p>2000px (W) by 1000px (H)</p>
-                                    <img class="img-fluid" src="../../../img/app/triathlon/ashridge/ashridge-house.jpg">
+                <div class="col-12">
+                                    <p>All images are to be optimised using <a href="https://tinypng.com/">tinypng</a>. Some of the components will auto apply a grayscale effect to the image
+                                        which is removed on <code>hover</code>, i am also using lazyload to only show call the images when in the user viewport to save on bandwidth.</p>
                 </div>
                 
                 <div class="col-12 col-md-4">
                                     <h3 class="h3-responsive">Vertical</h3>
                                     <p>1000px (W) by 2000px (H)</p>
-                                    <img class="img-fluid" src="../../../img/app/triathlon/training-turbo (7).jpg">
+                                    <img class="img-fluid lazy" src="../../img/app/triathlon/training-turbo (7).jpg">
                 </div>
+                
+                <div class="col-12 col-md-4">
+                                    <h3 class="h3-responsive">Square</h3>
+                                    <p>1000px (W) by 1000px (H)</p>
+                                    <img class="img-fluid lazy grayscale" src="../../img/app/triathlon/watlington-sportive2.jpg">
+                </div>
+                
+                <div class="col-12 col-md-4">
+                                    <h3 class="h3-responsive">Horizontal</h3>
+                                    <p>2000px (W) by 1000px (H)</p>
+                                    <img class="img-fluid lazy" src="../../img/app/triathlon/ashridge/ashridge-house.jpg">
+                </div>
+                
             </div>
         </div>
     </div>

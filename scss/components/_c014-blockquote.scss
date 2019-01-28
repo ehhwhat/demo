@@ -12,7 +12,7 @@
     text-align: left;
     &:before {
       content:"";
-      background:transparent url(../../img/svg/quote.svg) center no-repeat;
+      background:transparent url(./../img/svg/quote.svg) center no-repeat;
       transform: scaleX(-1);
       display:block;
       position: absolute;
@@ -28,7 +28,7 @@
     }
     &:after {
       content:"";
-      background:transparent url(../../img/svg/quote.svg) center no-repeat;
+      background:transparent url(./../img/svg/quote.svg) center no-repeat;
       display:block;
       position: absolute;
       bottom:0;

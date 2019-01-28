@@ -1,0 +1,321 @@
+{{!-- pages/app/triathlon.hbs --}}
+
+{{#> layouts/base title="Triathlon | Ashridge" }}
+
+    {{#*inline "header-block"}}
+        {{#> components/header
+                brand='Triathlon'
+                show-tech=true
+                show-tech-target='#tech-modal'
+        }}
+            {{> components/header__point--external
+                    point-title='Introduction'
+                    point-href='triathlon.html#introduction'
+            }}
+            {{> components/header__point--external
+                    point-title='How'
+                    point-href='triathlon.html#how'
+            }}
+            {{> components/header__point--external
+                    point-title='KPI'
+                    point-href='triathlon.html#kpi'
+            }}
+            {{> components/header__point--external
+                    point-title='Events'
+                    point-href='triathlon.html#events'
+            }}
+            {{> components/header__point--external
+                    point-title='Training'
+                    point-href='triathlon.html#training'
+            }}
+            {{!--
+            {{> components/header__point
+                    point-title='Journey'
+                    point-href='journey'
+            }}
+            --}}
+            {{! DROPDOWN }}
+            {{#> components/header__point--dropdown
+                    point-title='Journey'
+            }}
+                {{> components/header__point--dropdown__point
+                        point-title='October'
+                        point-href='triathlon.html#journey'
+                }}
+                {{> components/header__point--dropdown__point
+                        point-title='November'
+                        point-href='triathlon.html#november'
+                }}
+                {{> components/header__point--dropdown__point
+                        point-title='December'
+                        point-href='triathlon.html#december'
+                }}
+                {{> components/header__point--dropdown__point
+                        point-title='January'
+                        point-href='triathlon.html#january'
+                }}
+            {{/components/header__point--dropdown}}
+            {{! DROPDOWN END }}
+            {{> components/header__point
+                    point-title='Specials'
+                    point-href='specials'
+            }}
+            {{> components/header__point--external
+                    point-title='Injuries'
+                    point-href='triathlon.html#injuries'
+            }}
+        {{/components/header}}
+    {{/inline}}
+
+    {{#*inline "main-block"}}
+
+        {{#> sublayouts/grid1
+                id='specials'
+        }}
+            {{> components/c001-basic-content
+                    heading-primary='Ashridge'
+                    heading-secondary='Triathlon England National Championship'
+                    body-content='
+                    <p>After completing an earlier (less congested) version of the Ashridge Duathlon in January and then finding out that i could potentially qualify
+                for the 2020 European Championships as an age grouper i decided to do it all over again, this time it would be much more competitve but im going to give it
+                my best shot.</p>'
+            }}
+        {{/sublayouts/grid1}}
+
+        {{> components/c002-image-content-cta
+                id='specials'
+                class=""
+                img1-url='http://ashridgeduathlon.co.uk/wp-content/uploads/2018/03/Ashridge-logo-marroon.png'
+                img1-alt='Ashridge badge'
+                img1-class=''
+                heading-primary='Ashridge again'
+                heading-secondary='ETU Standard Distance Duathlon 2020 European Championship Qualifier'
+                img3-url='../../img/app/triathlon/ashridge/ashridge-duathlon2-4.jpg'
+                body-content='
+            '
+        }}
+
+        {{> components/c002-image-content-cta
+                id=''
+                class=""
+                heading-primary='Training and taper plan'
+                heading-secondary='???'
+                body-content='
+                <p>As this became a short term target of mine i stopped with all the swim training as i only need run and bike. In terms of training i managed to get in a
+                good number of speed sessions for running and for the bike i got in a lot of virtual training sessions at the gym, over the course of a couple of weeks i
+                have gone from speed training at 15kmph to 16kmph and taken my average watts over and hour on the bike from 160ish to 180ish.</p>
+                <h6>Penultimate week - intense (around 14hrs of training)</h6>
+                <ul class="">
+                    <li class="">2hrs on watt bike + Speed training</li>
+                    <li class="">1.5hrs on watt bike + LISS cardio * 2</li>
+                    <li class="">1hrs on watt bike + Speed training * 3 </li>
+                </ul>
+                <h6>Final week - taper (around 7hrs of training)</h6>
+                <ul class="">
+                    <li class="">Ashridge bike route x 4 loops + 10km run on treadmill</li>
+                    <li class="">Ashridge bike route x 3 loops + 7.5km run on treadmill</li>
+                    <li class="">Ashridge bike route x 2 loops + 5km run on treadmill</li>
+                    <li class="">Do nothing up to the event</li>
+                </ul>
+                <p><i class="fa fa-exclamation-triangle text-danger" aria-hidden="true"></i> During the final week into the event on what was supposed to be a medium pace 4
+                 loops of the Ashridge route i fell off my bike quite badly and injured
+                nearly every part of the right hand side of my body (see <a href="#injuries">injury list</a>), this meant i couldn`t finish my training plan completely but
+                worst of all i now have the `fear`, i worry
+                i may end up holding back on the day at certain points on the bike due the accident.</p>
+            '
+        }}
+
+        {{> components/c002-image-content-cta
+                id=''
+                class=""
+                heading-primary='Nutrition on the day and beforehand'
+                heading-secondary='???'
+                body-content='
+                <p>Having done the event before i found that after the 10km run and start of the bike my legs felt heavy, i think the issue was i didn`t take any calories
+                with my on the run so my legs were slightly depleted once i jumped on, this time i will be taking a sports drink to sip on every 2.5km lap, on the bike i will
+                have another sports drink and will use every 5km and also an energy gel to take right at the very start. For the final 5km i will take the same bottle from
+                the 10km to hydrate around the last 2 laps. I will start the day with a big bowl of porridge.</p>
+                <ul class="list-inline">
+                    <li class="list-inline-item">Porridge</li>
+                    <li class="list-inline-item">2 x lucozade drinks</li>
+                    <li class="list-inline-item">1 x energy gel</li>
+                </ul>
+            '
+        }}
+
+        {{> components/c002-image-content-cta
+                id=''
+                class=""
+                heading-primary='Equipment for the event'
+                heading-secondary='???'
+                body-content='
+                <ul class="list-inline">
+                    <li class="list-inline-item">Tri suit</li>
+                    <li class="list-inline-item">Nike running trainers</li>
+                    <li class="list-inline-item">Giant TCR road bike</li>
+                    <li class="list-inline-item">Garmin 730xt</li>
+                </ul>
+            '
+        }}
+
+        {{> components/c002-image-content-cta
+                id=''
+                class=""
+                heading-primary='How it went on the day'
+                heading-secondary='???'
+                body-content='
+                <p>Got to the event bright and early and you could tell straight away it was much more serious than the previous time i entered, not only was it a BTU
+                Qualifier event it was also a Triathlon England Championship, which meant there were a lot of very good athletes there.</p>
+                <p>Overall i came in about 5 minutes quicker which i was very pleased with, improving on each element except for the initial 10km run where i lost around 40
+                 seconds of time. My bike loops were
+                around 23.5 minutes each (compared to 24.75 minutes previously) and my final 5km which felt a lot easier than before was just over 30 seconds faster. I
+                also managed to claw back around 30 seconds in time from the transitions.</p>
+            '
+        }}
+
+        {{#> sublayouts/grid-wide }}
+            {{#> sublayouts/grid-wide__col12 }}
+                {{#> components/c006-image-block }}
+                    {{> components/c006-image-block__point
+                            img-src='../../img/app/triathlon/ashridge/ashridge-duathlon2-1.jpg'
+                            img-alt='Ashridge'
+                    }}
+                    {{> components/c006-image-block__point
+                            img-src='../../img/app/triathlon/ashridge/ashridge-duathlon2-2.jpg'
+                            img-alt='Ashridge'
+                    }}
+                    {{> components/c006-image-block__point
+                            img-src='../../img/app/triathlon/ashridge/ashridge-duathlon2-3.jpg'
+                            img-alt='Ashridge'
+                    }}
+                    {{> components/c006-image-block__point
+                            img-src='../../img/app/triathlon/ashridge/ashridge-duathlon2-4.jpg'
+                            img-alt='Ashridge'
+                    }}
+                    {{> components/c006-image-block__point
+                            img-src='../../img/app/triathlon/ashridge/ashridge-duathlon2-5.jpg'
+                            img-alt='Ashridge'
+                    }}
+                {{/components/c006-image-block}}
+            {{/sublayouts/grid-wide__col12 }}
+        {{/sublayouts/grid-wide}}
+
+        {{> components/c002-image-content-cta
+                id=''
+                class=""
+                heading-primary='The result'
+                heading-secondary='???'
+                body-content='
+                <p>I managed to finish <strong>113th</strong> with a time of <strong>02:43:25</strong> (<a href="http://results.eventchiptiming.com/MyResults
+                .aspx?uid=16202-8136-3-99745">see result here</a>), so even though i went faster than before i went from winning my age group to coming 16th out of 20 which
+                 shows just how much better the competitors were this time. Having looked at the finishers and comparing to Ashridge on the 6th January the fastest time for my
+                 age category (30-34) went from a 02:48:23 (me, on the 6th Jan) to a 02:05:42 and the average went from a 03:08:48 to a 02:28:46 (so i wasnt even near that)
+                 . I also noticed that within the top 10, 6 came from my category and of the top 20, 8 were in my group.
+                .</p>
+            '
+        }}
+
+        {{> components/c002-image-content-cta
+                id=''
+                class=""
+                heading-primary='Comparison'
+                heading-secondary='January 6th vs January 26th'
+                body-content='
+                <p>To show how different the level was between a "normal" duathlon event and a national championship.</p>
+                <div class="table-responsive">
+                    <table class="table table-sm">
+                        <thead class="bg-light">
+                        <tr>
+                            <th>&nbsp;</th>
+                            <th>6th Jan</th>
+                            <th>26th Jan</th>
+                            <th>Difference</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>10km run</th>
+                                <td>00:43:19</td>
+                                <td>00:43:58</td>
+                                <td class="text-danger">+ 00:00:39</td>
+                            </tr>
+                            <tr>
+                                <th>T1</th>
+                                <td>00:02:05</td>
+                                <td>00:01:44</td>
+                                <td class="text-success">- 00:00:21</td>
+                            </tr>
+                            <tr>
+                                <th>44km bike</th>
+                                <td>01:39:14</td>
+                                <td>01:34:30</td>
+                                <td class="text-success">- 00:04:44</td>
+                            </tr>
+                            <tr>
+                                <th>T2</th>
+                                <td>00:01:08</td>
+                                <td>00:01:11</td>
+                                <td class="text-success">- 00:00:03</td>
+                            </tr>
+                            <tr>
+                                <th>5km run</th>
+                                <td>00:22:34</td>
+                                <td>00:21:58</td>
+                                <td class="text-success">- 00:00:36</td>
+                            </tr>
+                            <tr>
+                                <th>Total</th>
+                                <td>02:48:23</td>
+                                <td>02:43:25</td>
+                                <td class="text-success">- 00:04:58</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            '
+        }}
+
+{{!-- ------- --}}
+{{!-- DIVIDER --}}
+{{!-- ------- --}}
+{{> components/c004-divider }}
+
+        {{> components/c011-modal
+                modal-id='tech-modal'
+                modal-heading='Under the hood'
+                modal-body='
+                <h6><strong>Markup</strong></h6>
+                <p>A mix of flat HTML and <a href="https://handlebarsjs.com/">Handlebars</a> partials, Handlebars allow for better reuse of code through templating.</p>
+                <h6><strong>Styles</strong></h6>
+                <p><a href="https://getbootstrap.com/">Bootstrap</a> with <a href="https://mdbootstrap.com">mdbootstrap</a> theme on top and then further expanded with my own bespoke styling.</p>
+                <h6><strong>JS</strong></h6>
+                <p>Use of <a href="https://jquery.com/">jQuery</a> and vanilla JS, also use of some libraries such as <a href="https://github.com/verlok/lazyload">lazyload.js</a> and <a href="https://wowjs.uk/">wow.js</a>.</p>
+                <h6><strong>Data</strong></h6>
+                <p>Most content is inline but specific data points are being pulled from my Strava account, I recieve the data in json format and then perfom a number of JS functions before appending to the page.</p>
+                <h6><strong>Imagery</strong></h6>
+                <p>Images have been cropped or resized to specific dimensions, they have been saved as .jpg, optimised using <a href="https://tinypng.com/">tinypng</a> and then I am lazyloading them in to reduce page weight.</p>
+                <h6><strong>Other</strong></h6>
+                <p>Main framework is <a href="https://mdbootstrap.com">mdbootstrap</a> to speed up build. <a href="https://gulpjs.com/">Gulp</a> has been used for task automation and <a href="https://git-scm.com/">Git</a> with <a href="https://github.com/">Github</a> is being used for version control and backup.</p>
+                '
+        }}
+
+    {{/inline}}
+
+    {{#*inline "footer-block"}}
+        {{> components/footer
+                body-content='
+                <ul class="list-inline my-0">
+                    <li class="list-inline-item"><a href="../index.html">Home</a></li>
+                    <li class="list-inline-item"><a href="triathlon.html"><strong>Triathlon</strong></a></li>
+                    <li class="list-inline-item"><a href="triathlon-data.html">Data</a></li>
+                </ul>
+                '
+        }}
+    {{/inline}}
+
+    {{#*inline "scripts-block"}}
+        <!-- Bespoke to page JavaScript -->
+        <script src="{{domainprefix}}js/bespoke/data.js?v{{version}}"></script>
+    {{/inline}}
+
+{{/layouts/base}}

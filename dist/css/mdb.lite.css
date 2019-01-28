@@ -5848,6 +5848,10 @@ ul.stepper {
     -webkit-column-count: 4;
     column-count: 4; } }
 
+@media (max-width: 767.98px) {
+  .c006-image-block {
+    margin: 0 -2rem; } }
+
 .container-training .c007-data-block .dataPoint {
   min-height: 48px; }
 
@@ -5923,7 +5927,9 @@ ul.stepper {
     .line .dot.dot-target {
       background-image: url(https://cdn1.iconfinder.com/data/icons/feather-2/24/flag-16.png); }
     .line .dot.dot-success {
-      background-image: url(https://cdn2.iconfinder.com/data/icons/donkey/800/18-16.png); }
+      background-image: url(https://cdn3.iconfinder.com/data/icons/flat-actions-icons-9/512/Tick_Mark-16.png); }
+    .line .dot.dot-fail {
+      background-image: url(https://cdn3.iconfinder.com/data/icons/flat-actions-icons-9/792/Close_Icon-16.png); }
 
 .time-line {
   background: #fff; }
@@ -5991,10 +5997,12 @@ ul.stepper {
     left: 27.5%; }
   .events-line .dot-ashridgedual {
     left: 39.6%; }
+  .events-line .dot-windsorhalf {
+    left: 45.2%; }
   .events-line .dot-ashridgedual2 {
     left: 47.6%; }
-  .events-line .dot-windsorhalf {
-    left: 48%; }
+  .events-line .dot-watfordhalf {
+    left: 50.8%; }
   .events-line .dot-cycle2 {
     left: 54.8%; }
   .events-line .dot-cycle3 {
@@ -6025,7 +6033,9 @@ ul.stepper {
   .target-line .dot-target-ashridge2 {
     left: 47.6%; }
   .target-line .dot-target-windsorhalf {
-    left: 48%; }
+    left: 45.2%; }
+  .target-line .dot-watfordhalf {
+    left: 50.8%; }
 
 .current-line {
   background: #42a5f5 !important;
@@ -6045,6 +6055,10 @@ ul.stepper {
     left: 27.5%; }
   .current-line .dot-target-ashridge {
     left: 39.6%; }
+  .current-line .dot-target-windsorhalf {
+    left: 45.2%; }
+  .current-line .dot-target-ashridge2 {
+    left: 47.6%; }
   .current-line:after {
     content: "";
     position: absolute;
@@ -6118,7 +6132,7 @@ ul.stepper {
     text-align: left; }
     .c014-blockquote blockquote:before {
       content: "";
-      background: transparent url(../../img/svg/quote.svg) center no-repeat;
+      background: transparent url(./../img/svg/quote.svg) center no-repeat;
       -webkit-transform: scaleX(-1);
       -ms-transform: scaleX(-1);
       transform: scaleX(-1);
@@ -6135,7 +6149,7 @@ ul.stepper {
           left: -5rem; } }
     .c014-blockquote blockquote:after {
       content: "";
-      background: transparent url(../../img/svg/quote.svg) center no-repeat;
+      background: transparent url(./../img/svg/quote.svg) center no-repeat;
       display: block;
       position: absolute;
       bottom: 0;
@@ -6319,6 +6333,15 @@ code {
     -webkit-border-radius: 0.25rem;
     border-radius: 0.25rem;
     padding: 2px 4px; }
+
+.navbar .dropdown-menu {
+  padding: 0; }
+  .navbar .dropdown-menu a {
+    padding: 0.5rem;
+    display: block; }
+    .navbar .dropdown-menu a.dropdown-item.active, .navbar .dropdown-menu a.dropdown-item:active {
+      text-decoration: underline;
+      background-color: transparent; }
 
 .grayscale {
   -webkit-filter: grayscale(100%);

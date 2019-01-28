@@ -12,11 +12,11 @@ $(document).ready(function() {
     // ---------------
     // SMOOTH SCROLL
     // ---------------
-    $('.smooth-scroll a').click(function() {
+    $('.smooth-scroll a[href^="#"]').click(function() {
         let sectionTo = $(this).attr('href');
         $('html, body').animate({
             scrollTop: $(sectionTo).offset().top -100
-        }, 1500);
+        }, 750);
     });
 
     // ---------------

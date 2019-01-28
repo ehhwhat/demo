@@ -66,9 +66,11 @@
       background-image:url(https://cdn1.iconfinder.com/data/icons/feather-2/24/flag-16.png);
     }
     &.dot-success {
-      background-image:url(https://cdn2.iconfinder.com/data/icons/donkey/800/18-16.png);
+      background-image:url(https://cdn3.iconfinder.com/data/icons/flat-actions-icons-9/512/Tick_Mark-16.png);
     }
-
+    &.dot-fail {
+      background-image:url(https://cdn3.iconfinder.com/data/icons/flat-actions-icons-9/792/Close_Icon-16.png);
+    }
 
   }
 }
@@ -157,15 +159,17 @@
 
   // 69days in
   .dot-mkhalf {left:27.5%;}
-
   // 99days in
   .dot-ashridgedual {left:39.6%;}
-
+  // 113days in = 113/2.5 =
+  .dot-windsorhalf {left:45.2%;}
   // 119days in = 119/2.5 =
   .dot-ashridgedual2 {left:47.6%;}
+  // 127days in = 127/2.5 =
+  .dot-watfordhalf {left:50.8%;}
 
-  // 120days in = 120/2.5 =
-  .dot-windsorhalf {left:48%;}
+
+
 
   // 137 days in
   .dot-cycle2 {left:54.8%;}
@@ -196,8 +200,8 @@
   .dot-target-mkhalf {left:27.5%;}
   .dot-target-ashridge {left:39.6%;}
   .dot-target-ashridge2 {left:47.6%;}
-
-  .dot-target-windsorhalf {left:48%;}
+  .dot-target-windsorhalf {left:45.2%;}
+  .dot-watfordhalf {left:50.8%;}
 }
 
 .current-line {
@@ -213,6 +217,8 @@
   .dot-target-hatfield5 {left:22%;}
   .dot-target-mkhalf {left:27.5%;}
   .dot-target-ashridge {left:39.6%;}
+  .dot-target-windsorhalf {left:45.2%;}
+  .dot-target-ashridge2 {left:47.6%;}
 
   &:after {
     content:"";
