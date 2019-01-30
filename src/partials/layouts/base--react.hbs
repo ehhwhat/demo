@@ -1,0 +1,42 @@
+{{!-- layouts/base--react.hbs --}}
+
+<!doctype html>
+<html>
+    <head>
+        {{> includes/meta }}
+        <title>
+            {{#if title}}
+                {{title}}
+            {{else}}
+                Base Page Title
+            {{/if}}
+        </title>
+        <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@8.17.0/dist/lazyload.min.js"></script>
+        {{> includes/styles
+                domainprefix='../../'
+                version='13'
+        }}
+        {{#> head-block}}
+            {{!-- Custom <head> content per page could be added. --}}
+        {{/head-block}}
+    </head>
+
+    <body data-spy="scroll" data-target="#navbar" data-offset="150" class="smooth-scroll">
+
+        {{#> main-block}}
+            {{!-- main content goes here. --}}
+        {{/main-block}}
+
+        {{> includes/scripts
+            domainprefix='../../'
+            version='13'
+        }}
+
+        {{#> scripts-block
+                domainprefix='../../'
+                version='13'}}
+                {{!-- Custom scripts. --}}
+        {{/scripts-block}}
+
+    </body>
+</html>

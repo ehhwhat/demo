@@ -1,15 +1,11 @@
 {{!-- pages/react/static.hbs --}}
 
-{{#> layouts/base title="CV Full | React" }}
+{{#> layouts/base--react title="CV Full | React" }}
 
     {{#*inline "main-block"}}
 
-        <style>
-
-        </style>
-
         <!-- TARGET TO RENDER THE MARKUP -->
-        <div id="root"></div>
+        <div class="react-cv"  id="root"></div>
 
     {{/inline}}
 
@@ -19,4 +15,4 @@
         <script src="{{domainprefix}}js/react/react-cv-full.js?v{{version}}" type="text/babel"></script>
     {{/inline}}
 
-{{/layouts/base}}
+{{/layouts/base--react}}

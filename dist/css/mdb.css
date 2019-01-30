@@ -8395,30 +8395,30 @@ ul.stepper {
     -o-transition: all 2s;
     transition: all 2s; }
 
-.c012-card .card-img-wrapper {
-  overflow: hidden; }
-  .c012-card .card-img-wrapper img {
-    -webkit-transition: all 0.125s;
-    -o-transition: all 0.125s;
-    transition: all 0.125s; }
-  .c012-card .card-img-wrapper:hover img {
-    -webkit-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    transform: scale(1.1);
-    -webkit-transition: all 0.25s;
-    -o-transition: all 0.25s;
-    transition: all 0.25s; }
-
-.c012-card .card-header {
-  border: none;
-  padding-bottom: .25rem; }
-
-.c012-card .card-body {
-  padding-bottom: 0; }
-
-.c012-card .card-footer {
-  background-color: white;
-  padding-bottom: 0; }
+.c012-card {
+  font-weight: 300; }
+  .c012-card .card-img-wrapper {
+    overflow: hidden; }
+    .c012-card .card-img-wrapper img {
+      -webkit-transition: all 0.125s;
+      -o-transition: all 0.125s;
+      transition: all 0.125s; }
+    .c012-card .card-img-wrapper:hover img {
+      -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+      transform: scale(1.1);
+      -webkit-transition: all 0.25s;
+      -o-transition: all 0.25s;
+      transition: all 0.25s; }
+  .c012-card .card-header {
+    border: none;
+    padding-bottom: .25rem; }
+  .c012-card .card-body {
+    padding-bottom: 0;
+    font-weight: 300; }
+  .c012-card .card-footer {
+    background-color: white;
+    padding-bottom: 0; }
 
 .c013-injuries__wrapper {
   position: relative;
@@ -8484,6 +8484,51 @@ ul.stepper {
           height: 4rem;
           width: 4rem;
           right: -5rem; } }
+
+.react-cv {
+  /* LOADING STATES */ }
+  .react-cv .loading {
+    opacity: 0;
+    -webkit-transition: opacity 2s ease-in-out;
+    -o-transition: opacity 2s ease-in-out;
+    transition: opacity 2s ease-in-out; }
+  .react-cv .loaded {
+    opacity: 1;
+    -webkit-transition: opacity 2s ease-in-out;
+    -o-transition: opacity 2s ease-in-out;
+    transition: opacity 2s ease-in-out; }
+  .react-cv .bg-cashplus {
+    border-bottom: 4px solid #17264D !important; }
+  .react-cv .bg-homeserve {
+    border-bottom: 4px solid #e7342c !important; }
+  .react-cv .bg-npower {
+    border-bottom: 4px solid #b8277c !important; }
+  .react-cv .bg-icaew {
+    border-bottom: 4px solid #d6d0cd !important; }
+  .react-cv main {
+    margin-top: 3rem;
+    -webkit-transition: color 1s linear, background-color 0.5s linear !important;
+    -o-transition: color 1s linear, background-color 0.5s linear !important;
+    transition: color 1s linear, background-color 0.5s linear !important; }
+  .react-cv main.bg-dark {
+    color: white !important;
+    -webkit-transition: color 1s linear, background-color 0.5s linear !important;
+    -o-transition: color 1s linear, background-color 0.5s linear !important;
+    transition: color 1s linear, background-color 0.5s linear !important; }
+    .react-cv main.bg-dark .text-muted {
+      color: white !important; }
+    .react-cv main.bg-dark p a {
+      text-decoration: underline;
+      -webkit-text-decoration-color: white;
+      text-decoration-color: white; }
+    .react-cv main.bg-dark li a {
+      text-decoration: underline;
+      -webkit-text-decoration-color: white;
+      text-decoration-color: white; }
+    .react-cv main.bg-dark .c004-divider hr.section-divider:before {
+      color: white !important; }
+    .react-cv main.bg-dark .c012-card {
+      color: #212529 !important; }
 
 .dataPoint:empty {
   font-size: 2rem;

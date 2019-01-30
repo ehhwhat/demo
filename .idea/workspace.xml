@@ -24,21 +24,81 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cv-full.hbs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pages/react/cv-full.hbs">
+      <file leaf-file-name="_custom-styles.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scss/_custom-styles.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <state relative-caret-position="323">
+              <caret line="159" column="2" lean-forward="false" selection-start-line="159" selection-start-column="2" selection-end-line="161" selection-end-column="3" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="react-cv-full.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="_react.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scss/components/bespoke/_react.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="27" column="5" lean-forward="false" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.hbs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/pages/index.hbs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="223">
+              <caret line="103" column="131" lean-forward="false" selection-start-line="103" selection-start-column="131" selection-end-line="103" selection-end-column="131" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_custom-variables.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scss/_custom-variables.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cv-full.hbs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pages/react/cv-full.hbs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="15" lean-forward="false" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base--react.hbs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/partials/layouts/base--react.hbs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="25" lean-forward="false" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="react-cv-full.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/src/react/react-cv-full.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
-              <caret line="214" column="34" lean-forward="true" selection-start-line="214" selection-start-column="34" selection-end-line="214" selection-end-column="34" />
+            <state relative-caret-position="-2210">
+              <caret line="245" column="0" lean-forward="false" selection-start-line="245" selection-start-column="0" selection-end-line="245" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="c012-card.hbs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/partials/components/c012-card.hbs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="12" lean-forward="false" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -48,9 +108,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>text-warning</find>
-      <find>dot-target-hatfield5</find>
-      <find>cyclesWattAvg</find>
       <find>ste</find>
       <find>col-12</find>
       <find>view</find>
@@ -69,7 +126,6 @@
       <find>buildCube</find>
       <find>btn</find>
       <find>WorkExp</find>
-      <find>class</find>
       <find>mk-winter-half-1.jpg</find>
       <find>jqu</find>
       <find>dot-windsorhalf</find>
@@ -78,6 +134,10 @@
       <find>CardSubTitle</find>
       <find>SubTitle</find>
       <find>fireb</find>
+      <find>thingsToNote</find>
+      <find>toggleFullCV</find>
+      <find>SummaryOfMe</find>
+      <find>class</find>
     </findStrings>
     <replaceStrings>
       <replace>&lt;h3 class=&quot;mt-5 h3-responsive&quot;&gt;</replace>
@@ -93,8 +153,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/js/src/react/react-cv.js" />
-        <option value="$PROJECT_DIR$/js/src/react/react-static.js" />
         <option value="$PROJECT_DIR$/src/pages/react/inline.hbs" />
         <option value="$PROJECT_DIR$/js/src/react/react-inline.js" />
         <option value="$PROJECT_DIR$/src/pages/react/array.hbs" />
@@ -111,7 +169,6 @@
         <option value="$PROJECT_DIR$/scss/components/_c002-image-content-cta.scss" />
         <option value="$PROJECT_DIR$/src/partials/sublayouts/grid-wide__colfluid.hbs" />
         <option value="$PROJECT_DIR$/src/partials/components/c012-card.hbs" />
-        <option value="$PROJECT_DIR$/scss/components/_c012-card.scss" />
         <option value="$PROJECT_DIR$/src/partials/components/c014-blockquote.hbs" />
         <option value="$PROJECT_DIR$/src/partials/components/c014-blockquote__point.hbs" />
         <option value="$PROJECT_DIR$/src/partials/components/c013-injuries__point.hbs" />
@@ -123,7 +180,6 @@
         <option value="$PROJECT_DIR$/src/pages/general/components.hbs" />
         <option value="$PROJECT_DIR$/src/partials/components/c002-image-content-cta.hbs" />
         <option value="$PROJECT_DIR$/src/partials/components/c004-divider.hbs" />
-        <option value="$PROJECT_DIR$/src/pages/index.hbs" />
         <option value="$PROJECT_DIR$/src/partials/layouts/base.hbs" />
         <option value="$PROJECT_DIR$/src/partials/layouts/starter.hbs" />
         <option value="$PROJECT_DIR$/scss/components/_c014-blockquote.scss" />
@@ -132,7 +188,6 @@
         <option value="$PROJECT_DIR$/src/partials/components/c008-kpi.hbs" />
         <option value="$PROJECT_DIR$/src/partials/components/header.hbs" />
         <option value="$PROJECT_DIR$/src/partials/components/header__point--dropdown.hbs" />
-        <option value="$PROJECT_DIR$/scss/_custom-styles.scss" />
         <option value="$PROJECT_DIR$/src/partials/components/header__point.hbs" />
         <option value="$PROJECT_DIR$/js/src/bespoke/general.js" />
         <option value="$PROJECT_DIR$/scss/components/_c010-events.scss" />
@@ -142,8 +197,13 @@
         <option value="$PROJECT_DIR$/src/pages/app/triathlon-ashridge.hbs" />
         <option value="$PROJECT_DIR$/src/pages/app/triathlon.hbs" />
         <option value="$PROJECT_DIR$/src/partials/components/c006-image-block__point.hbs" />
-        <option value="$PROJECT_DIR$/src/pages/react/cv-full.hbs" />
+        <option value="$PROJECT_DIR$/scss/components/_c012-card.scss" />
+        <option value="$PROJECT_DIR$/scss/_custom-styles.scss" />
         <option value="$PROJECT_DIR$/js/src/react/react-cv-full.js" />
+        <option value="$PROJECT_DIR$/src/partials/layouts/base--react.hbs" />
+        <option value="$PROJECT_DIR$/src/pages/react/cv-full.hbs" />
+        <option value="$PROJECT_DIR$/scss/components/bespoke/_react.scss" />
+        <option value="$PROJECT_DIR$/src/pages/index.hbs" />
       </list>
     </option>
   </component>
@@ -264,12 +324,6 @@
               <item name="ver2.0" type="b2602c69:ProjectViewProjectNode" />
               <item name="ver2.0" type="462c0819:PsiDirectoryNode" />
               <item name="scss" type="462c0819:PsiDirectoryNode" />
-              <item name="addons" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ver2.0" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ver2.0" type="462c0819:PsiDirectoryNode" />
-              <item name="scss" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -278,12 +332,6 @@
               <item name="scss" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="bespoke" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ver2.0" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ver2.0" type="462c0819:PsiDirectoryNode" />
-              <item name="scss" type="462c0819:PsiDirectoryNode" />
-              <item name="sublayouts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ver2.0" type="b2602c69:ProjectViewProjectNode" />
@@ -388,11 +436,11 @@
       <recent name="C:\xampp\htdocs\ver2.0\source\pages" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\ver2.0\src\partials\layouts" />
+      <recent name="C:\xampp\htdocs\ver2.0\scss\components\bespoke" />
       <recent name="C:\xampp\htdocs\ver2.0\src\pages\app" />
       <recent name="C:\xampp\htdocs\ver2.0\src\partials\components" />
       <recent name="C:\xampp\htdocs\ver2.0\js\src\react" />
-      <recent name="C:\xampp\htdocs\ver2.0\src\pages\react" />
-      <recent name="C:\xampp\htdocs\ver2.0\scss\components" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -421,12 +469,12 @@
       <option name="presentableId" value="Default" />
       <updated>1539524445068</updated>
       <workItem from="1539524446362" duration="33506000" />
-      <workItem from="1541362131120" duration="276833000" />
+      <workItem from="1541362131120" duration="289929000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="310339000" />
+    <option name="totallyTimeSpent" value="323435000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -487,38 +535,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/partials/components/c000-comp-desc.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/partials/sublayouts/grid-wide__colfluid.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="36" lean-forward="false" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scss/components/_c012-card.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="25" lean-forward="false" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/partials/components/c005-blockquote.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="9" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scss/components/_c001-basic-content.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -566,14 +582,6 @@
           <folding>
             <element signature="e#239#245#0#HTML" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scss/_custom-variables.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -659,14 +667,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/index.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="46" column="50" lean-forward="false" selection-start-line="46" selection-start-column="50" selection-end-line="46" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scss/components/_c014-blockquote.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
@@ -703,14 +703,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
           <caret line="66" column="37" lean-forward="false" selection-start-line="66" selection-start-column="37" selection-end-line="66" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/partials/components/c012-card.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="19" lean-forward="false" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="32" />
           <folding />
         </state>
       </provider>
@@ -783,14 +775,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="483">
           <caret line="219" column="38" lean-forward="false" selection-start-line="219" selection-start-column="38" selection-end-line="219" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scss/_custom-styles.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="243" column="33" lean-forward="false" selection-start-line="243" selection-start-column="33" selection-end-line="243" selection-end-column="33" />
           <folding />
         </state>
       </provider>
@@ -883,18 +867,82 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/react/cv-full.hbs">
+    <entry file="file://$PROJECT_DIR$/src/partials/components/c012-card.hbs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        <state relative-caret-position="51">
+          <caret line="3" column="12" lean-forward="false" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scss/components/_c012-card.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="18" lean-forward="false" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/src/react/react-cv-full.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="214" column="34" lean-forward="true" selection-start-line="214" selection-start-column="34" selection-end-line="214" selection-end-column="34" />
+        <state relative-caret-position="-2210">
+          <caret line="245" column="0" lean-forward="false" selection-start-line="245" selection-start-column="0" selection-end-line="245" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/partials/includes/scripts.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/partials/layouts/base--react.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="25" lean-forward="false" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/react/cv-full.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="15" lean-forward="false" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scss/_custom-styles.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="159" column="2" lean-forward="false" selection-start-line="159" selection-start-column="2" selection-end-line="161" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scss/_custom-variables.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scss/components/bespoke/_react.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="5" lean-forward="false" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/index.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="103" column="131" lean-forward="false" selection-start-line="103" selection-start-column="131" selection-end-line="103" selection-end-column="131" />
           <folding />
         </state>
       </provider>

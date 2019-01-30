@@ -1,0 +1,52 @@
+.react-cv {
+
+  /* LOADING STATES */
+  .loading {
+    opacity:0;
+    transition: opacity 2s ease-in-out;
+  }
+  .loaded {
+    opacity:1;
+    transition: opacity 2s ease-in-out;
+  }
+
+  .bg-cashplus {border-bottom:4px solid #17264D!important;}
+  .bg-homeserve {border-bottom:4px solid  #e7342c!important;}
+  .bg-npower {border-bottom:4px solid  #b8277c!important;}
+  .bg-icaew {border-bottom:4px solid #d6d0cd!important;}
+
+  main {
+    margin-top:3rem;
+    transition: color 1s linear, background-color 0.5s linear!important;
+  }
+
+  main.bg-dark {
+    color:white!important;
+    transition: color 1s linear, background-color 0.5s linear!important;
+    .text-muted {
+      color:white!important;
+    }
+
+    p {
+      a {
+        text-decoration: underline;
+        text-decoration-color: white;
+      }
+    }
+    li {
+      a {
+        text-decoration: underline;
+        text-decoration-color: white;
+      }
+    }
+
+    .c004-divider hr.section-divider:before {
+      color:white!important;
+    }
+
+    .c012-card {
+      color: #212529!important;
+    }
+
+  }
+}

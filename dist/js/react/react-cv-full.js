@@ -77,201 +77,241 @@ class App extends React.Component {
         return ([
             <div className={this.state.showLoading ? 'loading' : 'loaded'} key="divWrapper">
 
+                <nav className={this.state.darkTheme ? 'navbar navbar-expand-lg navbar-dark bg-dark fixed-top scrolling-navbar' : 'navbar navbar-expand-lg navbar-dark bg-dark fixed-top scrolling-navbar'}>
+                    <div className="container">
+                        <a className="navbar-brand d-none d-sm-block" href="../index.html">
+                            <i className="fa fa-home" aria-hidden="true"></i>
+                        </a>
+                        <a className="navbar-brand" href="#top">
+                            <strong>BPK</strong>
+                        </a>
+                        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+                            <span className="navbar-toggler-icon"></span>
+                        </button>
+                        <div className="collapse navbar-collapse" id="navbar-content">
+                            <ul className="navbar-nav mr-auto">
+                                <li className="nav-item d-block d-sm-none">
+                                    <a className="nav-link" href="../index.html"><i className="fa fa-home" aria-hidden="true"></i></a>
+                                </li>
+                                <li className="nav-item">
+                                    <a className="nav-link" href="#introduction">Introduction</a>
+                                </li>
+                                <li className="nav-item">
+                                    <a className="nav-link" href="#skills">Skills</a>
+                                </li>
+                                <li className="nav-item">
+                                    <a className="nav-link" href="#projects">Key projects</a>
+                                </li>
+                                <li className="nav-item">
+                                    <a className="nav-link" href="#clients">Clients</a>
+                                </li>
+                                {this.state.fullCV &&
+                                <li className="nav-item">
+                                    <a className="nav-link" href="#interests">Interests</a>
+                                </li>
+                                }
+                                {this.state.fullCV &&
+                                <li className="nav-item">
+                                    <a className="nav-link" href="#demo">Demo details</a>
+                                </li>
+                                }
+                            </ul>
+                            <ul className="navbar-nav ml-auto nav-flex-icons">
+                                <li className="nav-item">
+                                    <a href="#root" className={this.state.fullCV ? 'nav-link waves-effect waves-light' : 'nav-link waves-effect waves-light'} onClick={this.toggleFullCV}>
+                                        {this.state.fullCV ? 'Show concise CV' : 'Show full CV'}
+                                    </a>
+                                </li>
+                                <li className="nav-item">
+                                    <a href="#root" className={this.state.darkTheme ? 'nav-link waves-effect waves-light' : 'nav-link waves-effect waves-light'} onClick={this.toggleDarkTheme}>
+                                        {this.state.darkTheme ? 'Show light' : 'Show dark'}
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+
                 <main className={this.state.darkTheme ? 'bg-light' : 'bg-white'} key="mainWrapper">
 
                     <div className="container-fluid py-5">
 
-                        <nav className={this.state.darkTheme ? 'navbar navbar-expand-lg navbar-dark bg-dark fixed-top scrolling-navbar' : 'navbar navbar-expand-lg navbar-dark bg-dark fixed-top scrolling-navbar'}>
-                            <div className="container text-center">
-                                <div className="row text-center">
-                                    <div className="col text-center">
-                                        <button className={this.state.fullCV ? 'btn btn-outline-secondary btn-sm waves-effect mb-0' : 'btn btn-outline-secondary btn-sm' +
-                                            ' waves-effect mb-0'} onClick={this.toggleFullCV}>
-                                            {this.state.fullCV ? 'Show concise CV' : 'Show full CV'}
-                                        </button>
-                                        <button className={this.state.darkTheme ? 'btn btn-outline-secondary btn-sm waves-effect mb-0' : 'btn btn-outline-secondary btn-sm waves-effect mb-0'} onClick={this.toggleDarkTheme}>
-                                            {this.state.darkTheme ? 'Show light' : 'Show dark'}
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </nav>
+                        <div className="row">
 
-                        <div className={this.state.fullCV ? 'container mt-5' : 'container'}>
-                            {this.state.fullCV &&
-                            <div className="row">
-                                <div className="col-12">
-                                    <div className="c006-image-block grid mb-5">
-                                        <div className="grid-item wow fadeIn animated">
-                                            <img  src="../../../img/app/triathlon/self/norm.jpg" className="img-fluid grayscale" alt="???" />
-                                        </div>
-                                        <div className="grid-item wow fadeIn animated">
-                                            <img  src="../../../img/app/triathlon/self/swim.jpg" className="img-fluid grayscale" alt="???" />
-                                        </div>
-                                        <div className="grid-item wow fadeIn animated">
-                                            <img  src="../../../img/app/triathlon/self/bike.jpg" className="img-fluid grayscale" alt="???" />
-                                        </div>
-                                        <div className="grid-item wow fadeIn animated">
-                                            <img  src="../../../img/app/triathlon/self/run.jpg" className="img-fluid grayscale" alt="???" />
+                            <div id="introduction" className={this.state.fullCV ? 'container' : 'container'}>
+                                <div className="row">
+                                    <div className={this.state.fullCV ? 'col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3' : 'col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3'}>
+                                        <div className="c001-basic-content">
+
+                                            <Title dataFromParent={this.state.dataToUse} />
+
+                                            {this.state.fullCV &&
+                                                <p>
+                                                    <Available dataFromParent={this.state.dataToUse}/><br/>
+                                                    <Location dataFromParent={this.state.dataToUse}/><br/>
+                                                    <LocationWanted dataFromParent={this.state.dataToUse}/><br/>
+                                                    <span className="badge badge-pill badge-secondary animated bounceIn">ver 4.0</span>
+                                                </p>
+                                            }
+
+                                            <Summary dataFromParent={this.state.dataToUse}  />
+
+                                            {this.state.fullCV &&
+                                                <div className="animated bounceIn">
+                                                    <SummaryOfMe dataFromParent={this.state.dataToUse}/>
+                                                </div>
+                                            }
+
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            }
-                            <div className="row">
-                                <div className={this.state.fullCV ? 'col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3' : 'col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3'}>
-                                    <div className="c001-basic-content">
-
-                                        <Title dataFromParent={this.state.dataToUse} />
-
-                                        {this.state.fullCV &&
-                                            <p>
-                                                <Available dataFromParent={this.state.dataToUse}/><br/>
-                                                <Location dataFromParent={this.state.dataToUse}/><br/>
-                                                <LocationWanted dataFromParent={this.state.dataToUse}/><br/>
-                                                <span class="badge badge-pill badge-secondary">ver 4.0</span>
-                                            </p>
-                                        }
-
-                                        <CardSubTitle dataFromParent="About me" />
-
-                                        <Summary dataFromParent={this.state.dataToUse}  />
-
-                                        {this.state.fullCV &&
-                                            <div className="animated fadeIn">
-                                                <SummaryOfMe dataFromParent={this.state.dataToUse}/>
+                                {this.state.fullCV &&
+                                <div className="row">
+                                    <div className="col-12">
+                                        <div className="c006-image-block grid mb-5">
+                                            <div className="grid-item wow fadeIn animated">
+                                                <img  src="../../../img/app/triathlon/self/norm.jpg" className="img-fluid grayscale" alt="???" />
                                             </div>
-                                        }
-
+                                            <div className="grid-item wow fadeIn animated">
+                                                <img  src="../../../img/app/triathlon/self/swim.jpg" className="img-fluid grayscale" alt="???" />
+                                            </div>
+                                            <div className="grid-item wow fadeIn animated">
+                                                <img  src="../../../img/app/triathlon/self/bike.jpg" className="img-fluid grayscale" alt="???" />
+                                            </div>
+                                            <div className="grid-item wow fadeIn animated">
+                                                <img  src="../../../img/app/triathlon/self/run.jpg" className="img-fluid grayscale" alt="???" />
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
+                                }
                             </div>
-                        </div>
 
-                        <div className="container c004-divider">
-                            <div className="row">
-                                <div className="col-md-12">
-                                    <hr className="section-divider" />
-                                </div>
-                            </div>
-                        </div>
-
-                        {this.state.fullCV &&
-                            <div className="container">
-                                <div className="row animated fadeIn delay200">
-                                    <div className="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
-                                        <ThingsToNote dataFromParent={this.state.dataToUse.thingsToNote}/>
-                                    </div>
-                                </div>
-                                <div className="row c004-divider">
+                            <div className="container c004-divider">
+                                <div className="row">
                                     <div className="col-md-12">
                                         <hr className="section-divider" />
                                     </div>
                                 </div>
                             </div>
-                        }
 
-                        <div className="container">
-                            <div className="row">
-                                <div className={this.state.fullCV ? 'col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3' : 'col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3'}>
-                                    <div className="c001-basic-content">
-                                        <TitleH1 key="TitleH1Skills" dataFromParent="Skills"/>
-                                        <TitleH2 key="TitleH2Skills" dataFromParent="???"/>
+                            {this.state.fullCV &&
+                                <div className="container">
+                                    <div className="row">
+                                        <div className="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+                                            <ThingsToNote dataFromParent={this.state.dataToUse.thingsToNote}/>
+                                        </div>
+                                    </div>
+                                    <div className="row c004-divider">
+                                        <div className="col-md-12">
+                                            <hr className="section-divider" />
+                                        </div>
+                                    </div>
+                                </div>
+                            }
 
-                                        <TitleH3 key="TitleH3Skills" dataFromParent="Primary"/>
-                                        <p className="">Core skills used on a daily basis over a good 10 years of career.</p>
-                                        <Skills dataFromParent={this.state.dataToUse.primarySkills} dataFromParentViewType="alt" />
-                                        {this.state.fullCV &&
-                                            <div className="animated fadeIn">
-                                                <TitleH3 dataFromParent="Secondary"/>
-                                                <p className="">Skills used but not very regularly, maybe in a personal project or through my own learning.</p>
-                                                <Skills dataFromParent={this.state.dataToUse.secondarySkills} dataFromParentViewType="alt" />
+                            <div id="skills" className="container">
+                                <div className="row">
+                                    <div className={this.state.fullCV ? 'col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3' : 'col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3'}>
+                                        <div className="c001-basic-content">
+                                            <TitleH1 key="TitleH1Skills" dataFromParent="Skills"/>
+                                            <TitleH2 key="TitleH2Skills" dataFromParent="Technologies, techniques and languages I have experience of or have built my career around"/>
 
-                                                <TitleH3 dataFromParent="Worked with"/>
-                                                <p className="">Skills / software used / techniques used / familiar with.</p>
-                                                <Skills dataFromParent={this.state.dataToUse.workedWithSkills} dataFromParentViewType="alt" />
-                                            </div>
-                                        }
+                                            <TitleH3 key="TitleH3Skills" dataFromParent="Primary"/>
+                                            <p className="">Core skills used on a daily basis over a good 10 years of career.</p>
+                                            <Skills dataFromParent={this.state.dataToUse.primarySkills} dataFromParentViewType="alt" />
+                                            {this.state.fullCV &&
+                                                <div className="animated fadeIn">
+                                                    <TitleH3 dataFromParent="Secondary"/>
+                                                    <p className="">Skills used but not very regularly, maybe in a personal project or through my own learning.</p>
+                                                    <Skills dataFromParent={this.state.dataToUse.secondarySkills} dataFromParentViewType="alt" />
+
+                                                    <TitleH3 dataFromParent="Worked with"/>
+                                                    <p className="">Skills / software used / techniques used / familiar with.</p>
+                                                    <Skills dataFromParent={this.state.dataToUse.workedWithSkills} dataFromParentViewType="alt" />
+                                                </div>
+                                            }
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div className="container c004-divider">
-                            <div className="row">
-                                <div className="col-md-12">
-                                    <hr className="section-divider" />
+                            <div className="container c004-divider">
+                                <div className="row">
+                                    <div className="col-md-12">
+                                        <hr className="section-divider" />
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div className="container">
-                            <div className="row">
-                                <div className={this.state.fullCV ? 'col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3' : 'col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3'}>
-                                    <TitleH1 key="TitleH1projects" dataFromParent="Key projects"/>
-                                    <TitleH2 key="TitleH2projects" dataFromParent="???"/>
-                                    <p>???.</p>
+                            <div id="projects" className="container">
+                                <div className="row">
+                                    <div className={this.state.fullCV ? 'col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3' : 'col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3'}>
+                                        <TitleH1 key="TitleH1projects" dataFromParent="Key projects"/>
+                                        <TitleH2 key="TitleH2projects" dataFromParent="Examples of work I`ve been involved in"/>
+                                    </div>
+                                </div>
+                                <div className="row">
+                                    <div className="col-12">
+                                        <KeyProjects dataFromParent={this.state.dataToUse} />
+                                    </div>
                                 </div>
                             </div>
-                            <div className="row">
-                                <div className="col-12">
-                                    <KeyProjects dataFromParent={this.state.dataToUse} />
-                                </div>
-                            </div>
-                        </div>
 
-                        <div className="container c004-divider">
-                            <div className="row">
-                                <div className="col-md-12">
-                                    <hr className="section-divider" />
+                            <div className="container c004-divider">
+                                <div className="row">
+                                    <div className="col-md-12">
+                                        <hr className="section-divider" />
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div className="container">
-                            <div className="row">
-                                <div className={this.state.fullCV ? 'col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3' : 'col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3'}>
-                                    <TitleH1 key="TitleH1Clients" dataFromParent="Clients"/>
-                                    <TitleH2 key="TitleH2Clients" dataFromParent="Companies i have worked with"/>
-                                    <p>A list of all the major companies i have worked with on various projects.</p>
+                            <div id="clients" className="container">
+                                <div className="row">
+                                    <div className={this.state.fullCV ? 'col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3' : 'col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3'}>
+                                        <TitleH1 key="TitleH1Clients" dataFromParent="Clients"/>
+                                        <TitleH2 key="TitleH2Clients" dataFromParent="Companies i have worked with"/>
+                                        <p>A list of all the major companies i have worked with on various projects.</p>
+                                    </div>
+                                </div>
+                                <div className="row">
+                                    <div className="col-12">
+                                        <ClientsLogos dataFromParent={this.state.dataToUse} />
+                                    </div>
                                 </div>
                             </div>
-                            <div className="row">
-                                <div className="col-12">
-                                    <ClientsLogos dataFromParent={this.state.dataToUse} />
-                                </div>
-                            </div>
-                        </div>
 
-                        <div className="container c004-divider">
-                            <div className="row">
-                                <div className="col-md-12">
-                                    <hr className="section-divider" />
+                            <div className="container c004-divider">
+                                <div className="row">
+                                    <div className="col-md-12">
+                                        <hr className="section-divider" />
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        {this.state.fullCV &&
-                        <div className="container">
-                            <div className="row my-5">
-                                <div className={this.state.fullCV ? 'col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3' : 'col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3'}>
-                                    <TitleH1 key="TitleH1Interests" dataFromParent="Interests"/>
-                                    <TitleH2 key="TitleH2Interests" dataFromParent="Any and everything i am into"/>
-                                    <Interests dataFromParent={this.state.dataToUse}/>
+                            {this.state.fullCV &&
+                            <div id="interests" className="container">
+                                <div className="row my-5">
+                                    <div className={this.state.fullCV ? 'col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3' : 'col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3'}>
+                                        <TitleH1 key="TitleH1Interests" dataFromParent="Interests"/>
+                                        <TitleH2 key="TitleH2Interests" dataFromParent="Any and everything i am into"/>
+                                        <Interests dataFromParent={this.state.dataToUse}/>
+                                    </div>
                                 </div>
                             </div>
+                            }
+
                         </div>
-                        }
 
                     </div>
 
                     {this.state.fullCV &&
-                    <div className="container-fluid bg-secondary py-5">
+                    <div id="demo" className="container-fluid bg-light py-5">
                         <div className="container">
                             <div className="row">
                                 <div className="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
                                     <TitleH1 key="TitleH1Demo" dataFromParent="Demo details"/>
-                                    <TitleH2 key="TitleH2Demo" dataFromParent="???"/>
+                                    <TitleH2 key="TitleH2Demo" dataFromParent="Information on how this React demo works"/>
                                 </div>
                             </div>
                             <div className="row">
@@ -284,6 +324,14 @@ class App extends React.Component {
                     }
 
                 </main>
+                <footer className="page-footer font-small mdb-color lighten-1">
+                    <div className="footer-copyright text-center py-3">
+                        <ul className="list-inline my-0">
+                            <li className="list-inline-item"><a href="../index.html">Home</a></li>
+                            <li className="list-inline-item"><a href="#root"><strong>React CV</strong></a></li>
+                        </ul>
+                    </div>
+                </footer>
             </div>
         ]);
     }
@@ -364,7 +412,7 @@ class Available extends React.Component {
         console.log(this.props.dataFromParent.available);
         console.log('%c Available END', 'color: #61C155; font-weight: bold;background:#fff;border-left:5px solid #61C155;padding:15px 30px;');
         return ([
-            <span className="badge badge-pill badge-success" key="available">Available from: <strong>{this.props.dataFromParent.available}</strong></span>
+            <span className="badge badge-pill badge-success animated bounceIn" key="available">Available from: <strong>{this.props.dataFromParent.available}</strong></span>
         ]);
     }
 }
@@ -375,7 +423,7 @@ class Location extends React.Component {
         console.log(this.props.dataFromParent.location);
         console.log('%c Location END', 'color: #61C155; font-weight: bold;background:#fff;border-left:5px solid #61C155;padding:15px 30px;');
         return ([
-            <span className="badge badge-pill badge-default" key="Location">Based in: <strong>{this.props.dataFromParent.location}</strong></span>
+            <span className="badge badge-pill badge-secondary animated bounceIn" key="Location">Based in: <strong>{this.props.dataFromParent.location}</strong></span>
         ]);
     }
 }
@@ -386,7 +434,7 @@ class LocationWanted extends React.Component {
         console.log(this.props.dataFromParent.locationWanted);
         console.log('%c locationWanted END', 'color: #61C155; font-weight: bold;background:#fff;border-left:5px solid #61C155;padding:15px 30px;');
         return ([
-            <span className="badge badge-pill badge-default" key="LocationWanted">Roles in: <strong>{this.props.dataFromParent.locationWanted[0]}</strong>, <strong>{this.props.dataFromParent.locationWanted[1]}</strong> or <strong>{this.props.dataFromParent.locationWanted[2]}</strong></span>
+            <span className="badge badge-pill badge-secondary animated bounceIn" key="LocationWanted">Roles in: <strong>{this.props.dataFromParent.locationWanted[0]}</strong>, <strong>{this.props.dataFromParent.locationWanted[1]}</strong> or <strong>{this.props.dataFromParent.locationWanted[2]}</strong></span>
         ]);
     }
 }
@@ -428,20 +476,20 @@ class Skills extends React.Component {
 
         if(this.props.dataFromParentViewType === "alt") {
             return (
-                <ul className="list-inline">
+                <ul className="">
                     {
                         array.map(function (item, i) {
-                            return <li key={i} id={i} className="list-inline-item">{item}</li>
+                            return <li key={i} id={i} className="">{item}</li>
                         })
                     }
                 </ul>
             )
         } else {
             return (
-                <ul className="list-group list-group-flush">
+                <ul className="">
                     {
                         array.map(function (item, i) {
-                            return <li key={i} id={i} className="list-group-item">{item}</li>
+                            return <li key={i} id={i} className="">{item}</li>
                         })
                     }
                 </ul>
@@ -485,7 +533,7 @@ class ClientsLogos extends React.Component {
             <div className="row text-center  justify-content-center">
                 {
                     array.map(function (item, i) {
-                        return <div key={i} id={i} className={"clientLogos col-6 col-md-2 wow fadeIn animated " +i+ "00"}><img className="" src={item} /></div>
+                        return <div key={i} id={i} className={"clientLogos col-6 col-md-2 wow fadeIn animated " +i+ "00"}><img className="mb-4" src={item} /></div>
                     })
                 }
             </div>
@@ -533,28 +581,31 @@ class KeyProjects extends React.Component {
                                 color = "bg-cashplus";
                             } else if(item[0] === "npower") {
                                 color = "bg-npower";
+                            } else if(item[0] === "ICAEW") {
+                                color = "bg-icaew";
                             } else if(item[0] === "Homeserve PLC" || "Homeserve HML") {
                                 color = "bg-homeserve";
-                            } else {
+                            }  else {
                                 color = "be-muted";
                             }
 
-                            return <div className={"card my-4 animated fadeIn delay" +i+"00"} key={i} id={i}>
-                                <div className={"card-header " + color}></div>
-                                <div className="card-body">
-                                    <h5 className="card-title"><span dangerouslySetInnerHTML={ { __html: item[0] } }></span></h5>
-                                    <p><strong dangerouslySetInnerHTML={ { __html: item[4] } }></strong></p>
-                                    <span dangerouslySetInnerHTML={ { __html: item[5] } }></span>
+                            return <div className={"card c012-card my-3 animated fadeIn delay" +i+"00"} key={i} id={i}>
+                                <div id={"proj-"+item[0]} className={"card-header " + color}>
+                                    <h3 className="h3-responsive"><span dangerouslySetInnerHTML={ { __html: item[0] } }></span></h3>
+                                    <h5 className="h5-responsive"><span dangerouslySetInnerHTML={ { __html: item[4] } }></span></h5>
                                 </div>
-                                <div className="card-footer  text-muted">
-                                    {item[2]} | {item[1]}
+                                <div className="card-body">
+                                    <div dangerouslySetInnerHTML={ { __html: item[5] } }></div>
+                                </div>
+                                <div className="card-footer">
+                                    <p>{item[2]} | {item[1]}</p>
                                 </div>
                             </div>
                         })
                     }
                     <div className="text-center">
-                        <button className={this.state.showAll ? 'btn btn-info bmd-btn-fab' : 'btn btn-info bmd-btn-fab '} onClick={this.toggleShowAll}>
-                            {this.state.showAll ? '-' : '+'}
+                        <button className={this.state.showAll ? 'btn btn-outline-dark waves-effect' : 'btn btn-outline-dark waves-effect'} onClick={this.toggleShowAll}>
+                            {this.state.showAll ? 'Show less' : 'Show more'}
                         </button>
                     </div>
                 </div>
@@ -616,9 +667,9 @@ class ThingsToNote extends React.Component {
         console.log('%c ThingsToNote END', 'color: #61C155; font-weight: bold;background:#fff;border-left:5px solid #61C155;padding:15px 30px;');
 
         return (
-            <div class="c014-blockquote">
-                <blockquote class="">
-                    <p class="lead">{this.props.dataFromParent}</p>
+            <div className="c014-blockquote wow fadeIn">
+                <blockquote className="">
+                    <p className="lead">{this.props.dataFromParent}</p>
                 </blockquote>
             </div>
         )
@@ -664,14 +715,14 @@ class DemoDetails extends React.Component {
             <div className="row">
                 {this.state.showAll &&
                 <div className="col-12 col-sm-12 col-md-4 mb-5">
-                    <div className="card animated fadeIn delay200">
+                    <div className="card c012-card animated fadeIn">
                         <div className="card-header">
-                            <SubSubTitle dataFromParent="General" />
+                            <h3 className="h3-responsive">General</h3>
                         </div>
                         <div className="card-body">
                             {
                                 this.state.general.map(function (item, i) {
-                                    return <p key={i} id={i} className="card-text">{item}</p>
+                                    return <p key={i} id={i} className="">{item}</p>
                                 })
                             }
                         </div>
@@ -680,14 +731,14 @@ class DemoDetails extends React.Component {
                 }
                 {this.state.showAll &&
                 <div className="col-12 col-sm-12 col-md-4 mb-5">
-                    <div className="card animated fadeIn delay400">
+                    <div className="card c012-card animated fadeIn">
                         <div className="card-header">
-                            <SubSubTitle dataFromParent="Data related"/>
+                            <h3 className="h3-responsive">Data related</h3>
                         </div>
                         <div className="card-body">
                             {
                                 this.state.data.map(function (item, i) {
-                                    return <p key={i} id={i} className="card-text">{item}</p>
+                                    return <p key={i} id={i} className="">{item}</p>
                                 })
                             }
                         </div>
@@ -696,14 +747,14 @@ class DemoDetails extends React.Component {
                 }
                 {this.state.showAll &&
                 <div className="col-12 col-sm-12 col-md-4 mb-5">
-                    <div className="card animated fadeIn delay600">
+                    <div className="card c012-card animated fadeIn">
                         <div className="card-header">
-                            <SubSubTitle dataFromParent="Javascript"/>
+                            <h3 className="h3-responsive">Javascript</h3>
                         </div>
                         <div className="card-body">
                             {
                                 this.state.js.map(function (item, i) {
-                                    return <p key={i} id={i} className="card-text">{item}</p>
+                                    return <p key={i} id={i} className="">{item}</p>
                                 })
                             }
                         </div>
@@ -712,8 +763,8 @@ class DemoDetails extends React.Component {
                 }
                 <div className="col-12">
                     <div className="text-center">
-                        <button className={this.state.showAll ? 'btn btn-info bmd-btn-fab' : 'btn btn-info bmd-btn-fab '} onClick={this.toggleShowAll}>
-                            {this.state.showAll ? '-' : '+'}
+                        <button className={this.state.showAll ? 'btn btn-outline-dark waves-effect' : 'btn btn-outline-dark waves-effect'} onClick={this.toggleShowAll}>
+                            {this.state.showAll ? 'Hide' : 'Show'}
                         </button>
                     </div>
                 </div>
