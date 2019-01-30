@@ -170,16 +170,16 @@ class App extends React.Component {
                                     <div className="col-12">
                                         <div className="c006-image-block grid mb-5">
                                             <div className="grid-item wow fadeIn animated">
-                                                <img  src="../../../img/app/triathlon/self/norm.jpg" className="img-fluid grayscale" alt="???" />
+                                                <img  src="../../img/app/triathlon/self/norm.jpg" className="img-fluid grayscale" alt="Me" />
                                             </div>
                                             <div className="grid-item wow fadeIn animated">
-                                                <img  src="../../../img/app/triathlon/self/swim.jpg" className="img-fluid grayscale" alt="???" />
+                                                <img  src="../../img/app/triathlon/self/swim.jpg" className="img-fluid grayscale" alt="Swim" />
                                             </div>
                                             <div className="grid-item wow fadeIn animated">
-                                                <img  src="../../../img/app/triathlon/self/bike.jpg" className="img-fluid grayscale" alt="???" />
+                                                <img  src="../../img/app/triathlon/self/bike.jpg" className="img-fluid grayscale" alt="Bike" />
                                             </div>
                                             <div className="grid-item wow fadeIn animated">
-                                                <img  src="../../../img/app/triathlon/self/run.jpg" className="img-fluid grayscale" alt="???" />
+                                                <img  src="../../img/app/triathlon/self/run.jpg" className="img-fluid grayscale" alt="Run" />
                                             </div>
                                         </div>
                                     </div>
