@@ -124,7 +124,7 @@ class App extends React.Component {
                                 </li>
                                 <li className="nav-item">
                                     <a href="#root" className={this.state.darkTheme ? 'nav-link waves-effect waves-light' : 'nav-link waves-effect waves-light'} onClick={this.toggleDarkTheme}>
-                                        {this.state.darkTheme ? 'Show light' : 'Show dark'}
+                                        {this.state.darkTheme ? 'Default' : 'Accessible'}
                                     </a>
                                 </li>
                             </ul>
@@ -132,7 +132,7 @@ class App extends React.Component {
                     </div>
                 </nav>
 
-                <main className={this.state.darkTheme ? 'bg-light' : 'bg-white'} key="mainWrapper">
+                <main className={this.state.darkTheme ? 'bg-accessible' : 'bg-white'} key="mainWrapper">
 
                     <div className="container-fluid py-5">
 
@@ -306,7 +306,7 @@ class App extends React.Component {
                     </div>
 
                     {this.state.fullCV &&
-                    <div id="demo" className="container-fluid bg-light py-5">
+                    <div id="demo" className="container-fluid bg-secondary py-5">
                         <div className="container">
                             <div className="row">
                                 <div className="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
@@ -412,7 +412,7 @@ class Available extends React.Component {
         console.log(this.props.dataFromParent.available);
         console.log('%c Available END', 'color: #61C155; font-weight: bold;background:#fff;border-left:5px solid #61C155;padding:15px 30px;');
         return ([
-            <span className="badge badge-pill badge-success animated bounceIn" key="available">Available from: <strong>{this.props.dataFromParent.available}</strong></span>
+            <span className="animated bounceIn" key="available">Available from: <strong className="text-success">{this.props.dataFromParent.available}</strong></span>
         ]);
     }
 }
@@ -423,7 +423,7 @@ class Location extends React.Component {
         console.log(this.props.dataFromParent.location);
         console.log('%c Location END', 'color: #61C155; font-weight: bold;background:#fff;border-left:5px solid #61C155;padding:15px 30px;');
         return ([
-            <span className="badge badge-pill badge-secondary animated bounceIn" key="Location">Based in: <strong>{this.props.dataFromParent.location}</strong></span>
+            <span className="animated bounceIn" key="Location">Based in: <strong>{this.props.dataFromParent.location}</strong></span>
         ]);
     }
 }
@@ -434,7 +434,7 @@ class LocationWanted extends React.Component {
         console.log(this.props.dataFromParent.locationWanted);
         console.log('%c locationWanted END', 'color: #61C155; font-weight: bold;background:#fff;border-left:5px solid #61C155;padding:15px 30px;');
         return ([
-            <span className="badge badge-pill badge-secondary animated bounceIn" key="LocationWanted">Roles in: <strong>{this.props.dataFromParent.locationWanted[0]}</strong>, <strong>{this.props.dataFromParent.locationWanted[1]}</strong> or <strong>{this.props.dataFromParent.locationWanted[2]}</strong></span>
+            <span className="animated bounceIn" key="LocationWanted">Roles in: <strong>{this.props.dataFromParent.locationWanted[0]}</strong>, <strong>{this.props.dataFromParent.locationWanted[1]}</strong> or <strong>{this.props.dataFromParent.locationWanted[2]}</strong></span>
         ]);
     }
 }
