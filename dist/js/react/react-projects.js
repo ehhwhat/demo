@@ -10,6 +10,9 @@ class App extends React.Component {
             dataToUse: [
                 { }
             ],
+            dataAll: [
+                { }
+            ],
             isHidden: true,
             fullCV: false,
             showLoading:true,
@@ -140,14 +143,51 @@ class App extends React.Component {
             });
     };
 
-    toggleNpower = () => {
+    toggleNpower = test => () => {
+        console.log('toggleNpower');
+        console.log(test);
         this.setState({showLoading:true});
         axios.get('https://projects-b37dc.firebaseio.com/.json') // JSON File Path
             .then( response => {
                 let array = $.map(response.data, function(value, index) {
                     return [value];
                 });
-                this.setState({dataToUse: array[7]});
+                this.setState({dataToUse: array[test]});
+                this.setState({showLoading:false});
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+    };
+
+    toggleProject = projectNumber => () => {
+        console.log('toggleProject');
+        console.log(projectNumber);
+        this.setState({showLoading:true});
+        axios.get('https://projects-b37dc.firebaseio.com/.json') // JSON File Path
+            .then( response => {
+                let array = $.map(response.data, function(value, index) {
+                    return [value];
+                });
+                this.setState({dataToUse: array[projectNumber]});
+                this.setState({showLoading:false});
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+    };
+
+    toggleProjectID = projectName => () => {
+        this.setState({showLoading:true});
+        axios.get('https://projects-b37dc.firebaseio.com/.json') // JSON File Path
+            .then( response => {
+                let array = $.map(response.data, function(value, index) {
+                    return [value];
+                });
+                let dataIndex = array.filter(obj => {
+                    return obj.id === projectName
+                });
+                this.setState({dataToUse: dataIndex[0]});
                 this.setState({showLoading:false});
             })
             .catch(function (error) {
@@ -214,45 +254,45 @@ class App extends React.Component {
                                 </li>
                                 <li className="nav-item"><span className="navbar-text">ICAEW</span></li>
                                 <li className="nav-item">
-                                    <a className="nav-link" onClick={this.toggleHeader}>1</a>
+                                    <a className="nav-link" onClick={this.toggleProjectID("icaewUniversalHeader")}>1</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" onClick={this.toggleSearch}>2</a>
+                                    <a className="nav-link" onClick={this.toggleProjectID("icaewUniversalSearch")}>2</a>
                                 </li>
                                 <li className="nav-item"><span className="navbar-text">Cashplus</span></li>
                                 <li className="nav-item">
-                                    <a className="nav-link" onClick={this.togglePartnerPortal}>1</a>
+                                    <a className="nav-link" onClick={this.toggleProjectID("cashplusPartnerPortal")}>1</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" onClick={this.toggleTransactionEnrichment}>2</a>
+                                    <a className="nav-link" onClick={this.toggleProjectID("cashplusTransactionEnrichment")}>2</a>
                                 </li>
                                 <li className="nav-item"><span className="navbar-text">Homeserve</span></li>
                                 <li className="nav-item">
-                                    <a className="nav-link" onClick={this.toggleHomeserveUSA}>1</a>
+                                    <a className="nav-link" onClick={this.toggleProjectID("homeservePLCUSA")}>1</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" onClick={this.toggleHomeserveSpain}>2</a>
+                                    <a className="nav-link" onClick={this.toggleProjectID("homeservePLCSpain")}>2</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" onClick={this.toggleHomeserveHML}>3</a>
+                                    <a className="nav-link" onClick={this.toggleProjectID("homeserveHMLAll")}>3</a>
                                 </li>
                                 <li className="nav-item"><span className="navbar-text">npower</span></li>
                                 <li className="nav-item">
-                                    <a className="nav-link" onClick={this.toggleNpower}>1</a>
+                                    <a className="nav-link" onClick={this.toggleProjectID("npowerAll")}>1</a>
                                 </li>
                             </ul>
-                            <ul className="navbar-nav ml-auto nav-flex-icons">
-                                <li className="nav-item">
-                                    <a href="#root" className={this.state.fullCV ? 'nav-link waves-effect waves-light' : 'nav-link waves-effect waves-light'} onClick={this.toggleFullCV}>
-                                        {this.state.fullCV ? 'Show concise CV' : 'Show full CV'}
-                                    </a>
-                                </li>
-                                <li className="nav-item">
-                                    <a href="#root" className={this.state.darkTheme ? 'nav-link waves-effect waves-light' : 'nav-link waves-effect waves-light'} onClick={this.toggleDarkTheme}>
-                                        {this.state.darkTheme ? 'Default' : 'Accessible'}
-                                    </a>
-                                </li>
-                            </ul>
+                            {/*<ul className="navbar-nav ml-auto nav-flex-icons">*/}
+                                {/*<li className="nav-item">*/}
+                                    {/*<a href="#root" className={this.state.fullCV ? 'nav-link waves-effect waves-light' : 'nav-link waves-effect waves-light'} onClick={this.toggleFullCV}>*/}
+                                        {/*{this.state.fullCV ? 'Show concise CV' : 'Show full CV'}*/}
+                                    {/*</a>*/}
+                                {/*</li>*/}
+                                {/*<li className="nav-item">*/}
+                                    {/*<a href="#root" className={this.state.darkTheme ? 'nav-link waves-effect waves-light' : 'nav-link waves-effect waves-light'} onClick={this.toggleDarkTheme}>*/}
+                                        {/*{this.state.darkTheme ? 'Default' : 'Accessible'}*/}
+                                    {/*</a>*/}
+                                {/*</li>*/}
+                            {/*</ul>*/}
                         </div>
                     </div>
                 </nav>
@@ -263,12 +303,63 @@ class App extends React.Component {
                         <div className="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
                     </div>
 
+                    <div className="container-fluid pt-5">
+                        <div className="row">
+                            <div className="col-12">
+                                <div className="c003-stepper">
+                                    <ul className="stepper stepper-horizontal">
+                                        <li className="">
+                                            <a onClick={this.toggleProjectID("icaewUniversalHeader")}>
+                                                <span className="label text-left">ICAEW <br/><small>Universal Header</small></span>
+                                            </a>
+                                        </li>
+                                        <li className="">
+                                            <a>
+                                                <span className="label text-left">ICAEW <br/><small>Universal Search</small></span>
+                                            </a>
+                                        </li>
+                                        <li className="">
+                                            <a>
+                                                <span className="label text-left">Cashplus <br/><small>Partner Portal</small></span>
+                                            </a>
+                                        </li>
+                                        <li className="">
+                                            <a>
+                                                <span className="label text-left">Cashplus <br/><small>Transaction Enrichment</small></span>
+                                            </a>
+                                        </li>
+                                        <li className="">
+                                            <a>
+                                                <span className="label text-left">HomeServe <br/><small>USA Sitecore Migration</small></span>
+                                            </a>
+                                        </li>
+                                        <li className="">
+                                            <a>
+                                                <span className="label text-left">HomeServe <br/><small>Spain Sitecore Migration</small></span>
+                                            </a>
+                                        </li>
+                                        <li className="">
+                                            <a>
+                                                <span className="label text-left">HomeServe <br/><small>All</small></span>
+                                            </a>
+                                        </li>
+                                        <li className="">
+                                            <a>
+                                                <span className="label text-left">npower <br/><small>All</small></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <div className="container-fluid c002-image-content-cta pt-5">
                         <div className="row">
                             <div className="container">
                                 <div className="row">
                                     <div className="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
-                                        <Logo dataFromParent={this.state.dataToUse} loadingState={this.state.showLoading} />
+                                        <Logo dataFromParent={this.state.dataToUse} loadingState={this.state.showLoading} imgClass="test" />
                                         <TitleH3 dataFromParent={this.state.dataToUse} loadingState={this.state.showLoading} />
                                         <TitleH4 dataFromParent={this.state.dataToUse} loadingState={this.state.showLoading} />
                                     </div>
@@ -316,107 +407,124 @@ class App extends React.Component {
 
 class Logo extends React.Component {
     render() {
-        return ([
-            <div key="logo" className={this.props.loadingState ? 'c002-image-content-cta__image c002-image-content-cta__image--vertical loading-new' : 'c002-image-content-cta__image c002-image-content-cta__image--vertical loaded-new'}><img className="" src={this.props.dataFromParent.companyLogo} alt="???" /></div>
-        ]);
+        if (!this.props.dataFromParent.companyLogo) {
+            return null;
+        } else {
+            return ([
+                <div key="logo" className={this.props.loadingState ? `c002-image-content-cta__image ${this.props.imgClass} loading-new` : `c002-image-content-cta__image ${this.props.imgClass} loaded-new`}>
+                    <img className="" src={this.props.dataFromParent.companyLogo} alt={this.props.dataFromParent.companyName} />
+                </div>
+            ]);
+        }
     }
 }
 
 class TitleH3 extends React.Component {
     render() {
-        return ([
-            <h3 key="h3" className={this.props.loadingState ? 'h3-responsive loading-new' : 'h3-responsive loaded-new'}>{this.props.dataFromParent.companyName}</h3>
-        ]);
+        if (!this.props.dataFromParent.companyName) {
+            return null;
+        } else {
+            return ([
+                <h3 key="h3" className={this.props.loadingState ? 'h3-responsive loading-new' : 'h3-responsive loaded-new'}>{this.props.dataFromParent.companyName}</h3>
+            ]);
+        }
     }
-
 }
 
 class TitleH4 extends React.Component {
     render() {
-        return ([
-            <h4 className={this.props.loadingState ? 'h4-responsive loading-new' : 'h4-responsive loaded-new'}>{this.props.dataFromParent.projectName} &nbsp;</h4>
-        ]);
+        if (!this.props.dataFromParent.projectName) {
+            return null;
+        } else {
+            return ([
+                <h4 className={this.props.loadingState ? 'h4-responsive loading-new' : 'h4-responsive loaded-new'}>{this.props.dataFromParent.projectName} &nbsp;</h4>
+            ]);
+        }
     }
 }
 
 class ProjectImage extends React.Component {
     render() {
-        return ([
-            <div className={this.props.loadingState ? 'loading-new' : 'loaded-new'}>
-                <div className={`row c002-image-content-cta__background-${this.props.dataFromParent.companyNameAlt} py-5 mb-5`}>
-                    <div className="col-12 col-md-8 offset-md-2 text-center">
-                        <img key="image" className="img-fluid rounded z-depth-2" src={this.props.dataFromParent.projectImage} alt="???" />
+        if (!this.props.dataFromParent.projectImage) {
+            return null;
+        } else {
+            return ([
+                <div className={this.props.loadingState ? 'loading-new' : 'loaded-new'}>
+                    <div className={`row c002-image-content-cta__background-${this.props.dataFromParent.companyNameAlt} py-5 mb-5`}>
+                        <div className="col-12 col-md-8 offset-md-2 text-center">
+                            <img key="image" className="img-fluid rounded z-depth-2" src={this.props.dataFromParent.projectImage} alt="???" />
+                        </div>
                     </div>
                 </div>
-            </div>
-        ]);
+            ]);
+        }
     }
 }
 
 class ProjectDescription extends React.Component {
     render() {
-        return ([
-            <div key="description" className={this.props.loadingState ? 'loading-new' : 'loaded-new'} dangerouslySetInnerHTML={ { __html: this.props.dataFromParent.projectDescription } }></div>
-        ]);
+        if (!this.props.dataFromParent.projectDescription) {
+            return null;
+        } else {
+            return ([
+                <div key="description" className={this.props.loadingState ? 'loading-new' : 'loaded-new'} dangerouslySetInnerHTML={ { __html: this.props.dataFromParent.projectDescription } }></div>
+            ]);
+        }
     }
 }
 
 class ProjectRole extends React.Component {
     render() {
-        return ([
-            <div key="role" className={this.props.loadingState ? 'loading-new' : 'loaded-new'}>
-                <h6><strong>My role:</strong></h6>
-                <div dangerouslySetInnerHTML={ { __html: this.props.dataFromParent.projectRole } }></div>
-            </div>
-        ]);
-    }
-}
-
-class ProjectDate extends React.Component {
-    render() {
-        return ([
-            <span className={this.props.loadingState ? 'loading-new' : 'loaded-new'}>{this.props.dataFromParent.projectDate}</span>
-        ]);
-    }
-}
-
-class ProjectLocation extends React.Component {
-    render() {
-        return ([
-            <span className={this.props.loadingState ? 'loading-new' : 'loaded-new'}>{this.props.dataFromParent.projectLocation}</span>
-        ]);
+        if (!this.props.dataFromParent.projectRole) {
+            return null;
+        } else {
+            return ([
+                <div key="role" className={this.props.loadingState ? 'loading-new' : 'loaded-new'}>
+                    <h6><strong>My role:</strong></h6>
+                    <div dangerouslySetInnerHTML={ { __html: this.props.dataFromParent.projectRole } }></div>
+                </div>
+            ]);
+        }
     }
 }
 
 class ProjectMeta extends React.Component {
     render() {
-        return ([
-            <div key="meta" className={this.props.loadingState ? 'loading-new' : 'loaded-new'}>
-                <h6><strong>Other:</strong></h6>
-                <p><span>{this.props.dataFromParent.projectLocation}</span> | <span>{this.props.dataFromParent.projectDate}</span></p>
-            </div>
-        ]);
+        if (!this.props.dataFromParent.projectLocation) {
+            return null;
+        } else {
+            return ([
+                <div key="meta" className={this.props.loadingState ? 'loading-new' : 'loaded-new'}>
+                    <h6><strong>Other:</strong></h6>
+                    <p><span>{this.props.dataFromParent.projectLocation}</span> | <span>{this.props.dataFromParent.projectDate}</span></p>
+                </div>
+            ]);
+        }
     }
 }
 
 class ProjectTech extends React.Component {
     render() {
-        let array = $.map(this.props.dataFromParent.projectTech, function(value, index) {
-            return [value];
-        });
+        if (!this.props.dataFromParent.projectTech) {
+            return null;
+        } else {
+            let array = $.map(this.props.dataFromParent.projectTech, function(value, index) {
+                return [value];
+            });
+            return (
+                <div key="tech" className={this.props.loadingState ? 'loading-new' : 'loaded-new'}>
+                    <h6><strong>Tech used:</strong></h6>
+                    <ul className="list-inline">
+                        {
+                            array.map(function (item, i) {
+                                return <li key={i} id={i} className="list-inline-item">{item}</li>
+                            })
+                        }
+                    </ul>
+                </div>
+            )
+        }
 
-        return (
-            <div key="tech" className={this.props.loadingState ? 'loading-new' : 'loaded-new'}>
-                <h6><strong>Tech used:</strong></h6>
-                <ul className="list-inline">
-                    {
-                        array.map(function (item, i) {
-                            return <li key={i} id={i} className="list-inline-item">{item}</li>
-                        })
-                    }
-                </ul>
-            </div>
-        )
     }
 }
 
