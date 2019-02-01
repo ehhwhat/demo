@@ -38,128 +38,6 @@ class App extends React.Component {
         this.setState({ fullCV: !this.state.fullCV });
     };
 
-    toggleHeader = () => {
-        this.setState({showLoading:true});
-        axios.get('https://projects-b37dc.firebaseio.com/.json') // JSON File Path
-            .then( response => {
-                let array = $.map(response.data, function(value, index) {
-                    return [value];
-                });
-                this.setState({dataToUse: array[0]});
-                this.setState({showLoading:false});
-            })
-            .catch(function (error) {
-                console.log(error);
-            });
-    };
-
-    toggleSearch = () => {
-        this.setState({showLoading:true});
-        axios.get('https://projects-b37dc.firebaseio.com/.json') // JSON File Path
-            .then( response => {
-                let array = $.map(response.data, function(value, index) {
-                    return [value];
-                });
-                this.setState({dataToUse: array[1]});
-                this.setState({showLoading:false});
-            })
-            .catch(function (error) {
-                console.log(error);
-            });
-    };
-
-    togglePartnerPortal = () => {
-        this.setState({showLoading:true});
-        axios.get('https://projects-b37dc.firebaseio.com/.json') // JSON File Path
-            .then( response => {
-                let array = $.map(response.data, function(value, index) {
-                    return [value];
-                });
-                this.setState({dataToUse: array[2]});
-                this.setState({showLoading:false});
-            })
-            .catch(function (error) {
-                console.log(error);
-            });
-    };
-
-    toggleTransactionEnrichment = () => {
-        this.setState({showLoading:true});
-        axios.get('https://projects-b37dc.firebaseio.com/.json') // JSON File Path
-            .then( response => {
-                let array = $.map(response.data, function(value, index) {
-                    return [value];
-                });
-                this.setState({dataToUse: array[3]});
-                this.setState({showLoading:false});
-            })
-            .catch(function (error) {
-                console.log(error);
-            });
-    };
-
-    toggleHomeserveUSA = () => {
-        this.setState({showLoading:true});
-        axios.get('https://projects-b37dc.firebaseio.com/.json') // JSON File Path
-            .then( response => {
-                let array = $.map(response.data, function(value, index) {
-                    return [value];
-                });
-                this.setState({dataToUse: array[4]});
-                this.setState({showLoading:false});
-            })
-            .catch(function (error) {
-                console.log(error);
-            });
-    };
-
-    toggleHomeserveSpain = () => {
-        this.setState({showLoading:true});
-        axios.get('https://projects-b37dc.firebaseio.com/.json') // JSON File Path
-            .then( response => {
-                let array = $.map(response.data, function(value, index) {
-                    return [value];
-                });
-                this.setState({dataToUse: array[5]});
-                this.setState({showLoading:false});
-            })
-            .catch(function (error) {
-                console.log(error);
-            });
-    };
-
-    toggleHomeserveHML = () => {
-        this.setState({showLoading:true});
-        axios.get('https://projects-b37dc.firebaseio.com/.json') // JSON File Path
-            .then( response => {
-                let array = $.map(response.data, function(value, index) {
-                    return [value];
-                });
-                this.setState({dataToUse: array[6]});
-                this.setState({showLoading:false});
-            })
-            .catch(function (error) {
-                console.log(error);
-            });
-    };
-
-    toggleNpower = test => () => {
-        console.log('toggleNpower');
-        console.log(test);
-        this.setState({showLoading:true});
-        axios.get('https://projects-b37dc.firebaseio.com/.json') // JSON File Path
-            .then( response => {
-                let array = $.map(response.data, function(value, index) {
-                    return [value];
-                });
-                this.setState({dataToUse: array[test]});
-                this.setState({showLoading:false});
-            })
-            .catch(function (error) {
-                console.log(error);
-            });
-    };
-
     toggleProject = projectNumber => () => {
         console.log('toggleProject');
         console.log(projectNumber);
@@ -195,6 +73,29 @@ class App extends React.Component {
             });
     };
 
+    es6Function = (projectName) => {
+        console.log(projectName);
+        this.setState({showLoading:true});
+        axios.get('https://projects-b37dc.firebaseio.com/.json') // JSON File Path
+            .then( response => {
+                let array = $.map(response.data, function(value, index) {
+                    return [value];
+                });
+                let dataIndex = array.filter(obj => {
+                    return obj.id === projectName
+                });
+                this.setState({dataToUse: dataIndex[0]});
+                this.setState({showLoading:false});
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+    };
+
+    simplifiedFunction (value) {
+        console.log(value)
+    }
+
     toggleDarkTheme = () => {
         this.setState({ darkTheme: !this.state.darkTheme });
     };
@@ -211,6 +112,7 @@ class App extends React.Component {
                 console.log(array);
                 console.log('%c AXIOS', 'color: #61C155; font-weight: bold;background:#fff;border-left:5px solid #61C155;padding:15px 30px;');
                 this.setState({dataToUse: array[0]});
+                this.setState({dataAll: array});
                 this.setState({showLoading:false});
             })
             .catch(function (error) {
@@ -305,50 +207,12 @@ class App extends React.Component {
 
                     <div className="container-fluid pt-5">
                         <div className="row">
-                            <div className="col-12">
-                                <div className="c003-stepper">
-                                    <ul className="stepper stepper-horizontal">
-                                        <li className="">
-                                            <a onClick={this.toggleProjectID("icaewUniversalHeader")}>
-                                                <span className="label text-left">ICAEW <br/><small>Universal Header</small></span>
-                                            </a>
-                                        </li>
-                                        <li className="">
-                                            <a>
-                                                <span className="label text-left">ICAEW <br/><small>Universal Search</small></span>
-                                            </a>
-                                        </li>
-                                        <li className="">
-                                            <a>
-                                                <span className="label text-left">Cashplus <br/><small>Partner Portal</small></span>
-                                            </a>
-                                        </li>
-                                        <li className="">
-                                            <a>
-                                                <span className="label text-left">Cashplus <br/><small>Transaction Enrichment</small></span>
-                                            </a>
-                                        </li>
-                                        <li className="">
-                                            <a>
-                                                <span className="label text-left">HomeServe <br/><small>USA Sitecore Migration</small></span>
-                                            </a>
-                                        </li>
-                                        <li className="">
-                                            <a>
-                                                <span className="label text-left">HomeServe <br/><small>Spain Sitecore Migration</small></span>
-                                            </a>
-                                        </li>
-                                        <li className="">
-                                            <a>
-                                                <span className="label text-left">HomeServe <br/><small>All</small></span>
-                                            </a>
-                                        </li>
-                                        <li className="">
-                                            <a>
-                                                <span className="label text-left">npower <br/><small>All</small></span>
-                                            </a>
-                                        </li>
-                                    </ul>
+                            <div className="container">
+                                <div className="row">
+                                    <div className="col-12">
+                                        <ProjectItems dataFromParent={this.state.dataAll} loadingState={this.state.showLoading} someMethod={this.toggleProjectID} es6Function={this.es6Function} />
+                                        {/*<Child es6Function={this.es6Function} simplifiedFunction={this.simplifiedFunction} />*/}
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -437,7 +301,7 @@ class TitleH4 extends React.Component {
             return null;
         } else {
             return ([
-                <h4 className={this.props.loadingState ? 'h4-responsive loading-new' : 'h4-responsive loaded-new'}>{this.props.dataFromParent.projectName} &nbsp;</h4>
+                <h4 key="h4" className={this.props.loadingState ? 'h4-responsive loading-new' : 'h4-responsive loaded-new'}>{this.props.dataFromParent.projectName} &nbsp;</h4>
             ]);
         }
     }
@@ -449,7 +313,7 @@ class ProjectImage extends React.Component {
             return null;
         } else {
             return ([
-                <div className={this.props.loadingState ? 'loading-new' : 'loaded-new'}>
+                <div key="projectImage" className={this.props.loadingState ? 'loading-new' : 'loaded-new'}>
                     <div className={`row c002-image-content-cta__background-${this.props.dataFromParent.companyNameAlt} py-5 mb-5`}>
                         <div className="col-12 col-md-8 offset-md-2 text-center">
                             <img key="image" className="img-fluid rounded z-depth-2" src={this.props.dataFromParent.projectImage} alt="???" />
@@ -530,11 +394,61 @@ class ProjectTech extends React.Component {
 
 class ProjectLink extends React.Component {
     render() {
-        return ([
-            <div className={this.props.loadingState ? 'c002-image-content-cta__button loading-new' : 'c002-image-content-cta__button loaded-new'}>
-                <a className="btn btn-outline-dark waves-effect" href={this.props.dataFromParent.projectHref} title={"View " + this.props.dataFromParent.projectName}>{"View " + this.props.dataFromParent.projectName} <i className="fa fa-arrow-right"></i></a>
-            </div>
+        if (!this.props.dataFromParent.projectHref) {
+            return null;
+        } else {
+            return ([
+                <div key="projectLink" className={this.props.loadingState ? 'c002-image-content-cta__button loading-new' : 'c002-image-content-cta__button loaded-new'}>
+                    <a className="btn btn-outline-dark waves-effect" href={this.props.dataFromParent.projectHref} title={"View " + this.props.dataFromParent.projectName}>{"View " + this.props.dataFromParent.projectName} <i className="fa fa-arrow-right"></i></a>
+                </div>
             ]);
+        }
+    }
+}
+
+// class Child extends React.Component {
+//     render () {
+//         console.log("Child start");
+//         return (
+//             <div>
+//                 <h1 onClick={() => this.props.es6Function("icaewUniversalSearch")}> Something</h1>
+//             </div>
+//         )
+//     }
+// }
+
+class ProjectItems extends React.Component {
+    render() {
+        // console.log("ProjectItems start");
+        // console.log(this.props.dataFromParent);
+        // console.log(this.props.es6Function);
+        // console.log(this.props);
+        let properties = this.props;
+        // console.log('testdata');
+        // console.log(properties);
+
+        let objArray = this.props.dataFromParent;
+        let arrayResult = objArray.reduce(function(newArray, item) {
+            newArray.push([item.id, item.companyName, item.projectNameAlt, item.companyLogo]);
+            return newArray;
+        }, []);
+        //console.log(arrayResult);
+
+        console.log("ProjectItems end");
+        return (
+
+            <div className="c003-stepper">
+                <ul className="stepper stepper-horizontal stepper-nolines">
+                    {
+                        arrayResult.map(function (item, i) {
+                            return  <li key={i} className="text-center">
+                                <a onClick={() => properties.es6Function(item[0])}><img src={item[3]} className="img-fluid stepper-logo" /><br/><span className="label"><strong className="d-none">{item[1]}</strong><small>{item[2]}</small></span></a>
+                                    </li>
+                        })
+                    }
+                </ul>
+            </div>
+        )
     }
 }
 

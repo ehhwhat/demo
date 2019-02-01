@@ -8515,6 +8515,32 @@ ul.stepper {
     background-color: rgba(231, 52, 44, 0.9); }
   .react-root .c002-image-content-cta__background-npower {
     background-color: rgba(82, 12, 71, 0.9); }
+  .react-root .stepper-logo {
+    max-width: 3rem; }
+  .react-root .stepper.stepper-nolines li {
+    -webkit-transition: all 0.25s;
+    -o-transition: all 0.25s;
+    transition: all 0.25s;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start; }
+    .react-root .stepper.stepper-nolines li:after {
+      display: none !important; }
+    .react-root .stepper.stepper-nolines li:before {
+      display: none !important; }
+    .react-root .stepper.stepper-nolines li:hover {
+      background-color: transparent;
+      -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+      transform: scale(1.1);
+      -webkit-transition: all 0.25s;
+      -o-transition: all 0.25s;
+      transition: all 0.25s; }
   .react-root .loader-wrapper {
     position: fixed;
     top: 50%;
