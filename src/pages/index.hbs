@@ -43,12 +43,13 @@
                     heading-primary='Hello, world!'
                     heading-secondary='How are you?'
                     body-content='
-                    <p><span class="badge badge-pill badge-default">Updated 30/01/2019</span> <span class="badge badge-pill badge-default">v14</span> <span class="badge
+                    <p><span class="badge badge-pill badge-default">Updated 04/02/2019</span> <span class="badge badge-pill badge-default">v15</span> <span class="badge
                     badge-pill badge-danger">Work in progress</span></p>
                     <h3 class="mt-5 h3-responsive">Purpose</h3>
                     <p>This repo will be used for code examples, they will range from Vanilla JavaScript to jQuery to React and maybe some other stuff as well.</p>
                     <h3 class="mt-5 h3-responsive">Recent work</h3>
                     <ul class="">
+                        <li class=""><a href="react/projects.html" title="View Triathlon"><strong>Projects</strong> | React, Axios, JS, Json, SASS</a></li>
                         <li class=""><a href="react/cv-full.html" title="View Triathlon"><strong>CV</strong> | React, Axios, JS, Json, SASS</a></li>
                         <li class=""><a href="react/addremove.html" title="View Triathlon"><strong>Bookshelf</strong> | React, JS, Json, SASS</a></li>
                         <li class=""><a href="app/triathlon.html" title="View Triathlon"><strong>Triathlon</strong> | Handlebars, JS, SASS, Strava API</a></li>
@@ -87,7 +88,29 @@
                 '
         }}
         {{#> sublayouts/grid-wide }}
-            {{#> sublayouts/grid-wide__colfluid }}
+            {{#> sublayouts/grid-wide__col3 }}
+                {{> components/c012-card
+                        img-src='https://images.pexels.com/photos/669615/pexels-photo-669615.jpeg?&w=640'
+                        heading='React projects'
+                        body='
+                        <p class="mb-0"><strong>Tech:</strong></p>
+                        <ul class="list-inline">
+                            <li class="list-inline-item">React</li>
+                            <li class="list-inline-item">Axios</li>
+                            <li class="list-inline-item">SASS</li>
+                            <li class="list-inline-item">JS</li>
+                            <li class="list-inline-item">JSON</li>
+                        </ul>
+                        <span class="d-none">
+                            <p class="mb-0"><strong>Details:</strong></p>
+                            <p>Examples of major projects i have been involved in built using React.</p>
+                        </span>
+                        <a href="react/projects.html" class="btn btn-outline-dark waves-effect" title="View this">React Projects <i class="fa
+                        fa-arrow-right"></i></a>
+                        '
+                }}
+            {{/sublayouts/grid-wide__col3}}
+            {{#> sublayouts/grid-wide__col3 }}
                 {{> components/c012-card
                         img-src='https://images.pexels.com/photos/684385/pexels-photo-684385.jpeg?auto=compress&w=640'
                         heading='React CV'
@@ -100,13 +123,15 @@
                             <li class="list-inline-item">JS</li>
                             <li class="list-inline-item">JSON</li>
                         </ul>
-                        <p class="mb-0"><strong>Details:</strong></p>
-                        <p>A React app based around a CV, using Axios to get data, multiple React components, toggling of state etc.</p>
-                        <a href="react/cv-full.html" class="btn btn-outline-dark waves-effect" title="View this">View React CV <i class="fa fa-arrow-right"></i></a>
+                        <span class="d-none">
+                            <p class="mb-0"><strong>Details:</strong></p>
+                            <p>A React app based around a CV, using Axios to get data, multiple React components, toggling of state etc.</p>
+                        </span>
+                        <a href="react/cv-full.html" class="btn btn-outline-dark waves-effect" title="View this">React CV <i class="fa fa-arrow-right"></i></a>
                         '
                 }}
-            {{/sublayouts/grid-wide__colfluid}}
-            {{#> sublayouts/grid-wide__colfluid }}
+            {{/sublayouts/grid-wide__col3}}
+            {{#> sublayouts/grid-wide__col3 }}
                 {{> components/c012-card
                         img-src='https://images.pexels.com/photos/1166657/pexels-photo-1166657.jpeg?auto=compress&w=640'
                         heading='React bookshelf'
@@ -119,13 +144,15 @@
                             <li class="list-inline-item">jQuery</li>
                             <li class="list-inline-item">JSON</li>
                         </ul>
-                        <p class="mb-0"><strong>Details:</strong></p>
-                        <p>Basic React app which allows a user to add books to a shelf and then remove them.</p>
-                        <a href="react/addremove.html" class="btn btn-outline-dark waves-effect" title="View this">View Bookshelf <i class="fa fa-arrow-right"></i></a>
+                        <span class="d-none">
+                            <p class="mb-0"><strong>Details:</strong></p>
+                            <p>Basic React app which allows a user to add books to a shelf and then remove them.</p>
+                        </span>
+                        <a href="react/addremove.html" class="btn btn-outline-dark waves-effect" title="View this">React Bookshelf <i class="fa fa-arrow-right"></i></a>
                         '
                 }}
-            {{/sublayouts/grid-wide__colfluid}}
-            {{#> sublayouts/grid-wide__colfluid }}
+            {{/sublayouts/grid-wide__col3}}
+            {{#> sublayouts/grid-wide__col3 }}
                 {{> components/c012-card
                         img-src='https://images.pexels.com/photos/1263425/pexels-photo-1263425.jpeg?auto=compress&w=640'
                         heading='Triathlon training'
@@ -138,13 +165,15 @@
                             <li class="list-inline-item">jQuery</li>
                             <li class="list-inline-item">JSON</li>
                         </ul>
-                        <p class="mb-0"><strong>Details:</strong></p>
-                        <p>Blog type site I have been building to track all my training towards an Ironman 70.3 event.</p>
-                        <a href="app/triathlon.html" class="btn btn-outline-dark waves-effect" title="View this">View training <i class="fa fa-arrow-right"></i></a>
+                        <span class="d-none">
+                            <p class="mb-0"><strong>Details:</strong></p>
+                            <p>Blog type site I have been building to track all my training towards an Ironman 70.3 event.</p>
+                        </span>
+                        <a href="app/triathlon.html" class="btn btn-outline-dark waves-effect" title="View this">Handlebars Tri <i class="fa fa-arrow-right"></i></a>
                         '
                 }}
-            {{/sublayouts/grid-wide__colfluid}}
-            {{#> sublayouts/grid-wide__colfluid }}
+            {{/sublayouts/grid-wide__col3}}
+            {{#> sublayouts/grid-wide__col3 }}
                 {{> components/c012-card
                         img-src='https://images.pexels.com/photos/355988/pexels-photo-355988.jpeg?auto=compress&w=640'
                         heading='Curriculum Vitae'
@@ -156,12 +185,14 @@
                             <li class="list-inline-item">JS</li>
                             <li class="list-inline-item">jQuery</li>
                         </ul>
-                        <p class="mb-0"><strong>Details:</strong></p>
-                        <p>Flat HTML version of my CV, allows for improved experience over a simple word document.</p>
-                        <a href="general/cv-flat.html" class="btn btn-outline-dark waves-effect" title="View this">View CV <i class="fa fa-arrow-right"></i></a>
+                        <span class="d-none">
+                            <p class="mb-0"><strong>Details:</strong></p>
+                            <p>Flat HTML version of my CV, allows for improved experience over a simple word document.</p>
+                        </span>
+                        <a href="general/cv-flat.html" class="btn btn-outline-dark waves-effect" title="View this">Handlebars CV <i class="fa fa-arrow-right"></i></a>
                         '
                 }}
-            {{/sublayouts/grid-wide__colfluid}}
+            {{/sublayouts/grid-wide__col3}}
         {{/sublayouts/grid-wide}}
 
         {{> components/c002-image-content-cta
@@ -172,8 +203,14 @@
                 heading-primary='React'
                 heading-secondary='Code demonstrations built using React'
                 body-content='
+                    <h3 class="mt-5 h3-responsive">Links to major demo`s</h3>
+                    <p>Robust examples of using React, use of Axios to grab data, switching of state etc.</p>
+                    <ul class="">
+                        <li class=""><a href="react/projects.html" title="">Projects</a></li>
+                        <li class=""><a href="react/cv-full.html" title="">CV full</a></li>
+                    </ul>
+                    <h3 class="mt-5 h3-responsive">Links to basic demo`s</h3>
                     <p>All based around the idea of a bookshelf and adding books to it, similar to Good Reads website.</p>
-                    <h3 class="mt-5 h3-responsive">Links</h3>
                     <ul class="">
                         <li class=""><a href="react/static.html" title="">Static</a></li>
                         <li class=""><a href="react/inline.html" title="">Inline props</a></li>

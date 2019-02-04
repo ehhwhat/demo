@@ -6247,9 +6247,15 @@ ul.stepper {
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     z-index: 9999; }
-    .react-root .loader-wrapper.loading-new2 {
+    .react-root .loader-wrapper.loader-inline {
+      position: static;
+      -webkit-transform: none;
+      -ms-transform: none;
+      transform: none;
+      text-align: center; }
+    .react-root .loader-wrapper.loading-new-reverse {
       opacity: 1; }
-    .react-root .loader-wrapper.loaded-new2 {
+    .react-root .loader-wrapper.loaded-new-reverse {
       opacity: 0;
       -webkit-transition: opacity 0.25s ease-in;
       -o-transition: opacity 0.25s ease-in;
@@ -6372,6 +6378,42 @@ ul.stepper {
       border: 2px solid #fff !important;
       background-color: transparent !important;
       color: #fff !important; }
+  .react-root main.bg-night-mode {
+    background-color: black;
+    color: white !important;
+    -webkit-transition: color 1s linear, background-color 0.5s linear, font-size 0.25s linear !important;
+    -o-transition: color 1s linear, background-color 0.5s linear, font-size 0.25s linear !important;
+    transition: color 1s linear, background-color 0.5s linear, font-size 0.25s linear !important; }
+    .react-root main.bg-night-mode .text-muted {
+      color: white !important; }
+    .react-root main.bg-night-mode p a {
+      color: white;
+      text-decoration: underline;
+      -webkit-text-decoration-color: white;
+      text-decoration-color: white; }
+    .react-root main.bg-night-mode li a {
+      color: white;
+      text-decoration: underline;
+      -webkit-text-decoration-color: white;
+      text-decoration-color: white; }
+    .react-root main.bg-night-mode .c004-divider hr.section-divider:before {
+      color: white !important; }
+    .react-root main.bg-night-mode .c012-card {
+      color: #212529 !important; }
+      .react-root main.bg-night-mode .c012-card .btn.btn-outline-dark {
+        border: 2px solid #45526e !important;
+        background-color: transparent !important;
+        color: #45526e !important; }
+    .react-root main.bg-night-mode .btn.btn-outline-dark {
+      border: 2px solid #fff !important;
+      background-color: transparent !important;
+      color: #fff !important; }
+    .react-root main.bg-night-mode .stepper li {
+      color: white; }
+      .react-root main.bg-night-mode .stepper li a {
+        color: white; }
+        .react-root main.bg-night-mode .stepper li a span {
+          color: white; }
 
 .dataPoint:empty {
   font-size: 2rem;

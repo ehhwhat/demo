@@ -75,8 +75,13 @@
   left:50%;
   transform: translate(-50%,-50%);
   z-index:9999;
-  &.loading-new2 {opacity:1;}
-  &.loaded-new2 {
+  &.loader-inline {
+    position: static;
+    transform: none;
+    text-align: center;
+  }
+  &.loading-new-reverse {opacity:1;}
+  &.loaded-new-reverse {
     opacity:0;
     transition: opacity 0.25s ease-in;
     transition-delay: 0.75s;
@@ -187,6 +192,62 @@
       background-color: transparent!important;
       color: #fff!important;
     }
+  }
+
+  main.bg-night-mode {
+    background-color:black;
+    color:white!important;
+    transition: color 1s linear, background-color 0.5s linear, font-size 0.25s linear!important;
+    .text-muted {
+      color:white!important;
+    }
+
+    p {
+      a {
+        color:white;
+        text-decoration: underline;
+        text-decoration-color: white;
+      }
+    }
+    li {
+      a {
+        color:white;
+        text-decoration: underline;
+        text-decoration-color: white;
+      }
+    }
+
+    .c004-divider hr.section-divider:before {
+      color:white!important;
+    }
+
+    .c012-card {
+      color: #212529!important;
+      .btn.btn-outline-dark {
+        border: 2px solid #45526e!important;
+        background-color: transparent!important;
+        color: #45526e!important;
+      }
+    }
+
+    .btn.btn-outline-dark {
+      border: 2px solid #fff!important;
+      background-color: transparent!important;
+      color: #fff!important;
+    }
+
+    .stepper {
+      li {
+        color:white;
+        a {
+          color:white;
+          span {
+            color:white;
+          }
+        }
+      }
+    }
 
   }
+
 }

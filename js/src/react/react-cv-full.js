@@ -75,9 +75,10 @@ class App extends React.Component {
         // Some basic markup
         // We pass from the parent component to the child component the state so they can use this data as well
         return ([
-            <div className={this.state.showLoading ? 'loading' : 'loaded'} key="divWrapper">
+            <div className={this.state.showLoading ? 'loading-new' : 'loaded-new'} key="divWrapper">
 
-                <nav className={this.state.darkTheme ? 'navbar navbar-expand-lg navbar-dark bg-dark fixed-top scrolling-navbar' : 'navbar navbar-expand-lg navbar-dark bg-dark fixed-top scrolling-navbar'}>
+                <nav className={this.state.darkTheme ? 'navbar navbar-expand-lg navbar-dark bg-dark fixed-top scrolling-navbar' : 'navbar navbar-expand-lg navbar-dark' +
+                    ' bg-dark fixed-top scrolling-navbar'}>
                     <div className="container">
                         <a className="navbar-brand d-none d-sm-block" href="../index.html">
                             <i className="fa fa-home" aria-hidden="true"></i>
@@ -124,7 +125,7 @@ class App extends React.Component {
                                 </li>
                                 <li className="nav-item">
                                     <a href="#root" className={this.state.darkTheme ? 'nav-link waves-effect waves-light' : 'nav-link waves-effect waves-light'} onClick={this.toggleDarkTheme}>
-                                        {this.state.darkTheme ? 'Default' : 'Accessible'}
+                                        {this.state.darkTheme ? 'Default' : 'Night Mode'}
                                     </a>
                                 </li>
                             </ul>
@@ -132,7 +133,7 @@ class App extends React.Component {
                     </div>
                 </nav>
 
-                <main className={this.state.darkTheme ? 'bg-accessible' : 'bg-white'} key="mainWrapper">
+                <main className={this.state.darkTheme ? 'bg-night-mode' : 'bg-white'} key="mainWrapper">
 
                     <div className="container-fluid py-5">
 
@@ -324,7 +325,8 @@ class App extends React.Component {
                     }
 
                 </main>
-                <footer className="page-footer font-small mdb-color lighten-1">
+
+                <footer className={this.state.darkTheme ? 'page-footer font-small bg-dark' : 'page-footer font-small bg-dark'}>
                     <div className="footer-copyright text-center py-3">
                         <ul className="list-inline my-0">
                             <li className="list-inline-item"><a href="../index.html">Home</a></li>
