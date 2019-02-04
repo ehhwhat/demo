@@ -1,14 +1,5 @@
 .react-root {
 
-  /* LOADING STATES */
-  .loading-new{
-    opacity:0;
-  }
-  .loaded-new {
-    opacity:1;
-    transition: opacity 0.5s ease-in;
-    transition-delay: 2s;
-  }
 
   .bg-cashplus {border-bottom:4px solid #17264D!important;}
   .bg-homeserve {border-bottom:4px solid  #e7342c!important;}
@@ -45,7 +36,38 @@
         align-items: flex-start;;
       }
     }
+    li {
+      transition: all 0.25s;
+      &:hover {
+        background-color: transparent;
+        margin-left:1rem;
+        transition: all 0.25s;
+      }
+    }
   }
+
+  .ProjectItemsVerticalButton {
+    position: fixed;
+    bottom:1rem;
+    right:1rem;
+    border-radius: 100%;
+    width: 45px;
+    padding-left: 0;
+    padding-right: 0;
+    background:white!important;
+    z-index:999999;
+  }
+
+  /* LOADING STATES */
+  .loading-new{
+    opacity:0;
+  }
+  .loaded-new {
+    opacity:1;
+    transition: opacity 0.25s ease-in;
+    transition-delay: 1s;
+  }
+
 
   .loader-wrapper {
   position: fixed;
@@ -57,7 +79,7 @@
   &.loaded-new2 {
     opacity:0;
     transition: opacity 0.25s ease-in;
-    transition-delay: 1.75s;
+    transition-delay: 0.75s;
   }
 }
   .lds-ellipsis {

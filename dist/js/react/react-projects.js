@@ -138,7 +138,8 @@ class App extends React.Component {
         return ([
             <div className={this.state.showLoading ? 'loading-newOFF' : 'loaded-newOFF'} key="divWrapper">
 
-                <nav className={this.state.darkTheme ? 'navbar navbar-expand-lg navbar-dark bg-dark fixed-top scrolling-navbar' : 'navbar navbar-expand-lg navbar-dark bg-dark fixed-top scrolling-navbar'}>
+                <nav className={this.state.darkTheme ? 'navbar navbar-expand-lg navbar-dark bg-dark fixed-top scrolling-navbar' : 'navbar navbar-expand-lg' +
+                    ' navbar-dark bg-dark fixed-top scrolling-navbar'}>
                     <div className="container">
                         <a className="navbar-brand d-none d-sm-block" href="../index.html">
                             <i className="fa fa-home" aria-hidden="true"></i>
@@ -154,34 +155,33 @@ class App extends React.Component {
                                 <li className="nav-item d-block d-sm-none">
                                     <a className="nav-link" href="../index.html"><i className="fa fa-home" aria-hidden="true"></i></a>
                                 </li>
-                                <li className="nav-item"><span className="navbar-text">ICAEW</span></li>
                                 <li className="nav-item">
-                                    <a className="nav-link" onClick={this.toggleProjectID("icaewUniversalHeader")}>1</a>
+                                    <a className="nav-link" href="#clients">Clients</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" onClick={this.toggleProjectID("icaewUniversalSearch")}>2</a>
+                                    <a className="nav-link" href="#projects">Projects</a>
                                 </li>
-                                <li className="nav-item"><span className="navbar-text">Cashplus</span></li>
-                                <li className="nav-item">
-                                    <a className="nav-link" onClick={this.toggleProjectID("cashplusPartnerPortal")}>1</a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link" onClick={this.toggleProjectID("cashplusTransactionEnrichment")}>2</a>
-                                </li>
-                                <li className="nav-item"><span className="navbar-text">Homeserve</span></li>
-                                <li className="nav-item">
-                                    <a className="nav-link" onClick={this.toggleProjectID("homeservePLCUSA")}>1</a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link" onClick={this.toggleProjectID("homeservePLCSpain")}>2</a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link" onClick={this.toggleProjectID("homeserveHMLAll")}>3</a>
-                                </li>
-                                <li className="nav-item"><span className="navbar-text">npower</span></li>
-                                <li className="nav-item">
-                                    <a className="nav-link" onClick={this.toggleProjectID("npowerAll")}>1</a>
-                                </li>
+                                {/*<li className="nav-item"><span className="navbar-text">Cashplus</span></li>*/}
+                                {/*<li className="nav-item">*/}
+                                    {/*<a className="nav-link" onClick={this.toggleProjectID("cashplusPartnerPortal")}>1</a>*/}
+                                {/*</li>*/}
+                                {/*<li className="nav-item">*/}
+                                    {/*<a className="nav-link" onClick={this.toggleProjectID("cashplusTransactionEnrichment")}>2</a>*/}
+                                {/*</li>*/}
+                                {/*<li className="nav-item"><span className="navbar-text">Homeserve</span></li>*/}
+                                {/*<li className="nav-item">*/}
+                                    {/*<a className="nav-link" onClick={this.toggleProjectID("homeservePLCUSA")}>1</a>*/}
+                                {/*</li>*/}
+                                {/*<li className="nav-item">*/}
+                                    {/*<a className="nav-link" onClick={this.toggleProjectID("homeservePLCSpain")}>2</a>*/}
+                                {/*</li>*/}
+                                {/*<li className="nav-item">*/}
+                                    {/*<a className="nav-link" onClick={this.toggleProjectID("homeserveHMLAll")}>3</a>*/}
+                                {/*</li>*/}
+                                {/*<li className="nav-item"><span className="navbar-text">npower</span></li>*/}
+                                {/*<li className="nav-item">*/}
+                                    {/*<a className="nav-link" onClick={this.toggleProjectID("npowerAll")}>1</a>*/}
+                                {/*</li>*/}
                             </ul>
                             {/*<ul className="navbar-nav ml-auto nav-flex-icons">*/}
                                 {/*<li className="nav-item">*/}
@@ -199,61 +199,111 @@ class App extends React.Component {
                     </div>
                 </nav>
 
-                <main className={this.state.darkTheme ? 'bg-accessible' : 'bg-white'} key="mainWrapper">
+                {/*<div className="container-fluid">*/}
+                    {/*<div className="row">*/}
+                        {/*<aside className="col-12 col-md-3 col-lg-2 pt-5 bg-light">*/}
+                            {/*<button className="btn btn-primary" type="button" data-toggle="collapse" data-target="#ProjectItemsVerticalWrapper" aria-expanded="true" aria-controls="ProjectItemsVerticalWrapper">*/}
+                                {/*Show*/}
+                            {/*</button>*/}
+                            {/*<div className="collapse show" id="ProjectItemsVerticalWrapper">*/}
+                                {/*<ProjectItemsVertical dataFromParent={this.state.dataAll} loadingState={this.state.showLoading} someMethod={this.toggleProjectID} es6Function={this.es6Function} />*/}
+                            {/*</div>*/}
+                        {/*</aside>*/}
+                        <main className={this.state.darkTheme ? 'bg-accessible' : 'bg-white'} key="mainWrapper">
 
-                    <div className={this.state.showLoading ? 'loader-wrapper loading-new2' : 'loader-wrapper loaded-new2'}>
-                        <div className="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
-                    </div>
+                            <div className={this.state.showLoading ? 'loader-wrapper loading-new2' : 'loader-wrapper loaded-new2'}>
+                                <div className="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+                            </div>
 
-                    <div className="container-fluid pt-5">
-                        <div className="row">
-                            <div className="container">
+                            <a className="btn btn-outline-secondary waves-effect z-depth-2 ProjectItemsVerticalButton" href="#clients" title="Up">
+                                <i class="fa fa-arrow-up"></i>
+                            </a>
+
+                            <div id="clients" className="container-fluid pt-5">
                                 <div className="row">
-                                    <div className="col-12">
-                                        <ProjectItems dataFromParent={this.state.dataAll} loadingState={this.state.showLoading} someMethod={this.toggleProjectID} es6Function={this.es6Function} />
-                                        {/*<Child es6Function={this.es6Function} simplifiedFunction={this.simplifiedFunction} />*/}
+                                    <div className="container">
+                                        <div className="row">
+                                            <div className="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+                                                <div className="c001-basic-content">
+                                                    <h1 className="display-4">Clients</h1>
+                                                    <h2 className="display-5 text-muted">Companies I`ve worked with previously</h2>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="row">
+                                    <div className="container">
+                                        <div className="row">
+                                            <div className="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+                                                <ProjectItemsVertical dataFromParent={this.state.dataAll} loadingState={this.state.showLoading} someMethod={this.toggleProjectID} es6Function={this.es6Function} />
+                                                {/*<ProjectItems dataFromParent={this.state.dataAll} loadingState={this.state.showLoading} someMethod={this.toggleProjectID} es6Function={this.es6Function} />*/}
+                                                {/*<Child es6Function={this.es6Function} simplifiedFunction={this.simplifiedFunction} />*/}
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
 
-                    <div className="container-fluid c002-image-content-cta pt-5">
-                        <div className="row">
-                            <div className="container">
+                            <div className="container c004-divider ">
                                 <div className="row">
-                                    <div className="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
-                                        <Logo dataFromParent={this.state.dataToUse} loadingState={this.state.showLoading} imgClass="test" />
-                                        <TitleH3 dataFromParent={this.state.dataToUse} loadingState={this.state.showLoading} />
-                                        <TitleH4 dataFromParent={this.state.dataToUse} loadingState={this.state.showLoading} />
+                                    <div className="col-md-12">
+                                        <hr className="section-divider" />
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <ProjectImage dataFromParent={this.state.dataToUse} loadingState={this.state.showLoading}  />
-                        <div className="row">
-                            <div className="container">
+
+                            <div id="projects" className="container-fluid c002-image-content-cta">
                                 <div className="row">
-                                    <div className="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
-                                        <ProjectDescription dataFromParent={this.state.dataToUse} loadingState={this.state.showLoading} />
-                                        <ProjectRole dataFromParent={this.state.dataToUse} loadingState={this.state.showLoading} />
-                                        <ProjectTech dataFromParent={this.state.dataToUse} loadingState={this.state.showLoading} />
-                                        <ProjectMeta dataFromParent={this.state.dataToUse} loadingState={this.state.showLoading} />
-                                        <ProjectLink dataFromParent={this.state.dataToUse} loadingState={this.state.showLoading} />
+                                    <div className="container">
+                                        <div className="row">
+                                            <div className="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+                                                <div className="c001-basic-content">
+                                                    <h1 className="display-4">Projects</h1>
+                                                    <h2 className="display-5 text-muted">Examples of work I`ve been involved in</h2>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="projectLogo" className="row">
+                                    <div className="container">
+                                        <div className="row">
+                                            <div className="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+                                                <Logo dataFromParent={this.state.dataToUse} loadingState={this.state.showLoading} imgClass="test" />
+                                                <TitleH3 dataFromParent={this.state.dataToUse} loadingState={this.state.showLoading} />
+                                                <TitleH4 dataFromParent={this.state.dataToUse} loadingState={this.state.showLoading} />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <ProjectImage dataFromParent={this.state.dataToUse} loadingState={this.state.showLoading}  />
+                                <div className="row">
+                                    <div className="container">
+                                        <div className="row">
+                                            <div className="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+                                                <ProjectDescription dataFromParent={this.state.dataToUse} loadingState={this.state.showLoading} />
+                                                <ProjectRole dataFromParent={this.state.dataToUse} loadingState={this.state.showLoading} />
+                                                <ProjectTech dataFromParent={this.state.dataToUse} loadingState={this.state.showLoading} />
+                                                <ProjectMeta dataFromParent={this.state.dataToUse} loadingState={this.state.showLoading} />
+                                                <ProjectLink dataFromParent={this.state.dataToUse} loadingState={this.state.showLoading} />
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div className="container c004-divider ">
-                        <div className="row">
-                            <div className="col-md-12">
-                                <hr className="section-divider" />
-                            </div>
-                        </div>
-                    </div>
-                </main>
 
+                            <div className="container c004-divider ">
+                                <div className="row">
+                                    <div className="col-md-12">
+                                        <hr className="section-divider" />
+                                    </div>
+                                </div>
+                            </div>
+
+                        </main>
+                    {/*</div>*/}
+                {/*</div>*/}
 
                 <footer className="page-footer font-small mdb-color lighten-1">
                     <div className="footer-copyright text-center py-3">
@@ -433,10 +483,7 @@ class ProjectItems extends React.Component {
             return newArray;
         }, []);
         //console.log(arrayResult);
-
-        console.log("ProjectItems end");
         return (
-
             <div className="c003-stepper">
                 <ul className="stepper stepper-horizontal stepper-nolines">
                     {
@@ -444,6 +491,38 @@ class ProjectItems extends React.Component {
                             return  <li key={i} className="text-center">
                                 <a onClick={() => properties.es6Function(item[0])}><img src={item[3]} className="img-fluid stepper-logo" /><br/><span className="label"><strong className="d-none">{item[1]}</strong><small>{item[2]}</small></span></a>
                                     </li>
+                        })
+                    }
+                </ul>
+            </div>
+        )
+    }
+}
+
+class ProjectItemsVertical extends React.Component {
+    render() {
+        // console.log("ProjectItems start");
+        // console.log(this.props.dataFromParent);
+        // console.log(this.props.es6Function);
+        // console.log(this.props);
+        let properties = this.props;
+        // console.log('testdata');
+        // console.log(properties);
+
+        let objArray = this.props.dataFromParent;
+        let arrayResult = objArray.reduce(function(newArray, item) {
+            newArray.push([item.id, item.companyName, item.projectNameAlt, item.companyLogo]);
+            return newArray;
+        }, []);
+        //console.log(arrayResult);
+        return (
+            <div id="ProjectItemsVertical" key="ProjectItemsVertical" className="c003-stepper">
+                <ul className="stepper stepper-vertical">
+                    {
+                        arrayResult.map(function (item, i) {
+                            return  <li key={i} className="">
+                                <a href="#projects" onClick={() => properties.es6Function(item[0])}><span className="circle bg-white"><img src={item[3]} className="circle img-fluid" /></span><span className="label text-left"><strong className="">{item[1]}</strong><br/><small>{item[2]}</small></span></a>
+                            </li>
                         })
                     }
                 </ul>

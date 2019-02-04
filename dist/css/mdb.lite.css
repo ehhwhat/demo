@@ -6164,16 +6164,6 @@ ul.stepper {
 
 .react-root {
   /* LOADING STATES */ }
-  .react-root .loading-new {
-    opacity: 0; }
-  .react-root .loaded-new {
-    opacity: 1;
-    -webkit-transition: opacity 0.5s ease-in;
-    -o-transition: opacity 0.5s ease-in;
-    transition: opacity 0.5s ease-in;
-    -webkit-transition-delay: 2s;
-    -o-transition-delay: 2s;
-    transition-delay: 2s; }
   .react-root .bg-cashplus {
     border-bottom: 4px solid #17264D !important; }
   .react-root .bg-homeserve {
@@ -6218,6 +6208,37 @@ ul.stepper {
       -webkit-transition: all 0.25s;
       -o-transition: all 0.25s;
       transition: all 0.25s; }
+  .react-root .stepper li {
+    -webkit-transition: all 0.25s;
+    -o-transition: all 0.25s;
+    transition: all 0.25s; }
+    .react-root .stepper li:hover {
+      background-color: transparent;
+      margin-left: 1rem;
+      -webkit-transition: all 0.25s;
+      -o-transition: all 0.25s;
+      transition: all 0.25s; }
+  .react-root .ProjectItemsVerticalButton {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    -webkit-border-radius: 100%;
+    border-radius: 100%;
+    width: 45px;
+    padding-left: 0;
+    padding-right: 0;
+    background: white !important;
+    z-index: 999999; }
+  .react-root .loading-new {
+    opacity: 0; }
+  .react-root .loaded-new {
+    opacity: 1;
+    -webkit-transition: opacity 0.25s ease-in;
+    -o-transition: opacity 0.25s ease-in;
+    transition: opacity 0.25s ease-in;
+    -webkit-transition-delay: 1s;
+    -o-transition-delay: 1s;
+    transition-delay: 1s; }
   .react-root .loader-wrapper {
     position: fixed;
     top: 50%;
@@ -6233,9 +6254,9 @@ ul.stepper {
       -webkit-transition: opacity 0.25s ease-in;
       -o-transition: opacity 0.25s ease-in;
       transition: opacity 0.25s ease-in;
-      -webkit-transition-delay: 1.75s;
-      -o-transition-delay: 1.75s;
-      transition-delay: 1.75s; }
+      -webkit-transition-delay: 0.75s;
+      -o-transition-delay: 0.75s;
+      transition-delay: 0.75s; }
   .react-root .lds-ellipsis {
     display: inline-block;
     position: relative;
