@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
  * Material Design for Bootstrap 4
  * Version: MDB FREE 4.5.15
@@ -8045,6 +8046,103 @@ ul.stepper {
 .c001-basic-content p {
   text-align: justify; }
 
+.c001-basic-content .list-inline.list-inline--dotted .list-inline-item:not(:last-child) {
+  margin-right: 0.5rem; }
+  .c001-basic-content .list-inline.list-inline--dotted .list-inline-item:not(:last-child):after {
+    content: "•";
+    position: relative;
+    right: -0.3rem;
+    top: 0;
+    color: #ff8a80; }
+
+.c001-basic-content .custom-control {
+  padding: 0; }
+  .c001-basic-content .custom-control.float-right {
+    padding-right: 1.75rem; }
+
+.c001-basic-content .custom-control-input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0; }
+
+.c001-basic-content .custom-control-label {
+  position: relative;
+  margin-bottom: 0;
+  vertical-align: top; }
+
+.c001-basic-content .custom-control-label::before {
+  position: absolute;
+  top: .25rem;
+  left: -1.5rem;
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  pointer-events: none;
+  content: "";
+  background-color: #fff;
+  border: #45526e solid 1px;
+  outline: none; }
+
+.c001-basic-content .custom-control-label::before,
+.c001-basic-content .custom-file-label,
+.c001-basic-content .custom-select {
+  -webkit-transition: background-color .15s ease-in-out,border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+  transition: background-color .15s ease-in-out,border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+  -o-transition: background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  transition: background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  transition: background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out; }
+
+.c001-basic-content .custom-switch .custom-control-label::before {
+  left: 0;
+  width: 1.75rem;
+  pointer-events: all;
+  -webkit-border-radius: .5rem;
+  border-radius: .5rem; }
+
+.c001-basic-content .custom-control-input:checked ~ .custom-control-label::before {
+  color: #fff;
+  background-color: #66bb6a;
+  border: #66bb6a solid 1px; }
+
+.c001-basic-content .custom-control-label::after {
+  position: absolute;
+  top: .25rem;
+  left: -1.5rem;
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  content: "";
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: 50% 50%;
+  background-size: 50% 50%; }
+
+.c001-basic-content .custom-switch .custom-control-label::after {
+  top: -webkit-calc(.25rem + 2px);
+  top: calc(.25rem + 2px);
+  left: -webkit-calc(0rem + 2px);
+  left: calc(0rem + 2px);
+  width: -webkit-calc(1rem - 4px);
+  width: calc(1rem - 4px);
+  height: -webkit-calc(1rem - 4px);
+  height: calc(1rem - 4px);
+  background-color: #45526e;
+  -webkit-border-radius: .5rem;
+  border-radius: .5rem;
+  transition: background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-transform .15s ease-in-out;
+  -webkit-transition: background-color .15s ease-in-out,border-color .15s ease-in-out,-webkit-transform .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+  transition: background-color .15s ease-in-out,border-color .15s ease-in-out,-webkit-transform .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+  -o-transition: transform .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  transition: transform .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  transition: transform .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-transform .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+  transition: transform .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-transform .15s ease-in-out; }
+
+.c001-basic-content .custom-switch .custom-control-input:checked ~ .custom-control-label::after {
+  background-color: #fff;
+  -webkit-transform: translateX(0.75rem);
+  -ms-transform: translateX(0.75rem);
+  transform: translateX(0.75rem); }
+
 .c002-image-content-cta p {
   text-align: justify; }
 
@@ -8113,6 +8211,9 @@ ul.stepper {
   column-count: 2;
   -webkit-column-gap: 0;
   column-gap: 0; }
+  .c006-image-block.grid.grid-xs-3 {
+    -webkit-column-count: 3;
+    column-count: 3; }
   .c006-image-block.grid.cols-1 {
     -webkit-column-count: 1 !important;
     column-count: 1 !important; }
@@ -8169,7 +8270,10 @@ ul.stepper {
 @media (min-width: 576px) {
   .c006-image-block.grid {
     -webkit-column-count: 4;
-    column-count: 4; } }
+    column-count: 4; }
+    .c006-image-block.grid.grid-xs-3 {
+      -webkit-column-count: 4;
+      column-count: 4; } }
 
 @media (max-width: 767.98px) {
   .c006-image-block {
@@ -8270,9 +8374,8 @@ ul.stepper {
       color: #6D7578; }
   .time-line .dot-start {
     left: 0%; }
-  .time-line .dot-end {
-    left: auto;
-    right: 0%; }
+    .time-line .dot-start:before {
+      content: "oct"; }
   .time-line .dot-nov {
     left: 12.5%; }
     .time-line .dot-nov:before {
@@ -8301,6 +8404,11 @@ ul.stepper {
     left: 87.5%; }
     .time-line .dot-may:before {
       content: "may"; }
+  .time-line .dot-end {
+    left: auto;
+    right: 0%; }
+    .time-line .dot-end:before {
+      content: "jun"; }
 
 .events-line {
   background: #ff8a80; }
@@ -8326,6 +8434,18 @@ ul.stepper {
     left: 47.6%; }
   .events-line .dot-watfordhalf {
     left: 50.8%; }
+  .events-line .dot-welwyn10km {
+    left: 53.6%; }
+  .events-line .dot-hillingdonhalf {
+    left: 59.2%; }
+  .events-line .dot-bighalf {
+    left: 64.8%; }
+  .events-line .dot-welwynhalf {
+    left: 67.5%; }
+  .events-line .dot-hsvtri {
+    left: 90%; }
+  .events-line .dot-hertstri {
+    left: 95.6%; }
   .events-line .dot-cycle2 {
     left: 54.8%; }
   .events-line .dot-cycle3 {
@@ -8359,6 +8479,10 @@ ul.stepper {
     left: 45.2%; }
   .target-line .dot-watfordhalf {
     left: 50.8%; }
+  .target-line .dot-welwyn10km {
+    left: 53.6%; }
+  .target-line .dot-hillingdonhalf {
+    left: 59.2%; }
 
 .current-line {
   background: #42a5f5 !important;
@@ -8382,6 +8506,8 @@ ul.stepper {
     left: 45.2%; }
   .current-line .dot-target-ashridge2 {
     left: 47.6%; }
+  .current-line .dot-watfordhalf {
+    left: 50.8%; }
   .current-line:after {
     content: "";
     position: absolute;
@@ -8880,6 +9006,25 @@ a {
     text-decoration-color: #0b72c6; }
   p a {
     text-decoration: underline; }
+
+/* long version */
+a[href^="http://"]:not([href*="ehhwhat.co.uk"]):after,
+a[href^="https://"]:not([href*="ehhwhat.co.uk"]):after,
+a[href^="//"]:not([href*="ehhwhat.co.uk"]):after,
+a[href^="http://"]:not([href*="http://localhost:3000"]):after,
+a[href^="https://"]:not([href*="https://localhost:3000"]):after,
+a[href^="//"]:not([href*="//localhost:3000"]):after {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: .75rem;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  content: "\f14c";
+  margin: 0 0.125rem 0 0.25rem;
+  vertical-align: middle; }
+
+a.btn:after {
+  display: none !important; }
 
 .text-warning {
   color: #ffa726 !important; }

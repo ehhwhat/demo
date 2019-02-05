@@ -3,6 +3,9 @@
     column-width: auto;
     column-count: 2;
     column-gap: 0;
+    &.grid-xs-3 {
+      column-count: 3;
+    }
     &.cols-1 {
       column-count: 1!important;
     }
@@ -26,6 +29,9 @@
   @include media-breakpoint-up(sm) {
     &.grid {
       column-count: 4;
+      &.grid-xs-3 {
+        column-count: 4;
+      }
     }
   }
   @include media-breakpoint-down(sm) {

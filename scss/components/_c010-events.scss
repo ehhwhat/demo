@@ -91,25 +91,27 @@
       color:#6D7578;
     }
   }
+  // October 0-30days
   .dot-start {
     left:0%;
+    &:before {content:"oct";}
   }
-  .dot-end {
-    left:auto;
-    right:0%;
-  }
+  // 31 to 60
   .dot-nov {
     left:12.5%;
     &:before {content:"nov";}
   }
+  // 61 - 90
   .dot-dec {
     left:25%;
     &:before {content:"dec";}
   }
+  // 91 - 120
   .dot-jan {
     left:37.5%;
     &:before {content:"jan";}
   }
+  // 120 - 150
   .dot-feb {
     left:50%;
     &:before {content:"feb";}
@@ -126,9 +128,17 @@
     left:87.5%;
     &:before {content:"may";}
   }
+  .dot-end {
+    left:auto;
+    right:0%;
+    &:before {content:"jun";}
+  }
 }
 
 .events-line {
+  // position should be 2.5px per day of the month
+  // i have set each month to be 30 days no matter what
+  // starting month is October
   background:$secondary-color;
   .dot {
     margin-left:-12px;
@@ -167,6 +177,20 @@
   .dot-ashridgedual2 {left:47.6%;}
   // 127days in = 127/2.5 =
   .dot-watfordhalf {left:50.8%;}
+  // 134days in = 134/2.5 =
+  .dot-welwyn10km {left:53.6%;}
+  // 148days in (Feb 24th) = 148/2.5 =
+  .dot-hillingdonhalf {left:59.2%;}
+  // 162days in (Mar 10th) = 162/2.5 =
+  .dot-bighalf {left:64.8%;}
+  // 169days in (Mar 17th) = 169/2.5 =
+  .dot-welwynhalf {left:67.5%;}
+  // 225days in (May 12th) = 225/2.5 =
+  .dot-hsvtri {left:90%;}
+  // 239days in (May 26th) = 239/2.5 =
+  .dot-hertstri {left:95.6%;}
+
+
 
 
 
@@ -202,6 +226,8 @@
   .dot-target-ashridge2 {left:47.6%;}
   .dot-target-windsorhalf {left:45.2%;}
   .dot-watfordhalf {left:50.8%;}
+  .dot-welwyn10km {left:53.6%;}
+  .dot-hillingdonhalf {left:59.2%;}
 }
 
 .current-line {
@@ -219,6 +245,7 @@
   .dot-target-ashridge {left:39.6%;}
   .dot-target-windsorhalf {left:45.2%;}
   .dot-target-ashridge2 {left:47.6%;}
+  .dot-watfordhalf {left:50.8%;}
 
   &:after {
     content:"";

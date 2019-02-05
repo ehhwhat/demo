@@ -212,6 +212,30 @@ a {
   }
 }
 
+/* long version */
+a[href^="http://"]:not([href*="ehhwhat.co.uk"]),
+a[href^="https://"]:not([href*="ehhwhat.co.uk"]),
+a[href^="//"]:not([href*="ehhwhat.co.uk"]),
+a[href^="http://"]:not([href*="http://localhost:3000"]),
+a[href^="https://"]:not([href*="https://localhost:3000"]),
+a[href^="//"]:not([href*="//localhost:3000"]) {
+  &:after {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: .75rem;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    content: "\f14c";
+    margin: 0 0.125rem 0 0.25rem;
+    vertical-align: middle;
+  }
+}
+a.btn {
+  &:after {
+    display:none!important;
+  }
+}
+
 .text-warning {color: $theme-orange!important;}
 .text-danger {color: $theme-red!important;}
 .text-success {color: $theme-green!important;}
