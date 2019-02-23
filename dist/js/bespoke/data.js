@@ -179,13 +179,44 @@ $(document).ready(function() {
         // -------------------
         // LATEST ACTIVITY
         // -------------------
-        console.log(result[result.length - 1]);
         let latestEntry = data.slice(data.length - 1,data.length - 0).map(function(el){
             return el.name;
         });
         $('.latestEntry').html(latestEntry).addClass(animatedEffect);
-        //console.log(latestEntry);
-        console.log("%c Latest entry : " + latestEntry, "padding:5px 15px;margin:5px;color: #333;border-left:15px solid grey;font-weight:bold;");
+        let latestEntryDuration = data.slice(data.length - 1,data.length - 0).map(function(el){
+            return parseInt(el.elapsed_time / 60);
+        });
+        $('.latestEntryDuration').html(latestEntryDuration+"mins").addClass(animatedEffect);
+        console.log("%c Latest entry : " + latestEntry + " " + latestEntryDuration+"mins", "padding:5px 15px;margin:5px;color: #333;border-left:15px solid" +
+            " grey;font-weight:bold;");
+
+        // -------------------
+        // Previous ACTIVITY
+        // -------------------
+        let previousEntry = data.slice(data.length - 2,data.length - 1).map(function(el){
+            return el.name;
+        });
+        $('.previousEntry').html(previousEntry).addClass(animatedEffect);
+        let previousEntryDuration = data.slice(data.length - 2,data.length - 1).map(function(el){
+            return parseInt(el.elapsed_time / 60);
+        });
+        $('.previousEntryDuration').html(previousEntryDuration+"mins").addClass(animatedEffect);
+        console.log("%c Previous entry : " + previousEntry + " " + previousEntryDuration+"mins", "padding:5px 15px;margin:5px;color: #333;border-left:15px solid grey;font-weight:bold;");
+
+        // -------------------
+        // Previous Previous ACTIVITY
+        // -------------------
+        let previousPreviousEntry = data.slice(data.length - 3,data.length - 2).map(function(el){
+            return el.name;
+        });
+        $('.previousPreviousEntry').html(previousPreviousEntry).addClass(animatedEffect);
+        let previousPreviousEntryDuration = data.slice(data.length - 3,data.length - 2).map(function(el){
+            return parseInt(el.elapsed_time / 60);
+        });
+        $('.previousPreviousEntryDuration').html(previousPreviousEntryDuration+"mins").addClass(animatedEffect);
+        console.log("%c Previous previous entry : " + previousPreviousEntry + " " + previousPreviousEntryDuration+"mins", "padding:5px 15px;margin:5px;color:" +
+            " #333;border-left:15px solid grey;font-weight:bold;");
+
 
         console.log(weightSessions);
         console.log(gymCardioSessions);

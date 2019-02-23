@@ -1,0 +1,22 @@
+{{!-- pages/react/static.hbs --}}
+
+{{#> layouts/base--react
+        title="Strava | React"
+        body-class=""
+        html-class="strava"
+}}
+
+    {{#*inline "main-block"}}
+
+        <!-- TARGET TO RENDER THE MARKUP -->
+        <div class="react-root "  id="root"></div>
+
+    {{/inline}}
+
+    {{#*inline "scripts-block"}}
+        {{> includes/scripts-react }}
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="{{domainprefix}}js/react/react-strava.js?v{{version}}" type="text/babel"></script>
+    {{/inline}}
+
+{{/layouts/base--react}}

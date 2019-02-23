@@ -1,5 +1,10 @@
-.react-root {
 
+html.full-height, .full-height body {
+  height: 100%;
+}
+
+
+.react-root {
 
   .bg-cashplus {border-bottom:4px solid #17264D!important;}
   .bg-homeserve {border-bottom:4px solid  #e7342c!important;}
@@ -75,18 +80,20 @@
   left:50%;
   transform: translate(-50%,-50%);
   z-index:9999;
-  &.loader-inline {
-    position: static;
-    transform: none;
-    text-align: center;
+    &.loader-inline {
+      position: static;
+      transform: none;
+      text-align: center;
+    }
+    &.loading-new-reverse {
+      opacity:1;
+    }
+    &.loaded-new-reverse {
+      opacity:0;
+      transition: opacity 0.25s ease-in;
+      transition-delay: 0.75s;
+    }
   }
-  &.loading-new-reverse {opacity:1;}
-  &.loaded-new-reverse {
-    opacity:0;
-    transition: opacity 0.25s ease-in;
-    transition-delay: 0.75s;
-  }
-}
   .lds-ellipsis {
     display: inline-block;
     position: relative;
@@ -248,6 +255,382 @@
       }
     }
 
+  }
+
+}
+
+.strava {
+
+  .background {
+    background:url('../img/app/triathlon/self/norm.jpg') center;
+    background-size: cover;
+    position:absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    filter: grayscale(90%);
+    z-index:0;
+    transition: all 1s;
+    &.All {
+      background:url('../img/app/triathlon/self/norm.jpg') center;
+      background-size: cover;
+      transition: all 1s;
+    }
+    &.Swim {
+      background:url('../img/app/triathlon/self/swim.jpg') center;
+      background-size: cover;
+      transition: all 1s;
+    }
+    &.Ride {
+      background:url('../img/app/triathlon/self/bike.jpg') center;
+      background-size: cover;
+      transition: all 1s;
+    }
+    &.Run {
+      background:url('../img/app/triathlon/self/run.jpg') center;
+      background-size: cover;
+      transition: all 1s;
+    }
+    &.blurred {
+      filter: blur(10px) grayscale(90%);
+      top: -5vh;
+      left: -5vw;
+      right: 0;
+      bottom: 0;
+      width: 110vw;
+      height: 110vh;
+    }
+  }
+
+  .background-mask {
+    background:#1D1313;
+    opacity: 0.75;
+    position:absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index:0;
+    transition: all 1s;
+    &.All {
+      background:#1D1313;
+      transition: all 1s;
+    }
+    &.Swim {
+      background:#30C4C9;
+      transition: all 1s;
+    }
+    &.Ride {
+      background:#24B694;
+      transition: all 1s;
+    }
+    &.Run {
+      background:#D22042;
+      transition: all 1s;
+    }
+    &.Stats {
+      background:#613860;
+      transition: all 1s;
+    }
+  }
+
+  body, html {
+    height:100vh;
+    width:100vw;
+    overflow:hidden;
+
+  }
+
+  .strava-gradient {
+    background-image: linear-gradient(45deg,#fc4c02 0,lighten(#fc4c02,20%) 99%,lighten(#fc4c02,20%) 100%);
+  }
+
+  .react-root {
+    height:100vh;
+    width:100vw;
+    overflow:hidden;
+    position: relative;
+
+    main {
+      margin-top:0;
+      height:100vh;
+      width:100vw;
+      overflow:hidden;
+      .event-header {
+        position: absolute;
+        z-index:4;
+        top:15vh;
+        left:20vw;
+        font-weight: bold;
+      }
+      .event-header-next {
+        position: absolute;
+        z-index:4;
+        top:15vh;
+        right:-10vw;
+        font-weight: bold;
+        opacity:0.5;
+      }
+
+      .c007-data-block {
+        position: absolute;
+        z-index:4;
+        left:20vw;
+        p {
+          font-weight: bold;
+          margin-left:3px;
+        }
+        .dataPoint {
+          position: relative;
+          font-weight: 100;
+          margin-left:0;
+          &:before {
+            content:'';
+            height:2rem;
+            width:2rem;
+            display: block;
+            position: absolute;
+            left:-10vw;
+            top:.4rem;
+            filter: invert(100%);
+          }
+        }
+
+        &.point1 {
+          top:30vh;
+        }
+        &.point2 {
+          top:45vh;
+        }
+        &.point3 {
+          top:60vh;
+        }
+
+
+        &.Sessions {
+          top:30vh;
+          .dataPoint {
+            &:before {
+              background:url('../img/app/triathlon/icons/sync-reload-refreshh-synchronization-loop-64.png') center no-repeat;
+              background-size: 2rem;
+            }
+          }
+        }
+        &.Weight {
+          top:30vh;
+          .dataPoint {
+            &:before {
+              background:url('../img/app/triathlon/icons/user-person-account-avatar-customer-64.png') center no-repeat;
+              background-size: 2rem;
+            }
+          }
+        }
+        &.Time {
+          top:45vh;
+          .dataPoint {
+            &:before {
+              background:url('../img/app/triathlon/icons/time-clock-date-analog-period-64.png') center no-repeat;
+              background-size: 2rem;
+            }
+          }
+        }
+        &.Bodyfat {
+          top:45vh;
+          .dataPoint {
+            &:before {
+              background:url('../img/app/triathlon/icons/user-group-team-duo-partner-64.png') center no-repeat;
+              background-size: 2rem;
+            }
+          }
+        }
+        &.Distance {
+          top:60vh;
+          .dataPoint {
+            &:before {
+              background:url('../img/app/triathlon/icons/trasfer-back-forward-arrow-horizontal-64.png') center no-repeat;
+              background-size: 2rem;
+            }
+          }
+        }
+        &.VO2 {
+          .dataPoint {
+            &:before {
+              background:url('../img/app/triathlon/icons/signal-wave-distribute-share-sound-64.png') center no-repeat;
+              background-size: 2rem;
+            }
+          }
+        }
+      }
+
+    }
+
+    .content-wrapper {
+      //height:50vh;
+    }
+
+    .data-wrapper {
+      div:nth-child(1) {
+        animation-delay: 0.25s;
+      }
+      div:nth-child(2){
+        animation-delay: 0.5s;
+      }
+      div:nth-child(3){
+        animation-delay: 0.75s;
+      }
+    }
+
+    .Sessions {
+
+    }
+
+    .thumbButtons {
+      ul li a {
+        &:focus,
+        &:active {
+          text-decoration: underline;
+          color:white;
+        }
+      }
+      &--default {
+        position: fixed;
+        right: 10vw;
+        bottom: 4vh;
+        border-radius: 100%;
+        width: 45px;
+        padding-left: 0;
+        padding-right: 0;
+        background:transparent!important;
+        z-index:999999;
+        color:white;
+        text-align: right;
+        &__All{
+          bottom: 7.5vh;
+          span {
+            background: url('https://cdn0.iconfinder.com/data/icons/sport-2-android-l-lollipop-icon-pack/24/walking-16.png');
+          }
+        }
+        &__Swim {
+          bottom: 10vh;
+          span {
+            background: url('https://cdn0.iconfinder.com/data/icons/sport-2-android-l-lollipop-icon-pack/24/swimming-16.png');
+          }
+        }
+        &__Ride {
+          bottom: 12.5vh;
+          span {
+            background: url('https://cdn0.iconfinder.com/data/icons/sport-2-android-l-lollipop-icon-pack/24/time_trial_biking-16.png');
+          }
+        }
+        &__Run {
+          bottom: 15vh;
+          span {
+            background: url('https://cdn0.iconfinder.com/data/icons/sport-2-android-l-lollipop-icon-pack/24/walking-16.png');
+          }
+        }
+        &__Stats {
+          bottom: 17.5vh;
+          span {
+            background: url('https://cdn0.iconfinder.com/data/icons/sport-2-android-l-lollipop-icon-pack/24/walking-16.png');
+          }
+        }
+
+      }
+    }
+
+    /* LOADING STATES */
+    .loaded-new {
+      transition-delay: 0.1s;
+    }
+    .loader-wrapper {
+      &.loaded-new-reverse {
+        transition-delay: 0.1s;
+      }
+    }
+
+    .dots {
+      position: absolute;
+      left:10vw;
+      bottom:5vh;
+      text-align: center;
+      z-index:3;
+      margin:0;
+      padding:0;
+      display:flex;
+      align-items: center;
+      li {
+        height:0.4rem;
+        width:0.4rem;
+        display: inline-block;
+        background:rgba(white,0.4);
+        margin:0 0.1rem;
+        padding:0;
+        border-radius: 100%;
+        transition: all 0.2s;
+      }
+      &.All {
+        li:nth-child(1) {
+          height:0.6rem;
+          width:0.6rem;
+          background:rgba(white,1);
+        }
+      }
+      &.Swim {
+        li:nth-child(2) {
+          height:0.6rem;
+          width:0.6rem;
+          background:rgba(white,1);
+        }
+      }
+      &.Ride {
+        li:nth-child(3) {
+          height:0.6rem;
+          width:0.6rem;
+          background:rgba(white,1);
+        }
+      }
+      &.Run {
+        li:nth-child(4) {
+          height:0.6rem;
+          width:0.6rem;
+          background:rgba(white,1);
+        }
+      }
+      &.Stats {
+        li:nth-child(5) {
+          height:0.6rem;
+          width:0.6rem;
+          background:rgba(white,1);
+        }
+      }
+    }
+
+  }
+
+  // ----
+  // Sass (v3.3.0.rc.1)
+  // Compass (v0.13.alpha.10)
+  // ----
+
+  $max: 10;
+  $step: 1;
+
+  @for $i from 1 through ceil($max/$step) {
+    $value: ($i - 1)*$step + 1;
+    .test_#{$value} {
+      top: $i;
+      left: $value;
+    }
+    .thumbButtons ul li:nth-child(#{$value}) a{
+      //top: $i+px;
+      //left: $value+px;
+      animation-delay: #{$value * 100}ms;
+    }
   }
 
 }

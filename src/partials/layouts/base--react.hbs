@@ -1,7 +1,7 @@
 {{!-- layouts/base--react.hbs --}}
 
 <!doctype html>
-<html>
+<html class="{{html-class}}">
     <head>
         {{> includes/meta }}
         <title>
@@ -14,14 +14,25 @@
         <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@8.17.0/dist/lazyload.min.js"></script>
         {{> includes/styles
                 domainprefix='../../'
-                version='14'
+                version='20'
         }}
         {{#> head-block}}
             {{!-- Custom <head> content per page could be added. --}}
         {{/head-block}}
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <script type="text/javascript">
+            // When ready...
+            window.addEventListener("load",function() {
+                // Set a timeout...
+                setTimeout(function(){
+                    // Hide the address bar!
+                    window.scrollTo(0,document.body.scrollHeight);
+                }, 0);
+            });
+        </script>
     </head>
 
-    <body data-spy="scroll" data-target="#navbar" data-offset="150" class="smooth-scroll">
+    <body data-spy="scroll" data-target="#navbar" data-offset="150" class="smooth-scroll {{body-class}}">
 
         {{#> main-block}}
             {{!-- main content goes here. --}}
@@ -29,12 +40,12 @@
 
         {{> includes/scripts
             domainprefix='../../'
-            version='14'
+            version='20'
         }}
 
         {{#> scripts-block
                 domainprefix='../../'
-                version='14'}}
+                version='20'}}
                 {{!-- Custom scripts. --}}
         {{/scripts-block}}
 

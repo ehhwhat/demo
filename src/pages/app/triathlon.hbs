@@ -74,13 +74,13 @@
         }}
             {{> components/c001-basic-content
                     heading-primary='7 to 70, well 70.3'
-                    heading-secondary='What am i doing?'
+                    heading-secondary='What am I doing?'
                     body-content='
                     <p>I will train for the next 7 months to enter a 70.3 half Ironman event in lovely Staffordshire and I plan to document everything as I go along, I also fully expect to get a flat tyre or forget a wetsuit and all this training will be for nothing.</p>
                     <h3 class="mt-5">What is a half Ironman?</h3>
-                    <p>Well it consists of a <strong>1.2mile swim</strong>, a <strong>56mile bike ride</strong> and finishes with a <strong>13.1mile run</strong>, for a total of 70.3miles in distance.</p>
-                    <h3 class="mt-5">Why am i doing this?</h3>
-                    <p>You may be wondering why i am documenting this process and the simple reason is i am a bit of a neat freak (my life is a trello board) and i love data and training / competing in an event such as this can create lots of juicy data. My plan is to add a post every month detailing what training has been done, what improvements may have been made, what events have been entered etc. </p>
+                    <p>Well, it consists of a&nbsp;<strong>1.2mile swim</strong>, a&nbsp;<strong>56mile bike ride</strong>&nbsp;and finishes with a&nbsp;<strong>13.1mile run</strong>, for a total of 70.3miles in distance.</p>
+                    <h3 class="mt-5">Why am I doing this?</h3>
+                    <p>You may be wondering why I am documenting this process and the simple reason is I am a bit of a neat freak (my life is a Trello board) and I love data and training / competing in an event such as this can create lots of juicy data. My plan is to add a post every month detailing what training has been done, what improvements may have been made, what events have been entered etc.</p>
                     '
             }}
         {{/sublayouts/grid1}}
@@ -114,6 +114,30 @@
 {{> components/c004-divider }}
 
         {{#> sublayouts/grid1
+                id=''
+                class='bg-alt2'
+        }}
+            {{> components/c001-basic-content
+                    heading-primary='Latest activities...'
+                    heading-secondary='From Strava'
+                    body-content='
+                    <p class="with-fadeout"><span class="latestEntry"></span> | <span class="latestEntryDuration"></span>
+                    <br/>
+                    <span class="previousEntry"></span> | <span class="previousEntryDuration"></span>
+                    <br/>
+                    <span class="previousPreviousEntry"></span> | <span class="previousPreviousEntryDuration"></span>
+                    <span class="fadeout"></span>
+                    </p>
+                    '
+            }}
+        {{/sublayouts/grid1}}
+
+{{!-- ------- --}}
+{{!-- DIVIDER --}}
+{{!-- ------- --}}
+{{> components/c004-divider }}
+
+        {{#> sublayouts/grid1
                 id='how'
         }}
             {{> components/c001-basic-content
@@ -136,25 +160,42 @@
                     <p>My Key Performance Indicators will be values which will hopefully show improvement as I continue training, each should have some reason/logic behind why I think this specific piece of data will be worth knowing or monitoring.</p>
 
                     <h6><strong>Weight</strong></h6>
-                    <p>The lighter I am the easier any running should be. <sup><span class="badge badge-info">1</span> <span class="badge badge-info">5</span></sup></p>
+                    <p>The lighter I am the easier any running should be.</p>
 
                     <h6><strong>5km, 10km and half marathon personal bests</strong></h6>
-                    <p>Improving PB`s in these events will highlight improvements in fitness, technique etc but also show consistency in training as I don`t think improvements could be made without all three. <sup><span class="badge badge-info">1</span> <span class="badge badge-info">5</span></sup></p>
+                    <p>Improving PB`s in these events will highlight improvements in fitness, technique etc but also show consistency in training as I don`t think improvements could be made without all three.</p>
 
                     <h6><strong>Average bike watts over specific routes</strong></h6>
-                    <p>This will show an increase in power and also potentially a reduction in weight, improving power to weight ratio, it will also highlight an improvement in training time and amount. <sup><span class="badge badge-info">2</span> <span class="badge badge-info">5</span></sup></p>
+                    <p>This will show an increase in power and also potentially a reduction in weight, improving power to weight ratio, it will also highlight an improvement in training time and amount.</p>
 
                     <h6><strong>Longest swim distance</strong></h6>
-                    <p><sup><span class="badge badge-info">3</span> <span class="badge badge-info">5</span></sup></p>
+                    <p>???</p>
 
                     <h6><strong>Number of times I cycle 50miles</strong></h6>
-                    <p><sup><span class="badge badge-info">4</span> <span class="badge badge-info">5</span></sup></p>
+                    <p>???</p>
 
                     <h6><strong>Hours spent training</strong></h6>
-                    <p>Will track all 3 events, will highlight which event needs more training and where I may have failed to do enough training. <sup><span class="badge badge-info">5</span></sup></p>
+                    <p>Will track all 3 events, will highlight which event needs more training and where I may have failed to do enough training.</p>
                     '
                     }}
                 {{/sublayouts/grid1}}
+
+{{!-- ------- --}}
+{{!-- DIVIDER --}}
+{{!-- ------- --}}
+{{> components/c004-divider }}
+
+        {{#> sublayouts/grid1
+                id=''
+                class='bg-alt2'
+        }}
+            {{> components/c001-basic-content
+                    heading-primary='The target, summarised'
+                    body-content='
+                    <p class="">At IRONMAN 70.3 Staffordshire finish in a time better than <strong>05:46:27</strong>.</p>
+                    '
+            }}
+        {{/sublayouts/grid1}}
 
 {{!-- ------- --}}
 {{!-- DIVIDER --}}
@@ -216,6 +257,60 @@
         {{#> sublayouts/grid-full class='container-training bg-alt1' }}
             {{> components/c009-training }}
         {{/sublayouts/grid-full}}
+        {{#> sublayouts/grid1
+                id=''
+                class='bg-alt3'
+        }}
+            {{> components/c001-basic-content
+                    heading-primary='Session types'
+                    heading-secondary='Making the most of the time available'
+                    body-content='
+                    <p>A couple of months into the training i found i sometimes wasnt making the most of my time, for example sometimes i would go to the gym and just do
+                    random weight training when i could have done legs (help with cycling) or cardio sessions on the eliptical when i could have do some heart rate
+                    training on the stepper. So i needed a set of cardio activities i could do over and over with a view to increase, resistance, speed or time and
+                    therefore get bigger, faster, stronger.</p>
+                    <ul>
+                        <li>Speed - 1km @ 16.6kmph, 250m @ 4kmph x 5 = an 18min 5km but will take around 35mins</li>
+                        <li>Distance - 10km + runs and 2hr+ sessions on the bike</li>
+                        <li>Power - High wattage cycles, 30min sessions with FTP set to 50watts over what i want to be able to do for an 1hr + in the saddle (275watts)</li>
+                        <li>Heart Rate - Stepper for 30mins with HR at 150+</li>
+                        <li>Strength - double (squats, leg press etc) or single leg (step ups, lunges etc) sessions for 45mins to 1hr</li>
+                        <li>LISS - Incline walking to maintain a lowish heart rate for extended periods (120-130)</li>
+                    </ul>
+                    <p><i class="fa fa-exclamation-circle" aria-hidden="true"></i> My expectation is to up / increase in some way each of the activites types
+                    .</p>
+                    <p><i class="fa fa-info-circle" aria-hidden="true"></i> There will likely be other sessions that I just don`t track as they may not be relevant.</p>
+                    '
+            }}
+        {{/sublayouts/grid1}}
+
+{{!-- ------- --}}
+{{!-- DIVIDER --}}
+{{!-- ------- --}}
+{{> components/c004-divider }}
+
+        {{#> sublayouts/grid-wide }}
+            {{#> sublayouts/grid-wide__col12 }}
+                {{#> components/c006-image-block }}
+                    {{> components/c006-image-block__point
+                            img-src='../../img/app/triathlon/self/norm.jpg'
+                            img-alt='Turbo trainer'
+                    }}
+                    {{> components/c006-image-block__point
+                            img-src='../../img/app/triathlon/self/swim.jpg'
+                            img-alt='Turbo trainer'
+                    }}
+                    {{> components/c006-image-block__point
+                            img-src='../../img/app/triathlon/self/bike.jpg'
+                            img-alt='Turbo trainer'
+                    }}
+                    {{> components/c006-image-block__point
+                            img-src='../../img/app/triathlon/self/run.jpg'
+                            img-alt='Turbo trainer'
+                    }}
+                {{/components/c006-image-block}}
+            {{/sublayouts/grid-wide__col12 }}
+        {{/sublayouts/grid-wide}}
 
 {{!-- ------- --}}
 {{!-- DIVIDER --}}
@@ -479,8 +574,8 @@
 <p>January started very well with lots of swimming, definitely got better at swimming for longer distances in one go although i am still very slow, i do wonder if once in
 an open water event I`ll be worse or better as it`ll be easier to get in to a rhythm as no turning every 25 meters, I`ll be wearing a tri and swimsuit for bouyancy as well
 as reduced drag. What will make things harder will be choppier water and people kicking me in the face during the scramble.</p>
-<p>Early in the month we had the Ashridge Duathlon which went much better than expected as i won my age group (only 5 entered to be fair) with a time of&nbsp;<strong>02:48:23</strong>&nbsp;(<a href="http://results.eventchiptiming.com/MyResults.aspx?uid=16202-8134-3-98185">see result here</a>). Having done this i decided to try and see if i could qualify for the GB Good For Age team so I had 1 week on intense training and then planned to do a few days of the actual cycling route unfortunately i fell off really badly (<a href="http://localhost:3000/pages-handled/app/triathlon.html#injuries">see injuries</a>) and it stopped me from training properly for the rest of the week. You can see&nbsp;<a href="http://localhost:3000/pages-handled/app/triathlon-ashridge.html">how the real Ashridge event went here</a>&nbsp;(<strong>02:43:25</strong>,&nbsp;<a href="http://results.eventchiptiming.com/MyResults.aspx?uid=16202-8136-3-99745">see result here</a>).</p>
-<p>Also during January, I managed to hurt my back at the gym (<a href="http://localhost:3000/pages-handled/app/triathlon.html#injuries">see injuries</a>) which made running and walking very difficult, due to this I decided not to turn up at the Dorney Lake half.</p>
+<p>Early in the month we had the Ashridge Duathlon which went much better than expected as i won my age group (only 5 entered to be fair) with a time of&nbsp;<strong>02:48:23</strong>&nbsp;(<a href="http://results.eventchiptiming.com/MyResults.aspx?uid=16202-8134-3-98185">see result here</a>). Having done this i decided to try and see if i could qualify for the GB Good For Age team so I had 1 week on intense training and then planned to do a few days of the actual cycling route unfortunately i fell off really badly (<a href="#injuries">see injuries</a>) and it stopped me from training properly for the rest of the week. You can see&nbsp;<a href="triathlon-ashridge.html">how the real Ashridge event went here</a>&nbsp;(<strong>02:43:25</strong>,&nbsp;<a href="http://results.eventchiptiming.com/MyResults.aspx?uid=16202-8136-3-99745">see result here</a>).</p>
+<p>Also during January, I managed to hurt my back at the gym (<a href="#injuries">see injuries</a>) which made running and walking very difficult, due to this I decided not to turn up at the Dorney Lake half.</p>
                     </div>
                     '
             }}
@@ -609,7 +704,7 @@ as reduced drag. What will make things harder will be choppier water and people 
                     heading-primary='Specials'
                     heading-secondary='Important events with reports'
                     body-content='
-                    <p>Standalone page to review special events i`ve enetered.</p>
+                    <p>Standalone page to review special events I`ve entered.</p>
                     '
             }}
         {{/sublayouts/grid1}}
@@ -639,8 +734,8 @@ as reduced drag. What will make things harder will be choppier water and people 
                     heading-primary='Injuries'
                     heading-secondary='Starting to wrack em up now'
                     body-content='
-                    <p>Figured i may as well document parts of the body im doing my best to break, at the moment i haven`t had any injuries due to overtraining which is good.
-                    Both have been due to stupid mistakes.</p>
+                    <p>Figured I may as well document parts of the body I`m doing my best to break, at the moment I haven`t had any injuries due to overtraining which is
+                    good. Both have been due to stupid mistakes.</p>
                     '
             }}
             {{#> components/c013-injuries
