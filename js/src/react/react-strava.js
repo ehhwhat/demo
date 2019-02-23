@@ -76,6 +76,7 @@ class App extends React.Component {
                 this.setState({dataToUseEvent: eventType});
                 this.setState({weight: ""});
                 this.setState({bodyfat: ""});
+                this.setState({vo2: ""});
 
                 // ---------------
                 // SESSIONS
@@ -313,9 +314,7 @@ class App extends React.Component {
                 this.setState({dataToUseDistance: trainingDistanceTotalKM});
                 this.setState({dataToUseDistanceInitial: trainingDistanceTotalKM});
 
-                setTimeout(() => {
-                    this.setState({showLoading:false});
-                }, 150);
+                this.setState({showLoading:false});
 
             }))
             .catch(function (error) {
@@ -365,8 +364,6 @@ class App extends React.Component {
                     <Dots dataFromParent={this.state.dataToUseEvent} loadingState={this.state.showLoading} />
 
                     <ThumbButtons loadingState={this.state.showLoading} eventTypeFunction={this.eventTypeFunction} />
-
-
 
                     <div className={`background All d-none`}>&nbsp;</div>
                     <div className={`background Swim d-none`}>&nbsp;</div>
@@ -465,8 +462,8 @@ class ThumbButtons extends React.Component {
     render() {
         let properties = this.props;
         return ([
-            <div className={"thumbButtons"}>
-                <a className="thumbButtons--default thumbButtons--default__more animated fadeIn" onClick={this.toggleButtons}>
+            <div key={"thumbButtons"}>
+                <a key={"ThumbButtonsTigger"} className="thumbButtons--default thumbButtons--default__more animated fadeIn" onClick={this.toggleButtons}>
                     {this.state.showButtons &&
                     <i className="fa fa-minus"></i>
                     }
@@ -475,7 +472,7 @@ class ThumbButtons extends React.Component {
                     }
                 </a>
                 {this.state.showButtons &&
-                <div>
+                <div key={"ThumbButtonsWrapper"}>
                     <Buttons eventTypeFunction={properties.eventTypeFunction} />
                 </div>
                 }
@@ -487,45 +484,16 @@ class ThumbButtons extends React.Component {
 class Buttons extends React.Component {
     render() {
         let properties = this.props;
-        let eventTypes = ['All','Swim','Ride','Run','Stats'];
-        return ([
-            <ul key={"Buttons"}>
-                <li>
-                    <a href={"#"} onClick={() => properties.eventTypeFunction('All')}
-                       className="thumbButtons--default thumbButtons--default__all animated fadeIn"
-                       title="All">All</a>
-                </li>
-                <li>
-                    <a href={"#"} onClick={() => properties.eventTypeFunction('Swim')}
-                       className="thumbButtons--default thumbButtons--default__swim animated fadeIn"
-                       title="Swim">Swim</a>
-                </li>
-                <li>
-                    <a href={"#"} onClick={() => properties.eventTypeFunction('Ride')}
-                       className="thumbButtons--default thumbButtons--default__bike animated fadeIn"
-                       title="Ride">Ride</a>
-                </li>
-                <li>
-                    <a href={"#"} onClick={() => properties.eventTypeFunction('Run')}
-                       className="thumbButtons--default thumbButtons--default__run animated fadeIn"
-                       title="Run">Run</a>
-                </li>
-                <li>
-                    <a href={"#"} onClick={() => properties.eventTypeFunction('Stats')}
-                       className="thumbButtons--default thumbButtons--default__stats animated fadeIn"
-                       title="Stats">Stats</a>
-                </li>
-                {/*{*/}
-                    {/*eventTypes.map(function (item, i) {*/}
-                        {/*return (<li>*/}
-                            {/*<a href={"#"} onClick={() => properties.eventTypeFunction({item})}*/}
-                               {/*className={`thumbButtons--default thumbButtons--default__${item} animated fadeIn`}*/}
-                               {/*title="Stats">{item}</a>*/}
-                        {/*</li>)*/}
-                    {/*})*/}
-                {/*}*/}
-            </ul>
-        ]);
+        const eventTypes = ['All','Swim','Ride','Run','Stats'];
+        const listItems = eventTypes.map((event) =>
+            <li key={`key${event}`}><a href={`#${event}`} onClick={() => properties.eventTypeFunction(event)}
+                   className={`thumbButtons--default thumbButtons--default__${event} animated fadeIn`}
+                   title="{event}">{event}</a>
+            </li>
+        );
+        return (
+            <ul className={""}>{listItems}</ul>
+        );
     }
 }
 

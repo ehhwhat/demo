@@ -3,46 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e1a8dbd3-4db4-4d08-9e1b-4adaf1f1c343" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/dist/css/mdb.css" afterPath="$PROJECT_DIR$/dist/css/mdb.css" />
-      <change beforePath="$PROJECT_DIR$/dist/css/mdb.lite.css" afterPath="$PROJECT_DIR$/dist/css/mdb.lite.css" />
-      <change beforePath="$PROJECT_DIR$/dist/css/mdb.lite.min.css" afterPath="$PROJECT_DIR$/dist/css/mdb.lite.min.css" />
-      <change beforePath="$PROJECT_DIR$/dist/css/mdb.min.css" afterPath="$PROJECT_DIR$/dist/css/mdb.min.css" />
-      <change beforePath="$PROJECT_DIR$/dist/js/bespoke/data.js" afterPath="$PROJECT_DIR$/dist/js/bespoke/data.js" />
-      <change beforePath="$PROJECT_DIR$/dist/pages-handled/app/triathlon-ashridge.html" afterPath="$PROJECT_DIR$/dist/pages-handled/app/triathlon-ashridge.html" />
-      <change beforePath="$PROJECT_DIR$/dist/pages-handled/app/triathlon-data.html" afterPath="$PROJECT_DIR$/dist/pages-handled/app/triathlon-data.html" />
-      <change beforePath="$PROJECT_DIR$/dist/pages-handled/app/triathlon.html" afterPath="$PROJECT_DIR$/dist/pages-handled/app/triathlon.html" />
-      <change beforePath="$PROJECT_DIR$/dist/pages-handled/general/components.html" afterPath="$PROJECT_DIR$/dist/pages-handled/general/components.html" />
-      <change beforePath="$PROJECT_DIR$/dist/pages-handled/general/cv-flat.html" afterPath="$PROJECT_DIR$/dist/pages-handled/general/cv-flat.html" />
-      <change beforePath="$PROJECT_DIR$/dist/pages-handled/general/styletile.html" afterPath="$PROJECT_DIR$/dist/pages-handled/general/styletile.html" />
-      <change beforePath="$PROJECT_DIR$/dist/pages-handled/general/sublayouts.html" afterPath="$PROJECT_DIR$/dist/pages-handled/general/sublayouts.html" />
-      <change beforePath="$PROJECT_DIR$/dist/pages-handled/index.html" afterPath="$PROJECT_DIR$/dist/pages-handled/index.html" />
-      <change beforePath="$PROJECT_DIR$/dist/pages-handled/javascript/arrays.html" afterPath="$PROJECT_DIR$/dist/pages-handled/javascript/arrays.html" />
-      <change beforePath="$PROJECT_DIR$/dist/pages-handled/javascript/basics.html" afterPath="$PROJECT_DIR$/dist/pages-handled/javascript/basics.html" />
-      <change beforePath="$PROJECT_DIR$/dist/pages-handled/javascript/maths.html" afterPath="$PROJECT_DIR$/dist/pages-handled/javascript/maths.html" />
-      <change beforePath="$PROJECT_DIR$/dist/pages-handled/javascript/objects.html" afterPath="$PROJECT_DIR$/dist/pages-handled/javascript/objects.html" />
-      <change beforePath="$PROJECT_DIR$/dist/pages-handled/jquery/ajax-json.html" afterPath="$PROJECT_DIR$/dist/pages-handled/jquery/ajax-json.html" />
-      <change beforePath="$PROJECT_DIR$/dist/pages-handled/jquery/ajax-promise.html" afterPath="$PROJECT_DIR$/dist/pages-handled/jquery/ajax-promise.html" />
-      <change beforePath="$PROJECT_DIR$/dist/pages-handled/jquery/ajax.html" afterPath="$PROJECT_DIR$/dist/pages-handled/jquery/ajax.html" />
-      <change beforePath="$PROJECT_DIR$/dist/pages-handled/page-one.html" afterPath="$PROJECT_DIR$/dist/pages-handled/page-one.html" />
-      <change beforePath="$PROJECT_DIR$/dist/pages-handled/react/add.html" afterPath="$PROJECT_DIR$/dist/pages-handled/react/add.html" />
-      <change beforePath="$PROJECT_DIR$/dist/pages-handled/react/addremove.html" afterPath="$PROJECT_DIR$/dist/pages-handled/react/addremove.html" />
-      <change beforePath="$PROJECT_DIR$/dist/pages-handled/react/array.html" afterPath="$PROJECT_DIR$/dist/pages-handled/react/array.html" />
-      <change beforePath="$PROJECT_DIR$/dist/pages-handled/react/cv-full.html" afterPath="$PROJECT_DIR$/dist/pages-handled/react/cv-full.html" />
-      <change beforePath="$PROJECT_DIR$/dist/pages-handled/react/cv.html" afterPath="$PROJECT_DIR$/dist/pages-handled/react/cv.html" />
-      <change beforePath="$PROJECT_DIR$/dist/pages-handled/react/dynamic.html" afterPath="$PROJECT_DIR$/dist/pages-handled/react/dynamic.html" />
-      <change beforePath="$PROJECT_DIR$/dist/pages-handled/react/inline.html" afterPath="$PROJECT_DIR$/dist/pages-handled/react/inline.html" />
-      <change beforePath="$PROJECT_DIR$/dist/pages-handled/react/projects.html" afterPath="$PROJECT_DIR$/dist/pages-handled/react/projects.html" />
-      <change beforePath="$PROJECT_DIR$/dist/pages-handled/react/state.html" afterPath="$PROJECT_DIR$/dist/pages-handled/react/state.html" />
-      <change beforePath="$PROJECT_DIR$/dist/pages-handled/react/static.html" afterPath="$PROJECT_DIR$/dist/pages-handled/react/static.html" />
-      <change beforePath="$PROJECT_DIR$/js/src/bespoke/data.js" afterPath="$PROJECT_DIR$/js/src/bespoke/data.js" />
-      <change beforePath="$PROJECT_DIR$/scss/_custom-styles.scss" afterPath="$PROJECT_DIR$/scss/_custom-styles.scss" />
-      <change beforePath="$PROJECT_DIR$/scss/components/bespoke/_react.scss" afterPath="$PROJECT_DIR$/scss/components/bespoke/_react.scss" />
-      <change beforePath="$PROJECT_DIR$/src/pages/app/triathlon-ashridge.hbs" afterPath="$PROJECT_DIR$/src/pages/app/triathlon-ashridge.hbs" />
-      <change beforePath="$PROJECT_DIR$/src/pages/app/triathlon.hbs" afterPath="$PROJECT_DIR$/src/pages/app/triathlon.hbs" />
-      <change beforePath="$PROJECT_DIR$/src/pages/index.hbs" afterPath="$PROJECT_DIR$/src/pages/index.hbs" />
-      <change beforePath="$PROJECT_DIR$/src/partials/layouts/base--react.hbs" afterPath="$PROJECT_DIR$/src/partials/layouts/base--react.hbs" />
-      <change beforePath="$PROJECT_DIR$/src/partials/layouts/base.hbs" afterPath="$PROJECT_DIR$/src/partials/layouts/base.hbs" />
-      <change beforePath="$PROJECT_DIR$/src/partials/layouts/starter.hbs" afterPath="$PROJECT_DIR$/src/partials/layouts/starter.hbs" />
+      <change beforePath="$PROJECT_DIR$/dist/js/react/react-strava.js" afterPath="$PROJECT_DIR$/dist/js/react/react-strava.js" />
+      <change beforePath="$PROJECT_DIR$/js/src/react/react-strava.js" afterPath="$PROJECT_DIR$/js/src/react/react-strava.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -59,7 +21,7 @@
       <file leaf-file-name="_react.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scss/components/bespoke/_react.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-294">
+            <state relative-caret-position="-634">
               <caret line="535" column="12" lean-forward="false" selection-start-line="535" selection-start-column="12" selection-end-line="535" selection-end-column="12" />
               <folding />
             </state>
@@ -99,8 +61,8 @@
       <file leaf-file-name="react-strava.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/src/react/react-strava.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="517" column="16" lean-forward="false" selection-start-line="517" selection-start-column="19" selection-end-line="525" selection-end-column="20" />
+            <state relative-caret-position="-204">
+              <caret line="313" column="59" lean-forward="false" selection-start-line="313" selection-start-column="59" selection-end-line="313" selection-end-column="59" />
               <folding />
             </state>
           </provider>
@@ -109,8 +71,8 @@
       <file leaf-file-name="react-cv-full.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/src/react/react-cv-full.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2169">
-              <caret line="653" column="0" lean-forward="false" selection-start-line="653" selection-start-column="0" selection-end-line="657" selection-end-column="17" />
+            <state relative-caret-position="299">
+              <caret line="533" column="0" lean-forward="false" selection-start-line="533" selection-start-column="0" selection-end-line="541" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -474,12 +436,12 @@
       <workItem from="1541362131120" duration="313486000" />
       <workItem from="1548960005970" duration="28566000" />
       <workItem from="1549300865120" duration="37083000" />
-      <workItem from="1550396236896" duration="28154000" />
+      <workItem from="1550396236896" duration="31950000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="440795000" />
+    <option name="totallyTimeSpent" value="444591000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -494,7 +456,7 @@
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29891303" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14673913" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -895,15 +857,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/src/react/react-cv-full.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2169">
-          <caret line="653" column="0" lean-forward="false" selection-start-line="653" selection-start-column="0" selection-end-line="657" selection-end-column="17" />
+        <state relative-caret-position="299">
+          <caret line="533" column="0" lean-forward="false" selection-start-line="533" selection-start-column="0" selection-end-line="541" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scss/components/bespoke/_react.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-294">
+        <state relative-caret-position="-634">
           <caret line="535" column="12" lean-forward="false" selection-start-line="535" selection-start-column="12" selection-end-line="535" selection-end-column="12" />
           <folding />
         </state>
@@ -911,8 +873,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/src/react/react-strava.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="517" column="16" lean-forward="false" selection-start-line="517" selection-start-column="19" selection-end-line="525" selection-end-column="20" />
+        <state relative-caret-position="-204">
+          <caret line="313" column="59" lean-forward="false" selection-start-line="313" selection-start-column="59" selection-end-line="313" selection-end-column="59" />
           <folding />
         </state>
       </provider>
