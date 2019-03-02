@@ -1,636 +1,719 @@
 
 html.full-height, .full-height body {
-  height: 100%;
+    height: 100%;
 }
 
 
 .react-root {
 
-  .bg-cashplus {border-bottom:4px solid #17264D!important;}
-  .bg-homeserve {border-bottom:4px solid  #e7342c!important;}
-  .bg-npower {border-bottom:4px solid  #b8277c!important;}
-  .bg-icaew {border-bottom:4px solid #d6d0cd!important;}
+    .bg-cashplus {border-bottom:4px solid #17264D!important;}
+    .bg-homeserve {border-bottom:4px solid  #e7342c!important;}
+    .bg-npower {border-bottom:4px solid  #b8277c!important;}
+    .bg-icaew {border-bottom:4px solid #d6d0cd!important;}
 
-  .c002-image-content-cta__background-ICAEW {background-color: rgba(#d6d0cd,0.9);}
-  .c002-image-content-cta__background-Cashplus {background-color: rgba(#17264D,0.9);}
-  .c002-image-content-cta__background-HomeServePLC {background-color: rgba(#e7342c,0.9);}
-  .c002-image-content-cta__background-HomeServeHML {background-color: rgba(#e7342c,0.9);}
-  .c002-image-content-cta__background-npower {background-color: rgba(#520c47,0.9);}
-
-
-  .stepper-logo {
-    max-width: 3rem;
-  }
-
-  .stepper {
-    &.stepper-nolines {
-      li {
-        transition: all 0.25s;
-        &:after {
-          display:none!important;
-        }
-        &:before {
-          display:none!important;
-        }
-        &:hover {
-          background-color: transparent;
-          transform: scale(1.1);
-          transition: all 0.25s;
-        }
-        justify-content: center;
-        align-items: flex-start;;
-      }
-    }
-    li {
-      transition: all 0.25s;
-      &:hover {
-        background-color: transparent;
-        margin-left:1rem;
-        transition: all 0.25s;
-      }
-    }
-  }
-
-  .ProjectItemsVerticalButton {
-    position: fixed;
-    bottom:1rem;
-    right:1rem;
-    border-radius: 100%;
-    width: 45px;
-    padding-left: 0;
-    padding-right: 0;
-    background:white!important;
-    z-index:999999;
-  }
-
-  /* LOADING STATES */
-  .loading-new{
-    opacity:0;
-  }
-  .loaded-new {
-    opacity:1;
-    transition: opacity 0.25s ease-in;
-    transition-delay: 1s;
-  }
+    .c002-image-content-cta__background-ICAEW {background-color: rgba(#d6d0cd,0.9);}
+    .c002-image-content-cta__background-Cashplus {background-color: rgba(#17264D,0.9);}
+    .c002-image-content-cta__background-HomeServePLC {background-color: rgba(#e7342c,0.9);}
+    .c002-image-content-cta__background-HomeServeHML {background-color: rgba(#e7342c,0.9);}
+    .c002-image-content-cta__background-npower {background-color: rgba(#520c47,0.9);}
 
 
-  .loader-wrapper {
-  position: fixed;
-  top:50%;
-  left:50%;
-  transform: translate(-50%,-50%);
-  z-index:9999;
-    &.loader-inline {
-      position: static;
-      transform: none;
-      text-align: center;
-    }
-    &.loading-new-reverse {
-      opacity:1;
-    }
-    &.loaded-new-reverse {
-      opacity:0;
-      transition: opacity 0.25s ease-in;
-      transition-delay: 0.75s;
-    }
-  }
-  .lds-ellipsis {
-    display: inline-block;
-    position: relative;
-    width: 64px;
-    height: 64px;
-  }
-  .lds-ellipsis div {
-    position: absolute;
-    top: 27px;
-    width: 11px;
-    height: 11px;
-    border-radius: 50%;
-    background: $secondary-color;
-    animation-timing-function: cubic-bezier(0, 1, 1, 0);
-  }
-  .lds-ellipsis div:nth-child(1) {
-    left: 6px;
-    animation: lds-ellipsis1 0.6s infinite;
-  }
-  .lds-ellipsis div:nth-child(2) {
-    left: 6px;
-    animation: lds-ellipsis2 0.6s infinite;
-  }
-  .lds-ellipsis div:nth-child(3) {
-    left: 26px;
-    animation: lds-ellipsis2 0.6s infinite;
-  }
-  .lds-ellipsis div:nth-child(4) {
-    left: 45px;
-    animation: lds-ellipsis3 0.6s infinite;
-  }
-  @keyframes lds-ellipsis1 {
-    0% {
-      transform: scale(0);
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
-  @keyframes lds-ellipsis3 {
-    0% {
-      transform: scale(1);
-    }
-    100% {
-      transform: scale(0);
-    }
-  }
-  @keyframes lds-ellipsis2 {
-    0% {
-      transform: translate(0, 0);
-    }
-    100% {
-      transform: translate(19px, 0);
-    }
-  }
-
-
-
-  main {
-    margin-top:3rem;
-    transition: color 1s linear, background-color 0.5s linear, font-size 0.25s linear!important;
-  }
-
-  main.bg-accessible {
-    background-color:black;
-    font-size:1.25rem;
-    color:white!important;
-    transition: color 1s linear, background-color 0.5s linear, font-size 0.25s linear!important;
-    .text-muted {
-      color:white!important;
-    }
-
-    p {
-      a {
-        color:white;
-        text-decoration: underline;
-        text-decoration-color: white;
-      }
-    }
-    li {
-      a {
-        color:white;
-        text-decoration: underline;
-        text-decoration-color: white;
-      }
-    }
-
-    .c004-divider hr.section-divider:before {
-      color:white!important;
-    }
-
-    .c012-card {
-      color: #212529!important;
-      .btn.btn-outline-dark {
-        border: 2px solid #45526e!important;
-        background-color: transparent!important;
-        color: #45526e!important;
-      }
-    }
-
-    .btn.btn-outline-dark {
-      border: 2px solid #fff!important;
-      background-color: transparent!important;
-      color: #fff!important;
-    }
-  }
-
-  main.bg-night-mode {
-    background-color:black;
-    color:white!important;
-    transition: color 1s linear, background-color 0.5s linear, font-size 0.25s linear!important;
-    .text-muted {
-      color:white!important;
-    }
-
-    p {
-      a {
-        color:white;
-        text-decoration: underline;
-        text-decoration-color: white;
-      }
-    }
-    li {
-      a {
-        color:white;
-        text-decoration: underline;
-        text-decoration-color: white;
-      }
-    }
-
-    .c004-divider hr.section-divider:before {
-      color:white!important;
-    }
-
-    .c012-card {
-      color: #212529!important;
-      .btn.btn-outline-dark {
-        border: 2px solid #45526e!important;
-        background-color: transparent!important;
-        color: #45526e!important;
-      }
-    }
-
-    .btn.btn-outline-dark {
-      border: 2px solid #fff!important;
-      background-color: transparent!important;
-      color: #fff!important;
+    .stepper-logo {
+        max-width: 3rem;
     }
 
     .stepper {
-      li {
-        color:white;
-        a {
-          color:white;
-          span {
-            color:white;
-          }
-        }
-      }
-    }
-
-  }
-
-}
-
-.strava {
-
-  .background {
-    background:url('../img/app/triathlon/self/norm.jpg') center;
-    background-size: cover;
-    position:absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100vw;
-    height: 100vh;
-    filter: grayscale(90%);
-    z-index:0;
-    transition: all 1s;
-    &.All {
-      background:url('../img/app/triathlon/self/norm.jpg') center;
-      background-size: cover;
-      transition: all 1s;
-    }
-    &.Swim {
-      background:url('../img/app/triathlon/self/swim.jpg') center;
-      background-size: cover;
-      transition: all 1s;
-    }
-    &.Ride {
-      background:url('../img/app/triathlon/self/bike.jpg') center;
-      background-size: cover;
-      transition: all 1s;
-    }
-    &.Run {
-      background:url('../img/app/triathlon/self/run.jpg') center;
-      background-size: cover;
-      transition: all 1s;
-    }
-    &.blurred {
-      filter: blur(10px) grayscale(90%);
-      top: -5vh;
-      left: -5vw;
-      right: 0;
-      bottom: 0;
-      width: 110vw;
-      height: 110vh;
-    }
-  }
-
-  .background-mask {
-    background:#1D1313;
-    opacity: 0.75;
-    position:absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index:0;
-    transition: all 1s;
-    &.All {
-      background:#1D1313;
-      transition: all 1s;
-    }
-    &.Swim {
-      background:#30C4C9;
-      transition: all 1s;
-    }
-    &.Ride {
-      background:#24B694;
-      transition: all 1s;
-    }
-    &.Run {
-      background:#D22042;
-      transition: all 1s;
-    }
-    &.Stats {
-      background:#613860;
-      transition: all 1s;
-    }
-  }
-
-  body, html {
-    height:100vh;
-    width:100vw;
-    overflow:hidden;
-
-  }
-
-  .strava-gradient {
-    background-image: linear-gradient(45deg,#fc4c02 0,lighten(#fc4c02,20%) 99%,lighten(#fc4c02,20%) 100%);
-  }
-
-  .react-root {
-    height:100vh;
-    width:100vw;
-    overflow:hidden;
-    position: relative;
-
-    main {
-      margin-top:0;
-      height:100vh;
-      width:100vw;
-      overflow:hidden;
-      .event-header {
-        position: absolute;
-        z-index:4;
-        top:15vh;
-        left:20vw;
-        font-weight: bold;
-      }
-      .event-header-next {
-        position: absolute;
-        z-index:4;
-        top:15vh;
-        right:-10vw;
-        font-weight: bold;
-        opacity:0.5;
-      }
-
-      .c007-data-block {
-        position: absolute;
-        z-index:4;
-        left:20vw;
-        p {
-          font-weight: bold;
-          margin-left:3px;
-        }
-        .dataPoint {
-          position: relative;
-          font-weight: 100;
-          margin-left:0;
-          &:before {
-            content:'';
-            height:2rem;
-            width:2rem;
-            display: block;
-            position: absolute;
-            left:-10vw;
-            top:.4rem;
-            filter: invert(100%);
-          }
-        }
-
-        &.point1 {
-          top:30vh;
-        }
-        &.point2 {
-          top:45vh;
-        }
-        &.point3 {
-          top:60vh;
-        }
-
-
-        &.Sessions {
-          top:30vh;
-          .dataPoint {
-            &:before {
-              background:url('../img/app/triathlon/icons/sync-reload-refreshh-synchronization-loop-64.png') center no-repeat;
-              background-size: 2rem;
+        &.stepper-nolines {
+            li {
+                transition: all 0.25s;
+                &:after {
+                    display:none!important;
+                }
+                &:before {
+                    display:none!important;
+                }
+                &:hover {
+                    background-color: transparent;
+                    transform: scale(1.1);
+                    transition: all 0.25s;
+                }
+                justify-content: center;
+                align-items: flex-start;;
             }
-          }
         }
-        &.Weight {
-          top:30vh;
-          .dataPoint {
-            &:before {
-              background:url('../img/app/triathlon/icons/user-person-account-avatar-customer-64.png') center no-repeat;
-              background-size: 2rem;
+        li {
+            transition: all 0.25s;
+            &:hover {
+                background-color: transparent;
+                margin-left:1rem;
+                transition: all 0.25s;
             }
-          }
         }
-        &.Time {
-          top:45vh;
-          .dataPoint {
-            &:before {
-              background:url('../img/app/triathlon/icons/time-clock-date-analog-period-64.png') center no-repeat;
-              background-size: 2rem;
-            }
-          }
-        }
-        &.Bodyfat {
-          top:45vh;
-          .dataPoint {
-            &:before {
-              background:url('../img/app/triathlon/icons/user-group-team-duo-partner-64.png') center no-repeat;
-              background-size: 2rem;
-            }
-          }
-        }
-        &.Distance {
-          top:60vh;
-          .dataPoint {
-            &:before {
-              background:url('../img/app/triathlon/icons/trasfer-back-forward-arrow-horizontal-64.png') center no-repeat;
-              background-size: 2rem;
-            }
-          }
-        }
-        &.VO2 {
-          .dataPoint {
-            &:before {
-              background:url('../img/app/triathlon/icons/signal-wave-distribute-share-sound-64.png') center no-repeat;
-              background-size: 2rem;
-            }
-          }
-        }
-      }
-
     }
 
-    .content-wrapper {
-      //height:50vh;
-    }
-
-    .data-wrapper {
-      div:nth-child(1) {
-        animation-delay: 0.25s;
-      }
-      div:nth-child(2){
-        animation-delay: 0.5s;
-      }
-      div:nth-child(3){
-        animation-delay: 0.75s;
-      }
-    }
-
-    .Sessions {
-
-    }
-
-    .thumbButtons {
-      ul li a {
-        &:focus,
-        &:active {
-          text-decoration: underline;
-          color:white;
-        }
-      }
-      &--default {
+    .ProjectItemsVerticalButton {
         position: fixed;
-        right: 10vw;
-        bottom: 4vh;
+        bottom:1rem;
+        right:1rem;
         border-radius: 100%;
         width: 45px;
         padding-left: 0;
         padding-right: 0;
-        background:transparent!important;
+        background:white!important;
         z-index:999999;
-        color:white;
-        text-align: right;
-        &__All{
-          bottom: 7.5vh;
-          span {
-            background: url('https://cdn0.iconfinder.com/data/icons/sport-2-android-l-lollipop-icon-pack/24/walking-16.png');
-          }
-        }
-        &__Swim {
-          bottom: 10vh;
-          span {
-            background: url('https://cdn0.iconfinder.com/data/icons/sport-2-android-l-lollipop-icon-pack/24/swimming-16.png');
-          }
-        }
-        &__Ride {
-          bottom: 12.5vh;
-          span {
-            background: url('https://cdn0.iconfinder.com/data/icons/sport-2-android-l-lollipop-icon-pack/24/time_trial_biking-16.png');
-          }
-        }
-        &__Run {
-          bottom: 15vh;
-          span {
-            background: url('https://cdn0.iconfinder.com/data/icons/sport-2-android-l-lollipop-icon-pack/24/walking-16.png');
-          }
-        }
-        &__Stats {
-          bottom: 17.5vh;
-          span {
-            background: url('https://cdn0.iconfinder.com/data/icons/sport-2-android-l-lollipop-icon-pack/24/walking-16.png');
-          }
-        }
-
-      }
     }
 
     /* LOADING STATES */
+    .loading-new{
+        opacity:0;
+    }
     .loaded-new {
-      transition-delay: 0.1s;
+        opacity:1;
+        transition: opacity 0.25s ease-in;
+        transition-delay: 1s;
     }
+
+
     .loader-wrapper {
-      &.loaded-new-reverse {
-        transition-delay: 0.1s;
-      }
+        position: fixed;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        z-index:9999;
+        &.loader-inline {
+            position: static;
+            transform: none;
+            text-align: center;
+        }
+        &.loading-new-reverse {
+            opacity:1;
+        }
+        &.loaded-new-reverse {
+            opacity:0;
+            transition: opacity 0.25s ease-in;
+            transition-delay: 0.75s;
+        }
     }
-
-    .dots {
-      position: absolute;
-      left:10vw;
-      bottom:5vh;
-      text-align: center;
-      z-index:3;
-      margin:0;
-      padding:0;
-      display:flex;
-      align-items: center;
-      li {
-        height:0.4rem;
-        width:0.4rem;
+    .lds-ellipsis {
         display: inline-block;
-        background:rgba(white,0.4);
-        margin:0 0.1rem;
-        padding:0;
-        border-radius: 100%;
-        transition: all 0.2s;
-      }
-      &.All {
-        li:nth-child(1) {
-          height:0.6rem;
-          width:0.6rem;
-          background:rgba(white,1);
+        position: relative;
+        width: 64px;
+        height: 64px;
+    }
+    .lds-ellipsis div {
+        position: absolute;
+        top: 27px;
+        width: 11px;
+        height: 11px;
+        border-radius: 50%;
+        background: $secondary-color;
+        animation-timing-function: cubic-bezier(0, 1, 1, 0);
+    }
+    .lds-ellipsis div:nth-child(1) {
+        left: 6px;
+        animation: lds-ellipsis1 0.6s infinite;
+    }
+    .lds-ellipsis div:nth-child(2) {
+        left: 6px;
+        animation: lds-ellipsis2 0.6s infinite;
+    }
+    .lds-ellipsis div:nth-child(3) {
+        left: 26px;
+        animation: lds-ellipsis2 0.6s infinite;
+    }
+    .lds-ellipsis div:nth-child(4) {
+        left: 45px;
+        animation: lds-ellipsis3 0.6s infinite;
+    }
+    @keyframes lds-ellipsis1 {
+        0% {
+            transform: scale(0);
         }
-      }
-      &.Swim {
-        li:nth-child(2) {
-          height:0.6rem;
-          width:0.6rem;
-          background:rgba(white,1);
+        100% {
+            transform: scale(1);
         }
-      }
-      &.Ride {
-        li:nth-child(3) {
-          height:0.6rem;
-          width:0.6rem;
-          background:rgba(white,1);
+    }
+    @keyframes lds-ellipsis3 {
+        0% {
+            transform: scale(1);
         }
-      }
-      &.Run {
-        li:nth-child(4) {
-          height:0.6rem;
-          width:0.6rem;
-          background:rgba(white,1);
+        100% {
+            transform: scale(0);
         }
-      }
-      &.Stats {
-        li:nth-child(5) {
-          height:0.6rem;
-          width:0.6rem;
-          background:rgba(white,1);
+    }
+    @keyframes lds-ellipsis2 {
+        0% {
+            transform: translate(0, 0);
         }
-      }
+        100% {
+            transform: translate(19px, 0);
+        }
     }
 
-  }
 
-  // ----
-  // Sass (v3.3.0.rc.1)
-  // Compass (v0.13.alpha.10)
-  // ----
 
-  $max: 10;
-  $step: 1;
-
-  @for $i from 1 through ceil($max/$step) {
-    $value: ($i - 1)*$step + 1;
-    .test_#{$value} {
-      top: $i;
-      left: $value;
+    main {
+        margin-top:3rem;
+        transition: color 1s linear, background-color 0.5s linear, font-size 0.25s linear!important;
     }
-    .thumbButtons ul li:nth-child(#{$value}) a{
-      //top: $i+px;
-      //left: $value+px;
-      animation-delay: #{$value * 100}ms;
+
+    main.bg-accessible {
+        background-color:black;
+        font-size:1.25rem;
+        color:white!important;
+        transition: color 1s linear, background-color 0.5s linear, font-size 0.25s linear!important;
+        .text-muted {
+            color:white!important;
+        }
+
+        p {
+            a {
+                color:white;
+                text-decoration: underline;
+                text-decoration-color: white;
+            }
+        }
+        li {
+            a {
+                color:white;
+                text-decoration: underline;
+                text-decoration-color: white;
+            }
+        }
+
+        .c004-divider hr.section-divider:before {
+            color:white!important;
+        }
+
+        .c012-card {
+            color: #212529!important;
+            .btn.btn-outline-dark {
+                border: 2px solid #45526e!important;
+                background-color: transparent!important;
+                color: #45526e!important;
+            }
+        }
+
+        .btn.btn-outline-dark {
+            border: 2px solid #fff!important;
+            background-color: transparent!important;
+            color: #fff!important;
+        }
     }
-  }
+
+    main.bg-night-mode {
+        background-color:black;
+        color:white!important;
+        transition: color 1s linear, background-color 0.5s linear, font-size 0.25s linear!important;
+        .text-muted {
+            color:white!important;
+        }
+
+        p {
+            a {
+                color:white;
+                text-decoration: underline;
+                text-decoration-color: white;
+            }
+        }
+        li {
+            a {
+                color:white;
+                text-decoration: underline;
+                text-decoration-color: white;
+            }
+        }
+
+        .c004-divider hr.section-divider:before {
+            color:white!important;
+        }
+
+        .c012-card {
+            color: #212529!important;
+            .btn.btn-outline-dark {
+                border: 2px solid #45526e!important;
+                background-color: transparent!important;
+                color: #45526e!important;
+            }
+        }
+
+        .btn.btn-outline-dark {
+            border: 2px solid #fff!important;
+            background-color: transparent!important;
+            color: #fff!important;
+        }
+
+        .stepper {
+            li {
+                color:white;
+                a {
+                    color:white;
+                    span {
+                        color:white;
+                    }
+                }
+            }
+        }
+
+    }
+
+}
+
+/* ===============
+   STRAVA DATA
+   =============== */
+.strava {
+
+    body, html {
+        height:100vh;
+        width:100vw;
+        overflow:hidden;
+    }
+
+    body {
+        background-color: black;
+    }
+
+    .react-root {
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+        position: relative;
+        main {
+            margin-top:0;
+            height:100vh;
+            width:100vw;
+            overflow:hidden;
+
+            // ====================
+            // LOADING
+            // ====================
+            .loaded-new {
+                transition-delay: 0.1s;
+            }
+            .loader-wrapper {
+                &.loaded-new-reverse {
+                    transition-delay: 0.1s;
+                }
+            }
+            // LOADING END
+            // =====
+
+            // ====================
+            // THEMES
+            // ====================
+            &.theme-light {
+                .text-color {
+                    color: white !important;
+                }
+            }
+            &.theme-dark {
+                .text-color {
+                    color: $theme-pink !important;
+                }
+            }
+            .theme-toggle {
+                position: absolute;
+                bottom:5vh;
+                left:calc(50vw);
+                z-index:4;
+                background:none;
+                border:none;
+                padding:0;
+                margin:0;
+                color: white;
+                font-size: .75rem;
+                transform: translateX(-50%) translateY(50%);
+                span {
+                    height:16px;
+                    width:16px;
+                    display:block;
+                    filter: invert(100%);
+                }
+                &.theme-light {
+                    > span {
+                        background:url(https://cdn2.iconfinder.com/data/icons/essential-web-2/50/star-favorite-favourite-rating-score-64.png) center no-repeat;
+                        background-size: 16px;
+                    }
+                }
+                &.theme-dark {
+                    > span {
+                        background:url(https://cdn2.iconfinder.com/data/icons/essential-web-2/50/sun-shine-bright-sunny-ray-64.png) center no-repeat;
+                        background-size: 16px;
+                    }
+                }
+            }
+            // THEMES END
+            // =====
+
+            // ====================
+            // BACKGROUNDS
+            // ====================
+            .background {
+                background:url('../img/app/triathlon/self/norm.jpg') center;
+                background-size: cover;
+                position:absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                width: 100vw;
+                height: 100vh;
+                filter: grayscale(90%);
+                z-index:0;
+                transition: all 1s;
+                &.All {
+                    background:url('../img/app/triathlon/self/norm.jpg') center;
+                    background-size: cover;
+                    transition: all 1s;
+                }
+                &.Swim {
+                    background:url('../img/app/triathlon/self/swim.jpg') center;
+                    background-size: cover;
+                    transition: all 1s;
+                }
+                &.Ride {
+                    background:url('../img/app/triathlon/self/bike.jpg') center;
+                    background-size: cover;
+                    transition: all 1s;
+                }
+                &.Run {
+                    background:url('../img/app/triathlon/self/run.jpg') center;
+                    background-size: cover;
+                    transition: all 1s;
+                }
+                &.blurred {
+                    filter: blur(10px) grayscale(90%);
+                    top: -5vh;
+                    left: -5vw;
+                    right: 0;
+                    bottom: 0;
+                    width: 110vw;
+                    height: 110vh;
+                }
+            }
+            .background-mask {
+                background:#1D1313;
+                opacity: 0.75;
+                position:absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                width: 100vw;
+                height: 100vh;
+                z-index:0;
+                transition: all 1s;
+                &.All {
+                    background:#1D1313;
+                    transition: all 1s;
+                }
+                &.Swim {
+                    background:#30C4C9;
+                    transition: all 1s;
+                }
+                &.Ride {
+                    background:#24B694;
+                    transition: all 1s;
+                }
+                &.Run {
+                    background:#D22042;
+                    transition: all 1s;
+                }
+                &.Stats {
+                    background:#613860;
+                    transition: all 1s;
+                }
+            }
+            &.theme-dark {
+                .background-mask {
+                    background:#1D1313;
+                    opacity: 0.9;
+                    &.All {
+                        background:#1D1313;
+                    }
+                    &.Swim {
+                        background:#1D1313;
+                    }
+                    &.Ride {
+                        background:#1D1313;
+                    }
+                    &.Run {
+                        background:#1D1313;
+                    }
+                    &.Stats {
+                        background:#1D1313;
+                    }
+                }
+            }
+            // BACKGROUNDS END
+            // =====
+
+            // ====================
+            // EVENT HEADERS
+            // ====================
+            .event-header {
+                position: absolute;
+                z-index:4;
+                top:15vh;
+                left:20vw;
+                font-weight: bold;
+            }
+            .event-header-next {
+                position: absolute;
+                z-index:4;
+                top:15vh;
+                right:-10vw;
+                font-weight: bold;
+                opacity:0.5;
+            }
+            // EVENT HEADERS END
+            // =====
+
+            // ====================
+            // THUMB BUTTONS
+            // ====================
+            .thumbButtons {
+                ul li a {
+                    &:focus,
+                    &:active {
+                        text-decoration: underline;
+                        color:white;
+                    }
+                }
+                &--default {
+                    position: fixed;
+                    right: 10vw;
+                    bottom: 4vh;
+                    border-radius: 100%;
+                    //width: 45px;
+                    padding-left: 0;
+                    padding-right: 0;
+                    background:transparent!important;
+                    z-index:999999;
+                    color:white;
+                    text-align: right;
+                    font-size:0.75rem;
+                    &__All{
+                        bottom: 7.5vh;
+                        span {
+                            background: url('https://cdn0.iconfinder.com/data/icons/sport-2-android-l-lollipop-icon-pack/24/walking-16.png');
+                        }
+                    }
+                    &__Swim {
+                        bottom: 10vh;
+                        span {
+                            background: url('https://cdn0.iconfinder.com/data/icons/sport-2-android-l-lollipop-icon-pack/24/swimming-16.png');
+                        }
+                    }
+                    &__Ride {
+                        bottom: 12.5vh;
+                        span {
+                            background: url('https://cdn0.iconfinder.com/data/icons/sport-2-android-l-lollipop-icon-pack/24/time_trial_biking-16.png');
+                        }
+                    }
+                    &__Run {
+                        bottom: 15vh;
+                        span {
+                            background: url('https://cdn0.iconfinder.com/data/icons/sport-2-android-l-lollipop-icon-pack/24/walking-16.png');
+                        }
+                    }
+                    &__Stats {
+                        bottom: 17.5vh;
+                        span {
+                            background: url('https://cdn0.iconfinder.com/data/icons/sport-2-android-l-lollipop-icon-pack/24/walking-16.png');
+                        }
+                    }
+                }
+                // INCREMENTAL ANIMATION DELAY
+                $max: 10;
+                $step: 1;
+                @for $i from 1 through ceil($max/$step) {
+                    $value: ($i - 1)*$step + 1;
+                    //.test_#{$value} {
+                    //    top: $i;
+                    //    left: $value;
+                    //}
+                    & ul li:nth-child(#{$value}) a{
+                        //top: $i+px;
+                        //left: $value+px;
+                        animation-delay: #{$value * 100}ms;
+                    }
+                }
+            }
+            // THUMB BUTTONS END
+            // ======
+
+            // ====================
+            // DOTS
+            // ====================
+            .dots {
+                position: absolute;
+                left:10vw;
+                bottom:5vh;
+                transform: translateY(50%);
+                text-align: center;
+                z-index:3;
+                margin:0;
+                padding:0;
+                display:flex;
+                align-items: center;
+                li {
+                    height:0.4rem;
+                    width:0.4rem;
+                    display: inline-block;
+                    background:rgba(white,0.4);
+                    margin:0 0.1rem;
+                    padding:0;
+                    border-radius: 100%;
+                    transition: all 0.2s;
+                }
+                &.All {
+                    li:nth-child(1) {
+                        background:rgba(white,1);
+                    }
+                }
+                &.Swim {
+                    li:nth-child(2) {
+                        background:rgba(white,1);
+                    }
+                }
+                &.Ride {
+                    li:nth-child(3) {
+                        background:rgba(white,1);
+                    }
+                }
+                &.Run {
+                    li:nth-child(4) {
+                        background:rgba(white,1);
+                    }
+                }
+                &.Stats {
+                    li:nth-child(5) {
+                        background:rgba(white,1);
+                    }
+                }
+            }
+            // DOTS
+            // =====
+
+            // ====================
+            // DATA
+            // ====================
+            .data-wrapper {
+                div:nth-child(1) {
+                    animation-delay: 0.25s;
+                }
+                div:nth-child(2){
+                    animation-delay: 0.5s;
+                }
+                div:nth-child(3){
+                    animation-delay: 0.75s;
+                }
+                div:nth-child(4){
+                    animation-delay: 1s;
+                }
+                .c007-data-block {
+                    position: absolute;
+                    z-index:4;
+                    left:20vw;
+                    p {
+                        font-weight: bold;
+                        margin-left:3px;
+                    }
+                    .dataPoint {
+                        position: relative;
+                        font-weight: 100;
+                        margin-left:0;
+                        &:before {
+                            content:'';
+                            height:2rem;
+                            width:2rem;
+                            display: block;
+                            position: absolute;
+                            left:-10vw;
+                            top:.4rem;
+                            filter: invert(100%);
+                        }
+                    }
+                    &.point1 {
+                        top:30vh;
+                    }
+                    &.point2 {
+                        top:45vh;
+                    }
+                    &.point3 {
+                        top:60vh;
+                    }
+                    &.point4 {
+                        top:75vh;
+                    }
+                    &.Sessions {
+                        .dataPoint {
+                            &:before {
+                                background:url('../img/app/triathlon/icons/svg/sessions.svg') center no-repeat;
+                                background-size: 2rem;
+                                //background-color: $theme-pink;
+                                //-webkit-mask-image: url('../img/app/triathlon/icons/svg/sessions.svg');
+                                //mask-image: url('../img/app/triathlon/icons/svg/sessions.svg');
+                                //mask-size: 2rem;
+                            }
+                        }
+                    }
+                    &.Weight {
+                        .dataPoint {
+                            &:before {
+                                background:url('../img/app/triathlon/icons/user-person-account-avatar-customer-64.png') center no-repeat;
+                                background-size: 2rem;
+                            }
+                        }
+                    }
+                    &.Time {
+                        .dataPoint {
+                            &:before {
+                                background:url('../img/app/triathlon/icons/time-clock-date-analog-period-64.png') center no-repeat;
+                                background-size: 2rem;
+                            }
+                        }
+                    }
+                    &.Bodyfat {
+                        .dataPoint {
+                            &:before {
+                                background:url('../img/app/triathlon/icons/user-group-team-duo-partner-64.png') center no-repeat;
+                                background-size: 2rem;
+                            }
+                        }
+                    }
+                    &.Distance {
+                        .dataPoint {
+                            &:before {
+                                background:url('../img/app/triathlon/icons/trasfer-back-forward-arrow-horizontal-64.png') center no-repeat;
+                                background-size: 2rem;
+                            }
+                        }
+                    }
+                    &.VO2 {
+                        .dataPoint {
+                            &:before {
+                                background:url('../img/app/triathlon/icons/signal-wave-distribute-share-sound-64.png') center no-repeat;
+                                background-size: 2rem;
+                            }
+                        }
+                    }
+                    .latest-event {
+                        max-width:50%;
+                        color:white;
+                        font-size:0.75rem;
+                        line-height: 1rem;
+                        font-weight: 200;
+                    }
+                }
+            }
+            // DATA END
+            // =====
+
+
+        }
+    }
 
 }

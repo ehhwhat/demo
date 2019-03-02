@@ -2,9 +2,49 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e1a8dbd3-4db4-4d08-9e1b-4adaf1f1c343" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/dist/img/app/triathlon/icons/svg/sessions.svg" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/dist/css.zip" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dist/css/mdb.css" afterPath="$PROJECT_DIR$/dist/css/mdb.css" />
+      <change beforePath="$PROJECT_DIR$/dist/css/mdb.lite.css" afterPath="$PROJECT_DIR$/dist/css/mdb.lite.css" />
+      <change beforePath="$PROJECT_DIR$/dist/css/mdb.lite.min.css" afterPath="$PROJECT_DIR$/dist/css/mdb.lite.min.css" />
+      <change beforePath="$PROJECT_DIR$/dist/css/mdb.min.css" afterPath="$PROJECT_DIR$/dist/css/mdb.min.css" />
+      <change beforePath="$PROJECT_DIR$/dist/js.zip" afterPath="" />
       <change beforePath="$PROJECT_DIR$/dist/js/react/react-strava.js" afterPath="$PROJECT_DIR$/dist/js/react/react-strava.js" />
+      <change beforePath="$PROJECT_DIR$/dist/pages-handled.zip" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dist/pages-handled/app/triathlon-ashridge.html" afterPath="$PROJECT_DIR$/dist/pages-handled/app/triathlon-ashridge.html" />
+      <change beforePath="$PROJECT_DIR$/dist/pages-handled/app/triathlon-data.html" afterPath="$PROJECT_DIR$/dist/pages-handled/app/triathlon-data.html" />
+      <change beforePath="$PROJECT_DIR$/dist/pages-handled/app/triathlon.html" afterPath="$PROJECT_DIR$/dist/pages-handled/app/triathlon.html" />
+      <change beforePath="$PROJECT_DIR$/dist/pages-handled/general/components.html" afterPath="$PROJECT_DIR$/dist/pages-handled/general/components.html" />
+      <change beforePath="$PROJECT_DIR$/dist/pages-handled/general/cv-flat.html" afterPath="$PROJECT_DIR$/dist/pages-handled/general/cv-flat.html" />
+      <change beforePath="$PROJECT_DIR$/dist/pages-handled/general/styletile.html" afterPath="$PROJECT_DIR$/dist/pages-handled/general/styletile.html" />
+      <change beforePath="$PROJECT_DIR$/dist/pages-handled/general/sublayouts.html" afterPath="$PROJECT_DIR$/dist/pages-handled/general/sublayouts.html" />
+      <change beforePath="$PROJECT_DIR$/dist/pages-handled/index.html" afterPath="$PROJECT_DIR$/dist/pages-handled/index.html" />
+      <change beforePath="$PROJECT_DIR$/dist/pages-handled/javascript/arrays.html" afterPath="$PROJECT_DIR$/dist/pages-handled/javascript/arrays.html" />
+      <change beforePath="$PROJECT_DIR$/dist/pages-handled/javascript/basics.html" afterPath="$PROJECT_DIR$/dist/pages-handled/javascript/basics.html" />
+      <change beforePath="$PROJECT_DIR$/dist/pages-handled/javascript/maths.html" afterPath="$PROJECT_DIR$/dist/pages-handled/javascript/maths.html" />
+      <change beforePath="$PROJECT_DIR$/dist/pages-handled/javascript/objects.html" afterPath="$PROJECT_DIR$/dist/pages-handled/javascript/objects.html" />
+      <change beforePath="$PROJECT_DIR$/dist/pages-handled/jquery/ajax-json.html" afterPath="$PROJECT_DIR$/dist/pages-handled/jquery/ajax-json.html" />
+      <change beforePath="$PROJECT_DIR$/dist/pages-handled/jquery/ajax-promise.html" afterPath="$PROJECT_DIR$/dist/pages-handled/jquery/ajax-promise.html" />
+      <change beforePath="$PROJECT_DIR$/dist/pages-handled/jquery/ajax.html" afterPath="$PROJECT_DIR$/dist/pages-handled/jquery/ajax.html" />
+      <change beforePath="$PROJECT_DIR$/dist/pages-handled/page-one.html" afterPath="$PROJECT_DIR$/dist/pages-handled/page-one.html" />
+      <change beforePath="$PROJECT_DIR$/dist/pages-handled/react/add.html" afterPath="$PROJECT_DIR$/dist/pages-handled/react/add.html" />
+      <change beforePath="$PROJECT_DIR$/dist/pages-handled/react/addremove.html" afterPath="$PROJECT_DIR$/dist/pages-handled/react/addremove.html" />
+      <change beforePath="$PROJECT_DIR$/dist/pages-handled/react/array.html" afterPath="$PROJECT_DIR$/dist/pages-handled/react/array.html" />
+      <change beforePath="$PROJECT_DIR$/dist/pages-handled/react/cv-full.html" afterPath="$PROJECT_DIR$/dist/pages-handled/react/cv-full.html" />
+      <change beforePath="$PROJECT_DIR$/dist/pages-handled/react/cv.html" afterPath="$PROJECT_DIR$/dist/pages-handled/react/cv.html" />
+      <change beforePath="$PROJECT_DIR$/dist/pages-handled/react/dynamic.html" afterPath="$PROJECT_DIR$/dist/pages-handled/react/dynamic.html" />
+      <change beforePath="$PROJECT_DIR$/dist/pages-handled/react/inline.html" afterPath="$PROJECT_DIR$/dist/pages-handled/react/inline.html" />
+      <change beforePath="$PROJECT_DIR$/dist/pages-handled/react/projects.html" afterPath="$PROJECT_DIR$/dist/pages-handled/react/projects.html" />
+      <change beforePath="$PROJECT_DIR$/dist/pages-handled/react/state.html" afterPath="$PROJECT_DIR$/dist/pages-handled/react/state.html" />
+      <change beforePath="$PROJECT_DIR$/dist/pages-handled/react/static.html" afterPath="$PROJECT_DIR$/dist/pages-handled/react/static.html" />
+      <change beforePath="$PROJECT_DIR$/dist/pages-handled/react/strava.html" afterPath="$PROJECT_DIR$/dist/pages-handled/react/strava.html" />
       <change beforePath="$PROJECT_DIR$/js/src/react/react-strava.js" afterPath="$PROJECT_DIR$/js/src/react/react-strava.js" />
+      <change beforePath="$PROJECT_DIR$/scss/components/bespoke/_react.scss" afterPath="$PROJECT_DIR$/scss/components/bespoke/_react.scss" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.hbs" afterPath="$PROJECT_DIR$/src/pages/index.hbs" />
+      <change beforePath="$PROJECT_DIR$/src/partials/layouts/base--react.hbs" afterPath="$PROJECT_DIR$/src/partials/layouts/base--react.hbs" />
+      <change beforePath="$PROJECT_DIR$/src/partials/layouts/base.hbs" afterPath="$PROJECT_DIR$/src/partials/layouts/base.hbs" />
+      <change beforePath="$PROJECT_DIR$/src/partials/layouts/starter.hbs" afterPath="$PROJECT_DIR$/src/partials/layouts/starter.hbs" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -21,28 +61,48 @@
       <file leaf-file-name="_react.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scss/components/bespoke/_react.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-634">
-              <caret line="535" column="12" lean-forward="false" selection-start-line="535" selection-start-column="12" selection-end-line="535" selection-end-column="12" />
+            <state relative-caret-position="46">
+              <caret line="693" column="21" lean-forward="false" selection-start-line="693" selection-start-column="21" selection-end-line="693" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="triathlon-ashridge.hbs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pages/app/triathlon-ashridge.hbs">
+      <file leaf-file-name="base.hbs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/partials/layouts/base.hbs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="165" column="37" lean-forward="false" selection-start-line="165" selection-start-column="37" selection-end-line="165" selection-end-column="94" />
+            <state relative-caret-position="435">
+              <caret line="50" column="27" lean-forward="false" selection-start-line="50" selection-start-column="27" selection-end-line="50" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="react-projects.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/src/react/react-projects.js">
+      <file leaf-file-name="base--react.hbs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/partials/layouts/base--react.hbs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="198" column="200" lean-forward="false" selection-start-line="198" selection-start-column="170" selection-end-line="198" selection-end-column="200" />
+            <state relative-caret-position="435">
+              <caret line="47" column="27" lean-forward="false" selection-start-line="47" selection-start-column="27" selection-end-line="47" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="starter.hbs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/partials/layouts/starter.hbs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="435">
+              <caret line="50" column="27" lean-forward="false" selection-start-line="50" selection-start-column="27" selection-end-line="50" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_custom-variables.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scss/_custom-variables.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-7">
+              <caret line="16" column="31" lean-forward="false" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -51,18 +111,8 @@
       <file leaf-file-name="strava.hbs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pages/react/strava.hbs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
+            <state relative-caret-position="-7">
               <caret line="11" column="50" lean-forward="false" selection-start-line="11" selection-start-column="50" selection-end-line="11" selection-end-column="50" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="react-strava.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/js/src/react/react-strava.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-204">
-              <caret line="313" column="59" lean-forward="false" selection-start-line="313" selection-start-column="59" selection-end-line="313" selection-end-column="59" />
               <folding />
             </state>
           </provider>
@@ -71,8 +121,28 @@
       <file leaf-file-name="react-cv-full.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/src/react/react-cv-full.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="533" column="0" lean-forward="false" selection-start-line="533" selection-start-column="0" selection-end-line="541" selection-end-column="9" />
+            <state relative-caret-position="307">
+              <caret line="122" column="40" lean-forward="false" selection-start-line="122" selection-start-column="40" selection-end-line="122" selection-end-column="96" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="data.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/src/bespoke/data.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-17">
+              <caret line="178" column="0" lean-forward="false" selection-start-line="178" selection-start-column="0" selection-end-line="187" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="react-strava.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/src/react/react-strava.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="561" column="55" lean-forward="false" selection-start-line="561" selection-start-column="55" selection-end-line="561" selection-end-column="55" />
               <folding />
             </state>
           </provider>
@@ -82,7 +152,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>buildCube</find>
       <find>btn</find>
       <find>WorkExp</find>
       <find>mk-winter-half-1.jpg</find>
@@ -103,20 +172,22 @@
       <find>loader-w</find>
       <find>bg-alt1</find>
       <find>ProjectItemsVerticalButton</find>
-      <find>ProjectItemsVertical</find>
       <find>data</find>
       <find>click</find>
       <find>toggleFullCV</find>
       <find>loading-new</find>
       <find>data-block</find>
-      <find>fullCV</find>
       <find>statsFunction</find>
       <find>dataP</find>
+      <find>ProjectItemsVertical</find>
+      <find>latest</find>
+      <find>fullCV</find>
     </findStrings>
     <replaceStrings>
       <replace>&lt;h3 class=&quot;mt-5 h3-responsive&quot;&gt;</replace>
       <replace>col-12</replace>
       <replace>&lt;div class=&quot;col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3&quot;&gt;</replace>
+      <replace>text-color</replace>
     </replaceStrings>
     <dirStrings>
       <dir>C:\xampp\htdocs\ver2.0</dir>
@@ -129,7 +200,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/pages/react/dynamic.hbs" />
         <option value="$PROJECT_DIR$/src/pages/react/state.hbs" />
         <option value="$PROJECT_DIR$/js/src/react/react-state.js" />
         <option value="$PROJECT_DIR$/js/src/react/react-add.js" />
@@ -174,12 +244,13 @@
         <option value="$PROJECT_DIR$/scss/_custom-styles.scss" />
         <option value="$PROJECT_DIR$/src/pages/app/triathlon.hbs" />
         <option value="$PROJECT_DIR$/src/pages/react/strava.hbs" />
-        <option value="$PROJECT_DIR$/src/partials/layouts/base.hbs" />
-        <option value="$PROJECT_DIR$/src/partials/layouts/base--react.hbs" />
-        <option value="$PROJECT_DIR$/src/partials/layouts/starter.hbs" />
+        <option value="$PROJECT_DIR$/dist/img/app/triathlon/icons/svg/sessions.svg" />
         <option value="$PROJECT_DIR$/src/pages/index.hbs" />
-        <option value="$PROJECT_DIR$/scss/components/bespoke/_react.scss" />
         <option value="$PROJECT_DIR$/js/src/react/react-strava.js" />
+        <option value="$PROJECT_DIR$/scss/components/bespoke/_react.scss" />
+        <option value="$PROJECT_DIR$/src/partials/layouts/starter.hbs" />
+        <option value="$PROJECT_DIR$/src/partials/layouts/base--react.hbs" />
+        <option value="$PROJECT_DIR$/src/partials/layouts/base.hbs" />
       </list>
     </option>
   </component>
@@ -386,7 +457,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.SCSS" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
@@ -436,12 +507,12 @@
       <workItem from="1541362131120" duration="313486000" />
       <workItem from="1548960005970" duration="28566000" />
       <workItem from="1549300865120" duration="37083000" />
-      <workItem from="1550396236896" duration="31950000" />
+      <workItem from="1550396236896" duration="46234000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="444591000" />
+    <option name="totallyTimeSpent" value="458875000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -456,7 +527,7 @@
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14673913" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24021739" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -502,13 +573,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/js/dist/data.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="97" lean-forward="true" selection-start-line="14" selection-start-column="97" selection-end-line="14" selection-end-column="100" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scss/components/_c013-injuries.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -665,14 +729,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scss/_custom-variables.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scss/components/_c001-basic-content.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -750,6 +806,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -772,6 +829,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1736">
           <caret line="126" column="57" lean-forward="false" selection-start-line="126" selection-start-column="57" selection-end-line="126" selection-end-column="90" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -783,10 +841,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/src/bespoke/data.js">
+    <entry file="file://$PROJECT_DIR$/src/pages/react/strava.hbs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5423">
-          <caret line="319" column="0" lean-forward="false" selection-start-line="319" selection-start-column="0" selection-end-line="333" selection-end-column="118" />
+        <state relative-caret-position="-7">
+          <caret line="11" column="50" lean-forward="false" selection-start-line="11" selection-start-column="50" selection-end-line="11" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/src/react/react-cv.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="245" column="46" lean-forward="false" selection-start-line="245" selection-start-column="46" selection-end-line="245" selection-end-column="46" />
           <folding />
         </state>
       </provider>
@@ -807,25 +873,62 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/react/strava.hbs">
+    <entry file="file://$PROJECT_DIR$/js/src/bespoke/data.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="50" lean-forward="false" selection-start-line="11" selection-start-column="50" selection-end-line="11" selection-end-column="50" />
+        <state relative-caret-position="-17">
+          <caret line="178" column="0" lean-forward="false" selection-start-line="178" selection-start-column="0" selection-end-line="187" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/src/react/react-cv.js">
+    <entry file="file://$PROJECT_DIR$/dist/img/app/triathlon/icons/svg/sessions.svg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scss/_custom-variables.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="245" column="46" lean-forward="false" selection-start-line="245" selection-start-column="46" selection-end-line="245" selection-end-column="46" />
+        <state relative-caret-position="-7">
+          <caret line="16" column="31" lean-forward="false" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/partials/layouts/base.hbs">
+    <entry file="file://$PROJECT_DIR$/src/pages/index.hbs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
+        <state relative-caret-position="170">
+          <caret line="45" column="142" lean-forward="false" selection-start-line="45" selection-start-column="142" selection-end-line="45" selection-end-column="142" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/src/react/react-cv-full.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="122" column="40" lean-forward="false" selection-start-line="122" selection-start-column="40" selection-end-line="122" selection-end-column="96" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/src/react/react-strava.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="561" column="55" lean-forward="false" selection-start-line="561" selection-start-column="55" selection-end-line="561" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scss/components/bespoke/_react.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="693" column="21" lean-forward="false" selection-start-line="693" selection-start-column="21" selection-end-line="693" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/partials/layouts/starter.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
           <caret line="50" column="27" lean-forward="false" selection-start-line="50" selection-start-column="27" selection-end-line="50" selection-end-column="27" />
           <folding />
         </state>
@@ -833,48 +936,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/partials/layouts/base--react.hbs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="42" column="23" lean-forward="false" selection-start-line="42" selection-start-column="23" selection-end-line="42" selection-end-column="23" />
+        <state relative-caret-position="435">
+          <caret line="47" column="27" lean-forward="false" selection-start-line="47" selection-start-column="27" selection-end-line="47" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/partials/layouts/starter.hbs">
+    <entry file="file://$PROJECT_DIR$/src/partials/layouts/base.hbs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-185">
-          <caret line="16" column="27" lean-forward="false" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/index.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="39" column="33" lean-forward="false" selection-start-line="39" selection-start-column="33" selection-end-line="39" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/src/react/react-cv-full.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="533" column="0" lean-forward="false" selection-start-line="533" selection-start-column="0" selection-end-line="541" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scss/components/bespoke/_react.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-634">
-          <caret line="535" column="12" lean-forward="false" selection-start-line="535" selection-start-column="12" selection-end-line="535" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/src/react/react-strava.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-204">
-          <caret line="313" column="59" lean-forward="false" selection-start-line="313" selection-start-column="59" selection-end-line="313" selection-end-column="59" />
+        <state relative-caret-position="435">
+          <caret line="50" column="27" lean-forward="false" selection-start-line="50" selection-start-column="27" selection-end-line="50" selection-end-column="27" />
           <folding />
         </state>
       </provider>

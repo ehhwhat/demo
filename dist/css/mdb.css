@@ -8867,122 +8867,174 @@ html.full-height, .full-height body {
         .react-root main.bg-night-mode .stepper li a span {
           color: white; }
 
-.strava .background {
-  background: url("../img/app/triathlon/self/norm.jpg") center;
-  -webkit-background-size: cover;
-  background-size: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100vw;
-  height: 100vh;
-  -webkit-filter: grayscale(90%);
-  filter: grayscale(90%);
-  z-index: 0;
-  -webkit-transition: all 1s;
-  -o-transition: all 1s;
-  transition: all 1s; }
-  .strava .background.All {
-    background: url("../img/app/triathlon/self/norm.jpg") center;
-    -webkit-background-size: cover;
-    background-size: cover;
-    -webkit-transition: all 1s;
-    -o-transition: all 1s;
-    transition: all 1s; }
-  .strava .background.Swim {
-    background: url("../img/app/triathlon/self/swim.jpg") center;
-    -webkit-background-size: cover;
-    background-size: cover;
-    -webkit-transition: all 1s;
-    -o-transition: all 1s;
-    transition: all 1s; }
-  .strava .background.Ride {
-    background: url("../img/app/triathlon/self/bike.jpg") center;
-    -webkit-background-size: cover;
-    background-size: cover;
-    -webkit-transition: all 1s;
-    -o-transition: all 1s;
-    transition: all 1s; }
-  .strava .background.Run {
-    background: url("../img/app/triathlon/self/run.jpg") center;
-    -webkit-background-size: cover;
-    background-size: cover;
-    -webkit-transition: all 1s;
-    -o-transition: all 1s;
-    transition: all 1s; }
-  .strava .background.blurred {
-    -webkit-filter: blur(10px) grayscale(90%);
-    filter: blur(10px) grayscale(90%);
-    top: -5vh;
-    left: -5vw;
-    right: 0;
-    bottom: 0;
-    width: 110vw;
-    height: 110vh; }
-
-.strava .background-mask {
-  background: #1D1313;
-  opacity: 0.75;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 0;
-  -webkit-transition: all 1s;
-  -o-transition: all 1s;
-  transition: all 1s; }
-  .strava .background-mask.All {
-    background: #1D1313;
-    -webkit-transition: all 1s;
-    -o-transition: all 1s;
-    transition: all 1s; }
-  .strava .background-mask.Swim {
-    background: #30C4C9;
-    -webkit-transition: all 1s;
-    -o-transition: all 1s;
-    transition: all 1s; }
-  .strava .background-mask.Ride {
-    background: #24B694;
-    -webkit-transition: all 1s;
-    -o-transition: all 1s;
-    transition: all 1s; }
-  .strava .background-mask.Run {
-    background: #D22042;
-    -webkit-transition: all 1s;
-    -o-transition: all 1s;
-    transition: all 1s; }
-  .strava .background-mask.Stats {
-    background: #613860;
-    -webkit-transition: all 1s;
-    -o-transition: all 1s;
-    transition: all 1s; }
-
+/* ===============
+   STRAVA DATA
+   =============== */
 .strava body, .strava html {
   height: 100vh;
   width: 100vw;
   overflow: hidden; }
 
-.strava .strava-gradient {
-  background-image: -webkit-linear-gradient(45deg, #fc4c02 0, #fe9366 99%, #fe9366 100%);
-  background-image: -o-linear-gradient(45deg, #fc4c02 0, #fe9366 99%, #fe9366 100%);
-  background-image: linear-gradient(45deg, #fc4c02 0, #fe9366 99%, #fe9366 100%); }
+.strava body {
+  background-color: black; }
 
 .strava .react-root {
   height: 100vh;
   width: 100vw;
   overflow: hidden;
-  position: relative;
-  /* LOADING STATES */ }
+  position: relative; }
   .strava .react-root main {
     margin-top: 0;
     height: 100vh;
     width: 100vw;
     overflow: hidden; }
+    .strava .react-root main .loaded-new {
+      -webkit-transition-delay: 0.1s;
+      -o-transition-delay: 0.1s;
+      transition-delay: 0.1s; }
+    .strava .react-root main .loader-wrapper.loaded-new-reverse {
+      -webkit-transition-delay: 0.1s;
+      -o-transition-delay: 0.1s;
+      transition-delay: 0.1s; }
+    .strava .react-root main.theme-light .text-color {
+      color: white !important; }
+    .strava .react-root main.theme-dark .text-color {
+      color: #ff8a80 !important; }
+    .strava .react-root main .theme-toggle {
+      position: absolute;
+      bottom: 5vh;
+      left: -webkit-calc(50vw);
+      left: calc(50vw);
+      z-index: 4;
+      background: none;
+      border: none;
+      padding: 0;
+      margin: 0;
+      color: white;
+      font-size: .75rem;
+      -webkit-transform: translateX(-50%) translateY(50%);
+      -ms-transform: translateX(-50%) translateY(50%);
+      transform: translateX(-50%) translateY(50%); }
+      .strava .react-root main .theme-toggle span {
+        height: 16px;
+        width: 16px;
+        display: block;
+        -webkit-filter: invert(100%);
+        filter: invert(100%); }
+      .strava .react-root main .theme-toggle.theme-light > span {
+        background: url(https://cdn2.iconfinder.com/data/icons/essential-web-2/50/star-favorite-favourite-rating-score-64.png) center no-repeat;
+        -webkit-background-size: 16px 16px;
+        background-size: 16px; }
+      .strava .react-root main .theme-toggle.theme-dark > span {
+        background: url(https://cdn2.iconfinder.com/data/icons/essential-web-2/50/sun-shine-bright-sunny-ray-64.png) center no-repeat;
+        -webkit-background-size: 16px 16px;
+        background-size: 16px; }
+    .strava .react-root main .background {
+      background: url("../img/app/triathlon/self/norm.jpg") center;
+      -webkit-background-size: cover;
+      background-size: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100vw;
+      height: 100vh;
+      -webkit-filter: grayscale(90%);
+      filter: grayscale(90%);
+      z-index: 0;
+      -webkit-transition: all 1s;
+      -o-transition: all 1s;
+      transition: all 1s; }
+      .strava .react-root main .background.All {
+        background: url("../img/app/triathlon/self/norm.jpg") center;
+        -webkit-background-size: cover;
+        background-size: cover;
+        -webkit-transition: all 1s;
+        -o-transition: all 1s;
+        transition: all 1s; }
+      .strava .react-root main .background.Swim {
+        background: url("../img/app/triathlon/self/swim.jpg") center;
+        -webkit-background-size: cover;
+        background-size: cover;
+        -webkit-transition: all 1s;
+        -o-transition: all 1s;
+        transition: all 1s; }
+      .strava .react-root main .background.Ride {
+        background: url("../img/app/triathlon/self/bike.jpg") center;
+        -webkit-background-size: cover;
+        background-size: cover;
+        -webkit-transition: all 1s;
+        -o-transition: all 1s;
+        transition: all 1s; }
+      .strava .react-root main .background.Run {
+        background: url("../img/app/triathlon/self/run.jpg") center;
+        -webkit-background-size: cover;
+        background-size: cover;
+        -webkit-transition: all 1s;
+        -o-transition: all 1s;
+        transition: all 1s; }
+      .strava .react-root main .background.blurred {
+        -webkit-filter: blur(10px) grayscale(90%);
+        filter: blur(10px) grayscale(90%);
+        top: -5vh;
+        left: -5vw;
+        right: 0;
+        bottom: 0;
+        width: 110vw;
+        height: 110vh; }
+    .strava .react-root main .background-mask {
+      background: #1D1313;
+      opacity: 0.75;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 0;
+      -webkit-transition: all 1s;
+      -o-transition: all 1s;
+      transition: all 1s; }
+      .strava .react-root main .background-mask.All {
+        background: #1D1313;
+        -webkit-transition: all 1s;
+        -o-transition: all 1s;
+        transition: all 1s; }
+      .strava .react-root main .background-mask.Swim {
+        background: #30C4C9;
+        -webkit-transition: all 1s;
+        -o-transition: all 1s;
+        transition: all 1s; }
+      .strava .react-root main .background-mask.Ride {
+        background: #24B694;
+        -webkit-transition: all 1s;
+        -o-transition: all 1s;
+        transition: all 1s; }
+      .strava .react-root main .background-mask.Run {
+        background: #D22042;
+        -webkit-transition: all 1s;
+        -o-transition: all 1s;
+        transition: all 1s; }
+      .strava .react-root main .background-mask.Stats {
+        background: #613860;
+        -webkit-transition: all 1s;
+        -o-transition: all 1s;
+        transition: all 1s; }
+    .strava .react-root main.theme-dark .background-mask {
+      background: #1D1313;
+      opacity: 0.9; }
+      .strava .react-root main.theme-dark .background-mask.All {
+        background: #1D1313; }
+      .strava .react-root main.theme-dark .background-mask.Swim {
+        background: #1D1313; }
+      .strava .react-root main.theme-dark .background-mask.Ride {
+        background: #1D1313; }
+      .strava .react-root main.theme-dark .background-mask.Run {
+        background: #1D1313; }
+      .strava .react-root main.theme-dark .background-mask.Stats {
+        background: #1D1313; }
     .strava .react-root main .event-header {
       position: absolute;
       z-index: 4;
@@ -8996,18 +9048,137 @@ html.full-height, .full-height body {
       right: -10vw;
       font-weight: bold;
       opacity: 0.5; }
-    .strava .react-root main .c007-data-block {
+    .strava .react-root main .thumbButtons ul li a:focus, .strava .react-root main .thumbButtons ul li a:active {
+      text-decoration: underline;
+      color: white; }
+    .strava .react-root main .thumbButtons--default {
+      position: fixed;
+      right: 10vw;
+      bottom: 4vh;
+      -webkit-border-radius: 100%;
+      border-radius: 100%;
+      padding-left: 0;
+      padding-right: 0;
+      background: transparent !important;
+      z-index: 999999;
+      color: white;
+      text-align: right;
+      font-size: 0.75rem; }
+      .strava .react-root main .thumbButtons--default__All {
+        bottom: 7.5vh; }
+        .strava .react-root main .thumbButtons--default__All span {
+          background: url("https://cdn0.iconfinder.com/data/icons/sport-2-android-l-lollipop-icon-pack/24/walking-16.png"); }
+      .strava .react-root main .thumbButtons--default__Swim {
+        bottom: 10vh; }
+        .strava .react-root main .thumbButtons--default__Swim span {
+          background: url("https://cdn0.iconfinder.com/data/icons/sport-2-android-l-lollipop-icon-pack/24/swimming-16.png"); }
+      .strava .react-root main .thumbButtons--default__Ride {
+        bottom: 12.5vh; }
+        .strava .react-root main .thumbButtons--default__Ride span {
+          background: url("https://cdn0.iconfinder.com/data/icons/sport-2-android-l-lollipop-icon-pack/24/time_trial_biking-16.png"); }
+      .strava .react-root main .thumbButtons--default__Run {
+        bottom: 15vh; }
+        .strava .react-root main .thumbButtons--default__Run span {
+          background: url("https://cdn0.iconfinder.com/data/icons/sport-2-android-l-lollipop-icon-pack/24/walking-16.png"); }
+      .strava .react-root main .thumbButtons--default__Stats {
+        bottom: 17.5vh; }
+        .strava .react-root main .thumbButtons--default__Stats span {
+          background: url("https://cdn0.iconfinder.com/data/icons/sport-2-android-l-lollipop-icon-pack/24/walking-16.png"); }
+    .strava .react-root main .thumbButtons ul li:nth-child(1) a {
+      -webkit-animation-delay: 100ms;
+      animation-delay: 100ms; }
+    .strava .react-root main .thumbButtons ul li:nth-child(2) a {
+      -webkit-animation-delay: 200ms;
+      animation-delay: 200ms; }
+    .strava .react-root main .thumbButtons ul li:nth-child(3) a {
+      -webkit-animation-delay: 300ms;
+      animation-delay: 300ms; }
+    .strava .react-root main .thumbButtons ul li:nth-child(4) a {
+      -webkit-animation-delay: 400ms;
+      animation-delay: 400ms; }
+    .strava .react-root main .thumbButtons ul li:nth-child(5) a {
+      -webkit-animation-delay: 500ms;
+      animation-delay: 500ms; }
+    .strava .react-root main .thumbButtons ul li:nth-child(6) a {
+      -webkit-animation-delay: 600ms;
+      animation-delay: 600ms; }
+    .strava .react-root main .thumbButtons ul li:nth-child(7) a {
+      -webkit-animation-delay: 700ms;
+      animation-delay: 700ms; }
+    .strava .react-root main .thumbButtons ul li:nth-child(8) a {
+      -webkit-animation-delay: 800ms;
+      animation-delay: 800ms; }
+    .strava .react-root main .thumbButtons ul li:nth-child(9) a {
+      -webkit-animation-delay: 900ms;
+      animation-delay: 900ms; }
+    .strava .react-root main .thumbButtons ul li:nth-child(10) a {
+      -webkit-animation-delay: 1000ms;
+      animation-delay: 1000ms; }
+    .strava .react-root main .dots {
+      position: absolute;
+      left: 10vw;
+      bottom: 5vh;
+      -webkit-transform: translateY(50%);
+      -ms-transform: translateY(50%);
+      transform: translateY(50%);
+      text-align: center;
+      z-index: 3;
+      margin: 0;
+      padding: 0;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center; }
+      .strava .react-root main .dots li {
+        height: 0.4rem;
+        width: 0.4rem;
+        display: inline-block;
+        background: rgba(255, 255, 255, 0.4);
+        margin: 0 0.1rem;
+        padding: 0;
+        -webkit-border-radius: 100%;
+        border-radius: 100%;
+        -webkit-transition: all 0.2s;
+        -o-transition: all 0.2s;
+        transition: all 0.2s; }
+      .strava .react-root main .dots.All li:nth-child(1) {
+        background: white; }
+      .strava .react-root main .dots.Swim li:nth-child(2) {
+        background: white; }
+      .strava .react-root main .dots.Ride li:nth-child(3) {
+        background: white; }
+      .strava .react-root main .dots.Run li:nth-child(4) {
+        background: white; }
+      .strava .react-root main .dots.Stats li:nth-child(5) {
+        background: white; }
+    .strava .react-root main .data-wrapper div:nth-child(1) {
+      -webkit-animation-delay: 0.25s;
+      animation-delay: 0.25s; }
+    .strava .react-root main .data-wrapper div:nth-child(2) {
+      -webkit-animation-delay: 0.5s;
+      animation-delay: 0.5s; }
+    .strava .react-root main .data-wrapper div:nth-child(3) {
+      -webkit-animation-delay: 0.75s;
+      animation-delay: 0.75s; }
+    .strava .react-root main .data-wrapper div:nth-child(4) {
+      -webkit-animation-delay: 1s;
+      animation-delay: 1s; }
+    .strava .react-root main .data-wrapper .c007-data-block {
       position: absolute;
       z-index: 4;
       left: 20vw; }
-      .strava .react-root main .c007-data-block p {
+      .strava .react-root main .data-wrapper .c007-data-block p {
         font-weight: bold;
         margin-left: 3px; }
-      .strava .react-root main .c007-data-block .dataPoint {
+      .strava .react-root main .data-wrapper .c007-data-block .dataPoint {
         position: relative;
         font-weight: 100;
         margin-left: 0; }
-        .strava .react-root main .c007-data-block .dataPoint:before {
+        .strava .react-root main .data-wrapper .c007-data-block .dataPoint:before {
           content: '';
           height: 2rem;
           width: 2rem;
@@ -9017,227 +9188,44 @@ html.full-height, .full-height body {
           top: .4rem;
           -webkit-filter: invert(100%);
           filter: invert(100%); }
-      .strava .react-root main .c007-data-block.point1 {
+      .strava .react-root main .data-wrapper .c007-data-block.point1 {
         top: 30vh; }
-      .strava .react-root main .c007-data-block.point2 {
+      .strava .react-root main .data-wrapper .c007-data-block.point2 {
         top: 45vh; }
-      .strava .react-root main .c007-data-block.point3 {
+      .strava .react-root main .data-wrapper .c007-data-block.point3 {
         top: 60vh; }
-      .strava .react-root main .c007-data-block.Sessions {
-        top: 30vh; }
-        .strava .react-root main .c007-data-block.Sessions .dataPoint:before {
-          background: url("../img/app/triathlon/icons/sync-reload-refreshh-synchronization-loop-64.png") center no-repeat;
-          -webkit-background-size: 2rem 2rem;
-          background-size: 2rem; }
-      .strava .react-root main .c007-data-block.Weight {
-        top: 30vh; }
-        .strava .react-root main .c007-data-block.Weight .dataPoint:before {
-          background: url("../img/app/triathlon/icons/user-person-account-avatar-customer-64.png") center no-repeat;
-          -webkit-background-size: 2rem 2rem;
-          background-size: 2rem; }
-      .strava .react-root main .c007-data-block.Time {
-        top: 45vh; }
-        .strava .react-root main .c007-data-block.Time .dataPoint:before {
-          background: url("../img/app/triathlon/icons/time-clock-date-analog-period-64.png") center no-repeat;
-          -webkit-background-size: 2rem 2rem;
-          background-size: 2rem; }
-      .strava .react-root main .c007-data-block.Bodyfat {
-        top: 45vh; }
-        .strava .react-root main .c007-data-block.Bodyfat .dataPoint:before {
-          background: url("../img/app/triathlon/icons/user-group-team-duo-partner-64.png") center no-repeat;
-          -webkit-background-size: 2rem 2rem;
-          background-size: 2rem; }
-      .strava .react-root main .c007-data-block.Distance {
-        top: 60vh; }
-        .strava .react-root main .c007-data-block.Distance .dataPoint:before {
-          background: url("../img/app/triathlon/icons/trasfer-back-forward-arrow-horizontal-64.png") center no-repeat;
-          -webkit-background-size: 2rem 2rem;
-          background-size: 2rem; }
-      .strava .react-root main .c007-data-block.VO2 .dataPoint:before {
+      .strava .react-root main .data-wrapper .c007-data-block.point4 {
+        top: 75vh; }
+      .strava .react-root main .data-wrapper .c007-data-block.Sessions .dataPoint:before {
+        background: url("../img/app/triathlon/icons/svg/sessions.svg") center no-repeat;
+        -webkit-background-size: 2rem 2rem;
+        background-size: 2rem; }
+      .strava .react-root main .data-wrapper .c007-data-block.Weight .dataPoint:before {
+        background: url("../img/app/triathlon/icons/user-person-account-avatar-customer-64.png") center no-repeat;
+        -webkit-background-size: 2rem 2rem;
+        background-size: 2rem; }
+      .strava .react-root main .data-wrapper .c007-data-block.Time .dataPoint:before {
+        background: url("../img/app/triathlon/icons/time-clock-date-analog-period-64.png") center no-repeat;
+        -webkit-background-size: 2rem 2rem;
+        background-size: 2rem; }
+      .strava .react-root main .data-wrapper .c007-data-block.Bodyfat .dataPoint:before {
+        background: url("../img/app/triathlon/icons/user-group-team-duo-partner-64.png") center no-repeat;
+        -webkit-background-size: 2rem 2rem;
+        background-size: 2rem; }
+      .strava .react-root main .data-wrapper .c007-data-block.Distance .dataPoint:before {
+        background: url("../img/app/triathlon/icons/trasfer-back-forward-arrow-horizontal-64.png") center no-repeat;
+        -webkit-background-size: 2rem 2rem;
+        background-size: 2rem; }
+      .strava .react-root main .data-wrapper .c007-data-block.VO2 .dataPoint:before {
         background: url("../img/app/triathlon/icons/signal-wave-distribute-share-sound-64.png") center no-repeat;
         -webkit-background-size: 2rem 2rem;
         background-size: 2rem; }
-  .strava .react-root .data-wrapper div:nth-child(1) {
-    -webkit-animation-delay: 0.25s;
-    animation-delay: 0.25s; }
-  .strava .react-root .data-wrapper div:nth-child(2) {
-    -webkit-animation-delay: 0.5s;
-    animation-delay: 0.5s; }
-  .strava .react-root .data-wrapper div:nth-child(3) {
-    -webkit-animation-delay: 0.75s;
-    animation-delay: 0.75s; }
-  .strava .react-root .thumbButtons ul li a:focus, .strava .react-root .thumbButtons ul li a:active {
-    text-decoration: underline;
-    color: white; }
-  .strava .react-root .thumbButtons--default {
-    position: fixed;
-    right: 10vw;
-    bottom: 4vh;
-    -webkit-border-radius: 100%;
-    border-radius: 100%;
-    width: 45px;
-    padding-left: 0;
-    padding-right: 0;
-    background: transparent !important;
-    z-index: 999999;
-    color: white;
-    text-align: right; }
-    .strava .react-root .thumbButtons--default__All {
-      bottom: 7.5vh; }
-      .strava .react-root .thumbButtons--default__All span {
-        background: url("https://cdn0.iconfinder.com/data/icons/sport-2-android-l-lollipop-icon-pack/24/walking-16.png"); }
-    .strava .react-root .thumbButtons--default__Swim {
-      bottom: 10vh; }
-      .strava .react-root .thumbButtons--default__Swim span {
-        background: url("https://cdn0.iconfinder.com/data/icons/sport-2-android-l-lollipop-icon-pack/24/swimming-16.png"); }
-    .strava .react-root .thumbButtons--default__Ride {
-      bottom: 12.5vh; }
-      .strava .react-root .thumbButtons--default__Ride span {
-        background: url("https://cdn0.iconfinder.com/data/icons/sport-2-android-l-lollipop-icon-pack/24/time_trial_biking-16.png"); }
-    .strava .react-root .thumbButtons--default__Run {
-      bottom: 15vh; }
-      .strava .react-root .thumbButtons--default__Run span {
-        background: url("https://cdn0.iconfinder.com/data/icons/sport-2-android-l-lollipop-icon-pack/24/walking-16.png"); }
-    .strava .react-root .thumbButtons--default__Stats {
-      bottom: 17.5vh; }
-      .strava .react-root .thumbButtons--default__Stats span {
-        background: url("https://cdn0.iconfinder.com/data/icons/sport-2-android-l-lollipop-icon-pack/24/walking-16.png"); }
-  .strava .react-root .loaded-new {
-    -webkit-transition-delay: 0.1s;
-    -o-transition-delay: 0.1s;
-    transition-delay: 0.1s; }
-  .strava .react-root .loader-wrapper.loaded-new-reverse {
-    -webkit-transition-delay: 0.1s;
-    -o-transition-delay: 0.1s;
-    transition-delay: 0.1s; }
-  .strava .react-root .dots {
-    position: absolute;
-    left: 10vw;
-    bottom: 5vh;
-    text-align: center;
-    z-index: 3;
-    margin: 0;
-    padding: 0;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center; }
-    .strava .react-root .dots li {
-      height: 0.4rem;
-      width: 0.4rem;
-      display: inline-block;
-      background: rgba(255, 255, 255, 0.4);
-      margin: 0 0.1rem;
-      padding: 0;
-      -webkit-border-radius: 100%;
-      border-radius: 100%;
-      -webkit-transition: all 0.2s;
-      -o-transition: all 0.2s;
-      transition: all 0.2s; }
-    .strava .react-root .dots.All li:nth-child(1) {
-      height: 0.6rem;
-      width: 0.6rem;
-      background: white; }
-    .strava .react-root .dots.Swim li:nth-child(2) {
-      height: 0.6rem;
-      width: 0.6rem;
-      background: white; }
-    .strava .react-root .dots.Ride li:nth-child(3) {
-      height: 0.6rem;
-      width: 0.6rem;
-      background: white; }
-    .strava .react-root .dots.Run li:nth-child(4) {
-      height: 0.6rem;
-      width: 0.6rem;
-      background: white; }
-    .strava .react-root .dots.Stats li:nth-child(5) {
-      height: 0.6rem;
-      width: 0.6rem;
-      background: white; }
-
-.strava .test_1 {
-  top: 1;
-  left: 1; }
-
-.strava .thumbButtons ul li:nth-child(1) a {
-  -webkit-animation-delay: 100ms;
-  animation-delay: 100ms; }
-
-.strava .test_2 {
-  top: 2;
-  left: 2; }
-
-.strava .thumbButtons ul li:nth-child(2) a {
-  -webkit-animation-delay: 200ms;
-  animation-delay: 200ms; }
-
-.strava .test_3 {
-  top: 3;
-  left: 3; }
-
-.strava .thumbButtons ul li:nth-child(3) a {
-  -webkit-animation-delay: 300ms;
-  animation-delay: 300ms; }
-
-.strava .test_4 {
-  top: 4;
-  left: 4; }
-
-.strava .thumbButtons ul li:nth-child(4) a {
-  -webkit-animation-delay: 400ms;
-  animation-delay: 400ms; }
-
-.strava .test_5 {
-  top: 5;
-  left: 5; }
-
-.strava .thumbButtons ul li:nth-child(5) a {
-  -webkit-animation-delay: 500ms;
-  animation-delay: 500ms; }
-
-.strava .test_6 {
-  top: 6;
-  left: 6; }
-
-.strava .thumbButtons ul li:nth-child(6) a {
-  -webkit-animation-delay: 600ms;
-  animation-delay: 600ms; }
-
-.strava .test_7 {
-  top: 7;
-  left: 7; }
-
-.strava .thumbButtons ul li:nth-child(7) a {
-  -webkit-animation-delay: 700ms;
-  animation-delay: 700ms; }
-
-.strava .test_8 {
-  top: 8;
-  left: 8; }
-
-.strava .thumbButtons ul li:nth-child(8) a {
-  -webkit-animation-delay: 800ms;
-  animation-delay: 800ms; }
-
-.strava .test_9 {
-  top: 9;
-  left: 9; }
-
-.strava .thumbButtons ul li:nth-child(9) a {
-  -webkit-animation-delay: 900ms;
-  animation-delay: 900ms; }
-
-.strava .test_10 {
-  top: 10;
-  left: 10; }
-
-.strava .thumbButtons ul li:nth-child(10) a {
-  -webkit-animation-delay: 1000ms;
-  animation-delay: 1000ms; }
+      .strava .react-root main .data-wrapper .c007-data-block .latest-event {
+        max-width: 50%;
+        color: white;
+        font-size: 0.75rem;
+        line-height: 1rem;
+        font-weight: 200; }
 
 .dataPoint:empty {
   font-size: 2rem;

@@ -10,6 +10,8 @@ class App extends React.Component {
             dataToUse: [
                 { }
             ],
+            eventTypes: ['All','Swim','Ride','Run','Stats'],
+
             dataToUseEvent:"",
             dataToUseEventInitial:"",
             dataToUseEventNext:"",
@@ -20,6 +22,8 @@ class App extends React.Component {
             dataToUseTimeInitial:"",
             dataToUseDistance:"",
             dataToUseDistanceInitial:"",
+            dataToUseEventLatest:"",
+
             weight:"",
             bodyfat:"",
             vo2:"",
@@ -113,6 +117,13 @@ class App extends React.Component {
                 let trainingDistanceTotalKM = parseInt(trainingDistanceTotal.reduce((a, b) => a + b, 0) / 1000);
                 this.setState({dataToUseDistance: trainingDistanceTotalKM});
 
+                // -------------------
+                // LATEST ACTIVITY
+                // -------------------
+                let latestEntry = Sessions.slice(Sessions.length - 1,Sessions.length - 0).map(function(el){
+                    return el.name;
+                });
+                this.setState({dataToUseEventLatest: latestEntry});
 
                 // Just for cycling virtual sessions
                 if(eventType === "Ride") {
@@ -162,6 +173,13 @@ class App extends React.Component {
                     this.setState({weight: ""});
                     this.setState({bodyfat: ""});
                     this.setState({vo2: ""});
+                    // -------------------
+                    // LATEST ACTIVITY
+                    // -------------------
+                    let latestEntry = array.slice(array.length - 1,array.length - 0).map(function(el){
+                        return el.name;
+                    });
+                    this.setState({dataToUseEventLatest: latestEntry});
                 }
                 if(eventType === "Swim") {
                     this.setState({dataToUseEventNext: "Ride"});
@@ -314,6 +332,14 @@ class App extends React.Component {
                 this.setState({dataToUseDistance: trainingDistanceTotalKM});
                 this.setState({dataToUseDistanceInitial: trainingDistanceTotalKM});
 
+                // -------------------
+                // LATEST ACTIVITY
+                // -------------------
+                let latestEntry = array.slice(array.length - 1,array.length - 0).map(function(el){
+                    return el.name;
+                });
+                this.setState({dataToUseEventLatest: latestEntry});
+
                 this.setState({showLoading:false});
 
             }))
@@ -340,30 +366,28 @@ class App extends React.Component {
         // We pass from the parent component to the child component the state so they can use this data as well
         return ([
 
-                <main className={this.state.darkTheme ? '' : ''} key="mainWrapper">
+                <main className={this.state.darkTheme ? 'theme-dark' : 'theme-light'} key="mainWrapper">
 
-                    <div className={this.state.showLoading ? 'loader-wrapper loading-new-reverse' : 'loader-wrapper loaded-new-reverse'}>
-                        <div className="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
-                    </div>
-
-                    <div className={`background blurred ${this.state.dataToUseEvent}`}>&nbsp;</div>
-                    <div className={`background-mask ${this.state.dataToUseEvent}`}>&nbsp;</div>
+                    <Loader dataFromParent={this.state.showLoading} />
+                    <Backgrounds dataFromParent={this.state.dataToUseEvent} />
 
                     <EventHeader dataFromParent={this.state.dataToUseEvent} loadingState={this.state.showLoading} />
                     <div className={"data-wrapper"}>
-                        <DataBlock title="Sessions" dataFromParent={this.state.dataToUseSessions} loadingState={this.state.showLoading} />
-                        <DataBlock title="Time" measure={"hrs"} dataFromParent={this.state.dataToUseTime} loadingState={this.state.showLoading} />
-                        <DataBlock title="Distance" measure="km" dataFromParent={this.state.dataToUseDistance} loadingState={this.state.showLoading} />
+                        <DataBlock title="Sessions" position={"point1"} dataFromParent={this.state.dataToUseSessions} loadingState={this.state.showLoading} />
+                        <DataBlock title="Time" position={"point2"} measure={"hrs"} dataFromParent={this.state.dataToUseTime} loadingState={this.state.showLoading} />
+                        <DataBlock title="Distance" position={"point3"} measure="km" dataFromParent={this.state.dataToUseDistance} loadingState={this.state.showLoading} />
 
-                        <DataBlock title="Weight" measure="KG" dataFromParent={this.state.weight} loadingState={this.state.showLoading} />
-                        <DataBlock title="Bodyfat" measure="%" dataFromParent={this.state.bodyfat} loadingState={this.state.showLoading} />
+                        <DataBlock title="Weight" position={"point1"} measure="KG" dataFromParent={this.state.weight} loadingState={this.state.showLoading} />
+                        <DataBlock title="Bodyfat" position={"point2"} measure="%" dataFromParent={this.state.bodyfat} loadingState={this.state.showLoading} />
                         <DataBlock title="VO2" position={"point3"} measure="max" dataFromParent={this.state.vo2} loadingState={this.state.showLoading} />
+
+                        <LatestEvent dataFromParent={this.state.dataToUseEventLatest} loadingState={this.state.showLoading} />
                     </div>
                     <EventHeaderNext dataFromParent={this.state.dataToUseEventNext} loadingState={this.state.showLoading} eventTypeFunction={this.eventTypeFunction} />
 
-                    <Dots dataFromParent={this.state.dataToUseEvent} loadingState={this.state.showLoading} />
-
-                    <ThumbButtons loadingState={this.state.showLoading} eventTypeFunction={this.eventTypeFunction} />
+                    <DotsNew dataFromParent={this.state.dataToUseEvent} eventTypes={this.state.eventTypes} loadingState={this.state.showLoading} />
+                    <ThumbButtons loadingState={this.state.showLoading} eventTypes={this.state.eventTypes} eventTypeFunction={this.eventTypeFunction} />
+                    <ThemeToggle loadingState={this.state.showLoading} darkTheme={this.state.darkTheme} toggleDarkTheme={this.toggleDarkTheme} />
 
                     <div className={`background All d-none`}>&nbsp;</div>
                     <div className={`background Swim d-none`}>&nbsp;</div>
@@ -376,13 +400,30 @@ class App extends React.Component {
 
 }
 
-class TitleH3 extends React.Component {
+class Backgrounds extends React.Component {
     render() {
-        if (!this.props.dataFromParent.companyName) {
+        if (!this.props.dataFromParent) {
             return null;
         } else {
             return ([
-                <h3 key="h3" className={this.props.loadingState ? 'h3-responsive loading-new' : 'h3-responsive loaded-new'}>{this.props.dataFromParent.companyName}</h3>
+                <div key={"Backgrounds"}>
+                    <div className={`background blurred ${this.props.dataFromParent}`}>&nbsp;</div>
+                    <div className={`background-mask ${this.props.dataFromParent}`}>&nbsp;</div>
+                </div>
+            ]);
+        }
+    }
+}
+
+class Loader extends React.Component {
+    render() {
+        if (!this.props.dataFromParent) {
+            return null;
+        } else {
+            return ([
+                <div className={this.props.dataFromParent ? 'loader-wrapper loading-new-reverse' : 'loader-wrapper loaded-new-reverse'}>
+                    <div className="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+                </div>
             ]);
         }
     }
@@ -394,7 +435,7 @@ class EventHeader extends React.Component {
             return null;
         } else {
             return ([
-                <h3 key="EventHeader" className={this.props.loadingState ? `display-3 text-white mt-0 mb-0 loading-new event-header ${this.props.dataFromParent}` : `display-3 text-white mt-0 mb-0 loaded-new event-header ${this.props.dataFromParent}`}>{this.props.dataFromParent}</h3>
+                <h3 key="EventHeader" className={this.props.loadingState ? `display-3 text-color mt-0 mb-0 loading-new event-header ${this.props.dataFromParent}` : `display-3 text-color mt-0 mb-0 loaded-new event-header ${this.props.dataFromParent}`}>{this.props.dataFromParent}</h3>
             ]);
         }
     }
@@ -408,7 +449,7 @@ class EventHeaderNext extends React.Component {
         } else {
             return ([
                 <div key="EventHeaderNext" className={this.props.loadingState ? `loading-new ${this.props.dataFromParent}` : `loaded-new animated fadeInRight ${this.props.dataFromParent}`}>
-                    <h3 onClick={() => properties.eventTypeFunction(this.props.dataFromParent)} className={"display-3 text-white mt-0 mb-0 event-header-next"} >{this.props.dataFromParent}</h3>
+                    <h3 onClick={() => properties.eventTypeFunction(this.props.dataFromParent)} className={"display-3 text-color mt-0 mb-0 event-header-next"} >{this.props.dataFromParent}</h3>
                 </div>
             ]);
         }
@@ -421,7 +462,7 @@ class DataBlock extends React.Component {
             return null;
         } else {
             return ([
-                <div key="DataBlock" className={this.props.loadingState ? `c007-data-block loading-new text-white ${this.props.title} ${this.props.position}` : `c007-data-block loaded-new text-white animated fadeInUp ${this.props.title} ${this.props.position}`}>
+                <div key="DataBlock" className={this.props.loadingState ? `c007-data-block loading-new text-color ${this.props.title} ${this.props.position}` : `c007-data-block loaded-new text-color animated fadeIn ${this.props.title} ${this.props.position}`}>
                     <p className="display-4 dataPoint mt-0 mb-0">{this.props.dataFromParent}{this.props.measure}</p>
                     <p className="mt-0 mb-0"><strong>{this.props.title}</strong></p>
                 </div>
@@ -436,8 +477,7 @@ class Dots extends React.Component {
             return null;
         } else {
             return ([
-
-                <ul key="Dots" className={this.props.loadingState ? `dots ${this.props.dataFromParent} loading-newOFF` : `dots ${this.props.dataFromParent} loaded-newOFF`}>
+                <ul key="Dots" className={this.props.loadingState ? `dots ${this.props.dataFromParent} loading-new` : `dots ${this.props.dataFromParent} loaded-new`}>
                     <li>&nbsp;</li>
                     <li>&nbsp;</li>
                     <li>&nbsp;</li>
@@ -446,6 +486,19 @@ class Dots extends React.Component {
                 </ul>
             ]);
         }
+    }
+}
+
+class DotsNew extends React.Component {
+    render() {
+        let properties = this.props;
+        const eventTypes = this.props.eventTypes;
+        const listItems = eventTypes.map((event) =>
+            <li key={`keyDotsNew${event}`} className={`keyDotsNew${event}`}></li>
+        );
+        return (
+            <ul key="DotsNew" className={this.props.loadingState ? `dots ${this.props.dataFromParent} loading-newOFF` : `dots ${this.props.dataFromParent} loaded-newOFF`}>{listItems}</ul>
+        );
     }
 }
 
@@ -462,8 +515,8 @@ class ThumbButtons extends React.Component {
     render() {
         let properties = this.props;
         return ([
-            <div key={"thumbButtons"}>
-                <a key={"ThumbButtonsTigger"} className="thumbButtons--default thumbButtons--default__more animated fadeIn" onClick={this.toggleButtons}>
+            <div key={"thumbButtons"} className={this.props.loadingState ? `thumbButtons loading-newOFF` : `thumbButtons loaded-newOFF`}>
+                <a key={"ThumbButtonsTrigger"} className="thumbButtons--default thumbButtons--default__more animated fadeIn" onClick={this.toggleButtons}>
                     {this.state.showButtons &&
                     <i className="fa fa-minus"></i>
                     }
@@ -473,7 +526,7 @@ class ThumbButtons extends React.Component {
                 </a>
                 {this.state.showButtons &&
                 <div key={"ThumbButtonsWrapper"}>
-                    <Buttons eventTypeFunction={properties.eventTypeFunction} />
+                    <Buttons eventTypeFunction={properties.eventTypeFunction} eventTypes={this.props.eventTypes} />
                 </div>
                 }
             </div>
@@ -484,16 +537,45 @@ class ThumbButtons extends React.Component {
 class Buttons extends React.Component {
     render() {
         let properties = this.props;
-        const eventTypes = ['All','Swim','Ride','Run','Stats'];
+        const eventTypes = this.props.eventTypes;
         const listItems = eventTypes.map((event) =>
-            <li key={`key${event}`}><a href={`#${event}`} onClick={() => properties.eventTypeFunction(event)}
+            <li key={`key${event}`}>
+                <a href={`#${event}`}
+                   onClick={() => properties.eventTypeFunction(event)}
                    className={`thumbButtons--default thumbButtons--default__${event} animated fadeIn`}
-                   title="{event}">{event}</a>
+                   title="{event}">
+                    {event}
+                </a>
             </li>
         );
         return (
             <ul className={""}>{listItems}</ul>
         );
+    }
+}
+
+class ThemeToggle extends React.Component {
+    render() {
+        let properties = this.props;
+        return (
+            <button className={properties.darkTheme ? 'theme-toggle theme-dark' : 'theme-toggle theme-light'} onClick={properties.toggleDarkTheme}>
+                {properties.darkTheme ? 'Light' : 'Dark'}
+            </button>
+        );
+    }
+}
+
+class LatestEvent extends React.Component {
+    render() {
+        if (!this.props.dataFromParent) {
+            return null;
+        } else {
+            return ([
+                <div key={'LatestEvent'} className={this.props.loadingState ? `c007-data-block point4 loading-new` : `c007-data-block point4 loaded-new animated fadeIn`}>
+                    <p className={"latest-event text-color"}>{this.props.dataFromParent}</p>
+                </div>
+            ]);
+        }
     }
 }
 
