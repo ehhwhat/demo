@@ -6553,7 +6553,7 @@ html.full-height, .full-height body {
   overflow: hidden; }
 
 .strava body {
-  background-color: black; }
+  background-color: #444; }
 
 .strava .react-root {
   height: 100vh;
@@ -6575,8 +6575,18 @@ html.full-height, .full-height body {
       transition-delay: 0.1s; }
     .strava .react-root main.theme-light .text-color {
       color: white !important; }
+    .strava .react-root main.theme-light .data-wrapper .c007-data-block .dataPoint:before {
+      background-color: white; }
     .strava .react-root main.theme-dark .text-color {
-      color: #ff8a80 !important; }
+      color: #ff8a80 !important;
+      -webkit-transition: all 1s;
+      -o-transition: all 1s;
+      transition: all 1s; }
+    .strava .react-root main.theme-dark .data-wrapper .c007-data-block .dataPoint:before {
+      background-color: #ff8a80;
+      -webkit-transition: all 1s;
+      -o-transition: all 1s;
+      transition: all 1s; }
     .strava .react-root main .theme-toggle {
       position: absolute;
       bottom: 5vh;
@@ -6592,6 +6602,8 @@ html.full-height, .full-height body {
       -webkit-transform: translateX(-50%) translateY(50%);
       -ms-transform: translateX(-50%) translateY(50%);
       transform: translateX(-50%) translateY(50%); }
+      .strava .react-root main .theme-toggle:focus {
+        outline: none; }
       .strava .react-root main .theme-toggle span {
         height: 16px;
         width: 16px;
@@ -6822,15 +6834,15 @@ html.full-height, .full-height body {
         -webkit-transition: all 0.2s;
         -o-transition: all 0.2s;
         transition: all 0.2s; }
-      .strava .react-root main .dots.All li:nth-child(1) {
+      .strava .react-root main .dots.All li.keyDotsNewAll {
         background: white; }
-      .strava .react-root main .dots.Swim li:nth-child(2) {
+      .strava .react-root main .dots.Swim li.keyDotsNewSwim {
         background: white; }
-      .strava .react-root main .dots.Ride li:nth-child(3) {
+      .strava .react-root main .dots.Ride li.keyDotsNewRide {
         background: white; }
-      .strava .react-root main .dots.Run li:nth-child(4) {
+      .strava .react-root main .dots.Run li.keyDotsNewRun {
         background: white; }
-      .strava .react-root main .dots.Stats li:nth-child(5) {
+      .strava .react-root main .dots.Stats li.keyDotsNewStats {
         background: white; }
     .strava .react-root main .data-wrapper div:nth-child(1) {
       -webkit-animation-delay: 0.25s;
@@ -6862,9 +6874,7 @@ html.full-height, .full-height body {
           display: block;
           position: absolute;
           left: -10vw;
-          top: .4rem;
-          -webkit-filter: invert(100%);
-          filter: invert(100%); }
+          top: .4rem; }
       .strava .react-root main .data-wrapper .c007-data-block.point1 {
         top: 30vh; }
       .strava .react-root main .data-wrapper .c007-data-block.point2 {
@@ -6874,29 +6884,35 @@ html.full-height, .full-height body {
       .strava .react-root main .data-wrapper .c007-data-block.point4 {
         top: 75vh; }
       .strava .react-root main .data-wrapper .c007-data-block.Sessions .dataPoint:before {
-        background: url("../img/app/triathlon/icons/svg/sessions.svg") center no-repeat;
-        -webkit-background-size: 2rem 2rem;
-        background-size: 2rem; }
+        -webkit-mask-image: url("../img/app/triathlon/icons/svg/loop.svg");
+        mask-image: url("../img/app/triathlon/icons/svg/loop.svg");
+        -webkit-mask-size: 2rem;
+        mask-size: 2rem; }
       .strava .react-root main .data-wrapper .c007-data-block.Weight .dataPoint:before {
-        background: url("../img/app/triathlon/icons/user-person-account-avatar-customer-64.png") center no-repeat;
-        -webkit-background-size: 2rem 2rem;
-        background-size: 2rem; }
+        -webkit-mask-image: url("../img/app/triathlon/icons/svg/person.svg");
+        mask-image: url("../img/app/triathlon/icons/svg/person.svg");
+        -webkit-mask-size: 2rem;
+        mask-size: 2rem; }
       .strava .react-root main .data-wrapper .c007-data-block.Time .dataPoint:before {
-        background: url("../img/app/triathlon/icons/time-clock-date-analog-period-64.png") center no-repeat;
-        -webkit-background-size: 2rem 2rem;
-        background-size: 2rem; }
+        -webkit-mask-image: url("../img/app/triathlon/icons/svg/clock.svg");
+        mask-image: url("../img/app/triathlon/icons/svg/clock.svg");
+        -webkit-mask-size: 2rem;
+        mask-size: 2rem; }
       .strava .react-root main .data-wrapper .c007-data-block.Bodyfat .dataPoint:before {
-        background: url("../img/app/triathlon/icons/user-group-team-duo-partner-64.png") center no-repeat;
-        -webkit-background-size: 2rem 2rem;
-        background-size: 2rem; }
+        -webkit-mask-image: url("../img/app/triathlon/icons/svg/persons.svg");
+        mask-image: url("../img/app/triathlon/icons/svg/persons.svg");
+        -webkit-mask-size: 2rem;
+        mask-size: 2rem; }
       .strava .react-root main .data-wrapper .c007-data-block.Distance .dataPoint:before {
-        background: url("../img/app/triathlon/icons/trasfer-back-forward-arrow-horizontal-64.png") center no-repeat;
-        -webkit-background-size: 2rem 2rem;
-        background-size: 2rem; }
+        -webkit-mask-image: url("../img/app/triathlon/icons/svg/arrows-horizontal.svg");
+        mask-image: url("../img/app/triathlon/icons/svg/arrows-horizontal.svg");
+        -webkit-mask-size: 2rem;
+        mask-size: 2rem; }
       .strava .react-root main .data-wrapper .c007-data-block.VO2 .dataPoint:before {
-        background: url("../img/app/triathlon/icons/signal-wave-distribute-share-sound-64.png") center no-repeat;
-        -webkit-background-size: 2rem 2rem;
-        background-size: 2rem; }
+        -webkit-mask-image: url("../img/app/triathlon/icons/svg/wave.svg");
+        mask-image: url("../img/app/triathlon/icons/svg/wave.svg");
+        -webkit-mask-size: 2rem;
+        mask-size: 2rem; }
       .strava .react-root main .data-wrapper .c007-data-block .latest-event {
         max-width: 50%;
         color: white;

@@ -24,6 +24,15 @@ class App extends React.Component {
             dataToUseDistanceInitial:"",
             dataToUseEventLatest:"",
 
+            dataBlockItem1:"",
+            dataBlockItem1Title:"",
+            dataBlockItem2:"",
+            dataBlockItem2Title:"",
+            dataBlockItem3:"",
+            dataBlockItem3Title:"",
+            dataBlockItem4:"",
+            dataBlockItem4Title:"",
+
             weight:"",
             bodyfat:"",
             vo2:"",
@@ -385,7 +394,12 @@ class App extends React.Component {
                     </div>
                     <EventHeaderNext dataFromParent={this.state.dataToUseEventNext} loadingState={this.state.showLoading} eventTypeFunction={this.eventTypeFunction} />
 
-                    <DotsNew dataFromParent={this.state.dataToUseEvent} eventTypes={this.state.eventTypes} loadingState={this.state.showLoading} />
+                    <DotsNew
+                        dataFromParent={this.state.dataToUseEvent}
+                        eventTypes={this.state.eventTypes}
+                        loadingState={this.state.showLoading}
+                        darkTheme={this.state.darkTheme}
+                    />
                     <ThumbButtons loadingState={this.state.showLoading} eventTypes={this.state.eventTypes} eventTypeFunction={this.eventTypeFunction} />
                     <ThemeToggle loadingState={this.state.showLoading} darkTheme={this.state.darkTheme} toggleDarkTheme={this.toggleDarkTheme} />
 
@@ -497,7 +511,9 @@ class DotsNew extends React.Component {
             <li key={`keyDotsNew${event}`} className={`keyDotsNew${event}`}></li>
         );
         return (
-            <ul key="DotsNew" className={this.props.loadingState ? `dots ${this.props.dataFromParent} loading-newOFF` : `dots ${this.props.dataFromParent} loaded-newOFF`}>{listItems}</ul>
+            <div className={properties.loadingState ? `loading-new` : `loaded-new`}>
+                <ul key="DotsNew" className={properties.darkTheme ? `dots theme-dark ${this.props.dataFromParent}` : `dots theme-light ${this.props.dataFromParent}`}>{listItems}</ul>
+            </div>
         );
     }
 }
@@ -515,8 +531,8 @@ class ThumbButtons extends React.Component {
     render() {
         let properties = this.props;
         return ([
-            <div key={"thumbButtons"} className={this.props.loadingState ? `thumbButtons loading-newOFF` : `thumbButtons loaded-newOFF`}>
-                <a key={"ThumbButtonsTrigger"} className="thumbButtons--default thumbButtons--default__more animated fadeIn" onClick={this.toggleButtons}>
+            <div key={"thumbButtons"} className={this.props.loadingState ? `thumbButtons loading-new` : `thumbButtons loaded-new`}>
+                <a key={"ThumbButtonsTrigger"} className="thumbButtons--default thumbButtons--default__more animated fadeIn text-color" onClick={this.toggleButtons}>
                     {this.state.showButtons &&
                     <i className="fa fa-minus"></i>
                     }
@@ -542,7 +558,7 @@ class Buttons extends React.Component {
             <li key={`key${event}`}>
                 <a href={`#${event}`}
                    onClick={() => properties.eventTypeFunction(event)}
-                   className={`thumbButtons--default thumbButtons--default__${event} animated fadeIn`}
+                   className={`thumbButtons--default thumbButtons--default__${event} animated fadeIn text-color`}
                    title="{event}">
                     {event}
                 </a>
@@ -558,9 +574,11 @@ class ThemeToggle extends React.Component {
     render() {
         let properties = this.props;
         return (
-            <button className={properties.darkTheme ? 'theme-toggle theme-dark' : 'theme-toggle theme-light'} onClick={properties.toggleDarkTheme}>
-                {properties.darkTheme ? 'Light' : 'Dark'}
-            </button>
+            <div key={"ThemeToggle"} className={this.props.loadingState ? `loading-new` : `loaded-new`}>
+                <button className={properties.darkTheme ? 'theme-toggle theme-dark text-color' : 'theme-toggle theme-light text-color'} onClick={properties.toggleDarkTheme}>
+                    {properties.darkTheme ? 'Light' : 'Dark'}
+                </button>
+            </div>
         );
     }
 }
