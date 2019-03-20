@@ -10,7 +10,7 @@ class App extends React.Component {
             dataToUse: [
                 { }
             ],
-            eventTypes: ['All','Swim','Ride','Run','Stats'],
+            eventTypes: ['All','Swim','Ride','Run','Stats','Targets'],
 
             dataToUseEvent:"",
             dataToUseEventInitial:"",
@@ -26,16 +26,28 @@ class App extends React.Component {
 
             dataBlockItem1:"",
             dataBlockItem1Title:"",
+            dataBlockItem1Measure:"",
+            dataBlockItem1Compare:"",
+
             dataBlockItem2:"",
             dataBlockItem2Title:"",
+            dataBlockItem2Measure:"",
+            dataBlockItem2Compare:"",
+
             dataBlockItem3:"",
             dataBlockItem3Title:"",
+            dataBlockItem3Measure:"",
+            dataBlockItem3Compare:"",
+
             dataBlockItem4:"",
             dataBlockItem4Title:"",
+            dataBlockItem4Measure:"",
+            dataBlockItem4Compare:"",
 
-            weight:"",
-            bodyfat:"",
-            vo2:"",
+            dataStats:"",
+            dataTargets:"",
+            dataTargetsCurrent:"",
+
             showButtons:false,
 
             isHidden: true,
@@ -52,170 +64,251 @@ class App extends React.Component {
         });
     }
 
-    // toggleButtons = () => {
-    //     this.setState({ showButtons: !this.state.showButtons});
-    // };
+    // This method will be sent to the child component
+    emptyData = () => {
+        this.setState({dataToUseEvent: ""});
+        this.setState({dataToUseEventNext: ""});
 
-    // statsFunction = (stats) => {
-    //     this.setState({showLoading:true});
-    //
-    //     this.setState({weight: "77"});
-    //     this.setState({bodyfat: "10.5"});
-    //     this.setState({vo2: "54"});
-    //
-    //     this.setState({dataToUse: []});
-    //     this.setState({dataToUseEvent: "Stats"});
-    //     this.setState({dataToUseEventNext: "All"});
-    //     this.setState({dataToUseSessions: ""});
-    //     this.setState({dataToUseTime: ""});
-    //     this.setState({dataToUseDistance: ""});
-    //
-    //     this.setState({showLoading:false});
-    //
-    // };
+        this.setState({dataBlockItem1: ""});
+        this.setState({dataBlockItem1Title: ""});
+        this.setState({dataBlockItem1Measure: ""});
+        this.setState({dataBlockItem1Compare: ""});
+
+        this.setState({dataBlockItem2: ""});
+        this.setState({dataBlockItem2Title: ""});
+        this.setState({dataBlockItem2Measure: ""});
+        this.setState({dataBlockItem2Compare: ""});
+
+        this.setState({dataBlockItem3: ""});
+        this.setState({dataBlockItem3Title: ""});
+        this.setState({dataBlockItem3Measure: ""});
+        this.setState({dataBlockItem3Compare: ""});
+
+        this.setState({dataBlockItem4: ""});
+        this.setState({dataBlockItem4Title: ""});
+        this.setState({dataBlockItem4Measure: ""});
+        this.setState({dataBlockItem4Compare: ""});
+
+        this.setState({dataToUseEventLatest: null});
+    };
 
     eventTypeFunction = (eventType) => {
-        console.log('es6Function');
+        console.log('eventTypeFunction');
         console.log(eventType);
         this.setState({showLoading:true});
-        axios.get('https://www.strava.com/api/v3/athlete/activities?after=1538355661&page=1&per_page=200&access_token=6c4884a4196ff4b71d3a58439c23a5adfadad027') // JSON File Path
-            .then( response => {
-                console.log(response.data);
-                let array = this.state.dataToUse;
-                console.log('%c AXIOS', 'color: #61C155; font-weight: bold;background:#fff;border-left:5px solid #61C155;padding:15px 30px;');
-                console.log(array);
-                console.log('%c AXIOS', 'color: #61C155; font-weight: bold;background:#fff;border-left:5px solid #61C155;padding:15px 30px;');
 
-                this.setState({dataToUseEvent: eventType});
-                this.setState({weight: ""});
-                this.setState({bodyfat: ""});
-                this.setState({vo2: ""});
+        this.emptyData();
 
-                // ---------------
-                // SESSIONS
-                // ---------------
-                let Sessions = array.filter(function (el) {
-                    return (el.type === eventType);
-                });
-                const SessionsTotal = Sessions.length;
-                this.setState({dataToUseSessions: SessionsTotal});
-                console.log("%c Total Sessions: " + SessionsTotal, "padding:5px 15px;margin:5px;color: #333;border-left:15px solid salmon;font-weight:bold;");
+        let array = this.state.dataToUse;
+        // console.log('%c AXIOS', 'color: #61C155; font-weight: bold;background:#fff;border-left:5px solid #61C155;padding:15px 30px;');
+        // console.log(array);
+        // console.log('%c AXIOS', 'color: #61C155; font-weight: bold;background:#fff;border-left:5px solid #61C155;padding:15px 30px;');
 
-                // ---------------
-                // HOURS
-                // ---------------
-                let trainingHoursTotal = array.filter(function (el) {
-                    return (el.type === eventType);
-                }).map(function(el){
-                    return el.moving_time;
-                });
-                const trainingHoursTotalFinal = parseInt(trainingHoursTotal.reduce((a, b) => a + b, 0) / 3600);
-                this.setState({dataToUseTime: trainingHoursTotalFinal});
+        this.setState({dataToUseEvent: eventType});
 
-                // ---------------
-                // DISTANCES
-                // ---------------
-                let trainingDistanceTotal = array.filter(function (el) {
-                    return (el.type === eventType);
-                }).map(function(el){
-                    return el.distance;
-                });
-                // -------------------
-                // DISTANCES TO KM
-                // -------------------
-                let trainingDistanceTotalKM = parseInt(trainingDistanceTotal.reduce((a, b) => a + b, 0) / 1000);
-                this.setState({dataToUseDistance: trainingDistanceTotalKM});
+        // ---------------
+        // SESSIONS
+        // ---------------
+        let Sessions = array.filter(function (el) {
+            return (el.type === eventType);
+        });
+        const SessionsTotal = Sessions.length;
+        this.setState({dataBlockItem1: SessionsTotal});
+        this.setState({dataBlockItem1Title: "Sessions"});
+        this.setState({dataBlockItem1Measure: ""});
+        console.log("%c Total Sessions: " + SessionsTotal, "padding:5px 15px;margin:5px;color: #333;border-left:15px solid salmon;font-weight:bold;");
 
-                // -------------------
-                // LATEST ACTIVITY
-                // -------------------
-                let latestEntry = Sessions.slice(Sessions.length - 1,Sessions.length - 0).map(function(el){
-                    return el.name;
-                });
-                this.setState({dataToUseEventLatest: latestEntry});
+        // ---------------
+        // HOURS
+        // ---------------
+        let trainingHoursTotal = array.filter(function (el) {
+            return (el.type === eventType);
+        }).map(function(el){
+            return el.moving_time;
+        });
+        const trainingHoursTotalFinal = parseInt(trainingHoursTotal.reduce((a, b) => a + b, 0) / 3600);
+        this.setState({dataBlockItem2: trainingHoursTotalFinal});
+        this.setState({dataBlockItem2Title: "Time"});
+        this.setState({dataBlockItem2Measure: "hrs"});
 
-                // Just for cycling virtual sessions
-                if(eventType === "Ride") {
-                    console.log('need to add virtual stuff');
-                    // ---------------
-                    // CYCLE SESSIONS - VIRTUAL
-                    // ---------------
-                    let cycleVirtualSessions = array.filter(function (el) {
-                        return (el.type === "VirtualRide");
-                    });
-                    const cycleVirtualSessionsTotal = cycleVirtualSessions.length;
-                    this.setState({dataToUseSessions: (SessionsTotal+cycleVirtualSessionsTotal)});
+        // ---------------
+        // DISTANCES
+        // ---------------
+        let trainingDistanceTotal = array.filter(function (el) {
+            return (el.type === eventType);
+        }).map(function(el){
+            return el.distance;
+        });
+        // -------------------
+        // DISTANCES TO KM
+        // -------------------
+        let trainingDistanceTotalKM = parseInt(trainingDistanceTotal.reduce((a, b) => a + b, 0) / 1000);
+        this.setState({dataBlockItem3: trainingDistanceTotalKM});
+        this.setState({dataBlockItem3Title: "Distance"});
+        this.setState({dataBlockItem3Measure: "km"});
 
-                    // ---------------
-                    // CYCLING HOURS - VIRTUAL
-                    // ---------------
-                    let cyclesVirtualTimeTotal = array.filter(function (el) {
-                        return (el.type === "VirtualRide");
-                    }).map(function(el){
-                        return el.moving_time;
-                    });
-                    const cyclesVirtualTimeTotalFinal = parseInt(cyclesVirtualTimeTotal.reduce((a, b) => a + b, 0) / 3600);
-                    this.setState({dataToUseTime: (trainingHoursTotalFinal+cyclesVirtualTimeTotalFinal)});
+        // -------------------
+        // LATEST ACTIVITY
+        // -------------------
+        let latestEntry = Sessions.slice(Sessions.length - 1,Sessions.length - 0).map(function(el){
+            return el.name;
+        });
+        this.setState({dataToUseEventLatest: latestEntry});
 
-                    // ---------------
-                    // CYCLE DISTANCES - VIRTUAL
-                    // ---------------
-                    let cyclesVirtualDistanceTotal = array.filter(function (el) {
-                        return (el.type === "VirtualRide");
-                    }).map(function(el){
-                        return el.distance;
-                    });
-
-                    // -------------------
-                    // CYCLE DISTANCES TO KM - VIRTUAL
-                    // -------------------
-                    let cyclesVirtualDistanceTotalKM = parseInt(cyclesVirtualDistanceTotal.reduce((a, b) => a + b, 0) / 1000);
-                    this.setState({dataToUseDistance: (trainingDistanceTotalKM+cyclesVirtualDistanceTotalKM)});
-                }
-
-                if(eventType === "All") {
-                    this.setState({dataToUseEvent: this.state.dataToUseEventInitial});
-                    this.setState({dataToUseSessions: this.state.dataToUseSessionsInitial});
-                    this.setState({dataToUseTime: this.state.dataToUseTimeInitial});
-                    this.setState({dataToUseDistance: this.state.dataToUseDistanceInitial});
-                    this.setState({dataToUseEventNext: this.state.dataToUseEventNextInitial});
-                    this.setState({weight: ""});
-                    this.setState({bodyfat: ""});
-                    this.setState({vo2: ""});
-                    // -------------------
-                    // LATEST ACTIVITY
-                    // -------------------
-                    let latestEntry = array.slice(array.length - 1,array.length - 0).map(function(el){
-                        return el.name;
-                    });
-                    this.setState({dataToUseEventLatest: latestEntry});
-                }
-                if(eventType === "Swim") {
-                    this.setState({dataToUseEventNext: "Ride"});
-                }
-                if(eventType === "Ride") {
-                    this.setState({dataToUseEventNext: "Run"});
-                }
-                if(eventType === "Run") {
-                    this.setState({dataToUseEventNext: "Stats"});
-                }
-                if(eventType === "Stats") {
-                    this.setState({weight: "77"});
-                    this.setState({bodyfat: "10.5"});
-                    this.setState({vo2: "54"});
-                    this.setState({dataToUseEvent: "Stats"});
-                    this.setState({dataToUseEventNext: "All"});
-                    this.setState({dataToUseSessions: ""});
-                    this.setState({dataToUseTime: ""});
-                    this.setState({dataToUseDistance: ""});
-                }
-
-                this.setState({showLoading:false});
-
-            })
-            .catch(function (error) {
-                console.log(error);
+        // Just for cycling virtual sessions
+        if(eventType === "Ride") {
+            // ---------------
+            // CYCLE SESSIONS - VIRTUAL
+            // ---------------
+            let cycleVirtualSessions = array.filter(function (el) {
+                return (el.type === "VirtualRide");
             });
+            const cycleVirtualSessionsTotal = cycleVirtualSessions.length;
+            this.setState({dataBlockItem1: (SessionsTotal+cycleVirtualSessionsTotal)});
+
+            // ---------------
+            // CYCLING HOURS - VIRTUAL
+            // ---------------
+            let cyclesVirtualTimeTotal = array.filter(function (el) {
+                return (el.type === "VirtualRide");
+            }).map(function(el){
+                return el.moving_time;
+            });
+            const cyclesVirtualTimeTotalFinal = parseInt(cyclesVirtualTimeTotal.reduce((a, b) => a + b, 0) / 3600);
+            this.setState({dataBlockItem2: (trainingHoursTotalFinal+cyclesVirtualTimeTotalFinal)});
+
+            // ---------------
+            // CYCLE DISTANCES - VIRTUAL
+            // ---------------
+            let cyclesVirtualDistanceTotal = array.filter(function (el) {
+                return (el.type === "VirtualRide");
+            }).map(function(el){
+                return el.distance;
+            });
+
+            // -------------------
+            // CYCLE DISTANCES TO KM - VIRTUAL
+            // -------------------
+            let cyclesVirtualDistanceTotalKM = parseInt(cyclesVirtualDistanceTotal.reduce((a, b) => a + b, 0) / 1000);
+            this.setState({dataBlockItem3: (trainingDistanceTotalKM+cyclesVirtualDistanceTotalKM)});
+
+            // -------------------
+            // LATEST ACTIVITY
+            // -------------------
+            let cycleLatestEntry = cycleVirtualSessions.slice(cycleVirtualSessions.length - 1,cycleVirtualSessions.length - 0).map(function(el){
+                return el.name;
+            });
+            this.setState({dataToUseEventLatest: cycleLatestEntry});
+        }
+
+        // Just for running virtual sessions
+        if(eventType === "Run") {
+            // ---------------
+            // Run SESSIONS - VIRTUAL
+            // ---------------
+            let runVirtualSessions = array.filter(function (el) {
+                return (el.type === "VirtualRun");
+            });
+            const runVirtualSessionsTotal = runVirtualSessions.length;
+            this.setState({dataBlockItem1: (SessionsTotal+runVirtualSessionsTotal)});
+
+            // ---------------
+            // Run HOURS - VIRTUAL
+            // ---------------
+            let runVirtualTimeTotal = array.filter(function (el) {
+                return (el.type === "VirtualRun");
+            }).map(function(el){
+                return el.moving_time;
+            });
+            const runVirtualTimeTotalFinal = parseInt(runVirtualTimeTotal.reduce((a, b) => a + b, 0) / 3600);
+            this.setState({dataBlockItem2: (trainingHoursTotalFinal+runVirtualTimeTotalFinal)});
+
+            // ---------------
+            // Run DISTANCES - VIRTUAL
+            // ---------------
+            let runVirtualDistanceTotal = array.filter(function (el) {
+                return (el.type === "VirtualRun");
+            }).map(function(el){
+                return el.distance;
+            });
+
+            // -------------------
+            // Run DISTANCES TO KM - VIRTUAL
+            // -------------------
+            let runVirtualDistanceTotalKM = parseInt(runVirtualDistanceTotal.reduce((a, b) => a + b, 0) / 1000);
+            this.setState({dataBlockItem3: (trainingDistanceTotalKM+runVirtualDistanceTotalKM)});
+        }
+
+        if(eventType === "All") {
+            this.setState({dataToUseEvent: this.state.dataToUseEventInitial});
+            this.setState({dataToUseEventNext: this.state.dataToUseEventNextInitial});
+            this.setState({dataBlockItem1: this.state.dataToUseSessionsInitial});
+            this.setState({dataBlockItem1Title: "Sessions"});
+            this.setState({dataBlockItem2: this.state.dataToUseTimeInitial});
+            this.setState({dataBlockItem2Title: "Time"});
+            this.setState({dataBlockItem3: this.state.dataToUseDistanceInitial});
+            this.setState({dataBlockItem3Title: "Distance"});
+
+            // -------------------
+            // LATEST ACTIVITY
+            // -------------------
+            let latestEntry = array.slice(array.length - 1,array.length - 0).map(function(el){
+                return el.name;
+            });
+            this.setState({dataToUseEventLatest: latestEntry});
+        }
+        if(eventType === "Swim") {
+            this.setState({dataToUseEventNext: "Ride"});
+        }
+        if(eventType === "Ride") {
+            this.setState({dataToUseEventNext: "Run"});
+        }
+        if(eventType === "Run") {
+            this.setState({dataToUseEventNext: "Stats"});
+        }
+        if(eventType === "Stats") {
+            this.setState({dataToUseEvent: "Stats"});
+            this.setState({dataToUseEventNext: "Targets"});
+            this.setState({dataToUseEventLatest: null});
+            this.setState({dataBlockItem1: this.state.dataStats[0]['weight']});
+            this.setState({dataBlockItem1Title: "Weight"});
+            this.setState({dataBlockItem1Measure: "lbs"});
+            this.setState({dataBlockItem2: this.state.dataStats[0]['bodyfat']});
+            this.setState({dataBlockItem2Title: "Bodyfat"});
+            this.setState({dataBlockItem2Measure: "%"});
+            this.setState({dataBlockItem3: this.state.dataStats[0]['vo2']});
+            this.setState({dataBlockItem3Title: "VO2"});
+            this.setState({dataBlockItem3Measure: "max"});
+        }
+
+        if(eventType === "Targets") {
+            this.setState({dataToUseEvent: "Targets"});
+            this.setState({dataToUseEventNext: "All"});
+            this.setState({dataToUseEventLatest: null});
+
+            // this.setState({dataBlockItem1: this.state.dataTargets[0]['weight']});
+            // this.setState({dataBlockItem1Title: "Weight"});
+            // this.setState({dataBlockItem1Measure: "lbs"});
+            // this.setState({dataBlockItem1Compare: this.state.dataTargetsCurrent[0]['weight']});
+
+            this.setState({dataBlockItem1: this.state.dataTargets[0]['swim']});
+            this.setState({dataBlockItem1Title: "Swim"});
+            this.setState({dataBlockItem1Measure: "s/100m"});
+            this.setState({dataBlockItem1Compare: this.state.dataTargetsCurrent[0]['swim']});
+
+            this.setState({dataBlockItem2: this.state.dataTargets[0]['ride']});
+            this.setState({dataBlockItem2Title: "Ride"});
+            this.setState({dataBlockItem2Measure: "W/kg"});
+            this.setState({dataBlockItem2Compare: this.state.dataTargetsCurrent[0]['ride']});
+
+            this.setState({dataBlockItem3: this.state.dataTargets[0]['run']});
+            this.setState({dataBlockItem3Title: "Run"});
+            this.setState({dataBlockItem3Measure: "HM"});
+            this.setState({dataBlockItem3Compare: this.state.dataTargetsCurrent[0]['run']});
+
+        }
+
+        this.setState({showLoading:false});
     };
 
     toggleDarkTheme = () => {
@@ -225,74 +318,21 @@ class App extends React.Component {
     componentWillMount() {
         //console.log('%c componentWillMount', 'color: #61C155; font-weight: bold;background:#fff;border-left:5px solid #61C155;padding:15px 30px;');
         this.setState({showLoading:true});
-        // axios.get('https://www.strava.com/api/v3/athlete/activities?after=1538355661&page=1&per_page=200&access_token=6c4884a4196ff4b71d3a58439c23a5adfadad027') // JSON File Path
-        //     .then( response => {
-        //         console.log(response.data);
-        //         let array = $.map(response.data, function(value, index) {
-        //             return [value];
-        //         });
-        //         console.log('%c AXIOS', 'color: #61C155; font-weight: bold;background:#fff;border-left:5px solid #61C155;padding:15px 30px;');
-        //         console.log(array);
-        //         console.log('%c AXIOS', 'color: #61C155; font-weight: bold;background:#fff;border-left:5px solid #61C155;padding:15px 30px;');
-        //
-        //         this.setState({dataToUse: array});
-        //         this.setState({dataToUseEvent: "All"});
-        //         this.setState({dataToUseEventInitial: "All"});
-        //         this.setState({dataToUseEventNext: "Swim"});
-        //         this.setState({dataToUseEventNextInitial: "Swim"});
-        //
-        //         // ---------------
-        //         // SESSIONS
-        //         // ---------------
-        //         let Sessions = array.filter(function (el) {
-        //             return el;
-        //         });
-        //         const SessionsTotal = Sessions.length;
-        //         this.setState({dataToUseSessions: SessionsTotal});
-        //         this.setState({dataToUseSessionsInitial: SessionsTotal});
-        //
-        //         // ---------------
-        //         // HOURS
-        //         // ---------------
-        //         let trainingHoursTotal = array.map(function(el){
-        //             return el.moving_time;
-        //         });
-        //         const trainingHoursTotalFinal = parseInt(trainingHoursTotal.reduce((a, b) => a + b, 0) / 3600);
-        //         this.setState({dataToUseTime: trainingHoursTotalFinal});
-        //         this.setState({dataToUseTimeInitial: trainingHoursTotalFinal});
-        //
-        //         // ---------------
-        //         // DISTANCES
-        //         // ---------------
-        //         let trainingDistanceTotal = array.map(function(el){
-        //             return el.distance;
-        //         });
-        //
-        //         // -------------------
-        //         // DISTANCES TO KM
-        //         // -------------------
-        //         let trainingDistanceTotalKM = parseInt(trainingDistanceTotal.reduce((a, b) => a + b, 0) / 1000);
-        //         this.setState({dataToUseDistance: trainingDistanceTotalKM});
-        //         this.setState({dataToUseDistanceInitial: trainingDistanceTotalKM});
-        //
-        //         setTimeout(() => {
-        //             this.setState({showLoading:false});
-        //         }, 150);
-        //
-        //     })
-        //     .catch(function (error) {
-        //         console.log(error);
-        //     });
 
-        axios.all([axios.get(`https://www.strava.com/api/v3/athlete/activities?after=1538355661&page=1&per_page=200&access_token=6c4884a4196ff4b71d3a58439c23a5adfadad027`),
-            axios.get(`https://www.strava.com/api/v3/athlete/activities?after=1538355661&page=2&per_page=200&access_token=6c4884a4196ff4b71d3a58439c23a5adfadad027`)])
-            .then(axios.spread((firstResponse, secondResponse) => {
-                console.log(firstResponse.data);
-                console.log(secondResponse.data);
+        axios.all([
+            axios.get(`https://www.strava.com/api/v3/athlete/activities?after=1538355661&page=1&per_page=200&access_token=6c4884a4196ff4b71d3a58439c23a5adfadad027`),
+            axios.get(`https://www.strava.com/api/v3/athlete/activities?after=1538355661&page=2&per_page=200&access_token=6c4884a4196ff4b71d3a58439c23a5adfadad027`),
+            axios.get(`https://triathlon-information.firebaseio.com/.json`)
+        ])
+            .then(axios.spread((firstResponse, secondResponse, thirdResponse) => {
+                //console.log(firstResponse.data);
+                //console.log(secondResponse.data);
+                //console.log(thirdResponse.data);
 
                 let firstData = firstResponse.data;
                 let secondData = secondResponse.data;
                 let allData = firstData.concat(secondData);
+                let thirdData = thirdResponse.data;
 
                 let array = $.map(allData, function(value, index) {
                     return [value];
@@ -303,9 +343,7 @@ class App extends React.Component {
                 this.setState({dataToUseEventInitial: "All"});
                 this.setState({dataToUseEventNext: "Swim"});
                 this.setState({dataToUseEventNextInitial: "Swim"});
-                this.setState({weight: ""});
-                this.setState({bodyfat: ""});
-                this.setState({vo2: ""});
+
 
                 // ---------------
                 // SESSIONS
@@ -314,7 +352,9 @@ class App extends React.Component {
                     return el;
                 });
                 const SessionsTotal = Sessions.length;
-                this.setState({dataToUseSessions: SessionsTotal});
+                this.setState({dataBlockItem1: SessionsTotal});
+                this.setState({dataBlockItem1Title: "Sessions"});
+                this.setState({dataBlockItem1Measure: ""});
                 this.setState({dataToUseSessionsInitial: SessionsTotal});
 
                 // ---------------
@@ -324,7 +364,9 @@ class App extends React.Component {
                     return el.moving_time;
                 });
                 const trainingHoursTotalFinal = parseInt(trainingHoursTotal.reduce((a, b) => a + b, 0) / 3600);
-                this.setState({dataToUseTime: trainingHoursTotalFinal});
+                this.setState({dataBlockItem2: trainingHoursTotalFinal});
+                this.setState({dataBlockItem2Title: "Time"});
+                this.setState({dataBlockItem2Measure: "hrs"});
                 this.setState({dataToUseTimeInitial: trainingHoursTotalFinal});
 
                 // ---------------
@@ -338,7 +380,9 @@ class App extends React.Component {
                 // DISTANCES TO KM
                 // -------------------
                 let trainingDistanceTotalKM = parseInt(trainingDistanceTotal.reduce((a, b) => a + b, 0) / 1000);
-                this.setState({dataToUseDistance: trainingDistanceTotalKM});
+                this.setState({dataBlockItem3: trainingDistanceTotalKM});
+                this.setState({dataBlockItem3Title: "Distance"});
+                this.setState({dataBlockItem3Measure: "km"});
                 this.setState({dataToUseDistanceInitial: trainingDistanceTotalKM});
 
                 // -------------------
@@ -349,6 +393,55 @@ class App extends React.Component {
                 });
                 this.setState({dataToUseEventLatest: latestEntry});
 
+                // ---------------
+                // STATS
+                // ---------------
+                const filteredStats = Object.keys(thirdData)
+                    .filter(key => ['stats'].includes(key))
+                    .reduce((obj, key) => {
+                        obj[key] = thirdData[key];
+                        return obj;
+                    }, {});
+                console.log(filteredStats);
+                let filteredStatsArray = $.map(filteredStats, function(value, index) {
+                    return [value];
+                });
+                console.log(filteredStatsArray);
+                this.setState({dataStats: filteredStatsArray});
+
+                // ---------------
+                // TARGETS
+                // ---------------
+                const filteredTargets = Object.keys(thirdData)
+                    .filter(key => ['targets'].includes(key))
+                    .reduce((obj, key) => {
+                        obj[key] = thirdData[key];
+                        return obj;
+                    }, {});
+                console.log(filteredTargets);
+                let filteredTargetsArray = $.map(filteredTargets, function(value, index) {
+                    return [value];
+                });
+                this.setState({dataTargets: filteredTargetsArray});
+
+                // ---------------
+                // TARGETS CURRENT
+                // ---------------
+                const filteredTargetsCurrent = Object.keys(thirdData)
+                    .filter(key => ['targetsCurrent'].includes(key))
+                    .reduce((obj, key) => {
+                        obj[key] = thirdData[key];
+                        return obj;
+                    }, {});
+                console.log(filteredTargetsCurrent);
+                let filteredTargetsCurrentArray = $.map(filteredTargetsCurrent, function(value, index) {
+                    return [value];
+                });
+                this.setState({dataTargetsCurrent: filteredTargetsCurrentArray});
+
+                // ---------------
+                // LOADING
+                // ---------------
                 this.setState({showLoading:false});
 
             }))
@@ -382,14 +475,10 @@ class App extends React.Component {
 
                     <EventHeader dataFromParent={this.state.dataToUseEvent} loadingState={this.state.showLoading} />
                     <div className={"data-wrapper"}>
-                        <DataBlock title="Sessions" position={"point1"} dataFromParent={this.state.dataToUseSessions} loadingState={this.state.showLoading} />
-                        <DataBlock title="Time" position={"point2"} measure={"hrs"} dataFromParent={this.state.dataToUseTime} loadingState={this.state.showLoading} />
-                        <DataBlock title="Distance" position={"point3"} measure="km" dataFromParent={this.state.dataToUseDistance} loadingState={this.state.showLoading} />
-
-                        <DataBlock title="Weight" position={"point1"} measure="KG" dataFromParent={this.state.weight} loadingState={this.state.showLoading} />
-                        <DataBlock title="Bodyfat" position={"point2"} measure="%" dataFromParent={this.state.bodyfat} loadingState={this.state.showLoading} />
-                        <DataBlock title="VO2" position={"point3"} measure="max" dataFromParent={this.state.vo2} loadingState={this.state.showLoading} />
-
+                        <DataBlock title={this.state.dataBlockItem1Title} position={"point1"} measure={this.state.dataBlockItem1Measure} dataFromParent={this.state.dataBlockItem1} dataToCompare={this.state.dataBlockItem1Compare} loadingState={this.state.showLoading} />
+                        <DataBlock title={this.state.dataBlockItem2Title} position={"point2"} measure={this.state.dataBlockItem2Measure} dataFromParent={this.state.dataBlockItem2} dataToCompare={this.state.dataBlockItem2Compare}  loadingState={this.state.showLoading} />
+                        <DataBlock title={this.state.dataBlockItem3Title} position={"point3"} measure={this.state.dataBlockItem3Measure} dataFromParent={this.state.dataBlockItem3} dataToCompare={this.state.dataBlockItem3Compare}  loadingState={this.state.showLoading} />
+                        <DataBlock title={this.state.dataBlockItem4Title} position={"point4"} measure={this.state.dataBlockItem4Measure} dataFromParent={this.state.dataBlockItem4} dataToCompare={this.state.dataBlockItem4Compare}  loadingState={this.state.showLoading} />
                         <LatestEvent dataFromParent={this.state.dataToUseEventLatest} loadingState={this.state.showLoading} />
                     </div>
                     <EventHeaderNext dataFromParent={this.state.dataToUseEventNext} loadingState={this.state.showLoading} eventTypeFunction={this.eventTypeFunction} />
@@ -401,7 +490,8 @@ class App extends React.Component {
                         darkTheme={this.state.darkTheme}
                     />
                     <ThumbButtons loadingState={this.state.showLoading} eventTypes={this.state.eventTypes} eventTypeFunction={this.eventTypeFunction} />
-                    <ThemeToggle loadingState={this.state.showLoading} darkTheme={this.state.darkTheme} toggleDarkTheme={this.toggleDarkTheme} />
+
+                    {/*<ThemeToggle loadingState={this.state.showLoading} darkTheme={this.state.darkTheme} toggleDarkTheme={this.toggleDarkTheme} />*/}
 
                     <div className={`background All d-none`}>&nbsp;</div>
                     <div className={`background Swim d-none`}>&nbsp;</div>
@@ -431,15 +521,18 @@ class Backgrounds extends React.Component {
 
 class Loader extends React.Component {
     render() {
-        if (!this.props.dataFromParent) {
-            return null;
-        } else {
+
             return ([
-                <div className={this.props.dataFromParent ? 'loader-wrapper loading-new-reverse' : 'loader-wrapper loaded-new-reverse'}>
-                    <div className="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+                <div className={this.props.dataFromParent ? 'loader-wrapper loading-new-reverse' : 'loader-wrapper loaded-new-reverseOFF animated flipOutY'}>
+                    {/*<div className="lds-ellipsis"><div></div><div></div><div></div><div></div></div>*/}
+                    <div className="loader-shape triangle">
+                        <svg viewBox="0 0 86 80">
+                            <polygon points="43 8 79 72 7 72"></polygon>
+                        </svg>
+                    </div>
                 </div>
             ]);
-        }
+
     }
 }
 
@@ -471,13 +564,27 @@ class EventHeaderNext extends React.Component {
 }
 
 class DataBlock extends React.Component {
+    constructor(){
+        super();
+        this.state = {
+            updating: true,
+        };
+    };
     render() {
         if (!this.props.dataFromParent) {
             return null;
+        } else if (this.props.dataToCompare) {
+            return ([
+                <div key="DataBlock" className={this.props.loadingState ? `c007-data-block loading-new text-color animated fadeOut ${this.props.title} ${this.props.position}` : `c007-data-block loaded-new text-color animated fadeIn ${this.props.title} ${this.props.position}`}>
+                    <p className="display-4 dataPoint mt-0 mb-0">{this.props.dataFromParent}<small>{this.props.measure}</small></p>
+                    <p className="mt-0 mb-0">{this.props.dataToCompare}<small>{this.props.measure}</small></p>
+                    <p className="mt-0 mb-0"><strong>{this.props.title}</strong></p>
+                </div>
+            ]);
         } else {
             return ([
-                <div key="DataBlock" className={this.props.loadingState ? `c007-data-block loading-new text-color ${this.props.title} ${this.props.position}` : `c007-data-block loaded-new text-color animated fadeIn ${this.props.title} ${this.props.position}`}>
-                    <p className="display-4 dataPoint mt-0 mb-0">{this.props.dataFromParent}{this.props.measure}</p>
+                <div key="DataBlock" className={this.props.loadingState ? `c007-data-block loading-new text-color animated fadeOut ${this.props.title} ${this.props.position}` : `c007-data-block loaded-new text-color animated fadeIn ${this.props.title} ${this.props.position}`}>
+                    <p className="display-4 dataPoint mt-0 mb-0">{this.props.dataFromParent}<small>{this.props.measure}</small></p>
                     <p className="mt-0 mb-0"><strong>{this.props.title}</strong></p>
                 </div>
             ]);
@@ -589,8 +696,8 @@ class LatestEvent extends React.Component {
             return null;
         } else {
             return ([
-                <div key={'LatestEvent'} className={this.props.loadingState ? `c007-data-block point4 loading-new` : `c007-data-block point4 loaded-new animated fadeIn`}>
-                    <p className={"latest-event text-color"}>{this.props.dataFromParent}</p>
+                <div key={'LatestEvent'} className={this.props.loadingState ? `latest-event loading-new` : `latest-event loaded-new`}>
+                    <p className={"text-color"}><strong>Latest:</strong> {this.props.dataFromParent}</p>
                 </div>
             ]);
         }
