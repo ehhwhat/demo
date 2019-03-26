@@ -9112,7 +9112,7 @@ html.full-height, .full-height body {
         width: 110vw;
         height: 110vh; }
     .strava .react-root main .background-mask {
-      background: #222;
+      background: #333;
       opacity: 0.75;
       position: absolute;
       top: 0;
@@ -9126,17 +9126,17 @@ html.full-height, .full-height body {
       -o-transition: all 1s;
       transition: all 1s; }
       .strava .react-root main .background-mask.All {
-        background: #222;
+        background: #333;
         -webkit-transition: all 1s;
         -o-transition: all 1s;
         transition: all 1s; }
       .strava .react-root main .background-mask.Swim {
-        background: #30C4C9;
+        background: #1693A7;
         -webkit-transition: all 1s;
         -o-transition: all 1s;
         transition: all 1s; }
       .strava .react-root main .background-mask.Ride {
-        background: #24B694;
+        background: #3E6B48;
         -webkit-transition: all 1s;
         -o-transition: all 1s;
         transition: all 1s; }
@@ -9151,7 +9151,7 @@ html.full-height, .full-height body {
         -o-transition: all 1s;
         transition: all 1s; }
       .strava .react-root main .background-mask.Targets {
-        background: #FF714B;
+        background: #666;
         -webkit-transition: all 1s;
         -o-transition: all 1s;
         transition: all 1s; }
@@ -9184,6 +9184,8 @@ html.full-height, .full-height body {
       -webkit-transform: translateX(33%);
       -ms-transform: translateX(33%);
       transform: translateX(33%); }
+    .strava .react-root main .thumbButtons .thumbButtons--list {
+      list-style: none; }
     .strava .react-root main .thumbButtons ul li a:focus, .strava .react-root main .thumbButtons ul li a:active {
       text-decoration: underline;
       color: white; }
@@ -9340,7 +9342,10 @@ html.full-height, .full-height body {
           display: block;
           position: absolute;
           left: -10vw;
-          top: .4rem; }
+          top: .4rem;
+          -webkit-transition: 1s;
+          -o-transition: 1s;
+          transition: 1s; }
         .strava .react-root main .data-wrapper .c007-data-block .dataPoint small {
           font-weight: 100;
           font-size: 66%; }
@@ -9387,13 +9392,13 @@ html.full-height, .full-height body {
         mask-image: url("../img/app/triathlon/icons/svg/cross.svg");
         -webkit-mask-size: 2rem;
         mask-size: 2rem;
-        background-color: #ef5350; }
+        background-color: #ffa726; }
       .strava .react-root main .data-wrapper .c007-data-block.Ride .dataPoint:before {
         -webkit-mask-image: url("../img/app/triathlon/icons/svg/cross.svg");
         mask-image: url("../img/app/triathlon/icons/svg/cross.svg");
         -webkit-mask-size: 2rem;
         mask-size: 2rem;
-        background-color: #ef5350; }
+        background-color: #ffa726; }
       .strava .react-root main .data-wrapper .c007-data-block.Run .dataPoint:before {
         -webkit-mask-image: url("../img/app/triathlon/icons/svg/check.svg");
         mask-image: url("../img/app/triathlon/icons/svg/check.svg");

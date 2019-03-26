@@ -8,38 +8,13 @@
       <change beforePath="$PROJECT_DIR$/dist/css/mdb.lite.min.css" afterPath="$PROJECT_DIR$/dist/css/mdb.lite.min.css" />
       <change beforePath="$PROJECT_DIR$/dist/css/mdb.min.css" afterPath="$PROJECT_DIR$/dist/css/mdb.min.css" />
       <change beforePath="$PROJECT_DIR$/dist/js/react/react-strava.js" afterPath="$PROJECT_DIR$/dist/js/react/react-strava.js" />
-      <change beforePath="$PROJECT_DIR$/dist/pages-handled/app/triathlon-ashridge.html" afterPath="$PROJECT_DIR$/dist/pages-handled/app/triathlon-ashridge.html" />
-      <change beforePath="$PROJECT_DIR$/dist/pages-handled/app/triathlon-data.html" afterPath="$PROJECT_DIR$/dist/pages-handled/app/triathlon-data.html" />
-      <change beforePath="$PROJECT_DIR$/dist/pages-handled/app/triathlon.html" afterPath="$PROJECT_DIR$/dist/pages-handled/app/triathlon.html" />
-      <change beforePath="$PROJECT_DIR$/dist/pages-handled/general/components.html" afterPath="$PROJECT_DIR$/dist/pages-handled/general/components.html" />
-      <change beforePath="$PROJECT_DIR$/dist/pages-handled/general/cv-flat.html" afterPath="$PROJECT_DIR$/dist/pages-handled/general/cv-flat.html" />
-      <change beforePath="$PROJECT_DIR$/dist/pages-handled/general/styletile.html" afterPath="$PROJECT_DIR$/dist/pages-handled/general/styletile.html" />
-      <change beforePath="$PROJECT_DIR$/dist/pages-handled/general/sublayouts.html" afterPath="$PROJECT_DIR$/dist/pages-handled/general/sublayouts.html" />
-      <change beforePath="$PROJECT_DIR$/dist/pages-handled/index.html" afterPath="$PROJECT_DIR$/dist/pages-handled/index.html" />
-      <change beforePath="$PROJECT_DIR$/dist/pages-handled/javascript/arrays.html" afterPath="$PROJECT_DIR$/dist/pages-handled/javascript/arrays.html" />
-      <change beforePath="$PROJECT_DIR$/dist/pages-handled/javascript/basics.html" afterPath="$PROJECT_DIR$/dist/pages-handled/javascript/basics.html" />
-      <change beforePath="$PROJECT_DIR$/dist/pages-handled/javascript/maths.html" afterPath="$PROJECT_DIR$/dist/pages-handled/javascript/maths.html" />
-      <change beforePath="$PROJECT_DIR$/dist/pages-handled/javascript/objects.html" afterPath="$PROJECT_DIR$/dist/pages-handled/javascript/objects.html" />
-      <change beforePath="$PROJECT_DIR$/dist/pages-handled/jquery/ajax-json.html" afterPath="$PROJECT_DIR$/dist/pages-handled/jquery/ajax-json.html" />
-      <change beforePath="$PROJECT_DIR$/dist/pages-handled/jquery/ajax-promise.html" afterPath="$PROJECT_DIR$/dist/pages-handled/jquery/ajax-promise.html" />
-      <change beforePath="$PROJECT_DIR$/dist/pages-handled/jquery/ajax.html" afterPath="$PROJECT_DIR$/dist/pages-handled/jquery/ajax.html" />
-      <change beforePath="$PROJECT_DIR$/dist/pages-handled/page-one.html" afterPath="$PROJECT_DIR$/dist/pages-handled/page-one.html" />
-      <change beforePath="$PROJECT_DIR$/dist/pages-handled/react/add.html" afterPath="$PROJECT_DIR$/dist/pages-handled/react/add.html" />
-      <change beforePath="$PROJECT_DIR$/dist/pages-handled/react/addremove.html" afterPath="$PROJECT_DIR$/dist/pages-handled/react/addremove.html" />
-      <change beforePath="$PROJECT_DIR$/dist/pages-handled/react/array.html" afterPath="$PROJECT_DIR$/dist/pages-handled/react/array.html" />
-      <change beforePath="$PROJECT_DIR$/dist/pages-handled/react/cv-full.html" afterPath="$PROJECT_DIR$/dist/pages-handled/react/cv-full.html" />
-      <change beforePath="$PROJECT_DIR$/dist/pages-handled/react/cv.html" afterPath="$PROJECT_DIR$/dist/pages-handled/react/cv.html" />
-      <change beforePath="$PROJECT_DIR$/dist/pages-handled/react/dynamic.html" afterPath="$PROJECT_DIR$/dist/pages-handled/react/dynamic.html" />
-      <change beforePath="$PROJECT_DIR$/dist/pages-handled/react/inline.html" afterPath="$PROJECT_DIR$/dist/pages-handled/react/inline.html" />
-      <change beforePath="$PROJECT_DIR$/dist/pages-handled/react/projects.html" afterPath="$PROJECT_DIR$/dist/pages-handled/react/projects.html" />
-      <change beforePath="$PROJECT_DIR$/dist/pages-handled/react/state.html" afterPath="$PROJECT_DIR$/dist/pages-handled/react/state.html" />
-      <change beforePath="$PROJECT_DIR$/dist/pages-handled/react/static.html" afterPath="$PROJECT_DIR$/dist/pages-handled/react/static.html" />
-      <change beforePath="$PROJECT_DIR$/dist/pages-handled/react/strava.html" afterPath="$PROJECT_DIR$/dist/pages-handled/react/strava.html" />
+      <change beforePath="$PROJECT_DIR$/gulpfile.js" afterPath="$PROJECT_DIR$/gulpfile.js" />
       <change beforePath="$PROJECT_DIR$/js/src/react/react-strava.js" afterPath="$PROJECT_DIR$/js/src/react/react-strava.js" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
+      <change beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change beforePath="$PROJECT_DIR$/scss/_custom-styles.scss" afterPath="$PROJECT_DIR$/scss/_custom-styles.scss" />
+      <change beforePath="$PROJECT_DIR$/scss/components/bespoke/_react-tri-app.scss" afterPath="$PROJECT_DIR$/scss/components/bespoke/_react-tri-app.scss" />
       <change beforePath="$PROJECT_DIR$/scss/components/bespoke/_react.scss" afterPath="$PROJECT_DIR$/scss/components/bespoke/_react.scss" />
-      <change beforePath="$PROJECT_DIR$/src/partials/layouts/base--react.hbs" afterPath="$PROJECT_DIR$/src/partials/layouts/base--react.hbs" />
-      <change beforePath="$PROJECT_DIR$/src/partials/layouts/base.hbs" afterPath="$PROJECT_DIR$/src/partials/layouts/base.hbs" />
-      <change beforePath="$PROJECT_DIR$/src/partials/layouts/starter.hbs" afterPath="$PROJECT_DIR$/src/partials/layouts/starter.hbs" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -56,8 +31,18 @@
       <file leaf-file-name="_react.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scss/components/bespoke/_react.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="258" column="0" lean-forward="false" selection-start-line="258" selection-start-column="0" selection-end-line="258" selection-end-column="0" />
+            <state relative-caret-position="4446">
+              <caret line="247" column="28" lean-forward="false" selection-start-line="247" selection-start-column="28" selection-end-line="247" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_custom-styles.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scss/_custom-styles.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="540">
+              <caret line="30" column="41" lean-forward="false" selection-start-line="30" selection-start-column="41" selection-end-line="30" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -66,8 +51,8 @@
       <file leaf-file-name="_react-tri-app.scss" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scss/components/bespoke/_react-tri-app.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="224" column="35" lean-forward="false" selection-start-line="224" selection-start-column="35" selection-end-line="224" selection-end-column="35" />
+            <state relative-caret-position="67">
+              <caret line="683" column="63" lean-forward="false" selection-start-line="683" selection-start-column="63" selection-end-line="683" selection-end-column="63" />
               <folding />
             </state>
           </provider>
@@ -76,7 +61,7 @@
       <file leaf-file-name="base.hbs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/partials/layouts/base.hbs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="500">
+            <state relative-caret-position="954">
               <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
               <folding />
             </state>
@@ -116,8 +101,8 @@
       <file leaf-file-name="react-strava.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/src/react/react-strava.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="573" column="41" lean-forward="false" selection-start-line="573" selection-start-column="41" selection-end-line="573" selection-end-column="41" />
+            <state relative-caret-position="265">
+              <caret line="243" column="42" lean-forward="false" selection-start-line="243" selection-start-column="42" selection-end-line="243" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -127,8 +112,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>succ</find>
-      <find>CardSubTitle</find>
       <find>SubTitle</find>
       <find>fireb</find>
       <find>thingsToNote</find>
@@ -157,6 +140,8 @@
       <find>loader-wrapper</find>
       <find>loaded-new-reverse</find>
       <find>dataToUseEventLatest</find>
+      <find>stats:</find>
+      <find>.c007</find>
     </findStrings>
     <replaceStrings>
       <replace>&lt;h3 class=&quot;mt-5 h3-responsive&quot;&gt;</replace>
@@ -175,7 +160,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/js/src/react/react-state.js" />
         <option value="$PROJECT_DIR$/js/src/react/react-add.js" />
         <option value="$PROJECT_DIR$/src/pages/react/add.hbs" />
         <option value="$PROJECT_DIR$/src/pages/react/addremove.hbs" />
@@ -215,7 +199,6 @@
         <option value="$PROJECT_DIR$/src/partials/components/c012-card.hbs" />
         <option value="$PROJECT_DIR$/src/pages/app/triathlon-ashridge.hbs" />
         <option value="$PROJECT_DIR$/js/src/bespoke/data.js" />
-        <option value="$PROJECT_DIR$/scss/_custom-styles.scss" />
         <option value="$PROJECT_DIR$/src/pages/app/triathlon.hbs" />
         <option value="$PROJECT_DIR$/src/pages/react/strava.hbs" />
         <option value="$PROJECT_DIR$/dist/img/app/triathlon/icons/svg/sessions.svg" />
@@ -223,8 +206,10 @@
         <option value="$PROJECT_DIR$/src/partials/layouts/starter.hbs" />
         <option value="$PROJECT_DIR$/src/partials/layouts/base--react.hbs" />
         <option value="$PROJECT_DIR$/src/partials/layouts/base.hbs" />
-        <option value="$PROJECT_DIR$/js/src/react/react-strava.js" />
+        <option value="$PROJECT_DIR$/gulpfile.js" />
         <option value="$PROJECT_DIR$/scss/components/bespoke/_react.scss" />
+        <option value="$PROJECT_DIR$/scss/_custom-styles.scss" />
+        <option value="$PROJECT_DIR$/js/src/react/react-strava.js" />
         <option value="$PROJECT_DIR$/scss/components/bespoke/_react-tri-app.scss" />
       </list>
     </option>
@@ -262,6 +247,9 @@
           </GulpTaskState>
           <GulpTaskState>
             <task-name>handled</task-name>
+          </GulpTaskState>
+          <GulpTaskState>
+            <task-name>cachebust</task-name>
           </GulpTaskState>
           <GulpTaskState>
             <task-name>mdb-go</task-name>
@@ -507,12 +495,22 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Gulp.js.mdb-go">
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-interpreter>project</node-interpreter>
       <node-options />
       <gulpfile />
       <tasks />
+      <arguments />
+      <envs />
+    </configuration>
+    <configuration name="cachebust" type="js.build_tools.gulp" factoryName="Gulp.js" temporary="true">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile>$PROJECT_DIR$/gulpfile.js</gulpfile>
+      <tasks>
+        <task>cachebust</task>
+      </tasks>
       <arguments />
       <envs />
     </configuration>
@@ -526,9 +524,14 @@
       <arguments />
       <envs />
     </configuration>
+    <list size="2">
+      <item index="0" class="java.lang.String" itemvalue="Gulp.js.mdb-go" />
+      <item index="1" class="java.lang.String" itemvalue="Gulp.js.cachebust" />
+    </list>
     <recent_temporary>
-      <list size="1">
+      <list size="2">
         <item index="0" class="java.lang.String" itemvalue="Gulp.js.mdb-go" />
+        <item index="1" class="java.lang.String" itemvalue="Gulp.js.cachebust" />
       </list>
     </recent_temporary>
   </component>
@@ -551,25 +554,27 @@
       <workItem from="1549300865120" duration="37083000" />
       <workItem from="1550396236896" duration="49603000" />
       <workItem from="1551596640858" duration="21304000" />
-      <workItem from="1552750286815" duration="6488000" />
+      <workItem from="1552750286815" duration="11715000" />
+      <workItem from="1553532149456" duration="250000" />
+      <workItem from="1553596737688" duration="2525000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="490036000" />
+    <option name="totallyTimeSpent" value="498038000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19020021" sideWeight="0.50563383" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19020021" sideWeight="0.4943662" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19020021" sideWeight="0.51690143" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19020021" sideWeight="0.4830986" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22826087" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19020021" sideWeight="0.50563383" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19020021" sideWeight="0.51521736" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24021739" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -612,18 +617,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="3" />
+      <option name="time" value="4" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/dist/pages/react/cv-flat.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3060">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/partials/components/c014-blockquote.hbs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -853,7 +851,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="198" column="200" lean-forward="false" selection-start-line="198" selection-start-column="170" selection-end-line="198" selection-end-column="200" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -877,7 +874,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2196">
           <caret line="122" column="40" lean-forward="false" selection-start-line="122" selection-start-column="40" selection-end-line="122" selection-end-column="96" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -885,14 +881,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="900">
           <caret line="50" column="27" lean-forward="false" selection-start-line="50" selection-start-column="27" selection-end-line="50" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scss/_custom-styles.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-779">
-          <caret line="264" column="11" lean-forward="false" selection-start-line="264" selection-start-column="11" selection-end-line="264" selection-end-column="11" />
           <folding />
         </state>
       </provider>
@@ -920,30 +908,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gulpfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="103" column="3" lean-forward="true" selection-start-line="103" selection-start-column="3" selection-end-line="103" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/src/react/react-strava.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="573" column="41" lean-forward="false" selection-start-line="573" selection-start-column="41" selection-end-line="573" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scss/components/bespoke/_react.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="258" column="0" lean-forward="false" selection-start-line="258" selection-start-column="0" selection-end-line="258" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/react/strava.hbs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -956,7 +920,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -964,22 +927,60 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="19" column="69" lean-forward="true" selection-start-line="19" selection-start-column="69" selection-end-line="19" selection-end-column="69" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/partials/layouts/base.hbs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
+        <state relative-caret-position="954">
           <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gulpfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="101" column="28" lean-forward="false" selection-start-line="101" selection-start-column="28" selection-end-line="101" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="19" column="21" lean-forward="false" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scss/components/bespoke/_react.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4446">
+          <caret line="247" column="28" lean-forward="false" selection-start-line="247" selection-start-column="28" selection-end-line="247" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scss/_custom-styles.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="30" column="41" lean-forward="false" selection-start-line="30" selection-start-column="41" selection-end-line="30" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/src/react/react-strava.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="243" column="42" lean-forward="false" selection-start-line="243" selection-start-column="42" selection-end-line="243" selection-end-column="42" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scss/components/bespoke/_react-tri-app.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="224" column="35" lean-forward="false" selection-start-line="224" selection-start-column="35" selection-end-line="224" selection-end-column="35" />
+        <state relative-caret-position="67">
+          <caret line="683" column="63" lean-forward="false" selection-start-line="683" selection-start-column="63" selection-end-line="683" selection-end-column="63" />
           <folding />
         </state>
       </provider>

@@ -17,6 +17,7 @@ const merge = require('merge-stream');
 
 const handlebars = require('gulp-compile-handlebars');
 //const rename = require('gulp-rename');
+const cachebust = require('gulp-cache-bust');
 
 // CSS Tasks
 gulp.task('css-compile', function() {
@@ -103,7 +104,14 @@ gulp.task('handled', () => {
         .pipe(gulp.dest('dist/pages-handled'));
 });
 
-
+// CACHE Tasks
+gulp.task('cachebust', function() {
+    gulp.src('dist/pages-handled/pages-one.html')
+        .pipe(cachebust({
+            type: 'timestamp'
+        }))
+        .pipe(gulp.dest('dist/pages-handled/pages-one.html'));
+});
 
 // Watch on everything
 gulp.task('mdb-go', function() {

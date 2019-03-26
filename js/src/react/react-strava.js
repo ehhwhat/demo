@@ -51,7 +51,8 @@ class App extends React.Component {
             showButtons:false,
 
             isHidden: true,
-            showLoading:true,
+            showLoading: true,
+            showLoadingPre: true,
             darkTheme: false,
             messageShown: false
         };
@@ -93,8 +94,9 @@ class App extends React.Component {
     };
 
     eventTypeFunction = (eventType) => {
-        console.log('eventTypeFunction');
-        console.log(eventType);
+        console.log("%c Switch data ", "padding:5px 15px;margin:5px;color: #333;border-left:20px solid #000;font-weight:bold;");
+        console.log("%c Event type: " + eventType, "padding:5px 15px;margin:5px;color: #333;border-left:20px solid #666;font-weight:bold;");
+
         this.setState({showLoading:true});
 
         this.emptyData();
@@ -116,7 +118,6 @@ class App extends React.Component {
         this.setState({dataBlockItem1: SessionsTotal});
         this.setState({dataBlockItem1Title: "Sessions"});
         this.setState({dataBlockItem1Measure: ""});
-        console.log("%c Total Sessions: " + SessionsTotal, "padding:5px 15px;margin:5px;color: #333;border-left:15px solid salmon;font-weight:bold;");
 
         // ---------------
         // HOURS
@@ -199,6 +200,8 @@ class App extends React.Component {
                 return el.name;
             });
             this.setState({dataToUseEventLatest: cycleLatestEntry});
+
+            console.log(cycleVirtualSessions);
         }
 
         // Just for running virtual sessions
@@ -237,6 +240,8 @@ class App extends React.Component {
             // -------------------
             let runVirtualDistanceTotalKM = parseInt(runVirtualDistanceTotal.reduce((a, b) => a + b, 0) / 1000);
             this.setState({dataBlockItem3: (trainingDistanceTotalKM+runVirtualDistanceTotalKM)});
+
+            console.log(runVirtualSessions);
         }
 
         if(eventType === "All") {
@@ -309,6 +314,7 @@ class App extends React.Component {
         }
 
         this.setState({showLoading:false});
+        console.log(Sessions);
     };
 
     toggleDarkTheme = () => {
@@ -442,7 +448,10 @@ class App extends React.Component {
                 // ---------------
                 // LOADING
                 // ---------------
-                this.setState({showLoading:false});
+                this.setState({showLoadingPre:false});
+                setTimeout(() => {
+                    this.setState({showLoading:false});
+                }, 2000);
 
             }))
             .catch(function (error) {
@@ -460,45 +469,38 @@ class App extends React.Component {
     }
 
     render() {
-        console.log('%c render', 'color: #61C155; font-weight: bold;background:#fff;border-left:5px solid #61C155;padding:15px 30px;');
-        console.log(this.state.dataToUse);
-        console.log('%c render END', 'color: #61C155; font-weight: bold;background:#fff;border-left:5px solid #61C155;padding:15px 30px;');
-        // This is what the user will see on screen
-        // Some basic markup
-        // We pass from the parent component to the child component the state so they can use this data as well
+        //console.log('%c render', 'color: #61C155; font-weight: bold;background:#fff;border-left:5px solid #61C155;padding:15px 30px;');
         return ([
+            <main className={this.state.darkTheme ? 'theme-dark' : 'theme-light'} key="mainWrapper">
+                <Loader dataFromParent={this.state.showLoadingPre} loadingState={this.state.showLoading} />
+                <Backgrounds dataFromParent={this.state.dataToUseEvent} />
 
-                <main className={this.state.darkTheme ? 'theme-dark' : 'theme-light'} key="mainWrapper">
+                <EventHeader dataFromParent={this.state.dataToUseEvent} loadingState={this.state.showLoading} />
+                <div className={"data-wrapper"}>
+                    <DataBlock title={this.state.dataBlockItem1Title} position={"point1"} measure={this.state.dataBlockItem1Measure} dataFromParent={this.state.dataBlockItem1} dataToCompare={this.state.dataBlockItem1Compare} loadingState={this.state.showLoading} />
+                    <DataBlock title={this.state.dataBlockItem2Title} position={"point2"} measure={this.state.dataBlockItem2Measure} dataFromParent={this.state.dataBlockItem2} dataToCompare={this.state.dataBlockItem2Compare} loadingState={this.state.showLoading} />
+                    <DataBlock title={this.state.dataBlockItem3Title} position={"point3"} measure={this.state.dataBlockItem3Measure} dataFromParent={this.state.dataBlockItem3} dataToCompare={this.state.dataBlockItem3Compare} loadingState={this.state.showLoading} />
+                    <DataBlock title={this.state.dataBlockItem4Title} position={"point4"} measure={this.state.dataBlockItem4Measure} dataFromParent={this.state.dataBlockItem4} dataToCompare={this.state.dataBlockItem4Compare} loadingState={this.state.showLoading} />
+                    <LatestEvent dataFromParent={this.state.dataToUseEventLatest} loadingState={this.state.showLoading} />
+                </div>
+                <EventHeaderNext dataFromParent={this.state.dataToUseEventNext} loadingState={this.state.showLoading} eventTypeFunction={this.eventTypeFunction} />
 
-                    <Loader dataFromParent={this.state.showLoading} />
-                    <Backgrounds dataFromParent={this.state.dataToUseEvent} />
+                <DotsNew
+                    dataFromParent={this.state.dataToUseEvent}
+                    eventTypes={this.state.eventTypes}
+                    loadingState={this.state.showLoading}
+                    darkTheme={this.state.darkTheme}
+                />
 
-                    <EventHeader dataFromParent={this.state.dataToUseEvent} loadingState={this.state.showLoading} />
-                    <div className={"data-wrapper"}>
-                        <DataBlock title={this.state.dataBlockItem1Title} position={"point1"} measure={this.state.dataBlockItem1Measure} dataFromParent={this.state.dataBlockItem1} dataToCompare={this.state.dataBlockItem1Compare} loadingState={this.state.showLoading} />
-                        <DataBlock title={this.state.dataBlockItem2Title} position={"point2"} measure={this.state.dataBlockItem2Measure} dataFromParent={this.state.dataBlockItem2} dataToCompare={this.state.dataBlockItem2Compare}  loadingState={this.state.showLoading} />
-                        <DataBlock title={this.state.dataBlockItem3Title} position={"point3"} measure={this.state.dataBlockItem3Measure} dataFromParent={this.state.dataBlockItem3} dataToCompare={this.state.dataBlockItem3Compare}  loadingState={this.state.showLoading} />
-                        <DataBlock title={this.state.dataBlockItem4Title} position={"point4"} measure={this.state.dataBlockItem4Measure} dataFromParent={this.state.dataBlockItem4} dataToCompare={this.state.dataBlockItem4Compare}  loadingState={this.state.showLoading} />
-                        <LatestEvent dataFromParent={this.state.dataToUseEventLatest} loadingState={this.state.showLoading} />
-                    </div>
-                    <EventHeaderNext dataFromParent={this.state.dataToUseEventNext} loadingState={this.state.showLoading} eventTypeFunction={this.eventTypeFunction} />
+                <ThumbButtons loadingState={this.state.showLoading} eventTypes={this.state.eventTypes} eventTypeFunction={this.eventTypeFunction} />
 
-                    <DotsNew
-                        dataFromParent={this.state.dataToUseEvent}
-                        eventTypes={this.state.eventTypes}
-                        loadingState={this.state.showLoading}
-                        darkTheme={this.state.darkTheme}
-                    />
-                    <ThumbButtons loadingState={this.state.showLoading} eventTypes={this.state.eventTypes} eventTypeFunction={this.eventTypeFunction} />
+                {/*<ThemeToggle loadingState={this.state.showLoading} darkTheme={this.state.darkTheme} toggleDarkTheme={this.toggleDarkTheme} />*/}
 
-                    {/*<ThemeToggle loadingState={this.state.showLoading} darkTheme={this.state.darkTheme} toggleDarkTheme={this.toggleDarkTheme} />*/}
-
-                    <div className={`background All d-none`}>&nbsp;</div>
-                    <div className={`background Swim d-none`}>&nbsp;</div>
-                    <div className={`background Ride d-none`}>&nbsp;</div>
-                    <div className={`background Run d-none`}>&nbsp;</div>
-
-                </main>
+                <div className={`background All d-none`}>&nbsp;</div>
+                <div className={`background Swim d-none`}>&nbsp;</div>
+                <div className={`background Ride d-none`}>&nbsp;</div>
+                <div className={`background Run d-none`}>&nbsp;</div>
+            </main>
         ]);
     }
 
@@ -521,18 +523,19 @@ class Backgrounds extends React.Component {
 
 class Loader extends React.Component {
     render() {
-
+        if (!this.props.loadingState) {
+            return null;
+        } else {
             return ([
-                <div className={this.props.dataFromParent ? 'loader-wrapper loading-new-reverse' : 'loader-wrapper loaded-new-reverseOFF animated flipOutY'}>
-                    {/*<div className="lds-ellipsis"><div></div><div></div><div></div><div></div></div>*/}
-                    <div className="loader-shape triangle">
+                <div key={"Loader"} className={this.props.dataFromParent ? 'loader-wrapper' : 'loader-wrapper animated fadeOut delay-1s'}>
+                    <div className={this.props.dataFromParent ? 'loader-shape triangle' : 'loader-shape triangle animated fadeOut'}>
                         <svg viewBox="0 0 86 80">
                             <polygon points="43 8 79 72 7 72"></polygon>
                         </svg>
                     </div>
                 </div>
             ]);
-
+        }
     }
 }
 
@@ -575,7 +578,7 @@ class DataBlock extends React.Component {
             return null;
         } else if (this.props.dataToCompare) {
             return ([
-                <div key="DataBlock" className={this.props.loadingState ? `c007-data-block loading-new text-color animated fadeOut ${this.props.title} ${this.props.position}` : `c007-data-block loaded-new text-color animated fadeIn ${this.props.title} ${this.props.position}`}>
+                <div key="DataBlock" className={this.props.loadingState ? `c007-data-block text-color loading-new ${this.props.title} ${this.props.position}` : `c007-data-block text-color loaded-new ${this.props.title} ${this.props.position}`}>
                     <p className="display-4 dataPoint mt-0 mb-0">{this.props.dataFromParent}<small>{this.props.measure}</small></p>
                     <p className="mt-0 mb-0">{this.props.dataToCompare}<small>{this.props.measure}</small></p>
                     <p className="mt-0 mb-0"><strong>{this.props.title}</strong></p>
@@ -583,28 +586,10 @@ class DataBlock extends React.Component {
             ]);
         } else {
             return ([
-                <div key="DataBlock" className={this.props.loadingState ? `c007-data-block loading-new text-color animated fadeOut ${this.props.title} ${this.props.position}` : `c007-data-block loaded-new text-color animated fadeIn ${this.props.title} ${this.props.position}`}>
+                <div key="DataBlock" className={this.props.loadingState ? `c007-data-block text-color loading-new ${this.props.title} ${this.props.position}` : `c007-data-block text-color loaded-new ${this.props.title} ${this.props.position}`}>
                     <p className="display-4 dataPoint mt-0 mb-0">{this.props.dataFromParent}<small>{this.props.measure}</small></p>
                     <p className="mt-0 mb-0"><strong>{this.props.title}</strong></p>
                 </div>
-            ]);
-        }
-    }
-}
-
-class Dots extends React.Component {
-    render() {
-        if (!this.props.dataFromParent) {
-            return null;
-        } else {
-            return ([
-                <ul key="Dots" className={this.props.loadingState ? `dots ${this.props.dataFromParent} loading-new` : `dots ${this.props.dataFromParent} loaded-new`}>
-                    <li>&nbsp;</li>
-                    <li>&nbsp;</li>
-                    <li>&nbsp;</li>
-                    <li>&nbsp;</li>
-                    <li>&nbsp;</li>
-                </ul>
             ]);
         }
     }
@@ -672,7 +657,7 @@ class Buttons extends React.Component {
             </li>
         );
         return (
-            <ul className={""}>{listItems}</ul>
+            <ul className={"thumbButtons--list"}>{listItems}</ul>
         );
     }
 }

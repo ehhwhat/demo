@@ -3,13 +3,13 @@
    =============== */
 .strava {
 
-    $color-strava: #fc4c02;
-    $color-default: #222;
-    $color-swim: #30C4C9;
-    $color-ride: #24B694;
-    $color-run: #D22042;
-    $color-stats: #613860;
-    $color-targets: #FF714B;
+    $color-strava: #fc4c02; // ORANGE
+    $color-default: #333; // BLACK
+    $color-swim: #1693A7; // Water = Blue
+    $color-ride: #3E6B48; // Bike =
+    $color-run: #D22042; // Run =
+    $color-stats: #613860; // Stats =
+    $color-targets: #666; // Targets =
 
     @mixin transition() {
         transition: all 1s;
@@ -353,6 +353,9 @@
             // THUMB BUTTONS
             // ====================
             .thumbButtons {
+                .thumbButtons--list {
+                    list-style: none;
+                }
                 ul li a {
                     &:focus,
                     &:active {
@@ -563,6 +566,7 @@
                             position: absolute;
                             left:-10vw;
                             top:.4rem;
+                            transition: 1s;
                             //background-color: $theme-green;
                             //filter: invert(100%);
                         }
@@ -664,7 +668,7 @@
                                 -webkit-mask-image: url('../img/app/triathlon/icons/svg/cross.svg');
                                 mask-image: url('../img/app/triathlon/icons/svg/cross.svg');
                                 mask-size: 2rem;
-                                background-color: $theme-red;
+                                background-color: $theme-orange;
                             }
                         }
                     }
@@ -677,7 +681,7 @@
                                 -webkit-mask-image: url('../img/app/triathlon/icons/svg/cross.svg');
                                 mask-image: url('../img/app/triathlon/icons/svg/cross.svg');
                                 mask-size: 2rem;
-                                background-color: $theme-red;
+                                background-color: $theme-orange;
                             }
                         }
                     }

@@ -16,8 +16,11 @@
     "babel-eslint": "^8.1.2",
     "babel-preset-env": "^1.6.1",
     "browser-sync": "^2.24.6",
+    "grunt-text-replace": "^0.4.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.1.0",
+    "gulp-cache-bust": "^1.4.0",
+    "gulp-cache-buster": "^0.2.1",
     "gulp-compile-handlebars": "^0.6.1",
     "gulp-concat": "^2.6.1",
     "gulp-cssmin": "^0.2.0",
@@ -29,7 +32,8 @@
     "gulp-sass": "^3.2.1",
     "gulp-wrap": "^0.14.0",
     "handlebars": "^5.0.2",
-    "merge-stream": "^1.0.1"
+    "merge-stream": "^1.0.1",
+    "randomstring": "^1.1.5"
   },
   "description": ""
 }
