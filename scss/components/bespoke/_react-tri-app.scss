@@ -3,7 +3,8 @@
    =============== */
 .strava {
 
-    $color-strava: #fc4c02; // ORANGE
+    $color-strava-default: #fc4c02; // ORANGE
+    $color-strava: darken($color-strava-default,12.5%); // ORANGE
     $color-default: #333; // BLACK
     $color-swim: #1693A7; // Water = Blue
     $color-ride: #3E6B48; // Bike =
@@ -383,31 +384,31 @@
                         }
                     }
                     &__Swim {
-                        bottom: 9.5vh;
+                        bottom: 10vh;
                         span {
                             background: url('https://cdn0.iconfinder.com/data/icons/sport-2-android-l-lollipop-icon-pack/24/swimming-16.png');
                         }
                     }
                     &__Ride {
-                        bottom: 11.5vh;
+                        bottom: 12.5vh;
                         span {
                             background: url('https://cdn0.iconfinder.com/data/icons/sport-2-android-l-lollipop-icon-pack/24/time_trial_biking-16.png');
                         }
                     }
                     &__Run {
-                        bottom: 13.5vh;
+                        bottom: 15vh;
                         span {
                             background: url('https://cdn0.iconfinder.com/data/icons/sport-2-android-l-lollipop-icon-pack/24/walking-16.png');
                         }
                     }
                     &__Stats {
-                        bottom: 15.5vh;
+                        bottom: 17.5vh;
                         span {
                             background: url('https://cdn0.iconfinder.com/data/icons/sport-2-android-l-lollipop-icon-pack/24/walking-16.png');
                         }
                     }
                     &__Targets {
-                        bottom: 17.5vh;
+                        bottom: 20vh;
                         span {
                             background: url('https://cdn0.iconfinder.com/data/icons/sport-2-android-l-lollipop-icon-pack/24/walking-16.png');
                         }
@@ -703,7 +704,7 @@
                     position: absolute;
                     z-index:4;
                     left:20vw;
-                    right:20vw;
+                    right:50vw;
                     top: 75vh;
                     color:white;
                     font-size:0.75rem;

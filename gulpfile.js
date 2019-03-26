@@ -92,12 +92,28 @@ gulp.task('live-server', function() {
   gulp.watch("**/*", {cwd: './dist/'}, browserSync.reload);
 });
 
-gulp.task('handled', () => {
+gulp.task('handledOLD', () => {
     return gulp.src('src/pages/**/*.hbs')
         .pipe(handlebars({}, {
             ignorePartials: true,
             batch: ['src/partials']
         }))
+        .pipe(rename({
+            extname: '.html'
+        }))
+        .pipe(gulp.dest('dist/pages-handled'));
+});
+
+gulp.task('handled', function () {
+    let templateData = {
+        versionGlobal: 30
+    };
+    options = {
+        ignorePartials: true,
+        batch: ['src/partials']
+    };
+    return gulp.src('src/pages/**/*.hbs')
+        .pipe(handlebars(templateData, options))
         .pipe(rename({
             extname: '.html'
         }))
