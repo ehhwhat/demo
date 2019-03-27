@@ -6553,7 +6553,16 @@ html.full-height, .full-height body {
   overflow: hidden; }
 
 .strava body {
-  background-color: #fc4c02; }
+  background-color: #bd3901; }
+
+.strava .version-number {
+  position: absolute;
+  top: 5vh;
+  left: 20vw;
+  z-index: 4;
+  color: rgba(255, 255, 255, 0.25);
+  font-size: 0.75rem;
+  margin: 0; }
 
 .strava .react-root {
   height: 100vh;
@@ -6935,8 +6944,8 @@ html.full-height, .full-height body {
       animation-delay: 1000ms; }
     .strava .react-root main .dots {
       position: absolute;
-      left: 10vw;
-      bottom: 5vh;
+      left: 20vw;
+      top: 10vh;
       -webkit-transform: translateY(50%);
       -ms-transform: translateY(50%);
       transform: translateY(50%);
@@ -6977,10 +6986,11 @@ html.full-height, .full-height body {
       .strava .react-root main .dots.theme-light.Targets li.keyDotsNewTargets {
         background: white; }
       .strava .react-root main .dots li {
-        height: 0.4rem;
-        width: 0.4rem;
+        height: 0.66rem;
+        width: 0.66rem;
         display: inline-block;
-        background: rgba(255, 255, 255, 0.4);
+        background: rgba(255, 255, 255, 0);
+        border: 1px solid rgba(255, 255, 255, 0.2);
         margin: 0 0.1rem;
         padding: 0;
         -webkit-border-radius: 100%;

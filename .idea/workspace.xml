@@ -3,13 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="e1a8dbd3-4db4-4d08-9e1b-4adaf1f1c343" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/dist/css.zip" afterPath="$PROJECT_DIR$/dist/css.zip" />
+      <change beforePath="$PROJECT_DIR$/dist/css.zip" afterPath="" />
       <change beforePath="$PROJECT_DIR$/dist/css/mdb.css" afterPath="$PROJECT_DIR$/dist/css/mdb.css" />
       <change beforePath="$PROJECT_DIR$/dist/css/mdb.lite.css" afterPath="$PROJECT_DIR$/dist/css/mdb.lite.css" />
       <change beforePath="$PROJECT_DIR$/dist/css/mdb.lite.min.css" afterPath="$PROJECT_DIR$/dist/css/mdb.lite.min.css" />
       <change beforePath="$PROJECT_DIR$/dist/css/mdb.min.css" afterPath="$PROJECT_DIR$/dist/css/mdb.min.css" />
-      <change beforePath="$PROJECT_DIR$/dist/js.zip" afterPath="$PROJECT_DIR$/dist/js.zip" />
-      <change beforePath="$PROJECT_DIR$/dist/pages-handled.zip" afterPath="$PROJECT_DIR$/dist/pages-handled.zip" />
+      <change beforePath="$PROJECT_DIR$/dist/js.zip" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/dist/pages-handled.zip" afterPath="" />
       <change beforePath="$PROJECT_DIR$/dist/pages-handled/app/triathlon-ashridge.html" afterPath="$PROJECT_DIR$/dist/pages-handled/app/triathlon-ashridge.html" />
       <change beforePath="$PROJECT_DIR$/dist/pages-handled/app/triathlon-data.html" afterPath="$PROJECT_DIR$/dist/pages-handled/app/triathlon-data.html" />
       <change beforePath="$PROJECT_DIR$/dist/pages-handled/app/triathlon.html" afterPath="$PROJECT_DIR$/dist/pages-handled/app/triathlon.html" />
@@ -40,11 +40,6 @@
       <change beforePath="$PROJECT_DIR$/gulpfile.js" afterPath="$PROJECT_DIR$/gulpfile.js" />
       <change beforePath="$PROJECT_DIR$/scss/components/bespoke/_react-tri-app.scss" afterPath="$PROJECT_DIR$/scss/components/bespoke/_react-tri-app.scss" />
       <change beforePath="$PROJECT_DIR$/src/pages/react/strava.hbs" afterPath="$PROJECT_DIR$/src/pages/react/strava.hbs" />
-      <change beforePath="$PROJECT_DIR$/src/partials/includes/scripts.hbs" afterPath="$PROJECT_DIR$/src/partials/includes/scripts.hbs" />
-      <change beforePath="$PROJECT_DIR$/src/partials/includes/styles.hbs" afterPath="$PROJECT_DIR$/src/partials/includes/styles.hbs" />
-      <change beforePath="$PROJECT_DIR$/src/partials/layouts/base--react.hbs" afterPath="$PROJECT_DIR$/src/partials/layouts/base--react.hbs" />
-      <change beforePath="$PROJECT_DIR$/src/partials/layouts/base.hbs" afterPath="$PROJECT_DIR$/src/partials/layouts/base.hbs" />
-      <change beforePath="$PROJECT_DIR$/src/partials/layouts/starter.hbs" afterPath="$PROJECT_DIR$/src/partials/layouts/starter.hbs" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -61,28 +56,28 @@
       <file leaf-file-name="_react-tri-app.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scss/components/bespoke/_react-tri-app.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="704" column="30" lean-forward="false" selection-start-line="704" selection-start-column="30" selection-end-line="704" selection-end-column="30" />
+            <state relative-caret-position="378">
+              <caret line="31" column="19" lean-forward="false" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gulpfile.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="gulpfile.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gulpfile.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="133">
-              <caret line="108" column="21" lean-forward="false" selection-start-line="108" selection-start-column="8" selection-end-line="108" selection-end-column="21" />
+              <caret line="108" column="25" lean-forward="false" selection-start-line="108" selection-start-column="25" selection-end-line="108" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="strava.hbs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="strava.hbs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pages/react/strava.hbs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="17" column="78" lean-forward="false" selection-start-line="17" selection-start-column="78" selection-end-line="17" selection-end-column="78" />
+            <state relative-caret-position="144">
+              <caret line="8" column="29" lean-forward="false" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -141,8 +136,8 @@
       <file leaf-file-name="react-strava.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/src/react/react-strava.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
-              <caret line="243" column="42" lean-forward="false" selection-start-line="243" selection-start-column="42" selection-end-line="243" selection-end-column="42" />
+            <state relative-caret-position="175">
+              <caret line="477" column="28" lean-forward="false" selection-start-line="477" selection-start-column="28" selection-end-line="477" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -152,7 +147,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>SubTitle</find>
       <find>fireb</find>
       <find>thingsToNote</find>
       <find>SummaryOfMe</find>
@@ -182,6 +176,7 @@
       <find>stats:</find>
       <find>.c007</find>
       <find>latest-event</find>
+      <find>.dots</find>
     </findStrings>
     <replaceStrings>
       <replace>&lt;h3 class=&quot;mt-5 h3-responsive&quot;&gt;</replace>
@@ -242,15 +237,15 @@
         <option value="$PROJECT_DIR$/src/pages/index.hbs" />
         <option value="$PROJECT_DIR$/scss/components/bespoke/_react.scss" />
         <option value="$PROJECT_DIR$/scss/_custom-styles.scss" />
-        <option value="$PROJECT_DIR$/js/src/react/react-strava.js" />
         <option value="$PROJECT_DIR$/src/partials/layouts/base.hbs" />
         <option value="$PROJECT_DIR$/src/partials/layouts/starter.hbs" />
         <option value="$PROJECT_DIR$/src/partials/layouts/base--react.hbs" />
-        <option value="$PROJECT_DIR$/scss/components/bespoke/_react-tri-app.scss" />
-        <option value="$PROJECT_DIR$/gulpfile.js" />
         <option value="$PROJECT_DIR$/src/partials/includes/styles.hbs" />
         <option value="$PROJECT_DIR$/src/partials/includes/scripts.hbs" />
+        <option value="$PROJECT_DIR$/scss/components/bespoke/_react-tri-app.scss" />
         <option value="$PROJECT_DIR$/src/pages/react/strava.hbs" />
+        <option value="$PROJECT_DIR$/js/src/react/react-strava.js" />
+        <option value="$PROJECT_DIR$/gulpfile.js" />
       </list>
     </option>
   </component>
@@ -581,8 +576,8 @@
     </list>
     <recent_temporary>
       <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="Gulp.js.handled" />
-        <item index="1" class="java.lang.String" itemvalue="Gulp.js.mdb-go" />
+        <item index="0" class="java.lang.String" itemvalue="Gulp.js.mdb-go" />
+        <item index="1" class="java.lang.String" itemvalue="Gulp.js.handled" />
         <item index="2" class="java.lang.String" itemvalue="Gulp.js.cachebust" />
       </list>
     </recent_temporary>
@@ -608,23 +603,23 @@
       <workItem from="1551596640858" duration="21304000" />
       <workItem from="1552750286815" duration="11715000" />
       <workItem from="1553532149456" duration="250000" />
-      <workItem from="1553596737688" duration="6034000" />
+      <workItem from="1553596737688" duration="8896000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="501547000" />
+    <option name="totallyTimeSpent" value="504409000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19020021" sideWeight="0.51878357" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19020021" sideWeight="0.48121646" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19020021" sideWeight="0.5165126" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19020021" sideWeight="0.48348746" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3923913" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17717391" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19020021" sideWeight="0.51521736" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24021739" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -946,22 +941,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/src/react/react-strava.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="243" column="42" lean-forward="false" selection-start-line="243" selection-start-column="42" selection-end-line="243" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scss/components/bespoke/_react-tri-app.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="704" column="30" lean-forward="false" selection-start-line="704" selection-start-column="30" selection-end-line="704" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/partials/sublayouts/grid1.hbs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -990,14 +969,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
           <caret line="23" column="5" lean-forward="false" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gulpfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="108" column="21" lean-forward="false" selection-start-line="108" selection-start-column="8" selection-end-line="108" selection-end-column="21" />
           <folding />
         </state>
       </provider>
@@ -1034,10 +1005,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/scss/components/bespoke/_react-tri-app.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="31" column="19" lean-forward="false" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/react/strava.hbs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="78" lean-forward="false" selection-start-line="17" selection-start-column="78" selection-end-line="17" selection-end-column="78" />
+        <state relative-caret-position="144">
+          <caret line="8" column="29" lean-forward="false" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/src/react/react-strava.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="477" column="28" lean-forward="false" selection-start-line="477" selection-start-column="28" selection-end-line="477" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gulpfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="108" column="25" lean-forward="false" selection-start-line="108" selection-start-column="25" selection-end-line="108" selection-end-column="25" />
           <folding />
         </state>
       </provider>

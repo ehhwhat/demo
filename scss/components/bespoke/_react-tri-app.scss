@@ -23,7 +23,17 @@
     }
 
     body {
-        background-color: #fc4c02;
+        background-color: $color-strava;
+    }
+
+    .version-number {
+        position: absolute;
+        top: 5vh;
+        left: 20vw;
+        z-index: 4;
+        color: rgba(white,0.25);
+        font-size: 0.75rem;
+        margin: 0;
     }
 
     .react-root {
@@ -438,8 +448,8 @@
             // ====================
             .dots {
                 position: absolute;
-                left:10vw;
-                bottom:5vh;
+                left:20vw;
+                top:10vh;
                 transform: translateY(50%);
                 text-align: center;
                 z-index:3;
@@ -515,10 +525,11 @@
                     }
                 }
                 li {
-                    height:0.4rem;
-                    width:0.4rem;
+                    height:0.66rem;
+                    width:0.66rem;
                     display: inline-block;
-                    background:rgba($colorToUse,0.4);
+                    background:rgba($colorToUse,0);
+                    border: 1px solid rgba($colorToUse,0.20);
                     margin:0 0.1rem;
                     padding:0;
                     border-radius: 100%;

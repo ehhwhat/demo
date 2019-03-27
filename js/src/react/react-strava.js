@@ -475,6 +475,7 @@ class App extends React.Component {
                 <Loader dataFromParent={this.state.showLoadingPre} loadingState={this.state.showLoading} />
                 <Backgrounds dataFromParent={this.state.dataToUseEvent} />
 
+                <p className="version-number">v32</p>
                 <EventHeader dataFromParent={this.state.dataToUseEvent} loadingState={this.state.showLoading} />
                 <div className={"data-wrapper"}>
                     <DataBlock title={this.state.dataBlockItem1Title} position={"point1"} measure={this.state.dataBlockItem1Measure} dataFromParent={this.state.dataBlockItem1} dataToCompare={this.state.dataBlockItem1Compare} loadingState={this.state.showLoading} />
