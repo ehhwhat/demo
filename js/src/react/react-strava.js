@@ -474,6 +474,7 @@ class App extends React.Component {
             <main className={this.state.darkTheme ? 'theme-dark' : 'theme-light'} key="mainWrapper">
                 <Loader dataFromParent={this.state.showLoadingPre} loadingState={this.state.showLoading} />
                 <Backgrounds dataFromParent={this.state.dataToUseEvent} />
+                <Orientation />
 
                 <p className="version-number">v32</p>
                 <EventHeader dataFromParent={this.state.dataToUseEvent} loadingState={this.state.showLoading} />
@@ -522,6 +523,16 @@ class Backgrounds extends React.Component {
     }
 }
 
+class Orientation extends React.Component {
+    render() {
+        return ([
+            <div key={"Orientation"} className={"change-orientation"}>
+                <p className={"display-5"}>Please change the orientation of your device.<br/><small>No one uses their device in horizontal anyway.</small></p>
+            </div>
+        ]);
+    }
+}
+
 class Loader extends React.Component {
     render() {
         if (!this.props.loadingState) {
@@ -559,9 +570,7 @@ class EventHeaderNext extends React.Component {
             return null;
         } else {
             return ([
-                <div key="EventHeaderNext" className={this.props.loadingState ? `loading-new ${this.props.dataFromParent}` : `loaded-new animated fadeInRight ${this.props.dataFromParent}`}>
-                    <h3 onClick={() => properties.eventTypeFunction(this.props.dataFromParent)} className={"display-3 text-color mt-0 mb-0 event-header-next"} >{this.props.dataFromParent}</h3>
-                </div>
+                <h3 onClick={() => properties.eventTypeFunction(this.props.dataFromParent)}  key="EventHeaderNext" className={this.props.loadingState ? `loading-new display-3 text-color mt-0 mb-0 event-header-next ${this.props.dataFromParent}` : `loaded-new display-3 text-color mt-0 mb-0 event-header-next ${this.props.dataFromParent}`}>{this.props.dataFromParent}</h3>
             ]);
         }
     }

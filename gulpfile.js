@@ -106,7 +106,7 @@ gulp.task('handledOLD', () => {
 
 gulp.task('handled', function () {
     let templateData = {
-        versionGlobal: 32
+        versionGlobal: 33
     };
     options = {
         ignorePartials: true,
